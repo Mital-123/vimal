@@ -1,11 +1,9 @@
-import '../../assets/Css/HomeCarousel.css'
+import React from 'react'
 
 function HomeCarousel() {
     return (
-        <div>
-
-        </div>
-    );
+        <div>HomeCarousel</div>
+    )
 }
 
 export default HomeCarousel

@@ -1,5 +1,5 @@
-import HOC from './HOC'
-import HomeCarousel from './Home/HomeCarousel'
+import HOC from '../HOC'
+import HomeCarousel from './HomeCarousel'
 
 function HomePage() {
     return (
