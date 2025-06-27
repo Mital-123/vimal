@@ -1,9 +1,12 @@
-import React from 'react'
+import HOC from './HOC'
+import HomeCarousel from './Home/HomeCarousel'
 
 function HomePage() {
     return (
-        <div>HomePage</div>
+        <div>
+            <HomeCarousel />
+        </div>
     )
 }
 
-export default HomePage
+export default HOC(HomePage)
