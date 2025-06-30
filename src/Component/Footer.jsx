@@ -12,7 +12,7 @@ function Footer() {
                     <div className='row pt-3'>
                         <div className='col-12 col-lg-4 p-4 text-center'>
                             <div style={{ width: "100px", height: "100px" }} className='mx-auto'>
-                                <img src={require("../assets/Images/logo_vimal_agro.png")} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
+                                <img src={require("../assets/Images/logo_vimal_agro.png")} className='img-fluid w-100 h-100 object-fit-contain' alt="" />
                             </div>
                             <div className='text-white my-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, explicabo.</div>
                             <div className="d-flex fs-4 my-3 justify-content-center">
