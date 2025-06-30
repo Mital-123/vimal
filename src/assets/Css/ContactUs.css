@@ -18,6 +18,14 @@
   overflow: hidden;
   z-index: 0;
 }
+.Contactus_main_add {
+  background-color: var(--red) !important;
+  border-radius: 30px;
+  border-bottom-left-radius: 90px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
 .Contactus_main::after {
   content: "";
   position: absolute;
@@ -39,7 +47,17 @@
 .Contact_cont,
 .Contact_icon,
 .Contact-iconbg {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.Contact-iconbg_add {
+  background-color: var(--golden) !important;
+}
+.Contact_icon_add,
+.Contact_cont_add {
+  color: white !important;
+}
+.Contact_tittle_add {
+  color: var(--golden) !important;
 }
 .Contactus_main:hover .Contact_tittle {
   color: var(--golden) !important;
@@ -52,6 +70,7 @@
 }
 .Contactus_main:hover .Contact_icon {
   color: white !important;
+  transform: rotateY(360deg) !important;
 }
 @media (min-width: 355px) and (max-width: 992px) {
   .main-contact {

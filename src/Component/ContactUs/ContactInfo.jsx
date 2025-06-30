@@ -20,12 +20,12 @@ function ContactInfo() {
                             </div>
                         </div>
                         <div className='col-12 col-lg-4 col-md-6 p-3'>
-                            <div className='Contactus_main h-100 text-center p-5 move-up_lg'>
-                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
-                                    <SlLocationPin className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
+                            <div className='Contactus_main_add h-100 text-center p-5 move-up_lg'>
+                                <div className="Contact-iconbg_add mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
+                                    <SlLocationPin className="Contact_icon_add darkcolor" style={{ fontSize: "45px" }} />
                                 </div>
-                                <h3 className="Contact_tittle fw-bold text-medium my-3">Address</h3>
-                                <div className='Contact_cont pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
+                                <h3 className="Contact_tittle_add fw-bold text-medium my-3">Address</h3>
+                                <div className='Contact_cont_add pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
                             </div>
                         </div>
                         <div className='col-12 col-lg-4 col-md-6 p-3'>
