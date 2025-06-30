@@ -3,6 +3,7 @@ import { LiaMailBulkSolid } from 'react-icons/lia'
 import { LuPhoneCall } from 'react-icons/lu'
 import { SlLocationPin } from 'react-icons/sl'
 import ButtonCom from '../ButtonCom'
+import Tittles from '../Tittles'
 
 function ContactInfo() {
     return (
@@ -43,9 +44,11 @@ function ContactInfo() {
                     <div className='row mt-3 mt-lg-4 mb-0 mb-lg-3 p-3 gx-lg-5'>
                         <div className='col-12 col-lg-6 mb-4'>
                             <div className='h-100 p-4 rounded-2 bg-white shadow border'>
-                                <h3 className='fw-bold'>Get In Touch With Us</h3>
+                                <div className='brdstart ps-2'>
+                                    <Tittles ltitle={"Get In Touch With Us"} />
+                                </div>
                                 <div>
-                                    <div className='w-100'>
+                                    <div className='w-100 mt-4'>
                                         <label htmlFor="">Name</label>
                                         <input
                                             type="text"
