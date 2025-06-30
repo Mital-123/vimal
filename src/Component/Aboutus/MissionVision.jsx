@@ -9,8 +9,9 @@ import Tittles from '../Tittles';
 function MissionVision() {
     return (
         <>
-            <div className='vision_mision_bg mb-5'>
-                <div className='container'>
+        <div className="overflow-hidden">
+                <div className='vision_mision_bg'>
+                <div className='container '>
                     <div className='row main_vi_mi'>
                         <div className='col-12 col-lg-6 col-md-6 mb-5'>
                             <div className='text-white brdstart'>
@@ -30,9 +31,9 @@ function MissionVision() {
                 </div>
             </div>
 
-            <div>
+            <div className='mb-5 '>
                 <div className='container'>
-                    <div className='row mainViMiSec overflow-hidden'>
+                    <div className='row mainViMiSec'>
                         <div className='col-12 col-lg-6 col-md-6' data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
                             <div className='Main_ViMi_box shadow bg-white rounded-3 py-4 px-5  h-100'>
                                 <div className='Vi_Mi-shadow'><HiLightBulb className='vision_mission_icon p-1' /></div>
@@ -52,6 +53,7 @@ function MissionVision() {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     )
 }

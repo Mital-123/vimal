@@ -4,12 +4,14 @@ import { TiArrowForward } from 'react-icons/ti';
 import Tittles from '../Tittles';
 import "../../assets/Css/Aboutus.css"
 import { FaQuoteRight } from 'react-icons/fa';
+import HOC from '../HOC';
+import MissionVision from './MissionVision';
 
 function AboutusSec() {
   return (
     <>
     
-        <div className="py-5 mt-5 overflow-hidden">
+        <div className="py-5 my-5 overflow-hidden">
         <div className="container">
           <div className="row p-0 m-0">
 
@@ -118,8 +120,8 @@ function AboutusSec() {
             </div>
           </div>
         </div>
-        <MissionVision/>
       </div>
+        <MissionVision/>
     </>
   );
 }
