@@ -10,7 +10,7 @@ function AboutusSec() {
         <div className="row">
           <div className="col-12 col-lg-6">
             <div className="h-100">
-                <div className='  brdstart'><Tittles stitle={"About us"} ltitle={" We Are Best Products provider"}/></div>
+                <div className='brdstart'><Tittles stitle={"About us"} ltitle={" We Are Best Products provider"}/></div>
             
               <div className="pera text-secondary py-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua minim veniam quis nostrud exercitation ullamco laboris sed do eius tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua minim veniam quis nostrud exercitation ullamco laboris sed

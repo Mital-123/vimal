@@ -8,6 +8,27 @@
   --red: #740000;
   --golden: #f2d05c;
 }
+.stittle{
+  color: var(--red);
+  text-shadow: 6px 7px 10px #3101019c;
+}
+.pera{
+  font-size: 14px;
+}
+.brdstart {
+  position: relative;
+  padding-left: 14px; /* enough space for the pseudo-border */
+}
+
+.brdstart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px; /* width of the "border" */
+  height: 100%;
+  background: linear-gradient(to top, #610303, #b90000, #ff2525); /* customize gradient */
+}
 /* Buttonhover start */
 .btncss {
   --border-color: linear-gradient(-45deg, #000330, #ff2525, #610303);
