@@ -3,6 +3,7 @@ import { LiaMailBulkSolid } from 'react-icons/lia'
 import { LuPhoneCall } from 'react-icons/lu'
 import { SlLocationPin } from 'react-icons/sl'
 import ButtonCom from '../ButtonCom'
+import Tittles from '../Tittles'
 
 function ContactInfo() {
     return (
@@ -20,12 +21,12 @@ function ContactInfo() {
                             </div>
                         </div>
                         <div className='col-12 col-lg-4 col-md-6 p-3'>
-                            <div className='Contactus_main h-100 text-center p-5 move-up_lg'>
-                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
-                                    <SlLocationPin className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
+                            <div className='Contactus_main_add h-100 text-center p-5 move-up_lg'>
+                                <div className="Contact-iconbg_add mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
+                                    <SlLocationPin className="Contact_icon_add darkcolor" style={{ fontSize: "45px" }} />
                                 </div>
-                                <h3 className="Contact_tittle fw-bold text-medium my-3">Address</h3>
-                                <div className='Contact_cont pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
+                                <h3 className="Contact_tittle_add fw-bold text-medium my-3">Address</h3>
+                                <div className='Contact_cont_add pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
                             </div>
                         </div>
                         <div className='col-12 col-lg-4 col-md-6 p-3'>
@@ -43,9 +44,11 @@ function ContactInfo() {
                     <div className='row mt-3 mt-lg-4 mb-0 mb-lg-3 p-3 gx-lg-5'>
                         <div className='col-12 col-lg-6 mb-4'>
                             <div className='h-100 p-4 rounded-2 bg-white shadow border'>
-                                <h3 className='fw-bold'>Get In Touch With Us</h3>
+                                <div className='brdstart ps-2'>
+                                    <Tittles ltitle={"Get In Touch With Us"} />
+                                </div>
                                 <div>
-                                    <div className='w-100'>
+                                    <div className='w-100 mt-4'>
                                         <label htmlFor="">Name</label>
                                         <input
                                             type="text"
