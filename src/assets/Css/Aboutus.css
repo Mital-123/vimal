@@ -47,3 +47,63 @@
   }
 }
 /* aboutus end */
+/* missinvision start */
+.main_vi_mi {
+  padding: 100px 10px 150px 10px;
+}
+.vision_mision_bg {
+  width: 100%;
+  height: auto;
+  background-image: url("../Images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0px 0px 0px 1500px  #240000c0;
+  z-index: 1 !important;
+  /* background-attachment: fixed; */
+}
+.mainViMiSec {
+  background: transparent !important;
+  margin-top: -150px !important;
+  z-index: 10 !important;
+}
+.play_Circle_icon {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px 5px currentColor;
+  box-shadow: 0 0 15px 5px currentColor;
+  -webkit-animation: button-ripple 3s infinite;
+  animation: button-ripple 3s infinite;
+}
+@keyframes button-ripple {
+  0% {
+    box-shadow: 0 0 5px 2px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 5px 2px currentColor;
+  }
+}
+.Vi_Mi-shadow {
+  width: 50px;
+  height: 50px;
+  background-color: #7400005b;
+  border-radius: 50%;
+}
+.vision_mission_icon {
+  font-size: 70px;
+  color:  #740000;
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+.Vi-Mi_Tittle {
+  transition: all 0.4s ease-in-out !important;
+}
+.Main_ViMi_box:hover .vision_mission_icon {
+  transform: rotateY(360deg) !important;
+}
+.Main_ViMi_box:hover .Vi-Mi_Tittle {
+  color: var(--green) !important;
+}
+/* missinvision end */
