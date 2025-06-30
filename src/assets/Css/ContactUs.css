@@ -1,0 +1,80 @@
+/* ContactInfo start */
+.contactinfo_bg {
+  width: 100%;
+  padding: 10px 0;
+  background-image: url("https://www.tharayilpower.com/static/media/testi_bg.f45dc51be227a3befcbe.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.Contactus_main {
+  background-color: #e8e6e6 !important;
+  border-radius: 30px;
+  border-bottom-left-radius: 90px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.Contactus_main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--red);
+  border-radius: 30px;
+  border-bottom-left-radius: 90px;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.Contactus_main:hover::after {
+  transform: scale(1);
+}
+.Contact_tittle,
+.Contact_cont,
+.Contact_icon,
+.Contact-iconbg {
+  transition: all 0.5s ease-in-out;
+}
+.Contactus_main:hover .Contact_tittle {
+  color: var(--golden) !important;
+}
+.Contactus_main:hover .Contact_cont {
+  color: white !important;
+}
+.Contactus_main:hover .Contact-iconbg {
+  background-color: var(--golden) !important;
+}
+.Contactus_main:hover .Contact_icon {
+  color: white !important;
+}
+@media (min-width: 355px) and (max-width: 992px) {
+  .main-contact {
+    margin-top: 30px !important;
+  }
+}
+@media (min-width: 992px) {
+  .main-contact {
+    margin-top: 80px !important;
+  }
+  .move-up_lg {
+    margin-top: -40px !important;
+  }
+}
+/* ContactInfo end */
+
+/* Map start */
+.contact_map {
+  min-height: 300px;
+}
+@media (max-width: 576px) {
+  .contact_map {
+    min-height: 350px !important;
+  }
+}
+/* Map end */

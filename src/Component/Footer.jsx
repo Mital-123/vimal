@@ -79,7 +79,7 @@ function Footer() {
                             </div>
                             <div className="p-1 pera pt-2">
                                 <Link
-                                    to={"/"}
+                                    to={"/contact"}
                                     className="text-decoration-none footer_tittle fw-medium text-white"
                                 >
                                     <span className="pe-2 fs-6">
@@ -100,7 +100,7 @@ function Footer() {
                                     <span className="pe-2 fs-4">
                                         <FaMapLocationDot />
                                     </span>
-                                    172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat, India.
+                                    172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.
                                 </Link>
                             </div>
                             <div className="p-1 pera text-white">
