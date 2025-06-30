@@ -6,12 +6,19 @@ import "../../assets/Css/Aboutus.css"
 import { FaQuoteRight } from 'react-icons/fa';
 import HOC from '../HOC';
 import MissionVision from './MissionVision';
+import videoBg from '../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4';
 
 function AboutusSec() {
   return (
     <>
-    
-        <div className="py-5 my-5 overflow-hidden">
+      {/* lending section start*/}
+      <div className="video-container">
+        <video autoPlay muted loop playsInline className="bg-video">
+          <source src={videoBg} type="video/mp4" /></video>
+      </div>
+      {/* lending section end*/}
+
+      <div className="py-5 mb-3 overflow-hidden">
         <div className="container">
           <div className="row p-0 m-0">
 
@@ -121,7 +128,7 @@ function AboutusSec() {
           </div>
         </div>
       </div>
-        <MissionVision/>
+      <MissionVision />
     </>
   );
 }
