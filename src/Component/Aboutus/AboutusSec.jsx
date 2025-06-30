@@ -18,7 +18,7 @@ function AboutusSec() {
       </div>
       {/* lending section end*/}
 
-      <div className="py-5 mb-3 overflow-hidden">
+      <div className="py-5 mb-4 overflow-hidden">
         <div className="container">
           <div className="row p-0 m-0">
 
