@@ -8,6 +8,8 @@ import HOC from '../HOC';
 import MissionVision from './MissionVision';
 import videoBg from '../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4';
 import AboutImpact from './AboutImpact';
+import Testimonial from "../Home/Testimonial"
+
 
 function AboutusSec() {
   return (
@@ -129,6 +131,7 @@ function AboutusSec() {
       </div>
       <MissionVision />
       <AboutImpact />
+      <Testimonial/>
     </>
   );
 }

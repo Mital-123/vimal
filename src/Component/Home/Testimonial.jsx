@@ -1,11 +1,10 @@
-
 import React from 'react'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 // import '../assets/Css/Testimonial.css'
-
+ 
 function Testimonial() {
   const settings = {
     dots: false,
@@ -25,7 +24,7 @@ function Testimonial() {
       },
     ],
   }
-
+ 
   const testimonials = [
     {
       id: 1,
@@ -63,7 +62,7 @@ function Testimonial() {
         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400",
     },
   ]
-
+ 
   return (
     <div className='testimonial_bg my-5'>
       <div className='container overflow-hidden'>
@@ -89,7 +88,7 @@ function Testimonial() {
               </div>
             </div>
           </div>
-
+ 
           <div className='col-12 col-lg-8 p-4'>
             <div className='h-100'>
               <Slider {...settings} className='testimonial-slider'>
@@ -112,7 +111,7 @@ function Testimonial() {
                         <h4 className='testi_person text-white fw-bold text-medium d-flex w-100 text-center justify-content-center'>
                           {item.name}
                         </h4>
-                        
+                       
                       </div>
                     </div>
                   </div>
@@ -125,5 +124,5 @@ function Testimonial() {
     </div>
   )
 }
-
+ 
 export default Testimonial

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
-import HOC from '../HOC';
+// import HOC from '../HOC';
 import Tittles from '../Tittles';
 
 function SubProducts() {
@@ -32,7 +32,6 @@ function SubProducts() {
             </div>
         ),
     };
-
 
     return (
 
@@ -93,4 +92,4 @@ function SubProducts() {
     );
 }
 
-export default HOC(SubProducts);
+export default SubProducts;

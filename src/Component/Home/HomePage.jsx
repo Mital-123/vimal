@@ -9,6 +9,7 @@ function HomePage() {
             <HomeCarousel />
             <HomeProduct />
             <ProductBrand />
+    
         </div>
     )
 }
