@@ -12,7 +12,7 @@ function ProductBrand() {
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
@@ -52,7 +52,7 @@ function ProductBrand() {
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='px-3'>
                                     <div className='brand-card position-relative'>
-                                        <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`/${item.id}`}>
+                                        <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`/${item.brandId}`}>
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>
                                         </Link>
                                         <div className='bg-white p-4 rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
