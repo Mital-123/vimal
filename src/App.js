@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './Component/Home/HomePage';
 import ContactPage from './Component/ContactUs/ContactPage';
 import AboutusSec from './Component/Aboutus/AboutusSec';
+import SubProductBrand from './Component/Home/SubProductBrand';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/:id' element={<SubProductBrand />} />
           <Route path='/aboutus' element={<AboutusSec />} />
           <Route path='/contact' element={<ContactPage />} />
         </Routes>
