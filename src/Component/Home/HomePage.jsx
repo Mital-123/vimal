@@ -9,8 +9,8 @@ function HomePage() {
     return (
         <div>
             <HomeCarousel />
-            <HomeProduct />
             <ProductBrand />
+            <HomeProduct />
             <Testimonial/>
     <Certificates/>
         </div>

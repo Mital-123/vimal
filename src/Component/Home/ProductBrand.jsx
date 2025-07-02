@@ -47,7 +47,7 @@ function ProductBrand() {
                     <div className='brdstart'>
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
-                    <div className="mt-4 product-brand_bg rounded-4 p-5">
+                    <div className="mt-4 product-brand_bg shadow-lg rounded-4 p-5">
                         <Slider {...settings}>
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='px-3'>
