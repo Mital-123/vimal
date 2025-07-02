@@ -55,9 +55,7 @@ function AboutusSec() {
                   />
                 </div>
               </div>
-
             </div>
-
 
             <div className="col-12 col-lg-6 pt-4  d-flex flex-column justify-content-between ps-0 ps-lg-5">
               <div className="h-100">
