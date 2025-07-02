@@ -1,141 +1,121 @@
 /* HOME_PRODUCT::CSS --start-- */
 
 .styled-wrapper {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .styled-wrapper .button {
-    display: block;
-    position: relative;
-    width: 38px;
-    height: 38px;
-    margin: 0;
-    overflow: hidden;
-    outline: none;
-    background-color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
 }
 
 .styled-wrapper .button:before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    transition:
-        opacity 0.4s ease 80ms,
-        transform 0.5s ease 80ms;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transition: opacity 0.4s ease 80ms, transform 0.5s ease 80ms;
 }
 
-
 .styled-wrapper .button:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(1.3);
-    opacity: 0;
-    transition:
-        opacity 0.4s ease 80ms,
-        transform 0.5s ease 80ms;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: opacity 0.4s ease 80ms, transform 0.5s ease 80ms;
 }
 
 .styled-wrapper .button:hover:before,
 .styled-wrapper .button:focus:before {
-    opacity: 0;
-    transform: scale(0.7);
+  opacity: 0;
+  transform: scale(0.7);
 }
 
 .styled-wrapper .button:hover:after,
 .styled-wrapper .button:focus:after {
-    opacity: 1;
-    transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
 }
 
 .styled-wrapper .button-box {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: transform 0.4s ease;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.4s ease;
 }
 
 .styled-wrapper .button-elem {
-    display: block;
-    width: 30px;
-    height: 30px;
-    color: black;
-    font-size: 24px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 24px;
 }
 
 .styled-wrapper .button-elem1 {
-    margin: 0px 17px 0 22px;
+  margin: 0px 17px 0 22px;
 }
 
 .styled-wrapper .button-elem2 {
-    margin: 0px 6px 0 22px;
+  margin: 0px 6px 0 22px;
 }
 
 .hover-trigger:hover .button-box {
-    transform: translateX(70px);
+  transform: translateX(70px);
 }
-
 
 .sunlight-shadow {
-    filter: drop-shadow(-11px 11px 11px #0000009b);
+  filter: drop-shadow(-11px 11px 11px #0000009b);
 }
-
 /* HOME_PRODUCT::CSS --end-- */
 
-.testimonial_bg {
+/* ProductBrand start */
+.product-brand_bg {
+  width: 100%;
+  height: auto;
   background-color: var(--red);
 }
-
-.testimonial-card {
-  min-height: 300px;
-  height: 100%;
-  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  border-radius: 20px;
+.brand-box {
+  transition: all 0.3s ease;
 }
-
-.testimonial-card .pera {
-  flex-grow: 1;
-  padding: 30px;
-  word-break: break-word;
-  padding-bottom: 60px;
+.brand-card:hover .brand-box {
+  box-shadow: inset 0 0 20px 100px var(--golden);
 }
-
-.testi_bg_content {
-  background: #bd3c3cb2;
-  height: 130px;
-  /* border-radius: 0 0 10px 10px; */
-  position: relative;
-  margin-top: auto;
-  border-radius: 20px;
-
+.icon-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
-
-.testi_image {
-  height: 120px;
-  width: 120px;
+.brand-card:hover .icon-overlay {
+  opacity: 1;
+}
+.plus-icon {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 5px solid white;
-  background: no-repeat center/cover;
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer !important;
 }
+/* ProductBrand end */
 
-
-.testi_person {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  white-space: nowrap;
-  text-align: center;
+/* SubProductBrand start */
+.subproductbrand_bg {
+  width: 100%;
+  background-image: url("https://washstrip.vercel.app/static/media/form_bg.2de981cea8c0afdfeeb0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+/* SubProductBrand end */
