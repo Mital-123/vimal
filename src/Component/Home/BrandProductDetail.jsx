@@ -30,13 +30,8 @@ function BrandProductDetail() {
                                         <div className='pera my-3'>
                                             {item.productInfo}
                                         </div>
-                                        <div className='d-lg-flex d-md-flex'>
-                                            <div>
-                                                <ButtonCom btn="Inquire For Bulk" />
-                                            </div>
-                                            <div className='ms-0 ms-lg-3 ms-md-3'>
-                                                <ButtonCom btn="Packing Details" />
-                                            </div>
+                                        <div>
+                                            <ButtonCom btn="Inquire For Bulk" />
                                         </div>
                                     </div>
                                 </div>

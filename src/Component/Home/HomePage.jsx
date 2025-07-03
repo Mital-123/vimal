@@ -5,16 +5,18 @@ import HomeCarousel from './HomeCarousel'
 import HomeProduct from './HomeProduct'
 import ProductBrand from './ProductBrand'
 import Testimonial from './Testimonial'
+import Whychooseus from './Whychooseus'
 
 function HomePage() {
     return (
         <div>
             <HomeCarousel />
-            <HomeAbout/>
+            <HomeAbout />
+            <Whychooseus />
             <ProductBrand />
             <HomeProduct />
-            <Testimonial/>
-    <Certificates/>
+            <Testimonial />
+            <Certificates />
         </div>
     )
 }
