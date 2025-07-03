@@ -1,3 +1,87 @@
+/* HomeAbou start */
+.testi_bg {
+  width: 100%;
+  height: auto;
+  background-image: url("https://demo2.themelexus.com/kitchor/wp-content/uploads/2023/04/h8-bg-04.png");
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: right center;
+}
+
+.sec1_imgtesti {
+  width: 25%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 998px) {
+  .testi_bg {
+    background-size: 100% 100%;
+
+    background-position: center center;
+  }
+}
+
+.sectesti_img {
+  width: 65%;
+}
+
+.aboutslider {
+  width: 45%;
+}
+
+.aboutslide_sec {
+  margin-top: -200px;
+}
+
+.slider_imageaboutus {
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .sectesti_img {
+    width: 61%;
+  }
+
+  .aboutslide_sec {
+    margin-top: -150px;
+  }
+
+  .aboutslider {
+    width: 48%;
+  }
+
+  .slider_imageaboutus {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media (min-width: 355px) and (max-width: 520px) {
+  .sec1_imgtesti {
+    display: none !important;
+  }
+
+  .sectesti_img {
+    width: 82%;
+  }
+
+  .aboutslider {
+    width: 60%;
+  }
+
+  .slider_imageaboutus {
+    width: 100%;
+    height: 230px;
+  }
+
+  .aboutslide_sec {
+    margin-top: -130px;
+  }
+}
+
+/* HomeAbou end */
 /* HOME_PRODUCT::CSS --start-- */
 
 .styled-wrapper {

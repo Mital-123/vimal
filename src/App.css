@@ -385,7 +385,7 @@
 /* Header end */
 /* certificates start */
 .red-certificates-section {
-  /* background: linear-gradient(135deg, #ffffff 0%, #fff9f9 50%, #fce8e8 100%);  */
+
 background-image: url("https://washstrip.vercel.app/static/media/whychooseus_enhanced.1fc073da4348ef597adf.png");
 box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.466);
   position: relative;
@@ -476,7 +476,6 @@ box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.466);
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
-  cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
 }

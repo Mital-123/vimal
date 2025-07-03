@@ -51,7 +51,7 @@ function AboutusSec() {
                 {/* <div className="fs-3 text-center fw-medium p-4  text-white mt-3 count_text" style={{backgroundColor:"#740000"}}>+ <CountUp end={14} enableScrollSpy={true} separator="" /> Years Experience</div> */}
                 <div className='h-100 test-shinee shadow'>
                   <img
-                    src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/07/home_bottom_images_2-776x424-1.jpg?w=776&ssl=1"
+                    src="https://importexport-nine.vercel.app/assets/images/faq-right.png"
 
                     alt=""
                     className="img-fluid w-100 h-100 object-fit-cover mt-3 shadow"
