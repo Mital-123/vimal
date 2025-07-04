@@ -30,8 +30,8 @@ function HomeAbout() {
     };
 
     return (
-        <div className="my-5">
-            <div className="testi_bg">
+        <div className="my-4">
+            <div className="testi_bg overflow-hidden">
                 <div className="container">
                     <div className="row d-flex justify-content-center align-items-center align-content-center py-3">
                         <div className=" col-12 col-lg-6 p-3">
