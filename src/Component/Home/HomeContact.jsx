@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import videolink from "../../assets/Video/why_choose_us_video.mp4";
 import ButtonCom from '../ButtonCom';
 import { HiMiniArrowUpRight } from 'react-icons/hi2';
+import Tittles from '../Tittles';
 
-function Whychooseus() {
+function HomeContact() {
 
   const newsItems = [
     {
@@ -21,7 +22,8 @@ function Whychooseus() {
 
   return (
     <>
-      <div className="whychooseus_bg py-3 py-lg-5 mb-5 overflow-hidden" >
+      <div className="whychooseus_bg py-3 py-lg-5  overflow-hidden" >
+        
         <video
           className="whychoose_video_bg"
           autoPlay
@@ -36,8 +38,14 @@ function Whychooseus() {
           <section className="whychoose-section">
             <div className="whychoose-content">
               <div className="whychoose-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
-                <h1 style={{ color: '#cd4747' }}>Why Choose Us</h1>
-                <p className='text-white pera' data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+                
+                            <div className='brdstart'>
+                                <Tittles stitle={"Contact Us"} ltitle={"We Believe In Personal Touch"} />
+                            </div>
+           
+                <p className='text-white pera pt-2' data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -53,7 +61,7 @@ function Whychooseus() {
                     </div>
                     <div className="whychoose-item-content mt-2">
                       <h2 className='pera lh-lg' style={{ wordBreak: "break-all", color: "#919eac" }}>{item.title}</h2>
-                      <HiMiniArrowUpRight className="whychoose-arrow-icon text-white fs-3" />
+                      {/* <HiMiniArrowUpRight className="whychoose-arrow-icon text-white fs-3" /> */}
                     </div>
                   </div>
                 ))}
@@ -66,4 +74,4 @@ function Whychooseus() {
   );
 }
 
-export default Whychooseus
+export default HomeContact

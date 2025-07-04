@@ -116,7 +116,7 @@ function AboutusSec() {
                     </div>
                   </div>
                   <div className="col-3 p-0 m-0 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
-                    <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#740000" }}>
+                    <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#6a1a1f" }}>
                       <FaQuoteRight />
                     </div>
                   </div>
