@@ -499,7 +499,7 @@
 }
 /* Whychooseus end */
 /* counter start */
-.counter_bg{
+.counter_bg {
   background-image: url("https://www.tharayilpower.com/static/media/testi_bg.f45dc51be227a3befcbe.png");
 }
 .counter,
@@ -535,7 +535,7 @@
 }
 
 .counter:after {
-  background: linear-gradient(45deg, #360a0d 49%,#6a1a1f 50%);
+  background: linear-gradient(45deg, #360a0d 49%, #6a1a1f 50%);
   width: 100%;
   height: 100%;
   box-shadow: none;
@@ -548,14 +548,14 @@
 }
 
 .counter-icon {
-  background: linear-gradient(45deg,  #360a0d 49%,#6a1a1f 50%);
+  background: linear-gradient(45deg, #360a0d 49%, #6a1a1f 50%);
   align-content: center;
   width: 70px;
   height: 70px;
 }
 
 .counter1:after {
-  background: linear-gradient(45deg, #bb222c  49%,#dd3b46 50% );
+  background: linear-gradient(45deg, #bb222c 49%, #dd3b46 50%);
   width: 100%;
   height: 100%;
   box-shadow: none;
@@ -567,16 +567,14 @@
 }
 
 .counter-icon1 {
-  background: linear-gradient(45deg, #bb222c  49%,#dd3b46 50%);
+  background: linear-gradient(45deg, #bb222c 49%, #dd3b46 50%);
   align-content: center;
   width: 70px;
   height: 70px;
 }
 
 .counter2:after {
-  background: linear-gradient(45deg,
-      #68191f 49%,
-      #ac3139 50%);
+  background: linear-gradient(45deg, #68191f 49%, #ac3139 50%);
   width: 100%;
   height: 100%;
   box-shadow: none;
@@ -588,16 +586,14 @@
 }
 
 .counter-icon2 {
-  background: linear-gradient(45deg,
-        #68191f 49%,
-      #ac3139 50%);
+  background: linear-gradient(45deg, #68191f 49%, #ac3139 50%);
   align-content: center;
   width: 70px;
   height: 70px;
 }
 
 .counter3:after {
-  background: linear-gradient(45deg, #dd3b46  49%,#dd3b468f 50%);
+  background: linear-gradient(45deg, #dd3b46 49%, #dd3b468f 50%);
   width: 100%;
   height: 100%;
   box-shadow: none;
@@ -609,7 +605,7 @@
 }
 
 .counter-icon3 {
-  background: linear-gradient(45deg,  #dd3b46  49%,#dd3b468f 50%);
+  background: linear-gradient(45deg, #dd3b46 49%, #dd3b468f 50%);
   align-content: center;
   width: 70px;
   height: 70px;
@@ -621,5 +617,111 @@
   }
 }
 
-
 /* counter end */
+
+/* ProductHighlight start */
+.card-box {
+  position: relative;
+}
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+  min-height: 300px;
+  background-color: #e8e6e6b3;
+  background-image: linear-gradient(to right, var(--red) 0%, var(--red) 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-size 1s ease;
+}
+.card-box:hover .card-content {
+  background-size: 100% 100%;
+}
+.product-img {
+  width: 100px;
+  object-fit: cover;
+  transform: scale(1.4);
+  transition: transform 0.5s ease-in-out;
+}
+.card-box:hover .product-img {
+  transform: scale(1.6) !important;
+}
+.bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background-color: var(--red);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+.card-box:hover .bottom-line {
+  transform: scaleX(1);
+}
+.product-style-wrapper {
+  border-radius: 50%;
+}
+.product-style-wrapper .product_button {
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: var(--red);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.product-style-wrapper .product_button:before,
+.product-style-wrapper .product_button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transition: opacity 0.4s ease 80ms, transform 0.5s ease 80ms;
+}
+.product-style-wrapper .product_button:after {
+  transform: scale(1.3);
+  opacity: 0;
+}
+.product-style-wrapper .product_button:hover:before,
+.product-style-wrapper .product_button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+}
+.product-style-wrapper .product_button:hover:after,
+.product-style-wrapper .product_button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.product-style-wrapper .product-btn-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.4s ease;
+}
+.product-style-wrapper .product_btn-elem {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 24px;
+}
+.product-style-wrapper .product_btn-elem1 {
+  margin: 0px 17px 0 22px;
+}
+.product-style-wrapper .product_btn-elem2 {
+  margin: 0px 6px 0 22px;
+}
+.card-box:hover .product-btn-box {
+  transform: translateX(70px);
+}
+/* ProductHighlight end */
