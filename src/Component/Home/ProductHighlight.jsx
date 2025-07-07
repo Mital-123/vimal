@@ -43,13 +43,13 @@ function ProductHighlight() {
 
     return (
         <>
-            <div >
+            <div style={{ marginTop: "-150px" }}>
                 <div className='container'>
                     <Slider {...settings}>
                         {products.map((item, i) => (
                             <div key={i} className="h-100 px-4 py-4">
                                 <div className='card-box position-relative h-100'>
-                                    <div className='card-content border shadow' style={{ backgroundColor: "#e8e6e6b3", borderRadius: "20px" }}>
+                                    <div className='card-content  shadow' style={{ backgroundColor: "#e8e6e6b3", borderRadius: "20px" }}>
                                         <div className='text-center p-5'>
                                             <img
                                                 src={item.img}

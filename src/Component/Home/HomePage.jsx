@@ -8,6 +8,7 @@ import HomeProduct from './HomeProduct'
 import ProductBrand from './ProductBrand'
 import ProductHighlight from './ProductHighlight'
 import Testimonial from './Testimonial'
+import Whychooseus from './Whychooseus'
 
 
 function HomePage() {
@@ -19,6 +20,7 @@ function HomePage() {
             <ProductBrand />
             <HomeContact />
             <Counter />
+            <Whychooseus />
             {/* <HomeProduct /> */}
             <Testimonial />
             <Certificates />

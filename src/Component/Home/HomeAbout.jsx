@@ -15,7 +15,7 @@ function HomeAbout() {
             img: "https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/avatar_003.png",
             logo: require("../../assets/Images/logo_vimal_agro.png"),
         },
-     
+
     ];
 
     const settings = {
@@ -30,25 +30,25 @@ function HomeAbout() {
     };
 
     return (
-        <div className="my-4">
+        <div className="my-4 pt-4">
             <div className="testi_bg overflow-hidden">
                 <div className="container">
                     <div className="row d-flex justify-content-center align-items-center align-content-center py-3">
                         <div className=" col-12 col-lg-6 p-3">
                             <div className="h-100 d-flex">
                                 <div className="sec1_imgtesti h-100 ">
-                                 <div className='test-shinee'>
-                                       <img
-                                        src={
-                                            "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.49.00_PM.png?v=1728991163&width=360"
-                                        }
-                                        alt=""
-                                        className="img-fluid w-100 "
-                                        data-aos="fade-right"
-                                        data-aos-duration="1800"
-                                        data-aos-once="true"
-                                    />
-                                 </div>
+                                    <div className='test-shinee'>
+                                        <img
+                                            src={
+                                                "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.49.00_PM.png?v=1728991163&width=360"
+                                            }
+                                            alt=""
+                                            className="img-fluid w-100 "
+                                            data-aos="fade-right"
+                                            data-aos-duration="1800"
+                                            data-aos-once="true"
+                                        />
+                                    </div>
                                     <div className="my-3 h-100 test-shinee">
                                         <img
                                             src={
@@ -94,42 +94,42 @@ function HomeAbout() {
                         </div>
                         <div className="h-100 col-12 col-lg-6 p-5">
 
-            
+
                             <div className='brdstart'>
                                 <Tittles stitle={"About Us"} ltitle={"We Believe Ie Personal Touch"} />
                             </div>
 
-                        
-                                {testimonials.map((testimonial, index) => (
-                                    <div
-                                        className="px-0   py-3"
-                                        key={index}
-                                        data-aos="fade-left"
-                                        data-aos-duration="1500"
-                                        data-aos-once="true"
-                                    >
-                                        <div>
-                                            <FaQuoteLeft className="fs-1 text-secondary" />
+
+                            {testimonials.map((testimonial, index) => (
+                                <div
+                                    className="px-0   py-3"
+                                    key={index}
+                                    data-aos="fade-left"
+                                    data-aos-duration="1500"
+                                    data-aos-once="true"
+                                >
+                                    <div>
+                                        <FaQuoteLeft className="fs-1 text-secondary" />
+                                    </div>
+                                    <div className="pt-4" style={{ textAlign: "justify" }}>
+                                        {testimonial.quote}
+                                    </div>
+                                    <div className="d-flex align-items-center align-content-center">
+
+                                        <div className="">
+                                            <ButtonCom btn={"view More"} />
                                         </div>
-                                        <div className="pt-4" style={{ textAlign: "justify" }}>
-                                            {testimonial.quote}
-                                        </div>
-                                        <div className="d-flex align-items-center align-content-center">
-                                          
-                                            <div className="">
-                                            <ButtonCom btn={"view More"}/>
-                                            </div>
-                                            <div className=" p-1 rounded w-25 h-25 ms-auto  test-shinee" style={{filter: "drop-shadow(-11px 11px 11px #0000009b)"}}>
-                                                <img
-                                                    src={testimonial.logo}
-                                                    className="img-fluid"
-                                                    alt=""
-                                                />
-                                            </div>
+                                        <div className=" p-1 rounded w-25 h-25 ms-auto  test-shinee" style={{ filter: "drop-shadow(-11px 11px 11px #0000009b)" }}>
+                                            <img
+                                                src={testimonial.logo}
+                                                className="img-fluid"
+                                                alt=""
+                                            />
                                         </div>
                                     </div>
-                                ))}
-                      
+                                </div>
+                            ))}
+
                         </div>
                     </div>
                 </div>
