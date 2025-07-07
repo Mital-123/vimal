@@ -1,34 +1,82 @@
 import HOC from '../HOC';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import products from '../../Product';
+import Tittles from '../Tittles';
+import { useEffect, useState } from 'react';
+import ButtonCom from '../ButtonCom';
 
 function SpecificSubPro() {
-    const { id, subid } = useParams();
+    const { id, proid } = useParams();
+    const navigate = useNavigate()
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     const product = products.find(p => p.id === id);
-    const subproduct = product.subproducts.find(item => item.id === subid)
+    const subproduct = product.subproducts.find(item => item.id === proid)
 
     if (!subproduct) return <p>No subproducts found.</p>;
 
 
     return (
-
-        <div >
-            <div className='container'>
-                <div className='row align-items-center'>
-                    <div className='col-6 p-5'>
-                        <h4>{subproduct.subName}</h4>
-                        <h1>{subproduct.ProductName}</h1>
-                        <div className=''>{subproduct.description}</div>
-                    </div>
-                    <div className='col-6'>
-                        <div className='specificbg text-center'>
-                            <img src={subproduct.proimg} alt="" className='img-fluid' />
+        <>
+            <div>
+                <div className='container red-circle'>
+                    <section className={`red-certificates-section py-5 ${isVisible ? 'visible' : ''}`}>
+                        <div className="floating-shapes">
+                            <div className="shape shape-1"></div>
+                            <div className="shape shape-2"></div>
+                            <div className="shape shape-3"></div>
+                            <div className="shape shape-4"></div>
+                            <div className="shape shape-5"></div>
                         </div>
-                    </div>
+                        <div className='row align-items-center justify-content-center rounded-4 my-3 '>
+                            <div className='col-lg-4 col-md-6 col-sm-7 col-10'>
+                                <img src={subproduct.proimg} alt="" className='img-fluid' />
+                            </div>
+                            <div className='col-md-6 col-sm-12 lh-lg mt-md-0 mt-4' style={{ textAlign: "justify" }}>
+                                <div><Tittles ltitle={"Swad's"} /></div>
+                                <div><img src={require('../../assets/Images/arrow_down.png')} alt="" style={{ height: '100px' }} /></div>
+                                <Tittles stitle={subproduct.ProductName} />
+                                <div className='lh-base ps-2 mt-3 fw-lighter'>{subproduct.description}</div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </div>
+            <div className='container'>
+                <div className="row justify-content-evenly" >
+                    {product.subproducts.map((item, i) => (
+                        <div className='col-lg-3 m-1 col-md-5 col-sm-7 col-10 p-3 mt-5 text-center bg-white shadow-lg' style={{ backgroundImage: "linear-gradient(135deg, #f7971e, #ffd200)", borderRadius: "14% 86% 13% 87% / 88% 12% 88% 12% " }} key={i}>
+                            <div style={{ backgroundColor: "#eff4f8", borderRadius: "50%" }}>
+                                <img
+                                    src={item.proimg}
+                                    alt=""
+                                    className='img-fluid'
+                                    style={{
+                                        height: '187px', position: "relative", bottom: "80px"
+                                    }}
+                                />
+                                <div className='fw-semibold fs-6'
+                                    style={{
+                                        position: "relative", bottom: "60px"
+                                    }}>
+                                    {item.ProductName}
+                                </div>
+                                <div className='subbtn'
+                                    style={{
+                                        position: "relative", bottom: "50px"
+                                    }}
+                                    onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                    <ButtonCom btn={"View Product"} />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
     );
 }
 
