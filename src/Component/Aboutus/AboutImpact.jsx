@@ -49,7 +49,7 @@ function AboutImpact() {
                                     className="bg-image position-absolute"
                                     style={{
                                         backgroundImage: `url(${service.bgImage})`,
-                                        boxShadow: "inset 0px 0px 140px 1200px #740000ba",
+                                        boxShadow: "inset 0px 0px 140px 1200px rgba(116, 0, 0, 0.42)",
                                         top: "0", bottom: "0", right: "0", left: "0", backgroundSize: "cover",
                                         backgroundRepeat: "no-repeat", backgroundPosition: "center", transition: "all 0.5s ease-in-out",
                                         zIndex: "0"

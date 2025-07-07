@@ -8,6 +8,9 @@ import HOC from '../HOC';
 import MissionVision from './MissionVision';
 import videoBg from '../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4';
 import AboutImpact from './AboutImpact';
+import Testimonial from "../Home/Testimonial"
+import Certificates from '../../Certificates';
+
 
 function AboutusSec() {
   return (
@@ -48,16 +51,14 @@ function AboutusSec() {
                 {/* <div className="fs-3 text-center fw-medium p-4  text-white mt-3 count_text" style={{backgroundColor:"#740000"}}>+ <CountUp end={14} enableScrollSpy={true} separator="" /> Years Experience</div> */}
                 <div className='h-100 test-shinee shadow'>
                   <img
-                    src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/07/home_bottom_images_2-776x424-1.jpg?w=776&ssl=1"
+                    src="https://importexport-nine.vercel.app/assets/images/faq-right.png"
 
                     alt=""
                     className="img-fluid w-100 h-100 object-fit-cover mt-3 shadow"
                   />
                 </div>
               </div>
-
             </div>
-
 
             <div className="col-12 col-lg-6 pt-4  d-flex flex-column justify-content-between ps-0 ps-lg-5">
               <div className="h-100">
@@ -115,7 +116,7 @@ function AboutusSec() {
                     </div>
                   </div>
                   <div className="col-3 p-0 m-0 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
-                    <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#740000" }}>
+                    <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#6a1a1f" }}>
                       <FaQuoteRight />
                     </div>
                   </div>
@@ -131,6 +132,8 @@ function AboutusSec() {
       </div>
       <MissionVision />
       <AboutImpact />
+      <Testimonial/>
+      <Certificates/>
     </>
   );
 }

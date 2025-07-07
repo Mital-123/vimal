@@ -1,10 +1,11 @@
 import HOC from "../HOC"
-import SubProductPage from "./SubProductPage"
 import '../../assets/Css/Product.css'
+import HomeProduct from "../Home/HomeProduct"
 function Product() {
     return (
         <>
-            <SubProductPage />
+        <HomeProduct/>
+       
         </>
     )
 }
