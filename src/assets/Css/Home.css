@@ -723,7 +723,6 @@
   font-size: 1.6rem;
 }
 
-
 /* WhyChooseUs end */
 
 /* ProductHighlight start */
@@ -850,3 +849,20 @@
 }
 
 /* ProductHighlight end */
+
+/* HomeRecipe start */
+.recipe_tittle {
+  height: 150px !important;
+  transition: all 0.4s ease-in-out;
+}
+.recipe_image:hover .recipe_tittle {
+  background-color: var(--golden) !important;
+  border: 4px solid var(--red) !important;
+}
+.recipe-shadow-wrapper {
+  border: 4px solid var(--red);
+  border-radius: 20px;
+  background: white;
+  box-shadow: -10px -10px 0 #610303;
+}
+/* HomeRecipe end */

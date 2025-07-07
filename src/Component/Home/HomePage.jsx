@@ -5,6 +5,7 @@ import HomeAbout from './HomeAbout'
 import HomeCarousel from './HomeCarousel'
 import HomeContact from './HomeContact'
 import HomeProduct from './HomeProduct'
+import HomeRecipe from './HomeRecipe'
 import ProductBrand from './ProductBrand'
 import ProductHighlight from './ProductHighlight'
 import Testimonial from './Testimonial'
@@ -23,6 +24,7 @@ function HomePage() {
             <Whychooseus />
             {/* <HomeProduct /> */}
             <Testimonial />
+            <HomeRecipe />
             <Certificates />
         </div>
     )
