@@ -5,6 +5,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { FaCalendarAlt, FaGlobe } from "react-icons/fa";
 import { ImHappy2 } from "react-icons/im";
 import { IoIosPeople } from "react-icons/io";
+import Whychooseus from "./Whychooseus";
 
 function Counter() {
 //   useEffect(() => {
@@ -93,6 +94,7 @@ function Counter() {
             </div>
           </div>
         </div>
+           <Whychooseus />
       </div>
     </>
   );

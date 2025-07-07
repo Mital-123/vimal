@@ -41,7 +41,7 @@ function Whychooseus() {
   ];
 
   return (
-    <div className="why-choose-us container mb-3 mb-md-0">
+    <div className="why-choose-us container  mb-md-0">
 
 
       <div className="row align-items-center">

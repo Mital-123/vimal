@@ -4,12 +4,10 @@ import Counter from './Counter'
 import HomeAbout from './HomeAbout'
 import HomeCarousel from './HomeCarousel'
 import HomeContact from './HomeContact'
-import HomeProduct from './HomeProduct'
 import HomeRecipe from './HomeRecipe'
 import ProductBrand from './ProductBrand'
 import ProductHighlight from './ProductHighlight'
 import Testimonial from './Testimonial'
-import Whychooseus from './Whychooseus'
 
 
 function HomePage() {
@@ -21,7 +19,7 @@ function HomePage() {
             <ProductBrand />
             <HomeContact />
             <Counter />
-            <Whychooseus />
+      
             {/* <HomeProduct /> */}
             <Testimonial />
             <HomeRecipe />
