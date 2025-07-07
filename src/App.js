@@ -9,6 +9,7 @@ import SubProductBrand from './Component/Home/SubProductBrand';
 import SubProducts from './Component/Product/SubProductPage';
 import SpecificSubPro from './Component/Product/SpecificSubPro';
 import BrandProductDetail from './Component/Home/BrandProductDetail';
+import Blog from './Component/Blog/Blog';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/:id' element={<SubProductBrand />} />
           <Route path='/product/:id' element={<SubProducts />} />
           <Route path='/product/:id/:proid' element={<SpecificSubPro />} />
+          <Route path='/blog' element={<Blog />} />
           <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </BrowserRouter>

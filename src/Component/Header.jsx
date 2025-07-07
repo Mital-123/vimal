@@ -60,6 +60,9 @@ function Header() {
                                 <Link className={`nav-link text-center rounded-0 ${location.pathname === "/product" ? "active" : ""}`} to="/product" onClick={() => setIsOpen(false)} style={{ color: 'black', margin: "10px 0px 10px 0px" }}>Product</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className={`nav-link text-center rounded-0 ${location.pathname === "/blog" ? "active" : ""}`} to="/blog" onClick={() => setIsOpen(false)} style={{ color: 'black', margin: "10px 0px 10px 0px" }}>Blog</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className={`nav-link text-center rounded-0 ${location.pathname === "/contact" ? "active" : ""}`} to="/contact" onClick={() => setIsOpen(false)} style={{ color: 'black', margin: "10px 0px 10px 0px" }}>Contact</Link>
                             </li>
                         </ul>
@@ -78,6 +81,9 @@ function Header() {
                     </li>
                     <li className="nav-item">
                         <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/product" ? "active" : ""}`} to="/product" style={{ color: fontColor }}>Product</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/blog" ? "active" : ""}`} to="/blog" style={{ color: fontColor }}>Blog</Link>
                     </li>
                     <li className="nav-item">
                         <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/contact" ? "active" : ""}`} to="/contact" style={{ color: fontColor }}>Contact</Link>
