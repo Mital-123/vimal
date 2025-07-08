@@ -23,9 +23,9 @@ function Certificates() {
           {/* Header Section */}
           <div className="row justify-content-center mb-2">
             <div className="col-lg-8 text-center">
-              <div className="header-content">
+              <div className="header-content" >
                 <span className="badge-text">Our Certificates</span>
-                <h2 className="ftittle fw-bold m-0 p-0 text-capitalize">
+                <h2 className="ftittle fw-bold m-0 p-0 text-capitalize"  data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
                   Certified Excellence
                 </h2>
                 <p className="pera pt-2">
@@ -37,7 +37,10 @@ function Certificates() {
 
           {/* Certificates Grid */}
           <div className="certificates-grid">
-            <div className="certificate-item">
+   <div  data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-once="true">
+             <div className="certificate-item"  >
               <img
                 src="https://www.vimalagro.com/wp-content/themes/jan2018/images/brc_logo.jpg?v1"
                 alt="BRC Logo"
@@ -45,8 +48,13 @@ function Certificates() {
               />
               <div className="certificate-glow"></div>
             </div>
+   </div>
 
-            <div className="certificate-item">
+        <div data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos-delay="500"
+                data-aos-once="true">
+              <div className="certificate-item"   >
               <img
                 src="https://www.vimalagro.com/wp-content/themes/jan2018/images/halal_logo.jpg"
                 alt="Halal Logo"
@@ -54,8 +62,13 @@ function Certificates() {
               />
               <div className="certificate-glow"></div>
             </div>
+        </div>
 
-            <div className="certificate-item">
+          <div data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="800"
+                data-aos-once="true">
+              <div className="certificate-item" >
               <img
                 src="https://www.vimalagro.com/wp-content/themes/jan2018/images/iso_logo.jpg"
                 alt="ISO Logo"
@@ -63,6 +76,7 @@ function Certificates() {
               />
               <div className="certificate-glow"></div>
             </div>
+          </div>
           </div>
         </div>
       </section>

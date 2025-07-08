@@ -51,7 +51,7 @@ function ProductBrand() {
                         <Slider {...settings}>
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='px-3'>
-                                    <div className='brand-card position-relative'>
+                                    <div className='brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
                                         <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`/${item.brandId}`}>
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>
                                         </Link>

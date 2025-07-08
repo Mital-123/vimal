@@ -16,7 +16,7 @@ function MissionVision() {
                         <div className='col-12 col-lg-6 col-md-6 mb-5'>
                             <div className='text-white brdstart'>
                                 <Tittles stitle={"Our Value"} ltitle="Offering a plethora of products, Vimal Agro Products Pvt Ltd. has now into a highly reputed food giant." />
-                                <div className='pear text-white pt-2'> Ranging from packaged condiments, to ready to cook, to ready to eat, the company manufactures it all. With constant strives towards excellence, and the end goal of multifaceted growth, the company set up an ultra modern manufacturing unit at Bardoli, Gujarat.</div>
+                                <div className='pera text-white pt-2'> Ranging from packaged condiments, to ready to cook, to ready to eat, the company manufactures it all. With constant strives towards excellence, and the end goal of multifaceted growth, the company set up an ultra modern manufacturing unit at Bardoli, Gujarat.</div>
                             </div>
                         </div>
                         <div className='col-12 col-lg-6 col-md-6 mb-5 d-flex align-items-center justify-content-center'>

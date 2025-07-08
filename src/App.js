@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import HomePage from './Component/Home/HomePage';
 import ContactPage from './Component/ContactUs/ContactPage';
 import AboutusSec from './Component/Aboutus/AboutusSec';

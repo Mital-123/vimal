@@ -68,7 +68,7 @@ function Testimonial() {
       <div className='container overflow-hidden'>
         <div className='row py-5'>
           <div className='col-12 col-lg-4 p-4 ms-2 ms-lg-0 ms-md-0'>
-            <div className='h-100'>
+            <div className='h-100' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
               <div className='text-white display-3'>
                 <FaQuoteLeft />
               </div>

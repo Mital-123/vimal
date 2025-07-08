@@ -9,6 +9,33 @@ function Blog() {
         setIsVisible(true);
     }, []);
     return (
+       <>
+        <div style={{ position: 'relative', width: '100%', height: '60vh', overflow: 'hidden' }}>
+  <img
+    src="https://www.yellowsky.in/image/catalog/products/vimal_agro/02.jpg"
+    // src="https://www.yellowsky.in/image/catalog/products/vimal_agro/03.jpg"
+    alt=""
+    className="img-fluid w-100"
+    style={{
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block',
+    }}
+  />
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: '#240000c0', // overlay color
+      boxShadow: 'inset 0 0 100px 20px #000',
+      pointerEvents: 'none',
+    }}
+  ></div>
+</div>
+
         <div className="container-lg">
             {recipeSections.map((recipe, i) => (
                 <div className='red-circle' key={recipe.id}>
@@ -44,6 +71,7 @@ function Blog() {
                 </div>
             </div>
         </div>
+       </>
     )
 }
 

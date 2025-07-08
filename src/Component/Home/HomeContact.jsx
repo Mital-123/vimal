@@ -55,14 +55,16 @@ function HomeContact() {
               </div>
               <div className="whychoose-list">
                 {newsItems.map((item, index) => (
-                  <div key={index} className="whychoose-item" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay={item.delay}>
-                    <div>
+                  <div key={index} className="whychoose-item"  data-aos="fade-left" data-aos-duration="1500">
+                   <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay={item.delay}>
+                     <div>
                       <span className="text-white fw-bold fs-5 me-4" style={{ letterSpacing: "1px" }}>{item.category}</span>
                     </div>
                     <div className="whychoose-item-content mt-2">
                       <h2 className='pera lh-lg' style={{ wordBreak: "break-all", color: "#919eac" }}>{item.title}</h2>
                       {/* <HiMiniArrowUpRight className="whychoose-arrow-icon text-white fs-3" /> */}
                     </div>
+                   </div>
                   </div>
                 ))}
               </div>

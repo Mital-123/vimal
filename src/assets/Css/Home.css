@@ -553,7 +553,11 @@
 .counter_bg {
   background-image: url("https://www.tharayilpower.com/static/media/testi_bg.f45dc51be227a3befcbe.png");
    background-repeat: no-repeat;
-  height: auto;
+  /* height: 100%; */
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-position:30% center;
+  background-attachment: fixed;
 }
 
 .counter,

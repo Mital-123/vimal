@@ -59,7 +59,7 @@ function HomeRecipe() {
                     {recipes.map((recipe, index) => (
                         <div key={index} className='p-3'>
                             <div className='recipe_image h-100'>
-                                <div className='test-shinee position-relative recipe-shadow-wrapper'>
+                                <div className='test-shinee position-relative recipe-shadow-wrapper' data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                                     <img
                                         src={recipe.image}
                                         className='img-fluid object-fit-cover h-100 w-100'

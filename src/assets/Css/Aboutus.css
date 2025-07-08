@@ -20,13 +20,11 @@
   height: 200%;
   opacity: 0;
   transform: rotate(30deg);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 /* Hover state - trigger effect */
@@ -40,19 +38,51 @@
 .test-shinee:active:after {
   opacity: 0;
 }
+
 .count_text {
   font-size: 1.75rem;
 }
+
 @media only screen and (max-width: 1180px) {
   .count_text {
     font-size: 1rem;
   }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated-image {
+  display: block;
+  margin: 0 auto;
+  animation: upDown 3s ease-in-out infinite;
+}
+.whyno {
+  color: #9b9b9b;
+  font-size: 50px;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+.whyno:hover {
+  color: var(--red) !important;
 }
 /* aboutus end */
 /* missinvision start */
 .main_vi_mi {
   padding: 100px 10px 150px 10px;
 }
+
 .vision_mision_bg {
   width: 100%;
   height: auto;
@@ -64,11 +94,13 @@
   z-index: 1 !important;
   /* background-attachment: fixed; */
 }
+
 .mainViMiSec {
   background: transparent !important;
-  margin-top: -150px !important;
+  margin-top: -100px !important;
   z-index: 10 !important;
 }
+
 .play_Circle_icon {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 15px 5px currentColor;
@@ -76,50 +108,87 @@
   -webkit-animation: button-ripple 3s infinite;
   animation: button-ripple 3s infinite;
 }
+
 @keyframes button-ripple {
   0% {
     box-shadow: 0 0 5px 2px currentColor;
   }
+
   50% {
     box-shadow: 0 0 20px 10px currentColor;
   }
+
   100% {
     box-shadow: 0 0 5px 2px currentColor;
   }
 }
+
 .Vi_Mi-shadow {
   width: 50px;
   height: 50px;
   background-color: #7400005b;
   border-radius: 50%;
 }
+
 .vision_mission_icon {
   font-size: 70px;
   color: #740000;
   display: inline-block;
   transition: transform 0.5s ease-in-out;
 }
+
 .Vi-Mi_Tittle {
   transition: all 0.4s ease-in-out !important;
 }
+
 .Main_ViMi_box:hover .vision_mission_icon {
   transform: rotateY(360deg) !important;
 }
+
 .Main_ViMi_box:hover .Vi-Mi_Tittle {
   color: var(--green) !important;
 }
+
 /* missinvision end */
 
 /* AboutImpact start */
 .Service_card:hover .bg-image {
   transform: scale(1.3) !important;
 }
+
 .Service_icon {
   border-radius: 20px 0px 0px 0px;
 }
+
 .Service_icon_wrapper {
   position: absolute;
   right: 0;
   bottom: 0;
 }
+
 /* AboutImpact end */
+
+/* Faq start */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.addicon {
+  background-color: var(--red) !important;
+  border-radius: 10px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 10px 10px 0px 0px !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+  background-color: whitesmoke;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* Faq end */
