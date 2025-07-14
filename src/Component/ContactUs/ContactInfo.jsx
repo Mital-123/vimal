@@ -10,36 +10,7 @@ function ContactInfo() {
         <>
             <div className='contactinfo_bg'>
                 <div className='container'>
-                    <div className='main-contact row'>
-                        <div className='col-12 col-lg-4 col-md-6 p-3'>
-                            <div className='Contactus_main h-100 text-center p-5'>
-                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
-                                    <LuPhoneCall className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
-                                </div>
-                                <h3 className="Contact_tittle fw-bold text-medium my-3">Phone No.</h3>
-                                <div className='Contact_cont pera'>(+91) 12345 67890</div>
-                            </div>
-                        </div>
-                        <div className='col-12 col-lg-4 col-md-6 p-3'>
-                            <div className='Contactus_main_add h-100 text-center p-5 move-up_lg'>
-                                <div className="Contact-iconbg_add mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
-                                    <SlLocationPin className="Contact_icon_add darkcolor" style={{ fontSize: "45px" }} />
-                                </div>
-                                <h3 className="Contact_tittle_add fw-bold text-medium my-3">Address</h3>
-                                <div className='Contact_cont_add pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
-                            </div>
-                        </div>
-                        <div className='col-12 col-lg-4 col-md-6 p-3'>
-                            <div className='Contactus_main h-100 text-center p-5'>
-                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
-                                    <LiaMailBulkSolid className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
-                                </div>
-                                <h3 className="Contact_tittle fw-bold text-medium my-3">E-mail</h3>
-                                <div className='Contact_cont pera'>abcdef@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
-
+          
                     {/* Form */}
                     <div className='row mt-3 mt-lg-4 mb-0 mb-lg-3 p-3 gx-lg-5'>
                         <div className='col-12 col-lg-6 mb-4'>
@@ -111,6 +82,35 @@ function ContactInfo() {
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
+                            </div>
+                        </div>
+                    </div>
+          <div className='main-contact row mb-3'>
+                        <div className='col-12 col-lg-4 col-md-6 p-3'>
+                            <div className='Contactus_main h-100 text-center p-5'>
+                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
+                                    <LuPhoneCall className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
+                                </div>
+                                <h3 className="Contact_tittle fw-bold text-medium my-3">Phone No.</h3>
+                                <div className='Contact_cont pera'>(+91) 12345 67890</div>
+                            </div>
+                        </div>
+                        <div className='col-12 col-lg-4 col-md-6 p-3'>
+                            <div className='Contactus_main_add h-100 text-center p-5 move-up_lg'>
+                                <div className="Contact-iconbg_add mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
+                                    <SlLocationPin className="Contact_icon_add darkcolor" style={{ fontSize: "45px" }} />
+                                </div>
+                                <h3 className="Contact_tittle_add fw-bold text-medium my-3">Address</h3>
+                                <div className='Contact_cont_add pera'>172, RJD Textile Park, Hazira Road, Bhatha, Surat - 395009, Gujarat.</div>
+                            </div>
+                        </div>
+                        <div className='col-12 col-lg-4 col-md-6 p-3'>
+                            <div className='Contactus_main h-100 text-center p-5'>
+                                <div className="Contact-iconbg mx-auto d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '100px', height: '100px' }}>
+                                    <LiaMailBulkSolid className="Contact_icon darkcolor" style={{ fontSize: "45px" }} />
+                                </div>
+                                <h3 className="Contact_tittle fw-bold text-medium my-3">E-mail</h3>
+                                <div className='Contact_cont pera'>abcdef@gmail.com</div>
                             </div>
                         </div>
                     </div>

@@ -550,11 +550,10 @@
 /* HomeContact end */
 
 /* counter start */
-.counter_bg {
+/* .counter_bg {
   background-image: url("https://www.tharayilpower.com/static/media/testi_bg.f45dc51be227a3befcbe.png");
    background-repeat: no-repeat;
-  /* height: 100%; */
-  /* background-attachment: fixed; */
+  
   background-size: cover;
   background-position:30% center;
   background-attachment: fixed;
@@ -673,8 +672,51 @@
   .counter {
     margin-bottom: 40px;
   }
+} */
+.counterbck_image{
+  background-image: url("https://it-company-kappa.vercel.app/static/media/counterimage002.6426e3bd58aa4207a833.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  box-shadow: inset 0px 0px 0px 2000px #300000cb;
+}
+.counter{
+  border: 2px solid goldenrod;
+background-color: #6e00007c ;
+  position: relative;
+  z-index: 0;
+  transition:  all 0.3s ease-in-out;
+}
+.counter::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color:#ddbb41;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  height: 0%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
 }
 
+.counter:hover::after{
+  bottom: 0%;
+  height: 100%;
+}
+
+.countericon{
+  font-size: 80px;
+}
+.countnumber{
+  font-family: none !important;
+  font-size:30px;
+}
+.nextprevbtn{
+/* left: 20 !important; */
+margin: 20px !important;
+}
 /* counter end */
 /* WhyChooseUs start */
 .feature-card {

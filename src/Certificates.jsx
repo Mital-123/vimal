@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Tittles from './Component/Tittles';
 
 function Certificates() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,10 +25,8 @@ function Certificates() {
           <div className="row justify-content-center mb-2">
             <div className="col-lg-8 text-center">
               <div className="header-content" >
-                <span className="badge-text">Our Certificates</span>
-                <h2 className="ftittle fw-bold m-0 p-0 text-capitalize"  data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
-                  Certified Excellence
-                </h2>
+                   <div className='text-center mb-2'><Tittles stitle={"Our Certificates"} ltitle={"  Certified Excellence"} /></div>
+              
                 <p className="pera pt-2">
                   Our commitment to quality is backed by internationally recognized certifications
                 </p>

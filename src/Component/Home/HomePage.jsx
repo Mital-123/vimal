@@ -16,9 +16,9 @@ function HomePage() {
             <HomeCarousel />
             <ProductHighlight />
             <HomeAbout />
-            <ProductBrand />
-            <HomeContact />
             <Counter />
+            <ProductBrand />
+            {/* <HomeContact /> */}
       
             {/* <HomeProduct /> */}
             <Testimonial />

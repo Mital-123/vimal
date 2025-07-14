@@ -12,7 +12,7 @@
 
 .stittle {
   color: #bb0000;
-  text-shadow: 6px 7px 10px #3101019c;
+  text-shadow: 6px 7px 10px #31010170;
 }
 
 .pera {
@@ -39,7 +39,22 @@
       #ff2525);
   /* customize gradient */
 }
-
+/* slick slider start */
+.slick-prev:before,
+.slick-next:before {
+  z-index: 10 !important;
+  color: goldenrod !important;
+  font-size: 30px !important; /* Optional: make arrows bigger */
+}
+.slick-prev {
+  left: -30px !important;
+  z-index: 10;
+}
+.slick-next {
+  right: -35px;
+  z-index: 10;
+}
+/* slick slider end */
 /* Buttonhover start */
 .btncss {
   --border-color: linear-gradient(-45deg, #000330, #ff2525, #610303);
@@ -182,6 +197,19 @@
 
 /* image shine end */
 /* Footer start */
+.footer_color{
+background-color:#dbbb4c;
+}
+.footer_logo{
+  width: 200px;
+  border-right: 3px solid var(--red);
+}
+@media only screen and (max-width: 768px) {
+.footer_logo{
+  width: 150px;
+  border-right: 0px solid transparent;
+}
+}
 .footer_bg {
   width: 100%;
   background-image: url("https://ptecologicalservices.com/wp-content/uploads/elementor/thumbs/environment-clearance-page-qpcrufgwdgb7hj2slglnev6jvmgz1hpqmu9unvjz4w.png");
@@ -367,7 +395,7 @@
   transition: all 0.7s ease-in-out;
   padding: 8px 12px;
   text-transform: uppercase;
-  color: white;
+color: var(--red) !important;
 }
 
 .navbar-nav .nav-link:hover {
@@ -384,7 +412,7 @@
 }
 
 .navbar-nav .nav-link.active {
-  color: #007bff;
+
   background: #610303;
 }
 
@@ -394,7 +422,7 @@
   left: 0;
   bottom: -2px;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: linear-gradient(90deg, var(--golden), var(--golden));
   border-radius: 2px;
   animation: waveMove 1.5s infinite linear;
@@ -542,22 +570,10 @@
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  animation: pulse 2s infinite;
+ 
   box-shadow: 0 4px 15px rgba(255, 37, 37, 0.3);
 }
 
-
-@keyframes gradient-shift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
 
 /* Certificates Grid (flexbox version) */
 .certificates-grid {
@@ -588,9 +604,9 @@
 
 .certificate-item:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 1);
+
   border-color: rgba(255, 37, 37, 0.3);
-  box-shadow: 0 30px 40px rgba(255, 37, 37, 0.205);
+
 }
 
 .certificate-glow {
@@ -603,10 +619,6 @@
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
-}
-
-.certificate-item:hover .certificate-glow {
-  opacity: 1;
 }
 
 /* Stats Section */

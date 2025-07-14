@@ -8,12 +8,12 @@ function HomeRecipe() {
 
     const settings = {
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
         speed: 2000,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1800,
         pauseOnHover: false,
         responsive: [
@@ -57,7 +57,7 @@ function HomeRecipe() {
                 <div className='text-center mb-4'><Tittles ltitle={"Mouth-Watering Recipes"} /></div>
                 <Slider {...settings}>
                     {recipes.map((recipe, index) => (
-                        <div key={index} className='p-3'>
+                        <div key={index} className='p-3 ps-4 '>
                             <div className='recipe_image h-100'>
                                 <div className='test-shinee position-relative recipe-shadow-wrapper' data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                                     <img
