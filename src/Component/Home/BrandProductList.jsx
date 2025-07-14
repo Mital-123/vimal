@@ -65,24 +65,12 @@ export const BrandProduct = [
         ]
     },
 
-    // dried fruits
-    {
-        brandId: "dried fruits",
-        Name: "Dried Fruits",
-        image: require("../../assets/Images/dried_fruit_logo.png")
-    },
-
     // bvitas
     {
         brandId: "bvitas",
         Name: "Bvitas",
-        image: require("../../assets/Images/b_vitas_logo.png")
+        image: "https://bigpantry.in/wp-content/uploads/2024/06/logo-web-2048x1106.jpg"
     },
 
-    // sauras
-    {
-        brandId: "sauras",
-        Name: "Sauras",
-        image: require("../../assets/Images/sauras_logo_vmial.png")
-    }
+    
 ]

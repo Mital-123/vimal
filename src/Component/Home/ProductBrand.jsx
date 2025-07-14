@@ -47,27 +47,27 @@ function ProductBrand() {
                     <div className='brdstart'>
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
-                    <div className="mt-4 product-brand_bg shadow-lg rounded-4 p-5">
-                        <Slider {...settings}>
+                    <div className="row mt-4 product-brand_bg shadow-lg rounded-4 p-5">
+                        {/* <Slider {...settings}> */}
                             {BrandProduct.map((item, index) => (
-                                <div key={index} className='px-3'>
+                                <div key={index} className='col-3 px-3'>
                                     <div className='brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
                                         <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`/${item.brandId}`}>
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>
                                         </Link>
-                                        <div className='bg-white p-4 rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
-                                            <div style={{ width: "120px", height: "120px" }}>
+                                        <div className='bg-white p-2  rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
+                                            <div style={{ width: "150px", height: "150px" }}>
                                                 <img
                                                     src={item.image}
                                                     alt={item.alt}
-                                                    className="w-100 h-100 img-fluid object-fit-cover"
+                                                    className="w-100 h-100 img-fluid object-fit-contain"
                                                 />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             ))}
-                        </Slider>
+                        {/* </Slider> */}
                     </div>
                 </div>
             </div>
