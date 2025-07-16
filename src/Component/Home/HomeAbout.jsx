@@ -112,7 +112,7 @@ function HomeAbout() {
                                     <div>
                                         <FaQuoteLeft className="fs-1 text-secondary" />
                                     </div>
-                                    <div className="pt-4" style={{ textAlign: "justify" }}>
+                                    <div className="pt-4 pera" style={{ textAlign: "justify" }}>
                                         {testimonial.quote}
                                     </div>
                                         <div className="row  m-0  mt-3">

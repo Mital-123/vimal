@@ -123,9 +123,9 @@ function Counter() {
     
     <div className='counterbck_image overflow-hidden'>
 <div className='container py-5'>
-<div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center g-3' data-aos="zoom-in" data-aos-delay="50"
+<div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center g-3' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
     data-aos-duration="1800">
-      <div className='col' data-aos="zoom-in" data-aos-delay="50"
+      <div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
     data-aos-duration="1800">
 <div className='text-white counter fw-bold py-3 p-1'>
     <div className='countericon'><RiEmotionHappyLine /></div>
@@ -133,7 +133,7 @@ function Counter() {
     <p className='countnumber'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</p>
 </div>
 </div>
-<div className='col' data-aos="zoom-in" data-aos-delay="50"
+<div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
     data-aos-duration="1800">
 <div className='text-white counter fw-bold py-3 p-1'>
     <div className='countericon'><TiShoppingCart /></div>
@@ -141,7 +141,7 @@ function Counter() {
     <p className='countnumber'>    <CountUp end={160} enableScrollSpy={true} separator="" /> +</p>
 </div>
 </div>
-<div className='col ' data-aos="zoom-in" data-aos-delay="50"
+<div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
     data-aos-duration="1800">
 <div className='text-white  counter fw-bold py-3 p-1'>
     <div className='countericon'><TbWorld /></div>
@@ -149,7 +149,7 @@ function Counter() {
     <p className='countnumber'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</p>
 </div>
 </div>
-<div className='col ' data-aos="zoom-in" data-aos-delay="50"
+<div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
     data-aos-duration="1800">
 <div className='text-white counter fw-bold py-3 p-1'>
     <div className='countericon'><FaRegCalendarAlt/></div>

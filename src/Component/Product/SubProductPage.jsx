@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
 // import HOC from '../HOC';
 import Tittles from '../Tittles';
+import HOC from '../HOC';
 
 function SubProducts() {
     const navigate = useNavigate()
@@ -36,7 +37,10 @@ function SubProducts() {
     return (
 
         <div >
-            <div className="container-md">
+            <div>
+                mango pulp
+            </div>
+            <div className="container-md py-5">
                 <div className="row justify-content-center">
                     {/* Left Scrollable Section */}
                     <div className="col-lg-8 col-sm-6 overflow-auto order-1">
@@ -92,4 +96,4 @@ function SubProducts() {
     );
 }
 
-export default SubProducts;
+export default HOC(SubProducts);

@@ -554,28 +554,13 @@ color: var(--red) !important;
   background: none !important;
 }
 
-/* Header Styles */
 .header-content {
   position: relative;
   z-index: 2;
 }
 
-.badge-text {
-  display: inline-block;
-  background: linear-gradient(45deg, #ff2525, #b90000);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
- 
-  box-shadow: 0 4px 15px rgba(255, 37, 37, 0.3);
-}
 
 
-/* Certificates Grid (flexbox version) */
 .certificates-grid {
   display: flex;
   flex-wrap: wrap;

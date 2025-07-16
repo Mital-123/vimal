@@ -12,11 +12,13 @@ import SubProducts from './Component/Product/SubProductPage';
 import SpecificSubPro from './Component/Product/SpecificSubPro';
 import BrandProductDetail from './Component/Home/BrandProductDetail';
 import Blog from './Component/Blog/Blog';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/:brand' element={<SubProductBrand />} />
