@@ -42,12 +42,17 @@ export const BrandProduct = [
             }
         ]
     },
-
+       // bvitas
+    {
+        brandId: "bvitas",
+        Name: "Bvitas",
+        image: require("../../assets/Images/b_vitas_logo.png")
+    },  
     // big pantry
     {
         brandId: "big pantry",
         Name: "Big Pantry",
-        image: require("../../assets/Images/big_pantry_vimal.png"),
+        image: "https://bigpantry.in/wp-content/uploads/2024/06/logo-web-2048x1106.jpg",
         subBrand: [
             {
                 brandproductId: "big pantry(1)",
@@ -65,12 +70,7 @@ export const BrandProduct = [
         ]
     },
 
-    // bvitas
-    {
-        brandId: "bvitas",
-        Name: "Bvitas",
-        image: "https://bigpantry.in/wp-content/uploads/2024/06/logo-web-2048x1106.jpg"
-    },
 
-    
+
+ 
 ]

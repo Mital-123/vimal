@@ -9,7 +9,7 @@ function Testimonial() {
      dots: false,
   arrows: false,
   infinite: true,
-  speed: 2500,          // Controls the slide animation duration (in ms)
+  speed: 2500,        // Controls the slide animation duration (in ms)
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
@@ -66,7 +66,7 @@ function Testimonial() {
   return (
     <div className='testimonial_bg py-5'>
       <div className='container overflow-hidden'>
-        <div className='row py-5'>
+        <div className='row d-flex align-items-center'>
           <div className='col-12 col-lg-4 p-4 ms-2 ms-lg-0 ms-md-0'>
             <div className='h-100' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
               <div className='text-white display-3'>

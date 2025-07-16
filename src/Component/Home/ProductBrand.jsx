@@ -1,10 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Tittles from '../Tittles'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrandProduct } from './BrandProductList';
 import { Link } from 'react-router-dom';
+import ButtonCom from '../ButtonCom';
+export  const productlist = [
+  {
+    brandId: "Swad",
+    title: "Mango Pulp",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore",
+    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    alt: "Snacks",
+  },
+  {
+    brandId: "Seeds",
+    title: "Seeds",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore",
+    image: require("../../assets/Images/Screenshot 2025-07-15 134744.png"),
+    alt: "Biscuits",
+  },
+ 
+  {
+    brandId: "Juices",
+    title: "Juices",
+    description:
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore",
+        image: require("../../assets/Images/bvitasjuice.png"),
+
+    alt: "Confectionery",
+  },
+  {
+    brandId: "Pickles ",
+    title: "Pickles ",
+    description:
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore",
+        image: require("../../assets/Images/download.jpeg"),
+
+    alt: "Rusk",
+  },
+  {
+    brandId: "Masala",
+    title: "Masala ",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd_P9m1Z6-s4UAHqpZ4wipZPUaDeSHrdPXtI05m7Q1LY8ffJZWdQJXKY4ycomqCHwzVo&usqp=CAU",
+    alt: "Platina",
+  },
+
+];
 
 function ProductBrand() {
 
@@ -40,13 +87,53 @@ function ProductBrand() {
         ]
     };
 
+ const [activeBrand, setActiveBrand] = useState(productlist[0]);
+
+  const handleBrandClick = (brand) => {
+    setActiveBrand(brand);
+  };
+
+
+    
     return (
         <>
             <div className='my-5 p-1'>
                 <div className='container mb-5'>
-                    <div className='brdstart'>
+                    <div className=' text-center'>
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
+
+<div>
+ <ul className="nav justify-content-center nav-brand-tabs mb-3 flex-wrap">
+          {productlist  .map((item, index) => (
+            <li className="nav-item" key={index}>
+              <button
+                className={`nav-link shadow m-2 rounded-pill bg-warning text-dark ${activeBrand.brandId === item.brandId ? 'active' : ''}`}
+                onClick={() => handleBrandClick(item)}
+              >
+                {item.title}
+              </button>
+            </li>
+          ))}
+        </ul>
+</div>
+ <div className="row align-items-center  rounded-4 pt-4">
+          <div className="col-md-6 d-flex justify-content-center">
+            <img
+              src={activeBrand.image}
+              alt={activeBrand.alt}
+              className="img-fluid brand-main-img"
+            />
+          </div>
+          <div className="col-md-6 text-start">
+            <h2 className="fw-bold">{activeBrand.title}</h2>
+            <p>{activeBrand.description}</p>
+            <Link to={`/${activeBrand.brandId}`}>
+            <ButtonCom btn={"Explore Now"}/>
+            </Link>
+          </div>
+        </div>
+    
                     <div className="row mt-4 product-brand_bg shadow-lg rounded-4 p-5">
                         {/* <Slider {...settings}> */}
                             {BrandProduct.map((item, index) => (
