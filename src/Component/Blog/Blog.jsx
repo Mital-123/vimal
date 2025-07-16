@@ -41,7 +41,9 @@ function Blog() {
                 <div className='red-circle' key={recipe.id}>
                     <div className='row align-items-center justify-content-center py-5 lh-lg'>
                         <div className='col-md-6'>
-                            <img src={recipe.image} alt="" className='img-fluid' />
+                          <div className='test-shine'>
+                              <img src={recipe.image} alt="" className='img-fluid' />
+                          </div>
                         </div>
                         <div className='col-md-6'>
                             <section className={`red-certificates-section py-0 ${isVisible ? 'visible' : ''}`}>
