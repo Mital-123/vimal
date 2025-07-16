@@ -189,8 +189,7 @@ function Footer() {
         </div>
    </div>
    <hr/>
- <p className='pera text-center pb-1  m-0'>  © copyright 2025 Vimal Agro Products Pvt Ltd
-Powered by Yellow Sky</p>
+ <p className='pera text-center pb-1  m-0'>  © copyright 2025 Vimal Agro Products Pvt Ltd. </p>
       </div>
     </div>
   );
