@@ -37,9 +37,10 @@ function SubProducts() {
     return (
 
         <div >
-            <div>
-                mango pulp
-            </div>
+            {console.log(product.h1)}
+        <div className='pt-5'>
+                <h1 className='mt-5 text-center text-danger'>{product.h1}</h1>
+        </div>
             <div className="container-md py-5">
                 <div className="row justify-content-center">
                     {/* Left Scrollable Section */}
