@@ -47,11 +47,11 @@
   font-size: 30px !important; /* Optional: make arrows bigger */
 }
 .slick-prev {
-  left: -30px !important;
+  left: 0px !important;
   z-index: 10;
 }
 .slick-next {
-  right: -35px;
+  right: 0px;
   z-index: 10;
 }
 /* slick slider end */

@@ -12,13 +12,9 @@ function SpecificSubPro() {
     useEffect(() => {
         setIsVisible(true);
     }, []);
-
     const product = products.find(p => p.id === id);
     const subproduct = product.subproducts.find(item => item.id === proid)
-
     if (!subproduct) return <p>No subproducts found.</p>;
-
-
     return (
         <>
             <div>
@@ -46,7 +42,8 @@ function SpecificSubPro() {
                 </div>
             </div>
             <div className='container'>
-                <div className="row justify-content-evenly" >
+              <div className='text-center pb-3'>      <Tittles stitle="Related Product"/></div>
+                <div className="row justify-content-evenly py-4" >
                     {product.subproducts.map((item, i) => (
                         <div className='col-lg-3 m-1 col-md-5 col-sm-7 col-10 p-3 mt-5 text-center bg-white shadow-lg' style={{ backgroundImage: "linear-gradient(135deg, #f7971e, #ffd200)", borderRadius: "14% 86% 13% 87% / 88% 12% 88% 12% " }} key={i}>
                             <div style={{ backgroundColor: "#eff4f8", borderRadius: "50%" }}>

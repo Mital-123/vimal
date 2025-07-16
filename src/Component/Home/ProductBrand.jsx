@@ -104,7 +104,7 @@ function ProductBrand() {
                     </div>
 
 <div>
- <ul className="nav justify-content-center nav-brand-tabs mb-3 flex-wrap">
+ <ul className="nav justify-content-center nav-brand-tabs mt-3 flex-wrap">
           {productlist  .map((item, index) => (
             <li className="nav-item" key={index}>
               <button
@@ -117,27 +117,28 @@ function ProductBrand() {
           ))}
         </ul>
 </div>
- <div className="row align-items-center  rounded-4 pt-4">
-          <div className="col-md-6 d-flex justify-content-center">
-            <img
+ <div className="row align-items-center  rounded-4 pt-4 overflow-hidden">
+          <div className="col-md-6 d-flex justify-content-center " data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+        <div className='test-shine' >
+                <img
               src={activeBrand.image}
               alt={activeBrand.alt}
               className="img-fluid brand-main-img"
             />
+        </div>
           </div>
-          <div className="col-md-6 text-start">
+          <div className="col-md-6 text-start" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
             <h2 className="fw-bold">{activeBrand.title}</h2>
             <p>{activeBrand.description}</p>
-            <Link to={`/${activeBrand.brandId}`}>
+            {/* <Link to={`/${activeBrand.brandId}`}> */}
             <ButtonCom btn={"Explore Now"}/>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
-    
                     <div className="row mt-4 product-brand_bg shadow-lg rounded-4 p-5">
                         {/* <Slider {...settings}> */}
                             {BrandProduct.map((item, index) => (
-                                <div key={index} className='col-3 px-3'>
+                                <div key={index} className='col-lg-3 col-12 px-0 px-lg-3 mt-3 mt-lg-0'>
                                     <div className='brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
                                         <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`/${item.brandId}`}>
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>

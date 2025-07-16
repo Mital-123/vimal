@@ -121,7 +121,7 @@ function Counter() {
   return (
     <>
     
-    <div className='counterbck_image'>
+    <div className='counterbck_image overflow-hidden'>
 <div className='container py-5'>
 <div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center g-3' data-aos="zoom-in" data-aos-delay="50"
     data-aos-duration="1800">

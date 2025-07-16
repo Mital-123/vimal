@@ -12,6 +12,7 @@ import Testimonial from "../Home/Testimonial"
 import Certificates from '../../Certificates';
 import Faq from './Faq';
 import { Link } from 'react-router-dom';
+import Brouchers from './Brouchers';
 
 
 function AboutusSec() {
@@ -124,7 +125,7 @@ function AboutusSec() {
                                             data-aos-once="true"> <div className='whyno mt-0 mt-md-2 ' > 12365 95847</div></Link>
                                     </div>
 </div>
-                <div className="row  m-0  mt-3">
+                {/* <div className="row  m-0  mt-3">
 
                   <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
                     <div className="h-100 d-flex align-items-center py-4  pera fw-bold text-center">
@@ -136,7 +137,7 @@ function AboutusSec() {
                       <FaQuoteRight />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* <div>
                 <button class="btncss fw-bold mt-2">About Us</button>
@@ -149,8 +150,9 @@ function AboutusSec() {
 <div className='overflow-hidden'>
         <MissionVision />
       <AboutImpact />
-      <Testimonial/>
+      <Brouchers/>
       <Faq/>
+      <Testimonial/>
       <Certificates/>
 </div>
     </>

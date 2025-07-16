@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import Slider from 'react-slick';
 import Tittles from '../Tittles';
 import ButtonCom from '../ButtonCom';
+import { Link } from 'react-router-dom';
 
 function HomeAbout() {
 
@@ -30,7 +31,7 @@ function HomeAbout() {
     };
 
     return (
-        <div className="my-4 pt-4">
+        <div className="my-4 pt-4 overflow-hidden">
             <div className="testi_bg overflow-hidden">
                 <div className="container">
                     <div className="row d-flex justify-content-center align-items-center align-content-center py-3">
@@ -92,7 +93,7 @@ function HomeAbout() {
                                 </div>
                             </div>
                         </div>
-                        <div className="h-100 col-12 col-lg-6 p-5">
+                        <div className="h-100 col-12 col-lg-6 p-3 p-lg-5">
 
 
                             <div className='brdstart'>
@@ -114,10 +115,23 @@ function HomeAbout() {
                                     <div className="pt-4" style={{ textAlign: "justify" }}>
                                         {testimonial.quote}
                                     </div>
-                                    <div className="d-flex align-items-center align-content-center">
+                                        <div className="row  m-0  mt-3">
+                                          <div className="col-3 p-0 m-0 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
+                                                        <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#6a1a1f" }}>
+                                                          <FaQuoteRight />
+                                                        </div>
+                                                      </div>
+                                                      <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
+                                                        <div className="h-100 d-flex align-items-center py-4  pera fw-bold text-center">
+                                                          " At Vimal, health taste and quality have been paramount since forever.  "
+                                                        </div>
+                                                      </div>
+                                                
+                                                    </div>
+                                    <div className="d-flex align-items-center align-content-center mt-2">
 
                                         <div className="">
-                                            <ButtonCom btn={"view More"} />
+                                            <Link to={"/aboutus"} className='text-decoration-none'><ButtonCom btn={"view More"} /></Link>
                                         </div>
                                         <div className=" p-1 rounded w-25 h-25 ms-auto  test-shinee" style={{ filter: "drop-shadow(-11px 11px 11px #0000009b)" }}>
                                             <img

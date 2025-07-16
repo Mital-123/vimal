@@ -167,7 +167,17 @@
 }
 
 /* AboutImpact end */
-
+/* brouvhers start */
+.brouchers_bg {
+  background-image: url("https://jr-equipment.vercel.app/static/media/old-texture-newspapers-arrangement-high-angle_23-2149318878.1e22bb7c1e14221f2973.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0px 0px 0px 1500px #1a0000d0;
+  object-fit: fill;
+}
+/* brouvhers end */
 /* Faq start */
 .accordion-button:focus {
   box-shadow: none !important;

@@ -44,7 +44,7 @@ function ProductHighlight() {
     return (
         <>
             <div style={{ marginTop: "-120px" }}>
-                <div className='container'>
+                <div className='container overflow-hidden'>
                     <Slider {...settings}>
                         {products.map((item, i) => (
                             <div key={i} className="h-100 px-4 py-4"  data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
