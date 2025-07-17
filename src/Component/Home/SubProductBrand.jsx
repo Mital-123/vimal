@@ -24,7 +24,7 @@ function SubProductBrand() {
                                 <div className='row mt-2 g-4'>
                                     {item.subBrand && item.subBrand.map((sub, subIndex) => (
                                         <div key={subIndex} className='col-12 col-lg-3 col-md-6'>
-                                            <div className="h-100 subbrandpro_crd shadow text-center overflow-hidden position-relative bg-light">
+                                            <div className="h-100 subbrandpro_crd shadow p-2 text-center overflow-hidden position-relative bg-light">
                                                 <div className="subbrandpro_pic d-inline-block mb-5 z-1 position-relative">
                                                     <img
                                                         src={sub.subBrandImage}
