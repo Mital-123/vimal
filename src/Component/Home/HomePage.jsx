@@ -3,6 +3,7 @@ import HOC from '../HOC'
 import Counter from './Counter'
 import HomeAbout from './HomeAbout'
 import HomeCarousel from './HomeCarousel'
+import HomeCategory from './HomeCategory'
 import HomeContact from './HomeContact'
 import HomeRecipe from './HomeRecipe'
 import ProductBrand from './ProductBrand'
@@ -14,15 +15,16 @@ function HomePage() {
     return (
         <div>
             <HomeCarousel />
-            <ProductHighlight />
-            <HomeAbout />
-            <Counter />
+            {/* <ProductHighlight /> */}
             <ProductBrand />
+            <HomeAbout />
+            <HomeCategory/>
+            <Counter />
             {/* <HomeContact /> */}
       
             {/* <HomeProduct /> */}
-            <Testimonial />
             <HomeRecipe />
+            <Testimonial />
             <Certificates />
         </div>
     )

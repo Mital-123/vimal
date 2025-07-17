@@ -97,45 +97,14 @@ function ProductBrand() {
     
     return (
         <>
-            <div className='my-5 p-1'>
-                <div className='container mb-5'>
+            <div className='pt-5 p-1  category_bgimg'>
+                <div className='container mt-5'>
                     <div className=' text-center'>
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
 
-<div>
- <ul className="nav justify-content-center nav-brand-tabs mt-3 flex-wrap">
-          {productlist  .map((item, index) => (
-            <li className="nav-item" key={index}>
-              <button
-                className={`nav-link shadow m-2 rounded-pill bg-warning text-dark ${activeBrand.brandId === item.brandId ? 'active' : ''}`}
-                onClick={() => handleBrandClick(item)}
-              >
-                {item.title}
-              </button>
-            </li>
-          ))}
-        </ul>
-</div>
- <div className="row align-items-center  rounded-4 pt-4 overflow-hidden">
-          <div className="col-md-6 d-flex justify-content-center " data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
-        <div className='test-shine' >
-                <img
-              src={activeBrand.image}
-              alt={activeBrand.alt}
-              className="img-fluid brand-main-img"
-            />
-        </div>
-          </div>
-          <div className="col-md-6 text-start" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
-            <h2 className="fw-bold">{activeBrand.title}</h2>
-            <p>{activeBrand.description}</p>
-            {/* <Link to={`/${activeBrand.brandId}`}> */}
-            <ButtonCom btn={"Explore Now"}/>
-            {/* </Link> */}
-          </div>
-        </div>
-                    <div className="row mt-4 product-brand_bg shadow-lg rounded-4 p-5">
+
+   <div className="row mt-4 product-brand_bg shadow-lg rounded-4 p-5">
                         {/* <Slider {...settings}> */}
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='col-lg-3 col-12 px-0 px-lg-3 mt-3 mt-lg-0'>

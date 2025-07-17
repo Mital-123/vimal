@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
+import Tittles from './Tittles'
 
 function Footer() {
   return (
-    <div className="bg-light py-5 mt-5">
+    <div className=" py-5 mt-5" style={{backgroundColor:"#fffcf3"}}>
       <div className="container-xl">
         <div className="row">
 
@@ -24,7 +25,7 @@ function Footer() {
             <div className="row justify-content-center">
               {/* Helpful Links */}
               <div className="col-lg-5 col-sm-6 mb-4">
-                <h5 className="fs-6 text-danger fw-semibold">Helpful Links</h5>
+                <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Helpful Links"/></h5>
                 <div className='ms-2 pera'>
                   <NavLink to="/" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`}>
                     Home
@@ -46,7 +47,7 @@ function Footer() {
 
               {/* Legal */}
               <div className="col-md-4 col-sm-6 mb-4">
-                <h5 className="fs-6 text-danger fw-semibold">Legal</h5>
+                <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Legal"/></h5>
                 <div className='ms-2 pera'>
                   <Link to="/privacy-policy" className="d-block text-dark text-decoration-none my-3 activetab">Privacy Policy</Link>
                   <Link to="/terms-condition" className="d-block text-dark text-decoration-none my-3 activetab">Terms And Conditions</Link>
@@ -56,7 +57,7 @@ function Footer() {
           </div>
           {/* Contact */}
           <div className="col-lg-3 col-sm-4 mb-4 pera">
-            <h5 className="fs-6 text-danger fw-semibold">Get in Touch</h5>
+                            <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Get in Touch"/></h5>
             <p className="mb-2 text-dark my-3">
               <FaMapMarkerAlt className="me-2 text-danger" />
               Vimal Agro Products Pvt Ltd, Near GIDC, Ten Road, Bardoli, Gujarat: 394601, INDIA
@@ -68,7 +69,7 @@ function Footer() {
               <FaEnvelope className="me-2 text-danger" /> info@vimalagro.com
             </p>
             <p className="mb-0 text-dark my-3">
-              <FaEnvelope className="me-2 text-danger" />Domestic Sales: <span className='ms-4'>sales@vimalagro.com</span>
+              <FaEnvelope className="me-2 text-danger" />Domestic Sales : <span className='ms-2'>sales@vimalagro.com</span>
             </p>
           </div>
 

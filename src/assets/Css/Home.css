@@ -165,6 +165,36 @@
 /* HOME_PRODUCT::CSS --end-- */
 
 /* ProductBrand start */
+/* Whole section same height */
+.brand-section-container {
+  min-height: 450px;
+  transition: all 0.3s ease;
+}
+
+/* Consistent image styling */
+.brand-main-img {
+  max-height: 220px;
+  object-fit: contain;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Handle content height to avoid jumping */
+.category_bgimg{
+  background-image: url("https://www.tharayilpower.com/static/media/hero-bg-abstract.54e8f6f3d5f65e12c49b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.425);
+}
+.brand-main-img {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
 .product-brand_bg {
   width: 100%;
   height: auto;

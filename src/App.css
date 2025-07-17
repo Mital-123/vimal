@@ -39,21 +39,26 @@
       #ff2525);
   /* customize gradient */
 }
+
 /* slick slider start */
 .slick-prev:before,
 .slick-next:before {
   z-index: 10 !important;
   color: goldenrod !important;
-  font-size: 30px !important; /* Optional: make arrows bigger */
+  font-size: 30px !important;
+  /* Optional: make arrows bigger */
 }
+
 .slick-prev {
   left: 0px !important;
   z-index: 10;
 }
+
 .slick-next {
   right: 0px;
   z-index: 10;
 }
+
 /* slick slider end */
 /* Buttonhover start */
 .btncss {
@@ -197,19 +202,32 @@
 
 /* image shine end */
 /* Footer start */
-.footer_color{
-background-color:#dbbb4c;
+.activetab {
+  color: #212529;
+  /* default text-dark color */
 }
-.footer_logo{
+
+.activetab.active {
+  color: red;
+  font-weight: bold;
+}
+
+.footer_color {
+  background-color: #dbbb4c;
+}
+
+.footer_logo {
   width: 200px;
   border-right: 3px solid var(--red);
 }
+
 @media only screen and (max-width: 768px) {
-.footer_logo{
-  width: 150px;
-  border-right: 0px solid transparent;
+  .footer_logo {
+    width: 150px;
+    border-right: 0px solid transparent;
+  }
 }
-}
+
 .footer_bg {
   width: 100%;
   background-image: url("https://ptecologicalservices.com/wp-content/uploads/elementor/thumbs/environment-clearance-page-qpcrufgwdgb7hj2slglnev6jvmgz1hpqmu9unvjz4w.png");
@@ -395,11 +413,12 @@ background-color:#dbbb4c;
   transition: all 0.7s ease-in-out;
   padding: 8px 12px;
   text-transform: uppercase;
-color: var(--red) !important;
+  color: var(--red) !important;
 }
 
 .navbar-nav .nav-link:hover {
   background: #610303;
+  border-radius: 10px !important;
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
 
@@ -412,7 +431,7 @@ color: var(--red) !important;
 }
 
 .navbar-nav .nav-link.active {
-
+   border-radius: 10px !important;
   background: #610303;
 }
 
@@ -472,92 +491,7 @@ color: var(--red) !important;
 }
 
 /* Floating Background Shapes */
-.floating-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
 
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(45deg, rgba(255, 37, 37, 0.1), rgba(185, 0, 0, 0.1));
-  animation: float 6s ease-in-out infinite;
-}
-
-
-.shape-1 {
-  width: 100px;
-  height: 100px;
-  top: 10%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.shape-2 {
-  width: 150px;
-  height: 150px;
-  top: 20%;
-  right: 15%;
-  animation-delay: 1s;
-}
-
-.shape-3 {
-  width: 80px;
-  height: 80px;
-  bottom: 30%;
-  left: 20%;
-  animation-delay: 2s;
-}
-
-.shape-4 {
-  width: 120px;
-  height: 120px;
-  bottom: 20%;
-  right: 10%;
-  animation-delay: 3s;
-}
-
-.shape-5 {
-  width: 200px;
-  height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: 4s;
-}
-
-
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
-}
-
-/* SpecificSubPro-css */
-.red-circle .shape {
-  animation: none !important;
-}
-
-.red-circle .red-certificates-section {
-  background: none !important;
-}
-
-.header-content {
-  position: relative;
-  z-index: 2;
-}
 
 
 
@@ -589,108 +523,7 @@ color: var(--red) !important;
 
 .certificate-item:hover {
   transform: translateY(-10px);
-
+  box-shadow: 0 30px 40px rgba(255, 37, 37, 0.205);
   border-color: rgba(255, 37, 37, 0.3);
 
-}
-
-.certificate-glow {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 37, 37, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-/* Stats Section */
-.stats-container {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(255, 37, 37, 0.1);
-  border: 1px solid rgba(255, 37, 37, 0.1);
-}
-
-.stat-item {
-  text-align: center;
-  position: relative;
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(45deg, #ff2525, #b90000, #740000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  color: #64748b;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 4px 15px rgba(255, 37, 37, 0.3);
-  }
-
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 37, 37, 0.4);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5rem;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-
-  .stats-container {
-    gap: 30px;
-    padding: 30px 20px;
-  }
-
-  .floating-shapes .shape {
-    opacity: 0.5;
-  }
-}
-
-@media (max-width: 576px) {
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-  }
-
-  .certificate-item {
-    padding: 20px;
-  }
-
-  .stats-container {
-    padding: 20px;
-  }
 }
