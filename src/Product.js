@@ -33,6 +33,20 @@ const products = [
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
+            {
+                id: "Mango-Pulp-Slice-5",
+                ProductName: "Alphonso Mango pulp",
+                subName: "Swad’s Alphonso Mango Slice",
+                proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
+                description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
+            },
+            {
+                id: "Mango-Pulp-Slice-5",
+                ProductName: "Alphonso Mango pulp",
+                subName: "Swad’s Alphonso Mango Slice",
+                proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
+                description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
+            },
         ]
     },
     {
