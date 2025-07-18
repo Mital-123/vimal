@@ -110,21 +110,21 @@ function AboutusSec() {
                   Paying Utmost Importance To Customer Satisfaction And Keeping Prime Focus On Maintaining A Perfect Balance Between The Taste Of Tradition And Improving By Innovation, The Brand Has Established Itself As An Industry Leader In The World Of Processed Foods And Beverages.
                 </div>
 
-<div className="row">
-  <div className=' d-block d-md-flex mt-0 mt-md-1 '>
-                                        <div style={{ width: 80 }} data-aos="zoom-in"
-                                            data-aos-duration="1800"
-                                            data-aos-once="true" className='mt-3 mx-auto mx-md-0' >
-                                            <img src="https://architecture-beta-three.vercel.app/static/media/phone_874555.94ba0b90f65147e56ad1.png" alt="" className='img-fluid w-100 h-100 animated-image' />
+                <div className="row">
+                  <div className=' d-block d-md-flex mt-0 mt-md-1 '>
+                    <div style={{ width: 80 }} data-aos="zoom-in"
+                      data-aos-duration="1800"
+                      data-aos-once="true" className='mt-3 mx-auto mx-md-0' >
+                      <img src="https://architecture-beta-three.vercel.app/static/media/phone_874555.94ba0b90f65147e56ad1.png" alt="" className='img-fluid w-100 h-100 animated-image' />
 
-                                        </div>
+                    </div>
 
-                                        <Link to={"tel:9824331155"} className="text-decoration-none ps-3 text-center text-md-start" data-aos="fade-right"
-                                            data-aos-delay="400"
-                                            data-aos-duration="1800"
-                                            data-aos-once="true"> <div className='whyno mt-0 mt-md-2 ' > 12365 95847</div></Link>
-                                    </div>
-</div>
+                    <Link to={"tel:9824331155"} className="text-decoration-none ps-3 text-center text-md-start" data-aos="fade-right"
+                      data-aos-delay="400"
+                      data-aos-duration="1800"
+                      data-aos-once="true"> <div className='whyno mt-0 mt-md-2 ' > 12365 95847</div></Link>
+                  </div>
+                </div>
                 {/* <div className="row  m-0  mt-3">
 
                   <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
@@ -147,14 +147,14 @@ function AboutusSec() {
           </div>
         </div>
       </div>
-<div className='overflow-hidden'>
+      <div className='overflow-hidden'>
         <MissionVision />
-      <AboutImpact />
-      <Brouchers/>
-      <Faq/>
-      <Testimonial/>
-      <Certificates/>
-</div>
+        <AboutImpact />
+        <Brouchers />
+        <Faq />
+        <Testimonial />
+        <Certificates />
+      </div>
     </>
   );
 }

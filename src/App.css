@@ -12,7 +12,7 @@
 
 .stittle {
   color: #bb0000;
-  text-shadow: 6px 7px 10px #31010170;
+  text-shadow: 6px 7px 10px #31010150;
 }
 
 .pera {
@@ -201,74 +201,16 @@
 }
 
 /* image shine end */
+
+
 /* Footer start */
 .activetab {
   color: #212529;
-  /* default text-dark color */
 }
 
 .activetab.active {
   color: red;
   font-weight: bold;
-}
-
-.footer_color {
-  background-color: #dbbb4c;
-}
-
-.footer_logo {
-  width: 200px;
-  border-right: 3px solid var(--red);
-}
-
-@media only screen and (max-width: 768px) {
-  .footer_logo {
-    width: 150px;
-    border-right: 0px solid transparent;
-  }
-}
-
-.footer_bg {
-  width: 100%;
-  background-image: url("https://ptecologicalservices.com/wp-content/uploads/elementor/thumbs/environment-clearance-page-qpcrufgwdgb7hj2slglnev6jvmgz1hpqmu9unvjz4w.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 0px 1500px 1000px rgba(10, 0, 0, 0.849);
-  /* background: linear-gradient(160deg, #000000, var(--red), var(--red) 160%); */
-  position: relative;
-  border-top: 2px solid #fff1;
-  /* box-shadow: inset 0 5px 25px rgba(255, 255, 255, 0.03); */
-  overflow: hidden;
-  z-index: 1;
-}
-
-/* .footer_bg::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -20%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, grey 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: animateBg 30s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-} */
-.footer_bg .container {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes animateBg {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(40px, 40px);
-  }
 }
 
 .footericon {
@@ -287,6 +229,29 @@
   background-color: #1877f2 !important;
 }
 
+.single-cta .i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.cta-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+
 .facebookicon:hover {
   background-color: white !important;
   color: #1877f2 !important;
@@ -295,12 +260,7 @@
 }
 
 .instaicon {
-  background-image: linear-gradient(180deg,
-      #833ab4,
-      #c13584,
-      #e1306c,
-      #f77737,
-      #ffdc80);
+  background-image: linear-gradient(180deg, #833ab4, #c13584, #e1306c, #f77737, #ffdc80);
 }
 
 .instaicon:hover {
@@ -333,51 +293,6 @@
   box-shadow: 0 0 15px 5px #1da1f2 !important;
 }
 
-.linkhover {
-  color: white;
-}
-
-.linkhover:hover {
-  color: rgb(194, 194, 194);
-}
-
-.footerlinkicon {
-  transform: scale(1);
-  transition: all 0.3s ease-in-out;
-}
-
-.linkhover:hover .footerlinkicon {
-  transform: scale(1.1) !important;
-}
-
-.footer_tittle .footer-tittle_text {
-  position: relative;
-  display: inline-block;
-}
-
-.footer_tittle .footer-tittle_text::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--golden);
-  transition: width 0.3s ease-in-out;
-}
-
-.footer_tittle:hover .footer-tittle_text::after {
-  width: 100%;
-}
-
-.footer_contact {
-  transition: all 0.5s ease-in-out !important;
-}
-
-.footer_contact:hover {
-  color: var(--golden) !important;
-}
-
 /* Footer end */
 
 /* lending section start */
@@ -397,7 +312,7 @@
 
 @media (max-width: 768px) {
   .bg-video {
-    height: auto !important;
+    height: 40vh !important;
   }
 }
 
@@ -431,7 +346,7 @@
 }
 
 .navbar-nav .nav-link.active {
-   border-radius: 10px !important;
+  border-radius: 10px !important;
   background: #610303;
 }
 
@@ -482,12 +397,9 @@
 /* Header end */
 /* certificates start */
 .red-certificates-section {
-
   background-image: url("https://washstrip.vercel.app/static/media/whychooseus_enhanced.1fc073da4348ef597adf.png");
   box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.466);
-  position: relative;
-  overflow: hidden;
-  padding: 30px 0;
+  background-size: cover;
 }
 
 /* Floating Background Shapes */
@@ -525,5 +437,32 @@
   transform: translateY(-10px);
   box-shadow: 0 30px 40px rgba(255, 37, 37, 0.205);
   border-color: rgba(255, 37, 37, 0.3);
+
+}
+
+
+
+.landingimg {
+  height: 91vh;
+}
+
+.lendingshadow {
+  background-color: #24000061;
+}
+
+@media screen and (max-width:992px) {
+  .landingimg {
+    height: auto;
+  }
+
+  .lendingshadow {
+    background-color: #24000061 !important;
+  }
+}
+
+@media screen and (max-width:552px) {
+  .landingimg {
+    height: 21vh;
+  }
 
 }
