@@ -116,12 +116,12 @@ function HomeAbout() {
                                         {testimonial.quote}
                                     </div>
                                         <div className="row  m-0  mt-3">
-                                          <div className="col-3 p-0 m-0 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
+                                          <div className="col-3 p-0 m-0 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
                                                         <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#6a1a1f" }}>
                                                           <FaQuoteRight />
                                                         </div>
                                                       </div>
-                                                      <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
+                                                      <div className="col-9 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
                                                         <div className="h-100 d-flex align-items-center py-4 bg-white  pera fw-bold text-center">
                                                           " At Vimal, health taste and quality have been paramount since forever.  "
                                                         </div>
