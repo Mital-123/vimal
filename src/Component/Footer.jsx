@@ -86,9 +86,9 @@ function Footer() {
             <p className="mb-0 text-dark my-3">
               <FaEnvelope className="me-2 text-danger" /> info@vimalagro.com
             </p>
-            <div className="mb-2 text-dark my-3 d-flex align-items-center justify-content-center">
+            <div className="mb-2 text-dark my-3 d-flex align-items-center">
               <FaEnvelope className="me-2 text-danger" />
-              Domestic Sales : sales@vimalagro.com
+              <span className='ms-1'>Domestic Sales : sales@vimalagro.com</span>
             </div>
 
           </div>
