@@ -17,16 +17,10 @@ function SpecificSubPro() {
     if (!subproduct) return <p>No subproducts found.</p>;
     return (
         <>
-            <div>
+            <div className='red-certificates-section'>
                 <div className='container red-circle'>
-                    <section className={`red-certificates-section py-5 ${isVisible ? 'visible' : ''}`}>
-                        <div className="floating-shapes">
-                            <div className="shape shape-1"></div>
-                            <div className="shape shape-2"></div>
-                            <div className="shape shape-3"></div>
-                            <div className="shape shape-4"></div>
-                            <div className="shape shape-5"></div>
-                        </div>
+                    <section className={` py-5 ${isVisible ? 'visible' : ''}`}>
+                      
                         <div className='row align-items-center justify-content-center rounded-4 my-3 '>
                             <div className='col-lg-4 col-md-6 col-sm-7 col-10'>
                                 <div className='test-shine'>
