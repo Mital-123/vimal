@@ -127,7 +127,7 @@ function HomeCategory() {
             style={{ minHeight: '400px' }} // 🔥 Set fixed minHeight
           >
             <div
-              className="col-md-6 d-flex justify-content-center"
+              className="col-md-6 d-flex justify-content-center cat_image"
               data-aos="fade-right"
               data-aos-duration="1500"
               data-aos-once="true"

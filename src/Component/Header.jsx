@@ -32,7 +32,7 @@ function Header() {
         <div className='bg-white w-100 position-fixed top-0 z-3' >
             <nav className=" bg-white fstyle navbar navbar-expand-md  fixed-top shadow"
             >
-                <div className='container-fluid mx-2'>
+                <div className='container-fluid ms-5'>
                     <Link className="navbar-brand bg-light  me-0" to="/">
                         <img src={require('../assets/Images/logo_vimal_agro.png')} alt="Logo" height={75} width={75} className="img-fluid object-fit-cover " style={{ filter: "drop-shadow(-11px 11px 11px #0000002d)" }} />
                     </Link>

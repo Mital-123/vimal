@@ -20,6 +20,9 @@
 
     background-position: center center;
   }
+  .cat_image{
+  height: 250px;
+}
 }
 
 .sectesti_img {
@@ -468,6 +471,7 @@
 
 /* HomeContact start */
 .whychooseus_bg {
+  
   position: relative;
   width: 100%;
   height: auto;
@@ -795,10 +799,6 @@ margin: 20px !important;
 .feature-card.right:hover::before {
   height: 100%;
   bottom: 0;
-}
-
-.icon-box {
-  font-size: 1.6rem;
 }
 
 /* WhyChooseUs end */

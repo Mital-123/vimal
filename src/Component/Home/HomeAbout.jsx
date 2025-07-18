@@ -122,7 +122,7 @@ function HomeAbout() {
                                                         </div>
                                                       </div>
                                                       <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
-                                                        <div className="h-100 d-flex align-items-center py-4  pera fw-bold text-center">
+                                                        <div className="h-100 d-flex align-items-center py-4 bg-white  pera fw-bold text-center">
                                                           " At Vimal, health taste and quality have been paramount since forever.  "
                                                         </div>
                                                       </div>

@@ -12,7 +12,8 @@ import Testimonial from "../Home/Testimonial"
 import Certificates from '../../Certificates';
 import Faq from './Faq';
 import { Link } from 'react-router-dom';
-import Brouchers from './Brouchers';
+import Brouchers from './Brouchers';  
+import Whychooseus from '../Home/Whychooseus';
 
 
 function AboutusSec() {
@@ -25,7 +26,7 @@ function AboutusSec() {
       </div>
       {/* lending section end*/}
 
-      <div className="py-5 my-4 overflow-hidden">
+      <div className="py-5  overflow-hidden contactinfo_bg">
         <div className="container">
           <div className="row p-0 m-0 my-3">
 
@@ -148,6 +149,7 @@ function AboutusSec() {
         </div>
       </div>
       <div className='overflow-hidden'>
+          <Whychooseus/>
         <MissionVision />
         <AboutImpact />
         <Brouchers />
