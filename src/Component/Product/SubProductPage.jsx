@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import products from '../../Product';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -7,6 +7,10 @@ import ButtonCom from '../ButtonCom';
 import Tittles from '../Tittles';
 import HOC from '../HOC';
 import { useState } from 'react';
+import Gogreen from './Gogreen';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import Howtouse from './Howtouse';
+import ProductSlider from './Slider';
 
 function SubProducts() {
     const navigate = useNavigate();
@@ -43,9 +47,23 @@ function SubProducts() {
     };
 
     return (
-        <div>
-            <div className='pt-5'>
-                <h1 className='mt-5 text-center text-danger'>{product.h1}</h1>
+        <div className='mt-5'>
+            <div style={{ backgroundColor: "#fffcf3" }}>
+                <Gogreen />
+                <div className='m-auto text-center col-sm-8 col-11 pb-5'>
+                    <h2 className='fw-bold my-4'>Power of {product.h1}</h2>
+                    <p className='px-5'>{product.powerdesc}</p>
+                    <div className='mt-5'>
+                        <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
+                        <Link to="https://www.instagram.com/swadbrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaInstagram /></Link>
+                        <Link to="https://www.youtube.com/@SwadBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaYoutube /></Link>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='pt-3'>
+                <h1 className='mt-3 text-center text-danger'>{product.h1}</h1>
             </div>
 
             {/* ✅ Weight Tabs */}
@@ -81,7 +99,7 @@ function SubProducts() {
                     </div>
 
                     {/* Right Cards => Filtered by Weight */}
-                    <div className="col-lg-8 col-sm-6 fade-in" key={selectedWeight}>
+                    <div className="col-lg-8 col-sm-6 fade-in bg-white" key={selectedWeight}>
                         <div className="row justify-content-evenly align-items-center">
                             {filteredSubProducts.map((item, i) => (
                                 <div
@@ -117,6 +135,8 @@ function SubProducts() {
                     </div>
                 </div>
             </div>
+            <Howtouse />
+            <ProductSlider />
         </div>
     );
 }

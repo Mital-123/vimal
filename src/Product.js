@@ -92,6 +92,7 @@ const products = [
         img2: require('./assets/Images/mango_thumb.png'),
         img3: require('./assets/Images/mango_thumb.png'),
         img4: require('./assets/Images/mango_thumb.png'),
+        powerdesc: "Pickles are known to enhance the taste of any meal and are enjoyed by people all over the world. Swad offers various pickles from tangy to spicy allowing consumers to choose according to their taste.",
         subproducts: [
             {
                 id: "pickel-1",
