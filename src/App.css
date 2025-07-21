@@ -319,6 +319,16 @@
 /* lending section end */
 
 /* Header start */
+.dropdown_color{
+  color: var(--red);
+  transition: all 0.2 ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.dropdown_color:hover{
+  color: white;
+  background-color: var(--red);
+}
 .navbar-brand {
   position: absolute;
 }
