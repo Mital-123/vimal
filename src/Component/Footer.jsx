@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
 import Tittles from './Tittles'
 
@@ -16,28 +16,22 @@ function Footer() {
             </p>
             <div className="d-flex justify-content-center gap-3 mt-3">
               <Link
-                to={"/"}
+                to={"https://www.facebook.com/SWADBrand/"}
                 target="_blank"
                 className="footericon text-center p-2 mx-2  ms-0 d-flex text-decoration-none text-white facebookicon">
                 <FaFacebookF />
               </Link>
               <Link
-                to={"/"}
+                to={"https://www.instagram.com/swadbrand/"}
                 target="_blank"
                 className="footericon text-center p-2  mx-2 d-flex text-decoration-none text-white instaicon">
                 <FaInstagram />
               </Link>
               <Link
-                to={"/"}
-                target="_blank"
-                className="footericon text-center p-2  mx-2 d-flex text-decoration-none text-white twittericon">
-                <FaTwitter />
-              </Link>
-              <Link
-                to={"/"}
+                to={"https://www.youtube.com/@SwadBrand"}
                 target="_blank"
                 className="footericon text-center p-2  mx-2 d-flex text-decoration-none text-white linkicon">
-                <FaLinkedinIn />
+                <FaYoutube />
               </Link>
             </div>
           </div>
