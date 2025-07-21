@@ -4,12 +4,16 @@ const products = [
         h1: "Mango Pulp & Slice",
         mainLine: "have devised a solution to store mango pulps for longer in safe and healthy condition for all mango lovers.",
         img: require('./assets/Images/kesar_mango_pupl_thumb.png'),
+        img2: require('./assets/Images/kesar_mango_pupl_thumb.png'),
+        img3: require('./assets/Images/kesar_mango_pupl_thumb.png'),
+        img4: require('./assets/Images/kesar_mango_pupl_thumb.png'),
         subproducts: [
             {
                 id: "Mango-Pulp-Slice-1",
                 ProductName: "Kesar Mango Pulp",
                 subName: "Swad’s Kesar Mango Pulp",
                 proimg: require('./assets/Images/Mango Pulp & Slice/kesar_mango_pulp_thumb.png'),
+                weight: "500 gm",
                 description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
             },
             {
@@ -52,57 +56,133 @@ const products = [
     {
         id: 2,
         h1: "Ready to Eat Foods (Cans)",
-        img: require('./assets/Images/aloo_methi_thumb.png')
+        img: require('./assets/Images/aloo_methi_thumb.png'),
+        img2: require('./assets/Images/aloo_methi_thumb.png'),
+        img3: require('./assets/Images/aloo_methi_thumb.png'),
+        img4: require('./assets/Images/aloo_methi_thumb.png'),
     },
     {
         id: 3,
         h1: "Canned Vegetables (In Brine)",
-        img: require('./assets/Images/product_thumb_2.png')
+        img: require('./assets/Images/product_thumb_2.png'),
+        img2: require('./assets/Images/product_thumb_2.png'),
+        img3: require('./assets/Images/product_thumb_2.png'),
+        img4: require('./assets/Images/product_thumb_2.png'),
     },
     {
         id: 4,
         h1: "Ready to Eat (Pouch)",
-        img: require('./assets/Images/aloo_mutter_list.png')
+        img: require('./assets/Images/aloo_mutter_list.png'),
+        img2: require('./assets/Images/aloo_mutter_list.png'),
+        img3: require('./assets/Images/aloo_mutter_list.png'),
+        img4: require('./assets/Images/aloo_mutter_list.png'),
     },
     {
         id: 5,
         h1: "Curry Sauce (Simmer Sauce) (Pouch)",
-        img: require('./assets/Images/balti_curry_thumb.png')
+        img: require('./assets/Images/balti_curry_thumb.png'),
+        img2: require('./assets/Images/balti_curry_thumb.png'),
+        img3: require('./assets/Images/balti_curry_thumb.png'),
+        img4: require('./assets/Images/balti_curry_thumb.png'),
     },
     {
         id: 6,
         h1: "Pickles",
-        img: require('./assets/Images/mango_thumb.png')
+        img: require('./assets/Images/mango_thumb.png'),
+        img2: require('./assets/Images/mango_thumb.png'),
+        img3: require('./assets/Images/mango_thumb.png'),
+        img4: require('./assets/Images/mango_thumb.png'),
+        subproducts: [
+            {
+                id: "pickel-1",
+                ProductName: "Pickels 1",
+                subName: "Pickels",
+                proimg: require('./assets/Images/Pickles/garlic_thumb.png'),
+                weight: "500 gm",
+                description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
+            },
+            {
+                id: "pickel-2",
+                ProductName: "Pickels 2",
+                subName: "Pickels",
+                proimg: require('./assets/Images/Pickles/ginger_thumb.png'),
+                weight: "200 gm",
+                description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
+            },
+            {
+                id: "pickel-3",
+                ProductName: "Pickels 3",
+                subName: "Pickels",
+                proimg: require('./assets/Images/Pickles/green_chili_thumb.png'),
+                weight: "250 gm",
+                description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
+            },
+            {
+                id: "pickel-4",
+                ProductName: "Pickels 4",
+                subName: "Pickels",
+                proimg: require('./assets/Images/Pickles/gunda_pickle_thumb.png'),
+                weight: "200 gm",
+                description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
+            },
+            {
+                id: "pickel-5",
+                ProductName: "Pickels 5",
+                subName: "Pickels",
+                proimg: require('./assets/Images/Pickles/kerda_thumb.png'),
+                weight: "1 kg",
+                description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
+            },
+
+        ]
     },
     {
         id: 7,
         h1: "Sweet Pickle & Mango Chutney",
-        img: require('./assets/Images/mixed_fruit_jam_thumb.png')
+        img: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img2: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img3: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img4: require('./assets/Images/mixed_fruit_jam_thumb.png'),
     },
     {
         id: 8,
         h1: "Curry Paste",
-        img: require('./assets/Images/tandoori_thumb.png')
+        img: require('./assets/Images/tandoori_thumb.png'),
+        img2: require('./assets/Images/tandoori_thumb.png'),
+        img3: require('./assets/Images/tandoori_thumb.png'),
+        img4: require('./assets/Images/tandoori_thumb.png'),
     },
     {
         id: 9,
         h1: "Cooking Paste",
-        img: require('./assets/Images/garlic_paste_thumb.png')
+        img: require('./assets/Images/garlic_paste_thumb.png'),
+        img2: require('./assets/Images/garlic_paste_thumb.png'),
+        img3: require('./assets/Images/garlic_paste_thumb.png'),
+        img4: require('./assets/Images/garlic_paste_thumb.png'),
     },
     {
         id: 10,
         h1: "Exotic Sweet Chutney",
-        img: require('./assets/Images/brinjal_thumb.png')
+        img: require('./assets/Images/brinjal_thumb.png'),
+        img2: require('./assets/Images/brinjal_thumb.png'),
+        img3: require('./assets/Images/brinjal_thumb.png'),
+        img4: require('./assets/Images/brinjal_thumb.png'),
     },
     {
         id: 11,
         h1: "Papad (Pappadums)",
-        img: require('./assets/Images/black_pepper_papad_thumb.png')
+        img: require('./assets/Images/black_pepper_papad_thumb.png'),
+        img2: require('./assets/Images/black_pepper_papad_thumb.png'),
+        img3: require('./assets/Images/black_pepper_papad_thumb.png'),
+        img4: require('./assets/Images/black_pepper_papad_thumb.png'),
     },
     {
         id: 12,
         h1: "Fruit Jam",
-        img: require('./assets/Images/mixed_fruit_jam_thumb.png')
+        img: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img2: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img3: require('./assets/Images/mixed_fruit_jam_thumb.png'),
+        img4: require('./assets/Images/mixed_fruit_jam_thumb.png'),
     },
 ]
 
