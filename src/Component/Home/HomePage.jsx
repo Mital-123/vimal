@@ -21,7 +21,7 @@ function HomePage() {
             <HomeCategory/>
             <Counter />
             {/* <HomeContact /> */}
-      
+    
             {/* <HomeProduct /> */}
             <HomeRecipe />
             <Testimonial />

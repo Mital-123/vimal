@@ -5,7 +5,7 @@ import Tittles from './Tittles'
 
 function Footer() {
   return (
-    <div className="py-5" style={{ backgroundColor: "#fffcf3" }}>
+    <div className="py-5 pb-2" style={{ backgroundColor: "#fffcf3" }}>
       <div className="container-xl">
         <div className="row">
           <div className="col-lg-3 order-lg-0 order-4 mb-4 text-center">

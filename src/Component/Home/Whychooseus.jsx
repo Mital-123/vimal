@@ -1,21 +1,27 @@
 import React from "react";
 import Tittles from "../Tittles";
+import { GiFruitBowl, GiFruitTree } from "react-icons/gi";
+import { FaTruckMoving } from "react-icons/fa";
+import { BsAlarmFill } from "react-icons/bs";
+import { MdOutlineSettingsSuggest, MdSettingsSuggest } from "react-icons/md";
+import { RiLeafFill } from "react-icons/ri";
 
 function Whychooseus() {
   const featuresLeft = [
     {
       title: "Fresh Food",
-      icon: "🍋",
+      icon:<GiFruitTree />,
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
     {
       title: "Safe Food",
-      icon: "🚚",
+      icon: <FaTruckMoving/>,
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
     {
       title: "Quickest Delivery",
-      icon: "⏱️",
+      icon: <BsAlarmFill />,
+
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
   ];
@@ -23,23 +29,26 @@ function Whychooseus() {
   const featuresRight = [
     {
       title: "Healthy Food Habit",
-      icon: "🥗",
+      icon: <GiFruitBowl />,
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
     {
       title: "Environmental safety",
-      icon: "🌱",
+      icon: <RiLeafFill/>,
+
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
     {
       title: "Honesty & Integrity",
-      icon: "⚙️",
+      icon: <MdSettingsSuggest/>,
+
       text: "Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor",
     },
   ];
 
   return (
-    <div className="why-choose-us container mb-md-0">
+ <div className="contactinfo_bg pt-5">
+     <div className="why-choose-us contactinfo_bg container mb-md-0">
       <div className="row align-items-center">
         <div className="col-md-6 text-end pera text-muted d-none d-md-block">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -71,12 +80,12 @@ function Whychooseus() {
               
             >
               <div className="d-flex justify-content-between align-items-center mb-2">
-                <h5 className="fw-bold m-0" style={{ color: "var(--red)" }}>
+                <h5 className="fw-bold m-0 " style={{color:"#dfa700"}} >
                   {item.title}
                 </h5>
-                <div className="icon-box">{item.icon}</div>
+                <h2 className="icon-box " style={{ color: "var(--red)" }}>{item.icon}</h2>
               </div>
-              <p className="mb-0 text-muted small pera">{item.text}</p>
+              <p className="mb-0 text-muted small pera ">{item.text}</p>
             </div>
        </div>
           ))}
@@ -106,8 +115,9 @@ function Whychooseus() {
              
             >
                 <div className="d-flex justify-content-between align-items-center mb-2">
-                <div className="icon-box">{item.icon}</div>
-                <h5 className="fw-bold m-0" style={{ color: "var(--red)" }}>
+                             <h2 className="icon-box" style={{ color: "var(--red)" }}>{item.icon}</h2>
+
+                <h5 className="fw-bold m-0 " style={{color:"#dfa700"}} >
                   {item.title}
                 </h5>
               </div>
@@ -118,6 +128,7 @@ function Whychooseus() {
         </div>
       </div>
     </div>
+ </div>
   );
 }
 
