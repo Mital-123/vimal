@@ -16,6 +16,8 @@ function SubProducts() {
     const navigate = useNavigate();
     const { id } = useParams();
     const product = products.find(p => p.id == id);
+    let packagedetail = product.Pckdetail
+
     const [selectedWeight, setSelectedWeight] = useState(null);
 
     if (!product || !product.subproducts) return <p>No subproducts found.</p>;
@@ -46,14 +48,34 @@ function SubProducts() {
         slidesToScroll: 1,
     };
 
+
     return (
+
+
         <div className='mt-5'>
+            <div className='pt-3'>
+                <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
+            </div>
             <div style={{ backgroundColor: "#fffcf3" }}>
-                <Gogreen />
-                <div className='m-auto text-center col-sm-8 col-11 pb-5'>
+                <div className='pt-2 pt-lg-4'>
+                    <Gogreen />
+                </div>
+                <div className='m-auto text-center col-sm-8 col-11 py-2 py-lg-4'>
                     <h2 className='fw-bold my-4'>Power of {product.h1}</h2>
                     <p className='px-5'>{product.powerdesc}</p>
-                    <div className='mt-5'>
+
+                    <div className='w-75 mx-auto container'>
+                        {
+                            packagedetail.map((x, i) => {
+                                return (
+                                    <>
+                                        <span className='fw-bold'> {x}{i < packagedetail.length - 1 && ' | '}</span>
+                                    </>
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='mt-3'>
                         <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
                         <Link to="https://www.instagram.com/swadbrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaInstagram /></Link>
                         <Link to="https://www.youtube.com/@SwadBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaYoutube /></Link>
@@ -66,7 +88,7 @@ function SubProducts() {
                 <h1 className='mt-3 text-center text-danger'>{product.h1}</h1>
             </div>
 
-            {/* ✅ Weight Tabs */}
+
             {uniqueWeights.length > 0 && (
                 <div className='text-center'>
                     <button className='border-0 bg-transparent mx-2' onClick={() => setSelectedWeight(null)}>
@@ -80,10 +102,37 @@ function SubProducts() {
                 </div>
             )}
 
-            {/* ✅ Slider (Only filtered subproducts shown) */}
-            <div className="container-md py-5">
-                <div className="row">
-                    <div className="col-lg-4 col-sm-6 col-10 mt-4 mb-5" style={{ position: 'sticky', top: '100px' }}>
+
+            <div className="container py-5">
+                <div className="row g-3 justify-content-center">
+                    {
+                        filteredSubProducts.map((item, index) => {
+                            return (
+                                <>
+
+                                    <div className="col-6 col-md-4 col-lg-3 fade-in mt-3">
+
+                                        <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4 " style={{ backgroundColor: "#fffcf3", cursor: "pointer" }} onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                            <div>
+                                                <img
+                                                    src={item.proimg}
+                                                    alt=""
+                                                    className='img-fluid'
+                                                    style={{ height: '200px' }}
+                                                />
+                                                <div className='fw-semibold subp pt-2 p-1 fs-6 ' >
+                                                    {item.ProductName}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </>
+                            )
+
+                        })
+                    }
+
+                    {/* <div className="col-lg-4 col-sm-6 col-10 mt-4 mb-5" style={{ position: 'sticky', top: '100px' }}>
                         <div className="px-4 pb-4" style={{ backgroundColor: "#eff4f8" }}>
                             <Slider {...settings}>
                                 {product.subproducts.map((item, i) => (
@@ -96,10 +145,10 @@ function SubProducts() {
                                 ))}
                             </Slider>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Right Cards => Filtered by Weight */}
-                    <div className="col-lg-8 col-sm-6 fade-in bg-white" key={selectedWeight}>
+                    {/* <div className="col-lg-8 col-sm-6 fade-in bg-white" key={selectedWeight}>
                         <div className="row justify-content-evenly align-items-center">
                             {filteredSubProducts.map((item, i) => (
                                 <div
@@ -132,7 +181,7 @@ function SubProducts() {
                                 <p className='text-center text-danger'>No products found for selected weight</p>
                             )}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <Howtouse />

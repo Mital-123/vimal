@@ -4,6 +4,7 @@ import products from '../../Product';
 import { useNavigate } from 'react-router-dom';
 import Certificates from '../../Certificates';
 function HomeProduct() {
+    let product=products
     const navigate = useNavigate();
 
     return (
@@ -12,9 +13,9 @@ function HomeProduct() {
                 <div className='row justify-content-center'>
                     {products.map((item, i) => {
                         return (
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-10 ps-sm-2 ps-0 pe-sm-2 pe-3" key={i}>
-                                <div data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-                                    <div className='w-100 m-2 p-3 hover-trigger shadow-sm' onClick={() => navigate(`/product/${item.id}`)} style={{ backgroundColor: "rgb(255, 252, 243)", borderRadius: '8px', cursor: "pointer" }}>
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-10 ps-sm-2 ps-0 pe-sm-2 pe-3 mt-4" key={i}>
+                                <div data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true" className='h-100 m-2'>
+                                    <div className='w-100 p-2 hover-trigger shadow-sm h-100' onClick={() => navigate(`/product/${item.id}`)} style={{ backgroundColor: "rgb(255, 252, 243)", borderRadius: '8px', cursor: "pointer" }}>
                                         <div className='fw-bold text-dark mt-2 mb-3'>{item.h1}</div>
                                         <div className='d-flex justify-content-between align-items-end mb-3'>
                                             <div className="styled-wrapper">
@@ -29,12 +30,32 @@ function HomeProduct() {
                                                     </div>
                                                 </button>
                                             </div>
-                                            <div>
-                                                <img src={item.img} alt="" className='object-fit-contain' height={90} />
-                                                <img src={item.img2} alt="" className='object-fit-contain' height={90} />
-                                                <img src={item.img3} alt="" className='object-fit-contain' height={90} />
-                                                <img src={item.img4} alt="" className='object-fit-contain' height={90} />
-                                            </div>
+                                
+                                        <div className="d-flex flex-wrap gap-2">
+                                            {
+                                                item.subproducts?.slice(0, 4).map((sub, j) => (
+                                                    <img
+                                                        key={j}
+                                                        src={sub.proimg}
+                                                        alt={sub.ProductName}
+                                                        className='object-fit-contain'
+                                                        height={70}
+                                                        style={{ maxWidth: '70px' }}
+                                                    />
+                                                ))
+                                            }
+                                            {
+                                                !item.subproducts && (
+                                                    <img
+                                                        src={item.img}
+                                                        alt={item.h1}
+                                                        className='object-fit-contain'
+                                                        height={70}
+                                                        style={{ maxWidth: '70px' }}
+                                                    />
+                                                )
+                                            }
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
