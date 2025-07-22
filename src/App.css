@@ -329,6 +329,9 @@
   color: white;
   background-color: var(--red);
 }
+
+
+
 .navbar-brand {
   position: absolute;
 }
@@ -351,6 +354,10 @@
   color: white !important;
 }
 
+.nav-item:hover .producthover{
+  color: white !important;
+  background-color: var(--red) !important;
+}
 .nav-item .nav-link.active {
   color: white !important;
 }
