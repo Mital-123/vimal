@@ -185,7 +185,7 @@ function SubProducts() {
                 </div>
             </div>
             <Howtouse />
-            {/* <ProductSlider /> */}
+            <ProductSlider />
         </div>
     );
 }

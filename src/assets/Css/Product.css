@@ -43,3 +43,76 @@
         opacity: 1;
     }
 }
+
+
+
+
+.image1 {
+    height: 275px;
+    width: 275px;
+    border: 9px solid white;
+}
+
+.image2 {
+    height: 175px;
+    width: 175px;
+    margin-top: -40px;
+    border: 5px solid white;
+}
+
+.productposition {
+    position: relative;
+    right: 100px;
+}
+
+.productbgred {
+    background-image: url(../Images/redcircle.png);
+    background-size: 250px 250px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    width: 375px;
+    /* heigh; */
+    background-position: 69% 70%;
+}
+
+@media screen and (max-width:992px) {
+    .productposition {
+        position: relative;
+        right: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width: 592px) {
+    .productbgred {
+        background-size: 200px 200px;
+        width: 350px;
+        background-position: 69% 70%;
+    }
+
+    .image1 {
+        height: 225px;
+        width: 225px;
+        border: 7px solid white;
+    }
+
+    .image2 {
+        height: 125px;
+        width: 125px;
+        margin-top: -30px;
+        border: 4px solid white;
+    }
+}
+
+@media screen and (max-width:392px) {
+    .productbgred {
+        background-size: 200px 200px;
+        border-radius: 50%;
+        width: 308px;
+        background-position: 69% 70%;
+    }
+
+
+}
