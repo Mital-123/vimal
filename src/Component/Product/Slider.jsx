@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
+import Tittles from '../Tittles';
 // import Tittles from '../Tittles';
 
 function ProductSlider() {
@@ -45,6 +46,9 @@ function ProductSlider() {
         <div className='category_bgimg'>
             <div className="slider_bgcolor ">
                 <div className='container-lg py-5'>
+                    <div className='text-end text-lg-center'>
+                        <Tittles stitle="Our Recipe's" ltitle="Vimal Agro's latest Recipes"/>
+                    </div>
                     <div className="row align-items-center justify-content-md-center justify-content-center">
                         {/* Image Slider */}
                         <div className="col-md-5 col-10 m-2 m-lg-4 ps-5 ms-auto ms-md-0 py-3  rounded-start-5" style={{ backgroundColor: "#fffcf3" }} >
