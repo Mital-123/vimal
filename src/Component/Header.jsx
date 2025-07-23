@@ -113,7 +113,7 @@ let product=products
                                             <ul className="list-unstyled mt-2 bg-white shadow rounded py-2 px-1 w-100">
                                                {products.map((p) => (
                                             <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item pera text-break text-wrap" onClick={closeAll}>
+                                                <Link to={`/product/${p.id}`} className="dropdown-item  text-break text-wrap" style={{fontSize:"12px"}} onClick={closeAll}>
                                                     {p.h1}
                                                 </Link>
                                             </li>
@@ -150,10 +150,10 @@ let product=products
                         
                                 {showDropdown && (
                                     
-                                    <ul className="position-absolute bg-white shadow rounded  p-1" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
+                                    <ul className="position-absolute bg-white shadow rounded  p-2 " style={{ top: "100%", left: "-50%", zIndex: 5 }}>
                                           {products.map((p) => (
                                             <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 pe-1 '>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item pera text-wrap" onClick={closeAll}>
+                                                <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
                                                     {p.h1}
                                                 </Link>
                                             </li>

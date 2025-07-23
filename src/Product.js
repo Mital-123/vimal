@@ -55,7 +55,7 @@ const products = [
         ]
     },
     {
-        id: 2,
+        id: "Pickles",
         h1: "Pickles",
         img: require('./assets/Images/mango_thumb.png'),
         img2: require('./assets/Images/mango_thumb.png'),
@@ -108,7 +108,7 @@ const products = [
         ]
     },
     {
-        id: 3,
+        id: "Canned Vegetables (In Brine)",
         h1: "Canned Vegetables (In Brine)",
         img: require('./assets/Images/product_thumb_2.png'),
         img2: require('./assets/Images/product_thumb_2.png'),
@@ -116,7 +116,7 @@ const products = [
         img4: require('./assets/Images/product_thumb_2.png'),
     },
     {
-        id: 4,
+        id:"Ready to Eat (Pouch)",
         h1: "Ready to Eat (Pouch)",
         img: require('./assets/Images/aloo_mutter_list.png'),
         img2: require('./assets/Images/aloo_mutter_list.png'),
@@ -124,7 +124,7 @@ const products = [
         img4: require('./assets/Images/aloo_mutter_list.png'),
     },
     {
-        id: 5,
+        id: "Curry Sauce (Simmer Sauce) (Pouch)",
         h1: "Curry Sauce (Simmer Sauce) (Pouch)",
         img: require('./assets/Images/balti_curry_thumb.png'),
         img2: require('./assets/Images/balti_curry_thumb.png'),
@@ -132,7 +132,7 @@ const products = [
         img4: require('./assets/Images/balti_curry_thumb.png'),
     },
     {
-        id: 6,
+        id: "Ready to Eat Foods (Cans)",
         h1: "Ready to Eat Foods (Cans)",
         img: require('./assets/Images/aloo_methi_thumb.png'),
         img2: require('./assets/Images/aloo_methi_thumb.png'),
@@ -141,7 +141,7 @@ const products = [
     },
 
     {
-        id: 7,
+        id:"Sweet Pickle & Mango Chutney",
         h1: "Sweet Pickle & Mango Chutney",
         img: require('./assets/Images/mixed_fruit_jam_thumb.png'),
         img2: require('./assets/Images/mixed_fruit_jam_thumb.png'),
@@ -149,7 +149,7 @@ const products = [
         img4: require('./assets/Images/mixed_fruit_jam_thumb.png'),
     },
     {
-        id: 8,
+        id:"Curry Paste",
         h1: "Curry Paste",
         img: require('./assets/Images/tandoori_thumb.png'),
         img2: require('./assets/Images/tandoori_thumb.png'),
@@ -157,7 +157,7 @@ const products = [
         img4: require('./assets/Images/tandoori_thumb.png'),
     },
     {
-        id: 9,
+        id:"Cooking Paste",
         h1: "Cooking Paste",
         img: require('./assets/Images/garlic_paste_thumb.png'),
         img2: require('./assets/Images/garlic_paste_thumb.png'),
@@ -165,7 +165,7 @@ const products = [
         img4: require('./assets/Images/garlic_paste_thumb.png'),
     },
     {
-        id: 10,
+        id: "Exotic Sweet Chutney",
         h1: "Exotic Sweet Chutney",
         img: require('./assets/Images/brinjal_thumb.png'),
         img2: require('./assets/Images/brinjal_thumb.png'),
@@ -173,7 +173,7 @@ const products = [
         img4: require('./assets/Images/brinjal_thumb.png'),
     },
     {
-        id: 11,
+        id:"Papad (Pappadums)",
         h1: "Papad (Pappadums)",
         img: require('./assets/Images/black_pepper_papad_thumb.png'),
         img2: require('./assets/Images/black_pepper_papad_thumb.png'),
@@ -181,7 +181,7 @@ const products = [
         img4: require('./assets/Images/black_pepper_papad_thumb.png'),
     },
     {
-        id: 12,
+        id:  "Fruit Jam",
         h1: "Fruit Jam",
         img: require('./assets/Images/mixed_fruit_jam_thumb.png'),
         img2: require('./assets/Images/mixed_fruit_jam_thumb.png'),

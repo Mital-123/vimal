@@ -28,10 +28,10 @@ function SpecificSubPro() {
                                 </div>
                             </div>
                             <div className='col-md-6 col-sm-12 lh-lg mt-md-0 mt-4' style={{ textAlign: "justify" }}>
-                                <div><Tittles ltitle={"Swad's"} /></div>
-                                <div ><img src={require('../../assets/Images/arrow_down.png')} alt="" style={{ height: '100px' }} /></div>
+                              
                                 <Tittles stitle={subproduct.ProductName} />
-                                <div className='lh-base ps-2 mt-3 fw-lighter'>{subproduct.description}</div>
+                                <div className='lh-base ps-2 mt-3 fw-lighter pera'>{subproduct.description}</div>
+                                <div className='lh-base ps-2 mt-3 fw-lighter pera'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione</div>
                             </div>
                         </div>
                     </section>
@@ -39,7 +39,7 @@ function SpecificSubPro() {
 
                 <div className='container pb-4'>
                     <div className='text-center pb-3'>
-                        <Tittles stitle="Related Product" />
+                        <Tittles stitle="Related Products" />
                     </div>
                     <div className="row g-3 justify-content-center">
                         {
@@ -51,7 +51,7 @@ function SpecificSubPro() {
                                             <div
                                                 className="h-100 shadow text-center p-1 p-lg-3 rounded-4"
                                                 style={{ backgroundColor: "#fffcf3", cursor: "pointer" }}
-                                                onClick={() => navigate(`/product/${id}/${item.id}`)} // ✅ use backticks
+                                                // onClick={() => navigate(`/product/${id}/${item.id}`)} 
                                             >
                                                 <img
                                                     src={item.proimg}
@@ -61,6 +61,9 @@ function SpecificSubPro() {
                                                 />
                                                 <div className='fw-semibold subp pt-2 p-1 fs-6'>
                                                     {item.ProductName}
+                                                </div>
+                                                 <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                                    <ButtonCom btn="View More"/>
                                                 </div>
                                             </div>
                                         </div>

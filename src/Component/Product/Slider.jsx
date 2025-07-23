@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
-import Tittles from '../Tittles';
+// import Tittles from '../Tittles';
 
 function ProductSlider() {
     const [nav1, setNav1] = useState(null);
@@ -22,7 +22,6 @@ function ProductSlider() {
         speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
         autoplay: true,
         autoplaySpeed: 3000,
     };
@@ -38,56 +37,54 @@ function ProductSlider() {
         speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
         autoplay: true,
         autoplaySpeed: 3000,
     };
 
     return (
-        <div className='container py-5'>
-            <div className="row align-items-center justify-content-center">
-                <div className="col-lg-6">
-                    {/* Image Slider */}
-                    <Slider {...imageSettings}>
-                        {recipes.map((item, index) => (
-                            <>
-                                <div className='productbgred mx-auto'>
-                                    <div className=''>
-                                        <img src={item.productImage} alt="" className='rounded-circle image1 bg-warning p-3 shadow' />
+        <div className='category_bgimg'>
+            <div className="slider_bgcolor ">
+                <div className='container-lg py-5'>
+                    <div className="row align-items-center justify-content-md-center justify-content-center">
+                        {/* Image Slider */}
+                        <div className="col-md-5 col-10 m-2 m-lg-4 ps-5 ms-auto ms-md-0 py-3  rounded-start-5" style={{ backgroundColor: "#fffcf3" }} >
+                            <Slider {...imageSettings}>
+                                {recipes.map((item, index) => (
+                                    <div key={index} className='d-flex justify-content-center'>
+                                        <div className='productbgred text-center'>
+                                            <img src={item.productImage} alt="product" className='rounded-circle image1 bg-warning p-3 shadow object-fit-cover' />
+                                            <img src={item.dishImage} alt="dish" className='rounded-circle ms-3 border bg-white border-5 border-light position-relative my-3 image2 z-3 shadow ' />
+                                        </div>
                                     </div>
-                                    <div className='me-sm-1 me-0'>
-                                        <img src={item.dishImage} alt="" className='rounded-circle ms-auto border bg-white border-5 border-light shadow-lg image2' />
-                                    </div>
-                                </div>
-                            </>
-                        ))}
-                    </Slider>
-                </div>
+                                ))}
+                            </Slider>
+                        </div>
 
-                <div className="col-lg-6 rounded-5 shadow-lg" style={{ backgroundColor: "#fffcf3" }}>
-                    {/* Content Slider */}
-                    <Slider {...contentSettings}>
-                        {recipes.map((item, index) => (
-                            <div key={index} className=''>
-                                <div className=" px-3 py-4  ">
-                                    <div><Tittles stitle={item.title} /></div>
-                                    <h5 className='fw-bold ms-3'>Instructions :</h5>
-                                    <ol>
-                                        {item.instructions.map((step, idx) => (
-                                            <li key={idx} className='mb-2'>{step}</li>
-                                        ))}
-                                    </ol>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
+                        {/* Content Slider */}
+                        <div className="col-md-6 col-11  rounded-5 shadow-lg" style={{ backgroundColor: "var(--golden)" }}>
+                            <Slider {...contentSettings}>
+                                {recipes.map((item, index) => (
+                                    <div key={index} className=" px-4 pt-3 pb-4" >
+                                        <div className='fs-4 fw-bold text-danger' style={{ color: "var(--red)" }}>{item.title}</div>
+
+                                        <h5 className='fw-bold mt-2 '>Instructions :</h5>
+                                        <ol>
+                                            {item.instructions.map((step, idx) => (
+                                                <li key={idx} className='mb-2 fw-normal'>{step}</li>
+                                            ))}
+                                        </ol>
+                                    </div>
+                                ))}
+                            </Slider>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
 
-export default ProductSlider
+export default ProductSlider;
 
 const recipes = [
     {
@@ -99,8 +96,8 @@ const recipes = [
             "Drizzle some extra honey on top for flavor.",
             "Serve chilled and enjoy your refreshing smoothie bowl!"
         ],
-        dishImage: require('../../assets/Images/recepi1.jpg'),
-        productImage: require('../../assets/Images/productbg_img.jpg')
+        dishImage: require('../../assets/Images/Pickles/gunda_pickle_thumb.png'),
+        productImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.47.51_PM.png?v=1728991096&width=360"
     },
     {
         title: "Spicy Mango Chutney",
@@ -111,8 +108,8 @@ const recipes = [
             "Let it cool and store in a glass jar.",
             "Perfect accompaniment for parathas and rice."
         ],
-        dishImage: require('../../assets/Images/recepi2.jpg'),
-        productImage: require('../../assets/Images/product_thumb_2.png')
+        dishImage: require('../../assets/Images/Pickles/methia_mango_thumb.png'),
+        productImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.46.33_PM.png?v=1728991057&width=360"
     },
     {
         title: "Tangy Mango Salad",
@@ -123,9 +120,8 @@ const recipes = [
             "Garnish with coriander leaves and roasted peanuts.",
             "Serve immediately for the best crunch."
         ],
-        dishImage: require('../../assets/Images/recepi1.jpg'),
-        productImage: require('../../assets/Images/productbg_img.jpg')
-
+        dishImage: require('../../assets/Images/Curry Paste/tikka_thumb.png'),
+        productImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.50.11_PM.png?v=1728991237&width=360"
     },
     {
         title: "Classic Mango Lassi",
@@ -137,6 +133,6 @@ const recipes = [
             "Serve cold for a refreshing summer drink."
         ],
         dishImage: require('../../assets/Images/recepi2.jpg'),
-        productImage: require('../../assets/Images/product_thumb_2.png')
+        productImage: "https://www.swad.shop/cdn/shop/files/DSC_8662-min.jpg?v=1728981995&width=360"
     }
 ];

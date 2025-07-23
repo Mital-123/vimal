@@ -91,16 +91,35 @@ function SubProducts() {
 
             {uniqueWeights.length > 0 && (
                 <div className='text-center'>
-                    <button className='border-0 bg-transparent mx-2' onClick={() => setSelectedWeight(null)}>
-                        <ButtonCom btn={"All"} />
+                    <button
+                        className='border-0 bg-transparent mx-2'
+                        onClick={() => setSelectedWeight(null)}
+                    >
+                        <button
+                            className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === null ? 'active-btn' : ''}`}
+                            style={{ backgroundColor: "#fffcf3" }}
+                        >
+                            All
+                        </button>
                     </button>
+
                     {uniqueWeights.map((weight, idx) => (
-                        <button className='border-0 bg-transparent mx-2' onClick={() => setSelectedWeight(weight)}>
-                            <ButtonCom btn={weight} />
+                        <button
+                            key={idx}
+                            className='border-0 bg-transparent mx-2'
+                            onClick={() => setSelectedWeight(weight)}
+                        >
+                            <button
+                                className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === weight ? 'active-btn' : ''}`}
+                                style={{ backgroundColor: "#fffcf3" }}
+                            >
+                                {weight}
+                            </button>
                         </button>
                     ))}
                 </div>
             )}
+
 
 
             <div className="container py-5">
@@ -111,8 +130,7 @@ function SubProducts() {
                                 <>
 
                                     <div className="col-6 col-md-4 col-lg-3 fade-in mt-3">
-
-                                        <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4 " style={{ backgroundColor: "#fffcf3", cursor: "pointer" }} onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                        <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4 " style={{ backgroundColor: "#fffcf3", cursor: "pointer" }} >
                                             <div>
                                                 <img
                                                     src={item.proimg}
@@ -122,6 +140,9 @@ function SubProducts() {
                                                 />
                                                 <div className='fw-semibold subp pt-2 p-1 fs-6 ' >
                                                     {item.ProductName}
+                                                </div>
+                                                <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                                    <ButtonCom btn="View More"/>
                                                 </div>
                                             </div>
                                         </div>
