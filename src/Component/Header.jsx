@@ -110,9 +110,14 @@ let product=products
                                         </div>
                                         {showDropdown && (
                                             
-                                            <ul className="list-unstyled mt-2 bg-white shadow rounded py-2 px-3">
-                                                <li><Link to="/product/item1" className="dropdown-item" onClick={closeAll}>Item 1</Link></li>
-                                                <li><Link to="/product/item2" className="dropdown-item" onClick={closeAll}>Item 2</Link></li>
+                                            <ul className="list-unstyled mt-2 bg-white shadow rounded py-2 px-1 w-100">
+                                               {products.map((p) => (
+                                            <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
+                                                <Link to={`/product/${p.id}`} className="dropdown-item pera text-break text-wrap" onClick={closeAll}>
+                                                    {p.h1}
+                                                </Link>
+                                            </li>
+                                        ))}
                                             </ul>
                                         )}
                                     </li>
@@ -139,7 +144,7 @@ let product=products
                                 <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/aboutus" ? "active" : ""}`} to="/aboutus">About</Link>
                             </li>
                             <li className="nav-item position-relative d-flex align-items-center" ref={dropdownRef}>
-                                <Link className={`nav-link px-3 mx-1 fs-6 ${location.pathname === "/product" ? "active" : ""}`} to="/product">Product         <span onClick={toggleDropdown} style={{ cursor: "pointer" }}>
+                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">Product <span onClick={toggleDropdown} style={{ cursor: "pointer" }}>
                                     <IoIosArrowDropdownCircle />
                                 </span></Link>
                         
@@ -147,8 +152,8 @@ let product=products
                                     
                                     <ul className="position-absolute bg-white shadow rounded  p-1" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
                                           {products.map((p) => (
-                                            <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 pe-1'>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item " onClick={closeAll}>
+                                            <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 pe-1 '>
+                                                <Link to={`/product/${p.id}`} className="dropdown-item pera text-wrap" onClick={closeAll}>
                                                     {p.h1}
                                                 </Link>
                                             </li>

@@ -7,6 +7,7 @@ const products = [
         img2: require('./assets/Images/kesar_mango_pupl_thumb.png'),
         img3: require('./assets/Images/kesar_mango_pupl_thumb.png'),
         img4: require('./assets/Images/kesar_mango_pupl_thumb.png'),
+        Pckdetail: ["450 x 12 Tins Trays", " 850g x 12 Tins Carton", "3.1 Kgs  x 6 Tins. Carton ", "850 x 6 Tins Trays", "850g x  2 4 Tins Carton"],
         subproducts: [
             {
                 id: "Mango-Pulp-Slice-1",
@@ -39,14 +40,14 @@ const products = [
             },
             {
                 id: "Mango-Pulp-Slice-5",
-                ProductName: "Alphonso Mango pulp",
+                ProductName: "Alphonso Mango pulp Slice",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
             {
-                id: "Mango-Pulp-Slice-5",
-                ProductName: "Alphonso Mango pulp",
+                id: "Mango-Pulp-Slice-6",
+                ProductName: "Alphonso Mango pulp Slicees titbits",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
@@ -55,44 +56,13 @@ const products = [
     },
     {
         id: 2,
-        h1: "Ready to Eat Foods (Cans)",
-        img: require('./assets/Images/aloo_methi_thumb.png'),
-        img2: require('./assets/Images/aloo_methi_thumb.png'),
-        img3: require('./assets/Images/aloo_methi_thumb.png'),
-        img4: require('./assets/Images/aloo_methi_thumb.png'),
-    },
-    {
-        id: 3,
-        h1: "Canned Vegetables (In Brine)",
-        img: require('./assets/Images/product_thumb_2.png'),
-        img2: require('./assets/Images/product_thumb_2.png'),
-        img3: require('./assets/Images/product_thumb_2.png'),
-        img4: require('./assets/Images/product_thumb_2.png'),
-    },
-    {
-        id: 4,
-        h1: "Ready to Eat (Pouch)",
-        img: require('./assets/Images/aloo_mutter_list.png'),
-        img2: require('./assets/Images/aloo_mutter_list.png'),
-        img3: require('./assets/Images/aloo_mutter_list.png'),
-        img4: require('./assets/Images/aloo_mutter_list.png'),
-    },
-    {
-        id: 5,
-        h1: "Curry Sauce (Simmer Sauce) (Pouch)",
-        img: require('./assets/Images/balti_curry_thumb.png'),
-        img2: require('./assets/Images/balti_curry_thumb.png'),
-        img3: require('./assets/Images/balti_curry_thumb.png'),
-        img4: require('./assets/Images/balti_curry_thumb.png'),
-    },
-    {
-        id: 6,
         h1: "Pickles",
         img: require('./assets/Images/mango_thumb.png'),
         img2: require('./assets/Images/mango_thumb.png'),
         img3: require('./assets/Images/mango_thumb.png'),
         img4: require('./assets/Images/mango_thumb.png'),
         powerdesc: "Pickles are known to enhance the taste of any meal and are enjoyed by people all over the world. Swad offers various pickles from tangy to spicy allowing consumers to choose according to their taste.",
+        Pckdetail: ["450 x 12 Tins Trays", " 850g x 12 Tins Carton", "3.1 Kgs  x 6 Tins. Carton ", "850 x 6 Tins Trays", "850g x  2 4 Tins Carton"],
         subproducts: [
             {
                 id: "pickel-1",
@@ -137,6 +107,39 @@ const products = [
 
         ]
     },
+    {
+        id: 3,
+        h1: "Canned Vegetables (In Brine)",
+        img: require('./assets/Images/product_thumb_2.png'),
+        img2: require('./assets/Images/product_thumb_2.png'),
+        img3: require('./assets/Images/product_thumb_2.png'),
+        img4: require('./assets/Images/product_thumb_2.png'),
+    },
+    {
+        id: 4,
+        h1: "Ready to Eat (Pouch)",
+        img: require('./assets/Images/aloo_mutter_list.png'),
+        img2: require('./assets/Images/aloo_mutter_list.png'),
+        img3: require('./assets/Images/aloo_mutter_list.png'),
+        img4: require('./assets/Images/aloo_mutter_list.png'),
+    },
+    {
+        id: 5,
+        h1: "Curry Sauce (Simmer Sauce) (Pouch)",
+        img: require('./assets/Images/balti_curry_thumb.png'),
+        img2: require('./assets/Images/balti_curry_thumb.png'),
+        img3: require('./assets/Images/balti_curry_thumb.png'),
+        img4: require('./assets/Images/balti_curry_thumb.png'),
+    },
+    {
+        id: 6,
+        h1: "Ready to Eat Foods (Cans)",
+        img: require('./assets/Images/aloo_methi_thumb.png'),
+        img2: require('./assets/Images/aloo_methi_thumb.png'),
+        img3: require('./assets/Images/aloo_methi_thumb.png'),
+        img4: require('./assets/Images/aloo_methi_thumb.png'),
+    },
+
     {
         id: 7,
         h1: "Sweet Pickle & Mango Chutney",
