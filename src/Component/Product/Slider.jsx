@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import Tittles from '../Tittles';
 // import Tittles from '../Tittles';

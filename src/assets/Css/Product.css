@@ -1,36 +1,9 @@
-.fancy-dot {
-    width: 8px;
-    height: 8px;
-    background: linear-gradient(135deg, #f7971e, #ffd200);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.slick-active .fancy-dot {
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    transform: scale(1.3);
-    opacity: 1;
-}
-
-.slick-dots li {
-    height: 14px;
-    width: 10px;
-}
-
 .subbtn .btncss {
     font-size: 12px;
 }
 
 .subp {
     font-size: 13px;
-}
-
-.specificbg {
-    background: url(../../assets/Images/productbg_img.jpg);
-    box-shadow: inset 0px 0px 1500px rgba(0, 0, 0, 0.7);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
 }
 
 .fade-in {
@@ -46,7 +19,7 @@
 
 
 
-
+/* product recepie slider start */
 .image1 {
     height: 275px;
     width: 275px;
@@ -71,7 +44,6 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     width: 375px;
-    /* heigh; */
     background-position: 69% 70%;
 }
 
@@ -80,10 +52,7 @@
         position: relative;
         right: 0;
     }
-
 }
-
-
 
 @media screen and (max-width: 592px) {
     .productbgred {
@@ -113,9 +82,12 @@
         width: 308px;
         background-position: 69% 70%;
     }
-
-
 }
+
+/* product recepie slider end */
+
+
+/* product Gram wise saperation ---start*/
 .btn_active {
     border: 2px solid gold !important;
     transition: all 0.3s ease;
@@ -128,7 +100,9 @@
 .active-btn {
     border: 2px solid var(--red) !important;
 }
-.slider_bgcolor{
-        background-image: linear-gradient(-90deg, transparent 70%, var(--red) 30%) !important;
- 
+
+.slider_bgcolor {
+    background-image: linear-gradient(-90deg, transparent 70%, var(--red) 30%) !important;
 }
+
+/* product Gram wise saperation ---end*/

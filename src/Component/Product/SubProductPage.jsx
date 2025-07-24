@@ -1,10 +1,8 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import products from '../../Product';
-import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
-import Tittles from '../Tittles';
 import HOC from '../HOC';
 import { useState } from 'react';
 import Gogreen from './Gogreen';
@@ -16,11 +14,11 @@ function SubProducts() {
     const navigate = useNavigate();
     const { id } = useParams();
     const product = products.find(p => p.id == id);
-    let packagedetail = product.Pckdetail
 
     const [selectedWeight, setSelectedWeight] = useState(null);
 
     if (!product || !product.subproducts) return <p>No subproducts found.</p>;
+    let packagedetail = product.Pckdetail
 
     // ✅ Get unique weights only
     const uniqueWeights = Array.from(
@@ -36,17 +34,7 @@ function SubProducts() {
         ? product.subproducts.filter(item => item.weight === selectedWeight)
         : product.subproducts;
 
-    // ✅ Slider settings
-    var settings = {
-        dots: false,
-        infinite: true,
-        arrows: false,
-        autoplay: false,
-        speed: 3000,
-        autoplaySpeed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+
 
 
     return (
@@ -63,17 +51,12 @@ function SubProducts() {
                 <div className='m-auto text-center col-sm-8 col-11 py-2 py-lg-4'>
                     <h2 className='fw-bold my-4'>Power of {product.h1}</h2>
                     <p className='px-5'>{product.powerdesc}</p>
-
                     <div className='w-75 mx-auto container'>
-                        {
-                            packagedetail.map((x, i) => {
-                                return (
-                                    <>
-                                        <span className='fw-bold'> {x}{i < packagedetail.length - 1 && ' | '}</span>
-                                    </>
-                                )
-                            })
-                        }
+                        {packagedetail.map((x, i) => {
+                            return (
+                                <><span className='fw-bold'> {x}{i < packagedetail.length - 1 && ' | '}</span></>
+                            )
+                        })}
                     </div>
                     <div className='mt-3'>
                         <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
@@ -83,36 +66,21 @@ function SubProducts() {
                 </div>
             </div>
 
-
             <div className='pt-3'>
                 <h1 className='mt-3 text-center text-danger'>{product.h1}</h1>
             </div>
 
-
             {uniqueWeights.length > 0 && (
                 <div className='text-center'>
-                    <button
-                        className='border-0 bg-transparent mx-2'
-                        onClick={() => setSelectedWeight(null)}
-                    >
-                        <button
-                            className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === null ? 'active-btn' : ''}`}
-                            style={{ backgroundColor: "#fffcf3" }}
-                        >
+                    <button className='border-0 bg-transparent mx-2' onClick={() => setSelectedWeight(null)}>
+                        <button className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === null ? 'active-btn' : ''}`}>
                             All
                         </button>
                     </button>
 
                     {uniqueWeights.map((weight, idx) => (
-                        <button
-                            key={idx}
-                            className='border-0 bg-transparent mx-2'
-                            onClick={() => setSelectedWeight(weight)}
-                        >
-                            <button
-                                className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === weight ? 'active-btn' : ''}`}
-                                style={{ backgroundColor: "#fffcf3" }}
-                            >
+                        <button key={idx} className='border-0 bg-transparent mx-2' onClick={() => setSelectedWeight(weight)}>
+                            <button className={`p-2 rounded-pill pera px-3 shadow-sm btn_active fw-bold ${selectedWeight === weight ? 'active-btn' : ''}`} style={{ backgroundColor: "#fffcf3" }}>
                                 {weight}
                             </button>
                         </button>
@@ -120,39 +88,41 @@ function SubProducts() {
                 </div>
             )}
 
-
-
             <div className="container py-5">
                 <div className="row g-3 justify-content-center">
-                    {
-                        filteredSubProducts.map((item, index) => {
-                            return (
-                                <>
-
-                                    <div className="col-6 col-md-4 col-lg-3 fade-in mt-3">
-                                        <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4 " style={{ backgroundColor: "#fffcf3", cursor: "pointer" }} >
-                                            <div>
-                                                <img
-                                                    src={item.proimg}
-                                                    alt=""
-                                                    className='img-fluid'
-                                                    style={{ height: '200px' }}
-                                                />
-                                                <div className='fw-semibold subp pt-2 p-1 fs-6 ' >
-                                                    {item.ProductName}
-                                                </div>
-                                                <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
-                                                    <ButtonCom btn="View More"/>
-                                                </div>
+                    {filteredSubProducts.map((item, index) => {
+                        return (
+                            <>
+                                <div className="col-6 col-md-4 col-lg-3 fade-in mt-3">
+                                    <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4 " style={{ backgroundColor: "#fffcf3", cursor: "pointer" }} >
+                                        <div>
+                                            <img src={item.proimg} alt="" className='img-fluid' style={{ height: '200px' }} />
+                                            <div className='fw-semibold subp pt-2 p-1 fs-6 ' >
+                                                {item.ProductName}
+                                            </div>
+                                            <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                                <ButtonCom btn="View More" />
                                             </div>
                                         </div>
                                     </div>
-                                </>
-                            )
+                                </div>
+                            </>
+                        )
+                    })}
 
-                        })
-                    }
-
+                    {/* old product show with slider code */}
+                    {/*   // ✅ Slider settings paste this up side on return 
+                        var settings = {
+                            dots: false,
+                            infinite: true,
+                            arrows: false,
+                            autoplay: false,
+                            speed: 3000,
+                            autoplaySpeed: 2000,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }; 
+                    */}
                     {/* <div className="col-lg-4 col-sm-6 col-10 mt-4 mb-5" style={{ position: 'sticky', top: '100px' }}>
                         <div className="px-4 pb-4" style={{ backgroundColor: "#eff4f8" }}>
                             <Slider {...settings}>

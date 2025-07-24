@@ -20,7 +20,6 @@ function SpecificSubPro() {
             <div className='red-certificates-section'>
                 <div className='container red-circle'>
                     <section className={` py-5 ${isVisible ? 'visible' : ''}`}>
-
                         <div className='row align-items-center justify-content-center rounded-4 my-3 '>
                             <div className='col-lg-4 col-md-6 col-sm-7 col-10'>
                                 <div className='test-shine'>
@@ -28,7 +27,6 @@ function SpecificSubPro() {
                                 </div>
                             </div>
                             <div className='col-md-6 col-sm-12 lh-lg mt-md-0 mt-4' style={{ textAlign: "justify" }}>
-                              
                                 <Tittles stitle={subproduct.ProductName} />
                                 <div className='lh-base ps-2 mt-3 fw-lighter pera'>{subproduct.description}</div>
                                 <div className='lh-base ps-2 mt-3 fw-lighter pera'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus rem culpa dignissimos perspiciatis expedita magni eligendi nemo voluptatem cum ratione</div>
@@ -42,33 +40,21 @@ function SpecificSubPro() {
                         <Tittles stitle="Related Products" />
                     </div>
                     <div className="row g-3 justify-content-center">
-                        {
-                            product.subproducts
-                                .filter(item => item.id !== proid) // ✅ filter out current subproduct
-                                .map((item, index) => {
-                                    return (
-                                        <div key={index} className="col-6 col-md-4 col-lg-3 fade-in mt-3">
-                                            <div
-                                                className="h-100 shadow text-center p-1 p-lg-3 rounded-4"
-                                                style={{ backgroundColor: "#fffcf3", cursor: "pointer" }}
-                                                // onClick={() => navigate(`/product/${id}/${item.id}`)} 
-                                            >
-                                                <img
-                                                    src={item.proimg}
-                                                    alt=""
-                                                    className='img-fluid'
-                                                    style={{ height: '200px' }}
-                                                />
-                                                <div className='fw-semibold subp pt-2 p-1 fs-6'>
-                                                    {item.ProductName}
-                                                </div>
-                                                 <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
-                                                    <ButtonCom btn="View More"/>
-                                                </div>
-                                            </div>
+                        {product.subproducts.filter(item => item.id !== proid).map((item, index) => { // ✅ filter out current subproduct
+                            return (
+                                <div key={index} className="col-6 col-md-4 col-lg-3 fade-in mt-3">
+                                    <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4" style={{ backgroundColor: "#fffcf3", cursor: "pointer" }}
+                                    // onClick={() => navigate(`/product/${id}/${item.id}`)} 
+                                    >
+                                        <img src={item.proimg} alt="" className='img-fluid' style={{ height: '200px' }} />
+                                        <div className='fw-semibold subp pt-2 p-1 fs-6'>{item.ProductName}</div>
+                                        <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                            <ButtonCom btn="View More" />
                                         </div>
-                                    )
-                                })
+                                    </div>
+                                </div>
+                            )
+                        })
                         }
                     </div>
                     {/* <div className="row justify-content-evenly py-4" >
