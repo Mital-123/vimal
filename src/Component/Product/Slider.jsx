@@ -1,7 +1,39 @@
 import { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import Tittles from '../Tittles';
+import { BiSolidLeftArrowCircle, BiSolidRightArrowCircle } from 'react-icons/bi';
 // import Tittles from '../Tittles';
+const CustomPrevArrow = ({ onClick }) => (
+    <div
+        className="custom-arrow custom-prev"
+        onClick={onClick}
+        style={{
+            position: 'absolute',
+            top: '10px',
+            right: '10%',
+            zIndex: 1,
+            cursor: 'pointer',
+        }}
+    >
+        <span style={{ fontSize: '30px', color: '#d9534f' }}><BiSolidLeftArrowCircle /></span>
+    </div>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+    <div
+        className="custom-arrow custom-next"
+        onClick={onClick}
+        style={{
+            position: 'absolute',
+            top: '10px',
+            right: '0',
+            zIndex: 1,
+            cursor: 'pointer',
+        }}
+    >
+        <span style={{ fontSize: '30px', color: '#d9534f' }}><BiSolidRightArrowCircle /></span>
+    </div>
+);
 
 function ProductSlider() {
     const [nav1, setNav1] = useState(null);
@@ -18,13 +50,15 @@ function ProductSlider() {
         asNavFor: nav2,
         ref: slider1,
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
         speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
     };
 
     const contentSettings = {
@@ -38,7 +72,7 @@ function ProductSlider() {
         speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
     };
 
