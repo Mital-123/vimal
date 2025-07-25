@@ -100,9 +100,9 @@ function SubProducts() {
                                             <div className='fw-semibold subp pt-2 p-1 fs-6 ' >
                                                 {item.ProductName}
                                             </div>
-                                            <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
+                                            {/* <div onClick={() => navigate(`/product/${id}/${item.id}`)}>
                                                 <ButtonCom btn="View More" />
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
