@@ -22,6 +22,7 @@ const products = [
                 ProductName: "Alphonso Mango Pulp with TitBits",
                 subName: "Swad's Alphonso Mango Pulp with TitBits",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_titbit_thumb.png'),
+               weight: "500 gm",
                 description: "Alphonso, being the King of fruits, is a delightful fruit and loved by all. Swad’s Alphonso Mango Pulp with TitBits is made using authentic Ratnagiri mangoes. To serve you the most genuine taste of real Alphonso mangoes. There are also cubes of mango in this pulp. This multiplies the joy of consuming it separately or in combination with milk, yogurt, or tarts."
             },
             {
@@ -29,6 +30,7 @@ const products = [
                 ProductName: "Alphonso Mango Slice",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_slice_thumb.png'),
+               weight: "200 gm",
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
             {
@@ -36,6 +38,7 @@ const products = [
                 ProductName: "Alphonso Mango pulp",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
+               weight: "200 gm",
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
             {
@@ -43,6 +46,7 @@ const products = [
                 ProductName: "Alphonso Mango pulp Slice",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
+               weight: "500 gm",
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
             {
@@ -50,6 +54,7 @@ const products = [
                 ProductName: "Alphonso Mango pulp Slicees titbits",
                 subName: "Swad’s Alphonso Mango Slice",
                 proimg: require('./assets/Images/Mango Pulp & Slice/mango_pulp_alphonso_thumb.png'),
+               weight: "50 gm",
                 description: "Organic Alphonso Mangoes are picked from the farms of Ratnagiri and then squeezed into pulps for longer storage and multiple uses. You can relish the Alphonso Mango Slice put along with the pulp irrespective of any season. Swads Alphonso Mango Slice is a treat to mango lovers who can club this pulp with milk or other desserts."
             },
         ]
@@ -105,6 +110,44 @@ const products = [
                 description: "This Mango Pulp is prepared using mouth-watering Kesar mangoes from Gujarat. Kesar mangoes are also referred to as being the Queen of fruits. Fresh mangoes, each picked from the farm make for a great pulp that can be stored and used. You can use this pulp to make mouth-watering milkshakes, smoothies, mango cheesecakes, mango tarts, and several other desserts. During any time of the year. The shelf life of these pulps is quite high which makes it a sure pick for everyone."
             },
 
+        ],
+        subtypes:[
+  {
+        id: "Sweet Pickle & Exotic Chutney",
+        h1: "Sweet Pickle / Exotic Chutney",
+         img: require('./assets/Images/mango_thumb.png'),
+        img2: require('./assets/Images/mango_thumb.png'),
+        img3: require('./assets/Images/mango_thumb.png'),
+        img4: require('./assets/Images/mango_thumb.png'),
+        powerdesc: "Sweet Pickles and Chutneys from Swad are perfect accompaniments to Indian meals, offering both sweetness and exotic flavors.",
+        Pckdetail: ["500 gm", "550 gm", "1 KG"],
+        subproducts: [
+            {
+                id: "sweet-chhundo",
+                ProductName: "Chhundo",
+                subName: "Swad Chhundo",
+                proimg: require('./assets/Images/Pickles/gunda_pickle_thumb.png'),
+                weight: "500 gm",
+                description: "A sweet and tangy shredded mango chutney, perfect with theplas and parathas."
+            },
+            {
+                id: "sweet-gorkeri",
+                ProductName: "Gorkeri",
+                subName: "Swad Gorkeri",
+                proimg: require('./assets/Images/Pickles/gunda_pickle_thumb.png'),
+                weight: "200 gm",
+                description: "Sweet and spicy Gujarati-style pickle made from mangoes."
+            },
+            {
+                id: "sweet-sweetlime",
+                ProductName: "Sweet Lime",
+                subName: "Swad Sweet Lime Pickle",
+                proimg: require('./assets/Images/Pickles/gunda_pickle_thumb.png'),
+                weight: "100 gm",
+                description: "Sweet and tangy lime pickle, great for traditional meals."
+            }
+        ]
+    }
         ]
     },
     {

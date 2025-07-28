@@ -22,7 +22,16 @@ let product=products
         setIsOpen(false);
         setShowDropdown(false);
     };
+// Inside your component
+const isDesktop = window.innerWidth >= 768;
 
+// Desktop dropdown handlers
+const handleMouseEnter = () => {
+    if (isDesktop) setShowDropdown(true);
+};
+const handleMouseLeave = () => {
+    if (isDesktop) setShowDropdown(false);
+};
     // Auto-close dropdown on outside click
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -99,9 +108,9 @@ let product=products
                                     <li className="nav-item">
                                         <Link className={`nav-link text-center ${location.pathname === "/aboutus" ? "active" : ""}`} to="/aboutus" onClick={closeAll}>About</Link>
                                     </li>
-                                    <li className="nav-item text-center position-relative" ref={dropdownRef}>
-                                        <div className="d-inline-block">
-                                            <Link className={`nav-link d-inline-block ${location.pathname === "/product" ? "active" : ""}`} to="/product" onClick={closeAll}>
+                                    <li className="nav-item text-center position-relative w-100" ref={dropdownRef}>
+                                        <div className="">
+                                            <Link className={`nav-link w-100 d-inline-block ${location.pathname === "/product" ? "active" : ""}`} to="/product" onClick={closeAll}>
                                                 Product   <span onClick={toggleDropdown} style={{ cursor: "pointer" }}>
                                                 <IoMdArrowDropdown />
                                             </span>
@@ -143,26 +152,29 @@ let product=products
                             <li className="nav-item">
                                 <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/aboutus" ? "active" : ""}`} to="/aboutus">About</Link>
                             </li>
-                            <li className="nav-item position-relative d-flex align-items-center" ref={dropdownRef}>
-                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">Product <span onClick={toggleDropdown} style={{ cursor: "pointer" }}>
-                                    <IoIosArrowDropdownCircle />
-                                </span></Link>
-                        
-                                {showDropdown && (
-                                    
-                                    <ul className="position-absolute bg-white shadow rounded  p-2 " style={{ top: "100%", left: "-50%", zIndex: 5 }}>
-                                          {products.map((p) => (
-                                            <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 pe-1 '>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
-                                                    {p.h1}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                        {/* <li><Link to="/product/item1" className="dropdown-item">Item 1</Link></li>
-                                        <li><Link to="/product/item2" className="dropdown-item">Item 2</Link></li> */}
-                                    </ul>
-                                )}
-                            </li>
+                    <li
+    className="nav-item position-relative d-flex align-items-center"
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+    ref={dropdownRef}
+>
+    <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">
+        Product <IoIosArrowDropdownCircle />
+    </Link>
+
+    {showDropdown && (
+        <ul className="position-absolute bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
+            {products.map((p) => (
+                <li key={p.id} className='dropdown_color list-unstyled py-1 ps-2 pe-1'>
+                    <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
+                        {p.h1}
+                    </Link>
+                </li>
+            ))}
+        </ul>
+    )}
+</li>
+
                             <li className="nav-item">
                                 <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/blog" ? "active" : ""}`} to="/blog">Blog</Link>
                             </li>

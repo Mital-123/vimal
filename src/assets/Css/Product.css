@@ -89,16 +89,16 @@
 
 /* product Gram wise saperation ---start*/
 .btn_active {
-    border: 2px solid gold !important;
+    border: 3px solid gold !important;
     transition: all 0.3s ease;
 }
 
 .btn_active:hover {
-    border: 2px solid var(--red) !important;
+    border: 3px solid var(--red) !important;
 }
 
 .active-btn {
-    border: 2px solid var(--red) !important;
+    border: 3px solid var(--red) !important;
 }
 
 .slider_bgcolor {
@@ -106,3 +106,9 @@
 }
 
 /* product Gram wise saperation ---end*/
+@media (max-width: 768px){
+    .yellow-circle{
+        width: 220px !important;
+                    height: 220px !important;
+    }
+}
