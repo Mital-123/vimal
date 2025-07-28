@@ -18,9 +18,9 @@
 }
 
 
- 
+
 /* product recepie slider start */
- 
+
 .image1 {
     height: 235px;
     width: 235px;
@@ -30,7 +30,7 @@
     box-shadow: -2px -2px 20px #696969bd;
     border: 9px solid white;
 }
- 
+
 .image2 {
     height: 135px;
     width: 135px;
@@ -43,7 +43,7 @@
         0 8px 6px rgba(0, 0, 0, 0.2),
         0 -8px 6px rgba(0, 0, 0, 0.2);
 }
- 
+
 .productbgred {
     background-image: url(../Images/yellow-circle.png);
     background-size: 300px 300px;
@@ -52,63 +52,96 @@
     width: 375px;
     background-position: 23% 100%;
 }
- 
+
 .product-line {
     margin-top: -170px;
 }
- 
+
 @media screen and (max-width:992px) {
     .product-line {
         margin-top: 0;
     }
 }
- 
+
 @media screen and (max-width:576px) {
- 
+
     .image1 {
         height: 211px;
         width: 211px;
         right: 16px;
     }
- 
+
     .image2 {
         height: 111px;
         width: 111px;
         right: 0;
         left: 46px;
     }
- 
+
     .productbgred {
         background-size: 267px 267px;
         width: 300px;
         background-position: 59% 100%;
     }
 }
- 
+
 
 
 /* product Gram wise saperation ---start*/
 .btn_active {
-    border: 3px solid gold !important;
+    font-weight: 500 !important;
+    border: 2px solid #E7E7E7 !important;
     transition: all 0.3s ease;
+    color: #54595F !important;
 }
 
 .btn_active:hover {
-    border: 3px solid var(--red) !important;
+    border: 2px solid var(--red) !important;
+    color: #000000 !important;
+
 }
 
 .active-btn {
-    border: 3px solid var(--red) !important;
+    border: 2px solid var(--red) !important;
+    color: #000000 !important;
+
 }
 
 .slider_bgcolor {
     background-image: linear-gradient(-90deg, transparent 70%, var(--red) 30%) !important;
 }
 
+.box_product {
+    width: 19%;
+    border-radius: 15px;
+    margin-left: 10px;
+    border: 1px solid #dac9c9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* product Gram wise saperation ---end*/
-@media (max-width: 768px){
-    .yellow-circle{
+@media (max-width: 996px) {
+
+    .box_product {
+        width: 40%;
+        border-radius: 15px;
+        margin-left: 10px;
+        border: 1px solid #dac9c9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .yellow-circle {
         width: 220px !important;
-                    height: 220px !important;
+        height: 220px !important;
+    }
+
+    .box_product {
+        width: 100%;
+        border-radius: 15px;
+        margin-left: 10px;
+        border: 1px solid #dac9c9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
