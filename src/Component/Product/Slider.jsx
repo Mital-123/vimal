@@ -13,7 +13,7 @@ function ProductSlider() {
     };
 
     return (
-        <div className="container bg-white">
+        <div className="container bg-white py-5">
             <div className="row">
                 <div className="col-12">
                     <div className="row align-items-end justify-content-end  order-lg-0 order-1">
@@ -24,7 +24,7 @@ function ProductSlider() {
                                         <div key={index} className="row justify-content-end align-items-end">
                                             <div className="col-lg-4 col-md-6 text-center position-relative">
                                                 <div className="productbgred mx-auto">
-                                                    <div className='text-start ms-4'>
+                                                    <div className='text-start ms-4 pt-5'>
                                                         <img src="https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.47.51_PM.png?v=1728991096&width=360" alt="" className='image1 rounded-circle  ' />
                                                     </div>
                                                     <div className='text-end'>
@@ -34,7 +34,7 @@ function ProductSlider() {
                                             </div>
 
                                             <div className="col-lg-7 col-md-6 text-start px-4">
-                                                <h3 className='display-6'>Tikka Masala with Veg Pulao</h3>
+                                                <h3 className='display-6 fw-bold'>Tikka Masala with Veg Pulao</h3>
                                                 <p className="fw-semibold">Instruction</p>
                                                 <ol className="small">
                                                     <li>Marinate the chicken pieces with a little oil, Swad ginger garlic paste, lemon and salt to taste. Let it sit for at least 30 minutes.</li>
