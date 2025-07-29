@@ -10,6 +10,7 @@ function Certificates() {
 
   return (
     <>
+
       <section className={`red-certificates-section py-5 ${isVisible ? 'visible' : ''}`}>
         {/* Animated Background Elements */}
         {/* <div className="floating-shapes">
@@ -25,8 +26,16 @@ function Certificates() {
           <div className="row justify-content-center mb-2">
             <div className="col-lg-8 text-center">
               <div className="header-content" >
-                   <div className='text-center mb-2'><Tittles stitle={"Our Certificates"} ltitle={"  Certified Excellence"} /></div>
-              
+                <h2
+                  className="ftittle fw-bold m-0 p-0 text-capitalize"
+                  data-aos="fade-down"
+                  data-aos-duration="1500"
+                  data-aos-once="true"
+                >
+
+                </h2>
+                <div className='text-center  mb-2' style={{ color: "#bb0000", textShadow: " 6px 7px 10px #31010131" }}><Tittles ltitle={"Our Certificates"} /></div>
+
                 <p className="pera pt-2">
                   Our commitment to quality is backed by internationally recognized certifications
                 </p>
@@ -36,46 +45,46 @@ function Certificates() {
 
           {/* Certificates Grid */}
           <div className="certificates-grid">
-   <div  data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-once="true">
-             <div className="certificate-item"  >
-              <img
-                src="https://www.vimalagro.com/wp-content/themes/jan2018/images/brc_logo.jpg?v1"
-                alt="BRC Logo"
-                className="img-fluid"
-              />
-              <div className="certificate-glow"></div>
+            <div data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-once="true">
+              <div className="certificate-item"  >
+                <img
+                  src="https://www.vimalagro.com/wp-content/themes/jan2018/images/brc_logo.jpg?v1"
+                  alt="BRC Logo"
+                  className="img-fluid"
+                />
+                <div className="certificate-glow"></div>
+              </div>
             </div>
-   </div>
 
-        <div data-aos="zoom-in"
-                data-aos-duration="1500"
-                data-aos-delay="500"
-                data-aos-once="true">
+            <div data-aos="zoom-in"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+              data-aos-once="true">
               <div className="certificate-item"   >
-              <img
-                src="https://www.vimalagro.com/wp-content/themes/jan2018/images/halal_logo.jpg"
-                alt="Halal Logo"
-                className="img-fluid"
-              />
-              <div className="certificate-glow"></div>
+                <img
+                  src="https://www.vimalagro.com/wp-content/themes/jan2018/images/halal_logo.jpg"
+                  alt="Halal Logo"
+                  className="img-fluid"
+                />
+                <div className="certificate-glow"></div>
+              </div>
             </div>
-        </div>
 
-          <div data-aos="zoom-in"
-                data-aos-duration="1800"
-                data-aos-delay="800"
-                data-aos-once="true">
+            <div data-aos="zoom-in"
+              data-aos-duration="1800"
+              data-aos-delay="800"
+              data-aos-once="true">
               <div className="certificate-item" >
-              <img
-                src="https://www.vimalagro.com/wp-content/themes/jan2018/images/iso_logo.jpg"
-                alt="ISO Logo"
-                className="img-fluid"
-              />
-              <div className="certificate-glow"></div>
+                <img
+                  src="https://www.vimalagro.com/wp-content/themes/jan2018/images/iso_logo.jpg"
+                  alt="ISO Logo"
+                  className="img-fluid"
+                />
+                <div className="certificate-glow"></div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </section>

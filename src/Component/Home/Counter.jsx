@@ -107,62 +107,114 @@
 
 
 
+// import { RiEmotionHappyLine } from "react-icons/ri";
+// import CountUp from 'react-countup';
+// import { TiShoppingCart } from 'react-icons/ti';
+// import { TbWorld } from 'react-icons/tb';
+// import { FaRegCalendarAlt } from 'react-icons/fa';
+
+// function Counter() {
+//   return (
+//     <>
+
+//     <div className='counterbck_image overflow-hidden'>
+// <div className='container py-5'>
+// <div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center g-3' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
+//     data-aos-duration="1800">
+//       <div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
+//     data-aos-duration="1800">
+// <div className='text-white counter fw-bold py-3 p-1'>
+//     <div className='countericon'><RiEmotionHappyLine /></div>
+//     <p className='fs-4'>Happy Customers</p>
+//     <p className='countnumber'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</p>
+// </div>
+// </div>
+// <div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
+//     data-aos-duration="1800">
+// <div className='text-white counter fw-bold py-3 p-1'>
+//     <div className='countericon'><TiShoppingCart /></div>
+//     <p className='fs-4'>popular product</p>
+//     <p className='countnumber'>    <CountUp end={160} enableScrollSpy={true} separator="" /> +</p>
+// </div>
+// </div>
+// <div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
+//     data-aos-duration="1800">
+// <div className='text-white  counter fw-bold py-3 p-1'>
+//     <div className='countericon'><TbWorld /></div>
+//     <p className='fs-4'> More Countries</p>
+//     <p className='countnumber'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</p>
+// </div>
+// </div>
+// <div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
+//     data-aos-duration="1800">
+// <div className='text-white counter fw-bold py-3 p-1'>
+//     <div className='countericon'><FaRegCalendarAlt/></div>
+//     <p className='fs-4'>years of excellence</p>
+//     <p className='countnumber'> <CountUp end={35} enableScrollSpy={true} separator="" /> +</p>
+// </div>
+// </div>
+
+// </div>
+// </div>
+//     </div>
+//     </>
+//   )
+// }
+
+// export default Counter
+
+
 import React from 'react';
-import { MdOutlineFolderCopy } from "react-icons/md";
-import { LiaUsersSolid } from "react-icons/lia";
-import { FaCalendarDays, FaHeadset } from "react-icons/fa6";
-import { RiEmotionHappyLine } from "react-icons/ri";
 import CountUp from 'react-countup';
-import { TiShoppingCart } from 'react-icons/ti';
+import { RiEmotionHappyLine } from 'react-icons/ri';
 import { TbWorld } from 'react-icons/tb';
-import { FaRegCalendarAlt } from 'react-icons/fa';
+import { TiShoppingCart } from 'react-icons/ti';
 
 function Counter() {
-  return (
-    <>
-    
-    <div className='counterbck_image overflow-hidden'>
-<div className='container py-5'>
-<div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center g-3' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
-    data-aos-duration="1800">
-      <div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
-    data-aos-duration="1800">
-<div className='text-white counter fw-bold py-3 p-1'>
-    <div className='countericon'><RiEmotionHappyLine /></div>
-    <p className='fs-4'>Happy Customers</p>
-    <p className='countnumber'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</p>
-</div>
-</div>
-<div className='col' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
-    data-aos-duration="1800">
-<div className='text-white counter fw-bold py-3 p-1'>
-    <div className='countericon'><TiShoppingCart /></div>
-    <p className='fs-4'>popular product</p>
-    <p className='countnumber'>    <CountUp end={160} enableScrollSpy={true} separator="" /> +</p>
-</div>
-</div>
-<div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
-    data-aos-duration="1800">
-<div className='text-white  counter fw-bold py-3 p-1'>
-    <div className='countericon'><TbWorld /></div>
-    <p className='fs-4'> More Countries</p>
-    <p className='countnumber'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</p>
-</div>
-</div>
-<div className='col ' data-aos="zoom-in" data-aos-delay="50" data-aos-once="true"
-    data-aos-duration="1800">
-<div className='text-white counter fw-bold py-3 p-1'>
-    <div className='countericon'><FaRegCalendarAlt/></div>
-    <p className='fs-4'>years of excellence</p>
-    <p className='countnumber'> <CountUp end={35} enableScrollSpy={true} separator="" /> +</p>
-</div>
-</div>
-
-</div>
-</div>
-    </div>
-    </>
-  )
+    return (
+        <>
+            <div className="container pt-5">
+                <div className="row justify-content-center">
+                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                        <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
+                            <div className='d-flex align-items-center '>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><RiEmotionHappyLine /></div>
+                                <div className='p-3'>
+                                    <div >
+                                        <h2 className='countnumber fw-bold'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div className='fs-4 fw-bold'>Happy Customers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                        <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
+                            <div className='d-flex align-items-center '>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><TiShoppingCart /></div>
+                                <div className='p-3'>
+                                    <div >
+                                        <h2 className='countnumber fw-bold'> <CountUp end={160} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div className='fs-4 fw-bold'>popular product</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                        <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
+                            <div className='d-flex align-items-center '>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><TbWorld /></div>
+                                <div className='p-3'>
+                                    <div >
+                                        <h2 className='countnumber fw-bold'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div className='fs-4 fw-bold'>More Countries</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
-export default Counter
+export default Counter;

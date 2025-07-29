@@ -108,7 +108,7 @@ function ProductBrand() {
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='col-lg-3 col-12 px-0 px-lg-3 mt-3 mt-lg-0'>
                                     <div className='brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-                                        <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' to={`${item.weblink}`}>
+                                        <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' >
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>
                                         </Link>
                                         <div className='bg-white p-2  rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>

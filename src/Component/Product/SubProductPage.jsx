@@ -40,16 +40,16 @@ function SubProducts() {
                 <div className='m-auto text-center col-sm-8 col-11 py-2 py-lg-4'>
                     <h2 className='fw-bold my-2 my-lg-4'>Power of {product.h1}</h2>
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
-                    <div className='w-75 mx-auto '>
+                    <div className='w-75 mx-auto pb-3'>
                         {packagedetail.map((x, i) => (
                             <span key={i} className='fw-bold'>{x}{i < packagedetail.length - 1 && ' | '}</span>
                         ))}
                     </div>
-                    <div className='mt-1 mt-lg-4'>
+                    {/* <div className='mt-1 mt-lg-4'>
                         <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
                         <Link to="https://www.instagram.com/swadbrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaInstagram /></Link>
                         <Link to="https://www.youtube.com/@SwadBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaYoutube /></Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ export const BrandProduct = [
         brandId: "vimal",
         Name: "Vimal",
         image: require("../../assets/Images/logo_vimal_agro.png"),
-        weblink:"/product",
+        
         subBrand: [
             {
                 brandproductId: "vimal(1)",
@@ -26,9 +26,8 @@ export const BrandProduct = [
     {
         brandId: "swad",
         Name: "Swad",
-        image: require("../../assets/Images/swad_logo.png"),
-        weblink:"https://www.swad.shop/",
-
+        image: require("../../assets/Images/swad_logo_copy.png"),
+        
         subBrand: [
             {
                 brandproductId: "swad(1)",
@@ -49,7 +48,7 @@ export const BrandProduct = [
     {
         brandId: "bvitas",
         Name: "Bvitas",
-        image: require("../../assets/Images/b_vitas_logo.png"),
+        image: require("../../assets/Images/b_vitas_logo_copy.png"),
         weblink:"https://www.bvitas.com/",
     },  
     // big pantry
@@ -57,7 +56,7 @@ export const BrandProduct = [
         brandId: "big pantry",
         Name: "Big Pantry",
         image: "https://bigpantry.in/wp-content/uploads/2024/06/logo-web-2048x1106.jpg",
-        weblink:"https://bigpantry.in/",
+      
 
         subBrand: [
             {
