@@ -46,7 +46,7 @@ function ProductSlider() {
         <>
             <div className="container-xxl">
                 <div className='row justify-content-between'>
-                    <div className='col-7 ms-sm-5 ps-sm-5'>
+                    <div className='col-5 ms-5 ps-5'>
                         <div className='d-flex align-items-center'>
                             <div className="p-2 rounded-circle" style={{ background: "var(--golden)" }}>
                                 <FaLeaf className='fs-3' />
@@ -112,13 +112,13 @@ function ProductSlider() {
 
             <div className="container-xxl">
                 <div className="">
-                    <div className='ms-auto col-sm-5 col-7 d-flex align-items-center justify-content-between px-3'
+                    <div className='ms-auto col-5 d-flex align-items-center justify-content-between px-3'
                         style={{ height: '80px', borderBottomLeftRadius: "2rem", background: "var(--golden)" }}>
                         <button className="btn btn-link text-white fs-4 ms-auto bg-white me-1" onClick={() => sliderRef.current?.slickPrev()}>
-                            <FaChevronLeft className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                            <FaChevronLeft className='' style={{ color: 'var(--golden)' ,fontWeight:900}} />
                         </button>
                         <button className="btn btn-link text-white fs-4 bg-white" onClick={() => sliderRef.current?.slickNext()}>
-                            <FaChevronRight className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                            <FaChevronRight className='' style={{ color: 'var(--golden)',fontWeight:900 }} />
                         </button>
                     </div>
                 </div>
