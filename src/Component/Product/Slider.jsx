@@ -34,7 +34,7 @@ function ProductSlider() {
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         arrows: false,
         // nextArrow: <SampleNextArrow />,
@@ -46,16 +46,16 @@ function ProductSlider() {
         <>
             <div className="container-xxl">
                 <div className='row justify-content-between'>
-                    <div className='col-5 ms-5 ps-5'>
+                    <div className='col-sm-5 col-7 ms-sm-5 ps-sm-5'>
                         <div className='d-flex align-items-center'>
                             <div className="p-2 rounded-circle" style={{ background: "var(--golden)" }}>
                                 <FaLeaf className='fs-3' />
                             </div>
-                            <i className='h6 ms-2'>Authentic <br />
+                            <i className='h6 ms-2 mt-3'>Authentic <br />
                                 Indian recipe</i>
                         </div>
                     </div>
-                    <div className='col-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div>
+                    <div className='col-sm-5 col-7 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div>
                 </div>
             </div>
 
