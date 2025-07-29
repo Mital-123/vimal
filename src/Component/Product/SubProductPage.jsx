@@ -15,19 +15,13 @@ function SubProducts() {
     const { id } = useParams();
     const product = products.find(p => p.id == id);
 
-    // MAIN product weight filter
     const [selectedMainWeight, setSelectedMainWeight] = useState(null);
-
-    // Subtype weight filters stored by subtype id
     const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
 
     if (!product || !product.subproducts) return <p>No subproducts found.</p>;
     const packagedetail = product.Pckdetail;
 
-    // Unique weights for main subproducts
-    const uniqueMainWeights = Array.from(
-        new Set(product.subproducts.map(item => item.weight))
-    );
+    const uniqueMainWeights = Array.from(new Set(product.subproducts.map(item => item.weight)));
 
     const filteredMainSubProducts = selectedMainWeight
         ? product.subproducts.filter(item => item.weight === selectedMainWeight)
@@ -73,34 +67,34 @@ function SubProducts() {
                 }}></div>
 
                 <div className='pt-3'>
-                    <h1 className='mt-3 text-center text-danger'>{product.h1}</h1>
+                    <h3 className='mt-3 mt-lg-5 text-center text-dark text-uppercase fw-bold'>{product.h1}</h3>
                 </div>
 
                 {/* Main Weight Filter */}
                 {uniqueMainWeights.length > 0 && (
-                    <div className='text-center '>
-                        <button className='border-0 bg-transparent mx-2' onClick={() => setSelectedMainWeight(null)}>
-                            <button className={`p-2 rounded-pill px-3 shadow-sm fw-bold btn_active ${selectedMainWeight === null ? 'active-btn' : ''}`} style={{ backgroundColor: "#fffcf3" }}>
+                    <div className='text-center pt-3 d-block d-lg-flex align-items-center justify-content-center'>
+                        <div className='border-0 bg-transparent mx-2 mt-3' onClick={() => setSelectedMainWeight(null)}>
+                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? 'active-btn' : ''}`} >
                                 All
-                            </button>
-                        </button>
+                            </div>
+                        </div>
                         {uniqueMainWeights.map((weight, idx) => (
-                            <button key={idx} className='border-0 bg-transparent mx-2 mt-2' onClick={() => setSelectedMainWeight(weight)}>
-                                <button className={`p-2 rounded-pill px-3 shadow-sm fw-bold btn_active ${selectedMainWeight === weight ? 'active-btn' : ''}`} style={{ backgroundColor: "#fffcf3" }}>
+                            <div key={idx} className='border-0 bg-transparent mx-2 mt-3' onClick={() => setSelectedMainWeight(weight)}>
+                                <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? 'active-btn' : ''}`} >
                                     {weight}
-                                </button>
-                            </button>
+                                </div>
+                            </div>
                         ))}
                     </div>
                 )}
 
                 {/* Display Main Subproducts */}
                 <div className="container py-5">
-                    <div className="row g-3 justify-content-center">
+                    <div className="row justify-content-center">
                         {filteredMainSubProducts.map((item, index) => (
-                            <div key={index} className="col-6 col-md-4 col-lg-3 fade-in mt-3">
-                                <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4" style={{ backgroundColor: "#fffcf3", cursor: "pointer" }}>
-                                    <img src={item.proimg} alt="" className='img-fluid' style={{ height: '200px' }} />
+                            <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
+                                <div className="card shadow-sm w-100 h-100 text-center p-3">
+                                    <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
                                     <div className='fw-semibold subp pt-2 p-1 fs-6'>
                                         {item.ProductName}
                                     </div>
@@ -114,46 +108,44 @@ function SubProducts() {
                 {product.subtypes && product.subtypes.length > 0 && product.subtypes.map((subtype, idx) => {
                     const subtypeId = subtype.id;
                     const subtypeWeights = Array.from(new Set(subtype.subproducts.map(item => item.weight)));
-
                     const selectedSubtypeWeight = selectedSubtypeWeights[subtypeId] || null;
-
                     const filteredSubtypeProducts = selectedSubtypeWeight
                         ? subtype.subproducts.filter(item => item.weight === selectedSubtypeWeight)
                         : subtype.subproducts;
 
                     return (
-                        <div key={idx} className="mb-5">
-                            <h2 className='mt-3 text-center text-danger'>{subtype.h1}</h2>
+                        <div key={idx} className="my-5">
+                            <h3 className='mt-3 text-center text-dark text-uppercase fw-bold'>{subtype.h1}</h3>
 
                             {/* Weight Filter for Subtype */}
                             {subtypeWeights.length > 0 && (
-                                <div className='text-center'>
-                                    <button className='border-0 bg-transparent mx-2' onClick={() =>
+                                <div className='text-center py-4 d-block d-lg-flex align-items-center justify-content-center'>
+                                    <div className='border-0 bg-transparent mx-2' onClick={() =>
                                         setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: null }))
                                     }>
-                                        <button className={`p-2 rounded-pill px-3 shadow-sm fw-bold btn_active ${!selectedSubtypeWeight ? 'active-btn' : ''}`} style={{ backgroundColor: "#fffcf3" }}>
+                                        <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-3 ${!selectedSubtypeWeight ? 'active-btn' : ''}`} >
                                             All
-                                        </button>
-                                    </button>
+                                        </div>
+                                    </div>
                                     {subtypeWeights.map((weight, i) => (
-                                        <button key={i} className='border-0 bg-transparent mx-2' onClick={() =>
+                                        <div key={i} className='border-0 bg-transparent mx-2' onClick={() =>
                                             setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: weight }))
                                         }>
-                                            <button className={`p-2 rounded-pill px-3 shadow-sm fw-bold btn_active mt-2 ${selectedSubtypeWeight === weight ? 'active-btn' : ''}`} style={{ backgroundColor: "#fffcf3" }}>
+                                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-3 ${selectedSubtypeWeight === weight ? 'active-btn' : ''}`}>
                                                 {weight}
-                                            </button>
-                                        </button>
+                                            </div>
+                                        </div>
                                     ))}
                                 </div>
                             )}
 
                             {/* Display Subtype Subproducts */}
                             <div className="container py-3">
-                                <div className="row g-3 justify-content-center">
+                                <div className="row justify-content-center">
                                     {filteredSubtypeProducts.map((item, index) => (
-                                        <div key={index} className="col-6 col-md-4 col-lg-3 fade-in mt-3">
-                                            <div className="h-100 shadow text-center p-1 p-lg-3 rounded-4" style={{ backgroundColor: "#fffcf3", cursor: "pointer" }}>
-                                                <img src={item.proimg} alt="" className='img-fluid' style={{ height: '200px' }} />
+                                        <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
+                                            <div className="card shadow-sm w-100 h-100 text-center p-3">
+                                                <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
                                                 <div className='fw-semibold subp pt-2 p-1 fs-6'>
                                                     {item.ProductName}
                                                 </div>
