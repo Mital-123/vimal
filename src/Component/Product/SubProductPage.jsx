@@ -38,14 +38,14 @@ function SubProducts() {
             <div style={{ backgroundColor: "#fffcf3" }}>
                 <div className='pt-2 pt-lg-4'><Gogreen /></div>
                 <div className='m-auto text-center col-sm-8 col-11 py-2 py-lg-4'>
-                    <h2 className='fw-bold my-4'>Power of {product.h1}</h2>
-                    <p className='px-5'>{product.powerdesc}</p>
-                    <div className='w-75 mx-auto container'>
+                    <h2 className='fw-bold my-2 my-lg-4'>Power of {product.h1}</h2>
+                    <p className='px-2 px-lg-5'>{product.powerdesc}</p>
+                    <div className='w-75 mx-auto '>
                         {packagedetail.map((x, i) => (
                             <span key={i} className='fw-bold'>{x}{i < packagedetail.length - 1 && ' | '}</span>
                         ))}
                     </div>
-                    <div className='mt-3'>
+                    <div className='mt-1 mt-lg-4'>
                         <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
                         <Link to="https://www.instagram.com/swadbrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaInstagram /></Link>
                         <Link to="https://www.youtube.com/@SwadBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaYoutube /></Link>
@@ -93,7 +93,7 @@ function SubProducts() {
                     <div className="row justify-content-center">
                         {filteredMainSubProducts.map((item, index) => (
                             <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                <div className="card shadow-sm w-100 h-100 text-center p-3">
+                                <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
                                     <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
                                     <div className='fw-semibold subp pt-2 p-1 fs-6'>
                                         {item.ProductName}
@@ -144,7 +144,7 @@ function SubProducts() {
                                 <div className="row justify-content-center">
                                     {filteredSubtypeProducts.map((item, index) => (
                                         <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                            <div className="card shadow-sm w-100 h-100 text-center p-3">
+                                            <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
                                                 <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
                                                 <div className='fw-semibold subp pt-2 p-1 fs-6'>
                                                     {item.ProductName}
