@@ -1,30 +1,6 @@
-import { useRef, useState } from 'react';
-import { FaChevronLeft, FaChevronRight, FaGreaterThan, FaLeaf, FaLessThan } from 'react-icons/fa';
+import { useRef } from 'react';
+import { FaChevronLeft, FaChevronRight, FaLeaf } from 'react-icons/fa';
 import Slider from 'react-slick';
-import ButtonCom from '../ButtonCom';
-import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
-const SampleNextArrow = (props) => {
-    const { className, onClick, style } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", right: "10px", zIndex: 2 }}
-            onClick={onClick}
-        />
-    );
-};
-
-const SamplePrevArrow = (props) => {
-    const { className, onClick, style } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", left: "10px", zIndex: 2 }}
-            onClick={onClick}
-        />
-    );
-};
 function ProductSlider() {
     const sliderRef = useRef();
     const settings = {
@@ -37,25 +13,23 @@ function ProductSlider() {
         autoplay: false,
         autoplaySpeed: 2000,
         arrows: false,
-        // nextArrow: <SampleNextArrow />,
-        // prevArrow: <SamplePrevArrow />,
     };
 
 
     return (
         <>
             <div className="container">
-                <div className='row justify-content-between'>
-                    <div className='col-sm-5 col-5'>
-                        <div className='d-flex align-items-center'>
-                            <div className="p-2 rounded-circle" style={{ background: "var(--golden)" }}>
+                <div className='row justify-content-center text-center'>
+                    <div className='col-sm-5 col-7 rounded-bottom-5 m-auto' style={{ background: "var(--golden)" }}>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <div className="p-2 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
                                 <FaLeaf className='fs-3' />
                             </div>
                             <i className='h6 ms-2 mt-3'>Authentic <br />
                                 Indian recipe</i>
                         </div>
                     </div>
-                    <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div>
+                    {/* <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div> */}
                 </div>
             </div>
 
@@ -64,7 +38,7 @@ function ProductSlider() {
                 <div className="row">
                     <div className="col-12 order-lg-0 order-1">
                         <div className="row align-items-end justify-content-end ">
-                            <div className="col-lg-10 px-0">
+                            <div className="col-lg-10 px-0 recepieslider">
                                 <Slider ref={sliderRef}  {...settings}>
                                     {recipes.map((item, index) => (
                                         <div key={index}>
@@ -109,8 +83,22 @@ function ProductSlider() {
                     </div>
                 </div>
             </div>
-
             <div className="container">
+                <div className='row justify-content-center text-center'>
+                    <div className='col-sm-5 col-7 pt-3 px-3 rounded-top-5'
+                        style={{ height: '80px', background: "var(--golden)" }}>
+                        <button className="btn btn-link text-white fs-5 ms-auto bg-white mx-2" onClick={() => sliderRef.current?.slickPrev()}>
+                            <FaChevronLeft className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                        </button>
+                        <button className="btn btn-link text-white fs-5 bg-white mx-2" onClick={() => sliderRef.current?.slickNext()}>
+                            <FaChevronRight className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                        </button>
+                    </div>
+                    {/* <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div> */}
+                </div>
+            </div>
+
+            {/* <div className="container">
                 <div className="">
                     <div className='ms-auto col-sm-5 col-7 d-flex align-items-center justify-content-between px-3'
                         style={{ height: '80px', borderBottomLeftRadius: "2rem", background: "var(--golden)" }}>
@@ -122,7 +110,7 @@ function ProductSlider() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 }

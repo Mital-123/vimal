@@ -62,16 +62,20 @@
     margin-top: -200px;
 }
 
-.slick-slide {
+.recepieslider .slick-slide {
     opacity: 0 !important;
     transform: translateY(20px) !important;
     transition: none !important;
 }
 
-.slick-active {
+.recepieslider .slick-active {
     opacity: 1 !important;
     transform: translateY(0) !important;
     transition: all 1s ease-in-out !important;
+}
+
+.recepieslider .slick-track {
+    transition-timing-function: ease-in-out !important;
 }
 
 @media screen and (max-width:992px) {
