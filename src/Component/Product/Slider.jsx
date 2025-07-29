@@ -44,9 +44,9 @@ function ProductSlider() {
 
     return (
         <>
-            <div className="container-xxl">
+            <div className="container">
                 <div className='row justify-content-between'>
-                    <div className='col-sm-5 col-7 ms-sm-5 ps-sm-5'>
+                    <div className='col-sm-5 col-5'>
                         <div className='d-flex align-items-center'>
                             <div className="p-2 rounded-circle" style={{ background: "var(--golden)" }}>
                                 <FaLeaf className='fs-3' />
@@ -55,7 +55,7 @@ function ProductSlider() {
                                 Indian recipe</i>
                         </div>
                     </div>
-                    <div className='col-sm-5 col-7 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div>
+                    <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div>
                 </div>
             </div>
 
@@ -110,15 +110,15 @@ function ProductSlider() {
                 </div>
             </div>
 
-            <div className="container-xxl">
+            <div className="container">
                 <div className="">
-                    <div className='ms-auto col-5 d-flex align-items-center justify-content-between px-3'
+                    <div className='ms-auto col-sm-5 col-7 d-flex align-items-center justify-content-between px-3'
                         style={{ height: '80px', borderBottomLeftRadius: "2rem", background: "var(--golden)" }}>
                         <button className="btn btn-link text-white fs-4 ms-auto bg-white me-1" onClick={() => sliderRef.current?.slickPrev()}>
-                            <FaChevronLeft className='' style={{ color: 'var(--golden)' ,fontWeight:900}} />
+                            <FaChevronLeft className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
                         </button>
                         <button className="btn btn-link text-white fs-4 bg-white" onClick={() => sliderRef.current?.slickNext()}>
-                            <FaChevronRight className='' style={{ color: 'var(--golden)',fontWeight:900 }} />
+                            <FaChevronRight className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
                         </button>
                     </div>
                 </div>
