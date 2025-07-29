@@ -16,7 +16,7 @@ function ProductSlider() {
         <div className="container bg-white py-5">
             <div className="row">
                 <div className="col-12">
-                    <div className="row align-items-end justify-content-end  order-lg-0 order-1">
+                    <div className="row align-items-end justify-content-end  order-lg-0 order-1 ">
                         <div className="col-lg-10 px-0">
                             <Slider {...settings}>
                                 {[0, 1, 2, 3, 4].map((item, index) => (
@@ -52,7 +52,7 @@ function ProductSlider() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1">
+                <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1 bg-white">
                     <p className="mb-1 fw-semibold small text-muted">Authentic Indian recipe</p>
                     <h1>
                         With <span className="fw-bold" style={{ color: 'var(--golden)' }}>Vimal</span>, <br />
