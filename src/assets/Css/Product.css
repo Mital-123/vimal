@@ -57,6 +57,23 @@
     margin-top: -170px;
 }
 
+
+.product-line {
+    margin-top: -200px;
+}
+
+.slick-slide {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: none !important;
+}
+
+.slick-active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 1s ease-in-out !important;
+}
+
 @media screen and (max-width:992px) {
     .product-line {
         margin-top: 0;
