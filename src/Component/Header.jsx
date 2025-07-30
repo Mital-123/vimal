@@ -52,23 +52,21 @@ function Header() {
     return (
         <div className='bg-white w-100 position-fixed top-0 z-3'>
             <nav className="bg-white fstyle navbar navbar-expand-md fixed-top shadow">
-                <div className='container-fluid ms-5'>
+                <div className='container-fluid ms-sm-5 ms-3'>
 
                     {/* Logo */}
                     <Link className="navbar-brand me-0" to="/">
                         <img
                             src={require('../assets/Images/logo_vimal_agro.png')}
                             alt="Logo"
-                            height={115}
-                            width={115}
-                            className="img-fluid object-fit-cover"
+                            className="img-fluid object-fit-cover logo"
                             style={{ filter: "drop-shadow(-11px 11px 11px #0000002d)", position: 'relative', top: '24px' }}
                         />
                     </Link>
 
                     {/* Toggler Button */}
                     <button
-                        className="navbar-toggler ms-auto py-3 text-warning"
+                        className="navbar-toggler ms-auto py-sm-3 py-0 text-warning"
                         type="button"
                         aria-expanded={isOpen}
                         aria-label="Toggle navigation"

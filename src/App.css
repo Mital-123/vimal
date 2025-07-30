@@ -319,18 +319,29 @@
 /* lending section end */
 
 /* Header start */
-.dropdown_color{
+.dropdown_color {
   color: var(--red);
   transition: all 0.2 ease-in-out;
   border: 1px solid transparent;
   border-radius: 10px;
 }
-.dropdown_color:hover{
+
+.dropdown_color:hover {
   color: white;
   background-color: var(--red);
 }
 
+.logo {
+  height: 115px;
+  width: 115px
+}
 
+@media screen and (max-width:576px) {
+  .logo {
+    height: 85px;
+    width: 75px
+  }
+}
 
 .navbar-brand {
   position: absolute;
@@ -354,10 +365,11 @@
   color: white !important;
 }
 
-.nav-item:hover .producthover{
+.nav-item:hover .producthover {
   color: white !important;
   background-color: var(--red) !important;
 }
+
 .nav-item .nav-link.active {
   color: white !important;
 }
