@@ -178,7 +178,7 @@ function Counter() {
                     <div className="col-12 col-md-6 col-lg-4 mt-3">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
-                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><RiEmotionHappyLine /></div>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><RiEmotionHappyLine /></div>
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</h2></div>
@@ -190,7 +190,7 @@ function Counter() {
                     <div className="col-12 col-md-6 col-lg-4 mt-3">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
-                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><TiShoppingCart /></div>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><TiShoppingCart /></div>
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={160} enableScrollSpy={true} separator="" /> +</h2></div>
@@ -202,7 +202,7 @@ function Counter() {
                     <div className="col-12 col-md-6 col-lg-4 mt-3">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
-                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "80px" }}><TbWorld /></div>
+                                <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><TbWorld /></div>
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</h2></div>
