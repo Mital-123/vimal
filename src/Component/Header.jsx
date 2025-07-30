@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaHome } from 'react-icons/fa';
 import { IoIosArrowDropdownCircle, IoMdArrowDropdown } from 'react-icons/io';
 import { IoCloseSharp } from 'react-icons/io5';
@@ -11,7 +11,7 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
-let product=products
+    let product = products
     const toggleDropdown = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -22,16 +22,16 @@ let product=products
         setIsOpen(false);
         setShowDropdown(false);
     };
-// Inside your component
-const isDesktop = window.innerWidth >= 768;
+    // Inside your component
+    const isDesktop = window.innerWidth >= 768;
 
-// Desktop dropdown handlers
-const handleMouseEnter = () => {
-    if (isDesktop) setShowDropdown(true);
-};
-const handleMouseLeave = () => {
-    if (isDesktop) setShowDropdown(false);
-};
+    // Desktop dropdown handlers
+    const handleMouseEnter = () => {
+        if (isDesktop) setShowDropdown(true);
+    };
+    const handleMouseLeave = () => {
+        if (isDesktop) setShowDropdown(false);
+    };
     // Auto-close dropdown on outside click
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -55,14 +55,14 @@ const handleMouseLeave = () => {
                 <div className='container-fluid ms-5'>
 
                     {/* Logo */}
-                    <Link className="navbar-brand bg-light me-0" to="/">
+                    <Link className="navbar-brand me-0" to="/">
                         <img
                             src={require('../assets/Images/logo_vimal_agro.png')}
                             alt="Logo"
-                            height={75}
-                            width={75}
+                            height={115}
+                            width={115}
                             className="img-fluid object-fit-cover"
-                            style={{ filter: "drop-shadow(-11px 11px 11px #0000002d)" }}
+                            style={{ filter: "drop-shadow(-11px 11px 11px #0000002d)", position: 'relative', top: '24px' }}
                         />
                     </Link>
 
@@ -112,21 +112,21 @@ const handleMouseLeave = () => {
                                         <div className="">
                                             <Link className={`nav-link w-100 d-inline-block ${location.pathname === "/product" ? "active" : ""}`} to="/product" onClick={closeAll}>
                                                 Product   <span onClick={toggleDropdown} style={{ cursor: "pointer" }}>
-                                                <IoMdArrowDropdown />
-                                            </span>
+                                                    <IoMdArrowDropdown />
+                                                </span>
                                             </Link>
-                                          
+
                                         </div>
                                         {showDropdown && (
-                                            
+
                                             <ul className="list-unstyled mt-2 bg-white shadow rounded py-2 px-1 w-100">
-                                               {products.map((p) => (
-                                            <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item  text-break text-wrap" style={{fontSize:"12px"}} onClick={closeAll}>
-                                                    {p.h1}
-                                                </Link>
-                                            </li>
-                                        ))}
+                                                {products.map((p) => (
+                                                    <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
+                                                        <Link to={`/product/${p.id}`} className="dropdown-item  text-break text-wrap" style={{ fontSize: "12px" }} onClick={closeAll}>
+                                                            {p.h1}
+                                                        </Link>
+                                                    </li>
+                                                ))}
                                             </ul>
                                         )}
                                     </li>
@@ -152,28 +152,28 @@ const handleMouseLeave = () => {
                             <li className="nav-item">
                                 <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/aboutus" ? "active" : ""}`} to="/aboutus">About</Link>
                             </li>
-                    <li
-    className="nav-item position-relative d-flex align-items-center"
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-    ref={dropdownRef}
->
-    <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">
-        Product <IoIosArrowDropdownCircle />
-    </Link>
+                            <li
+                                className="nav-item position-relative d-flex align-items-center"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                ref={dropdownRef}
+                            >
+                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">
+                                    Product <IoIosArrowDropdownCircle />
+                                </Link>
 
-    {showDropdown && (
-        <ul className="position-absolute bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
-            {products.map((p) => (
-                <li key={p.id} className='dropdown_color list-unstyled py-1 ps-2 pe-1'>
-                    <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
-                        {p.h1}
-                    </Link>
-                </li>
-            ))}
-        </ul>
-    )}
-</li>
+                                {showDropdown && (
+                                    <ul className="position-absolute bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
+                                        {products.map((p) => (
+                                            <li key={p.id} className='dropdown_color list-unstyled py-1 ps-2 pe-1'>
+                                                <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
+                                                    {p.h1}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
 
                             <li className="nav-item">
                                 <Link className={`nav-link px-4 mx-1 fs-6 ${location.pathname === "/blog" ? "active" : ""}`} to="/blog">Blog</Link>
