@@ -182,13 +182,11 @@
   width: auto;
   transition: all 0.3s ease-in-out;
 }
-
-@media (min-width: 996px) and (max-width: 1400px) {
-  .category-btn-container {
+ .category-btn-container {
     height: 45px;
     padding: 0;
   }
-}
+
 
 .category-btn {
   background: transparent;
