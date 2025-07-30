@@ -183,25 +183,54 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media (min-width: 996px) and (max-width: 1400px) {
+  .category-btn-container {
+    height: 45px;
+    padding: 0;
+  }
+}
+
+.category-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /* Handle content height to avoid jumping */
 .category_bgimg {
-  background-image: url("https://png.pngtree.com/background/20250115/original/pngtree-white-background-with-abstract-waves-a-graphic-line-sonic-or-sound-picture-image_15247260.jpg");
+  /* background-image: url("https://png.pngtree.com/background/20250115/original/pngtree-white-background-with-abstract-waves-a-graphic-line-sonic-or-sound-picture-image_15247260.jpg"); */
+  background-image: url("https://cdn.wallpapersafari.com/13/24/If1cMGT.webp");
+  box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.534);
+  background-color: #CDCDCE;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.719);
+  background-position: bottom center;
 }
+
 .categoryarrow .slick-next {
   top: 47% !important;
   right: -27px !important;
 }
- 
+
 .categoryarrow .slick-prev {
   top: 47% !important;
   left: -35px !important;
 }
- 
- 
+
+.categoryarrow .slick-center {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 .brand-main-img {
   transition: all 0.3s ease-in-out;
   width: 100%;
