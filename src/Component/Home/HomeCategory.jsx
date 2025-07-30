@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrandProduct } from './BrandProductList';
 import { Link } from 'react-router-dom';
 import ButtonCom from '../ButtonCom';
+import { FaChevronRight } from 'react-icons/fa';
+import { GrFormNextLink } from 'react-icons/gr';
 export const productlist = [
   {
     brandId: "Swad",
@@ -46,8 +48,26 @@ export const productlist = [
     alt: "Rusk",
   },
   {
-    brandId: "Masala",
-    title: "Masala ",
+    brandId: "extra1",
+    title: "add extra 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore. labore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore.",
+    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    path: '/product/Mango-Pulp-Slice',
+    alt: "Platina",
+  },
+  {
+    brandId: "extra2",
+    title: "add extra 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore. labore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore.",
+    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    path: '/product/Mango-Pulp-Slice',
+    alt: "Platina",
+  },
+  {
+    brandId: "extra3",
+    title: "add extra 3",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore. labore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut laborelabore sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod tempor incididunt ut labore.",
     image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
@@ -56,38 +76,60 @@ export const productlist = [
   },
 
 ];
-
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="custom-next-arrow"
+      onClick={onClick}
+      style={{
+        position: 'absolute',
+        right: '-30px',
+        top: '15%',
+        zIndex: 2,
+        cursor: 'pointer',
+        fontSize: '20px',
+        color: '#000',
+      }}
+    >
+      <GrFormNextLink className='bg-warning rounded-circle fs-3' />
+    </div>
+  );
+};
 function HomeCategory() {
 
   const settings = {
-    dots: false,
     arrows: false,
     infinite: true,
-    speed: 2000,
-    slidesToShow: 4,
+    speed: 1000,
+    slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1800,
+    autoplay: false,
+    autoplaySpeed: 0,
+    cssEase: "linear",
     pauseOnHover: false,
+    arrows: true,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <></>,
     responsive: [
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 4,
+        },
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1
-        }
-      }
+          slidesToShow: 2,
+        },
+      },
     ]
   };
 
@@ -106,25 +148,26 @@ function HomeCategory() {
           <div className='text-center'>
             <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
           </div>
+          <div className="col-md-8 col-10 m-auto pt-5 categoryarrow">
+            <Slider {...settings} className=''>
+              {productlist.map((item, index) => (
+                <div className="">
+                  <div key={index} className="px-2 m-1 bg-warning text-dark rounded-pill text-center">
+                    <button
+                      className={`nav-link text-center p-2 m-auto fw-semibold ${activeBrand.brandId === item.brandId ? 'active' : ''}`}
+                      onClick={() => handleBrandClick(item)}
+                    >
+                      {item.title}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
-          <ul className="nav justify-content-center nav-brand-tabs mt-3 flex-wrap">
-            {productlist.map((item, index) => (
-              <li className="nav-item" key={index}>
-                <button
-                  className={`nav-link shadow m-2 rounded-pill bg-warning text-dark ${activeBrand.brandId === item.brandId ? 'active' : ''
-                    }`}
-                  onClick={() => handleBrandClick(item)}
-                >
-                  {item.title}
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          {/* Fixed-height section */}
           <div
             className="row align-items-center rounded-4 pt-4 overflow-hidden"
-            style={{ minHeight: '400px' }} // 🔥 Set fixed minHeight
+            style={{ minHeight: '400px' }}
           >
             <div
               className="col-md-6 d-flex justify-content-center cat_image"
@@ -137,7 +180,7 @@ function HomeCategory() {
                   src={activeBrand.image}
                   alt={activeBrand.alt}
                   className="img-fluid brand-main-img"
-                  style={{ maxHeight: '300px', objectFit: 'contain' }} // 🔥 Consistent image height
+                  style={{ maxHeight: '300px', objectFit: 'contain' }}
                 />
               </div>
             </div>
