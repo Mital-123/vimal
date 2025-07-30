@@ -19,11 +19,11 @@ function ProductBrand() {
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
 
-                    <div className="row mt-4 d-flex justify-content-center mx-auto product-brand_bg shadow-lg rounded-4 p-4 p-lg-5">
+                    <div className="row mt-4 d-flex justify-content-center align-items-center mx-auto product-brand_bg shadow-lg rounded-4 p-2 p-lg-5">
                         {BrandProduct.map((item, index) => (
-                            <div key={index} className='col-lg-3 col-md-4 col-sm-6 col-12 px-0 px-lg-3 mt-3 mt-lg-0'>
+                            <div key={index} className='col-lg-3 col-md-6 col-sm-6 col-12 px-0 '>
                                 <div className='h-100 brand-card position-relative m-2' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-                                    <div className='bg-white p-3 rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
+                                    <div className='bg-white p-2 rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
                                         <div className="brand-img-wrapper">
                                             <img
                                                 src={item.image}
