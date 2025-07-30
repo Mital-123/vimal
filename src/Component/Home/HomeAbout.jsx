@@ -130,16 +130,16 @@ function HomeAbout() {
                                                     </div>
                                     <div className="d-flex align-items-center align-content-center mt-2">
 
-                                        <div className="">
+                                        <div className="mt-2">
                                             <Link to={"/aboutus"} className='text-decoration-none'><ButtonCom btn={"view More"} /></Link>
                                         </div>
-                                        <div className=" p-1 rounded w-25 h-25 ms-auto  test-shinee" style={{ filter: "drop-shadow(-11px 11px 11px #0000009b)" }}>
+                                        {/* <div className=" p-1 rounded w-25 h-25 ms-auto  test-shinee" style={{ filter: "drop-shadow(-11px 11px 11px #0000009b)" }}>
                                             <img
                                                 src={testimonial.logo}
                                                 className="img-fluid"
                                                 alt=""
                                             />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}

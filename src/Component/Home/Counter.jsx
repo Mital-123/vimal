@@ -182,7 +182,7 @@ function Counter() {
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</h2></div>
-                                    <div className='fs-4 fw-bold'>Happy Customers</div>
+                                    <div className='fs-5 fw-bold'>Happy Customers</div>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@ function Counter() {
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={160} enableScrollSpy={true} separator="" /> +</h2></div>
-                                    <div className='fs-4 fw-bold'>popular product</div>
+                                    <div className='fs-5 fw-bold'>popular product</div>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ function Counter() {
                                 <div className='p-3'>
                                     <div >
                                         <h2 className='countnumber fw-bold'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</h2></div>
-                                    <div className='fs-4 fw-bold'>More Countries</div>
+                                    <div className='fs-5 fw-bold'>More Countries</div>
                                 </div>
                             </div>
                         </div>
