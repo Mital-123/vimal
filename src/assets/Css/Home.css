@@ -207,8 +207,7 @@
 .category_bgimg {
   /* background-image: url("https://png.pngtree.com/background/20250115/original/pngtree-white-background-with-abstract-waves-a-graphic-line-sonic-or-sound-picture-image_15247260.jpg"); */
   background-image: url("https://cdn.wallpapersafari.com/13/24/If1cMGT.webp");
-  box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.534);
-  background-color: #CDCDCE;
+  box-shadow: inset 0px 0px 1500px 1000px #ffffff94;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;

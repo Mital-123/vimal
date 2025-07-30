@@ -12,7 +12,7 @@ export const productlist = [
     description:
       "Savor the richness of Indian summers with our premium Mango Pulp and Slices, made from handpicked Alphonso and Kesar mangoes. Carefully processed to preserve their natural sweetness and aroma, they’re perfect for desserts, drinks, and a variety of culinary delights. We are proud to be the first manufacturer of Kesar Mango Pulp, relished worldwide for our quality and purity.",
     image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
-    path: "/product/mango-pulp"
+    path: "/product/Mango-Pulp-Slice"
   },
   {
     brandId: "Pickles",
@@ -21,7 +21,7 @@ export const productlist = [
       "We offer a vibrant range of traditional Indian pickles, crafted with age-old recipes and the finest ingredients. From tangy mango and spicy mixed to regional favourites like lime and sweet pickles, each variant is packed with bold, authentic flavours. Hygienically processed and globally loved, they add the perfect punch to every meal.",
     image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
 
-    path: "/product/pickles"
+    path: "/product/Pickles"
   },
   {
     brandId: "ReadyToEat",
