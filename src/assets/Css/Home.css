@@ -229,26 +229,47 @@
   transition: all 0.3s ease;
 }
 
-.brand-main-img {
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-}
 
 .product-brand_bg {
   width: 100%;
-  height: auto;
-  background-color: var(--red);
+  background-color: var(--red); /* Define --red in root or replace with actual color */
+  border-radius: 1rem;
 }
 
 .brand-box {
-  transition: all 1s ease;
+  transition: all 0.5s ease;
+  width: 100%;
 }
 
 .brand-card:hover .brand-box {
-  box-shadow: inset 0 0 20px 100px var(--golden);
+  box-shadow: inset 0 0 20px 100px var(--golden); /* Define --golden or use a hex value */
+}
+
+.brand-img-wrapper {
+  width: 100%;
+  height: 150px; /* Default height for desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-main-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .brand-img-wrapper {
+    height: 150px; /* Tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-img-wrapper {
+    height: 120px; /* Mobile */
+  }
 }
 
 /* .icon-overlay {

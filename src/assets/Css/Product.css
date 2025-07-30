@@ -126,6 +126,13 @@
     color: #000000 !important;
 }
 
+@media screen and (max-width:576px) {
+    .recepie {
+        line-height: 20px !important;
+        margin-bottom: 5px;
+    }
+}
+
 .yellow-circle {
     /* Responsive adjustment for yellow background circle */
     width: 270px;
