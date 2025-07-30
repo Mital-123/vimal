@@ -97,8 +97,8 @@ function ProductBrand() {
     
     return (
         <>
-            <div className='pt-5 p-1  category_bgimg'>
-                <div className='container mt-5'>
+            <div className='py-5 p-1  category_bgimg'>
+                <div className='container my-5'>
                     <div className=' text-center'>
                         <Tittles stitle={"Our Brand"} ltitle={"Leading the market with quality and trust"} />
                     </div>
@@ -107,12 +107,12 @@ function ProductBrand() {
                         {/* <Slider {...settings}> */}
                             {BrandProduct.map((item, index) => (
                                 <div key={index} className='col-lg-3 col-12 px-0 px-lg-3 mt-3 mt-lg-0'>
-                                    <div className='brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+                                    <div className=' h-100 brand-card position-relative' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
                                         {/* <Link className='text-decoration-none icon-overlay position-absolute top-50 start-50 translate-middle' >
                                             <span className='plus-icon text-white bg-dark d-flex justify-content-center align-items-center'>+</span>
                                         </Link> */}
-                                        <div className='bg-white p-2  rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
-                                            <div style={{ width: "150px", height: "150px" }}>
+                                        <div className='bg-white p-3  rounded-4 h-100 d-flex justify-content-center align-items-center brand-box'>
+                                            <div >
                                                 <img
                                                     src={item.image}
                                                     alt={item.alt}
