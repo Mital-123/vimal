@@ -14,6 +14,7 @@ import Faq from './Faq';
 import { Link } from 'react-router-dom';
 import Brouchers from './Brouchers';  
 import Whychooseus from '../Home/Whychooseus';
+import Companylogo from './Companylogo';
 
 
 function AboutusSec() {
@@ -28,7 +29,8 @@ function AboutusSec() {
 
       <div className="py-5  overflow-hidden contactinfo_bg">
         <div className="container">
-          <div className="row p-0 m-0 my-3">
+
+     {/* <div className="row p-0 m-0 my-3">
 
             <div className="col-12 col-lg-4 pt-4 d-flex flex-column ps-0 pe-lg-4 pe-0 overflow-hidden" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
               <div className="h-100 test-shinee shadow">
@@ -52,8 +54,7 @@ function AboutusSec() {
                 </div>
               </div>
               <div className="mt-auto shadow d-none d-md-block">
-                {/* <div className="fs-3 text-center fw-medium p-4  text-white mt-3 count_text" style={{backgroundColor:"#740000"}}>+ <CountUp end={14} enableScrollSpy={true} separator="" /> Years Experience</div> */}
-                <div className='h-100 test-shinee shadow'>
+                 <div className='h-100 test-shinee shadow'>
                   <img
                     src="https://importexport-nine.vercel.app/assets/images/faq-right.png"
 
@@ -126,36 +127,63 @@ function AboutusSec() {
                       data-aos-once="true"> <div className='whyno mt-0 mt-md-2 ' > 12365 95847</div></Link>
                   </div>
                 </div>
-                {/* <div className="row  m-0  mt-3">
-
-                  <div className="col-9 shadow" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
-                    <div className="h-100 d-flex align-items-center py-4  pera fw-bold text-center">
-                      " At Vimal, health taste and quality have been paramount since forever.  "
-                    </div>
-                  </div>
-                  <div className="col-3 p-0 m-0 shadow" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
-                    <div className="h-100 fs-1 text-white text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: "#6a1a1f" }}>
-                      <FaQuoteRight />
-                    </div>
-                  </div>
-                </div> */}
-
-                {/* <div>
-                <button class="btncss fw-bold mt-2">About Us</button>
-              </div> */}
+              
               </div>
             </div>
+          </div> */}
+
+
+          <div className="row  ">
+            {/* Left Text Content */}
+            <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
+              <h6 className="text-uppercase mb-2">
+                <Tittles stitle="About Us" />
+              </h6>
+              <h5 className="fw-bold ps-md-2 ps-0">
+                Combining culinary heritage, manufacturing excellence, and global reach
+                <span className="d-block">feeding the world with something for everyone.</span>
+              </h5>
+            </div>
+
+            {/* Middle Paragraph Content */}
+            <div className="col-lg-6 col-12 mb-2 mb-lg-0 ms-auto ">
+              <p className="text-muted pera  text-justify">
+                On a mission to bring authentic, convenient, and high-quality ethnic foods to consumers across the globe.
+                From rich curries and accompaniments to traditional sweets and savoury snacks, our offerings cater to
+                modern consumers seeking authentic Indian flavours with everyday convenience. Under the umbrella of <b className='text-dark'>Vimal Agro Products</b>,
+                our brand architecture is thoughtfully designed to cater to every palate and purpose. <b className='text-dark'>Swad</b> and <b className='text-dark'>Britas</b> focus on delivering indulgent and innovative
+                offerings that fall under the “fun-for-you” and “better-for-you” categories. At the same time, <b className='text-dark'>Big Pantry</b> offers wholesome,
+                everyday products that align with the “good-for-you” philosophy. With a strong global distribution network, we serve retail,
+                horeca, gifting, and private label clients across diverse markets.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="col-lg-7 text-end ms-auto col-12">
+             <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
+               <img 
+                src="https://www.swad.shop/cdn/shop/files/1_51ff9f4c-90ab-438f-a1f0-76475116c5c3.png?v=1730196274&width=1500"
+                alt="About Us" 
+                className="img-fluid object-fit-cover w-100 h-100 rounded-5"
+              />
+             </div>
+            </div>
           </div>
+
+       
+
+           
         </div>
       </div>
       <div className='overflow-hidden'>
-          <Whychooseus/>
-        <MissionVision />
+        <Companylogo/>
+          {/* <Whychooseus/> */}
+        {/* <MissionVision /> */}
         <AboutImpact />
-        <Brouchers />
+        {/* <Brouchers /> */}
         <Faq />
-        <Testimonial />
-        <Certificates />
+        {/* <Testimonial /> */}
+        {/* <Certificates /> */}
       </div>
     </>
   );

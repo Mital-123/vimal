@@ -8,6 +8,7 @@
 :root {
   --red: #6a1a1f;
   --golden: #f2d05c;
+  --ofwhite:#fffcf3;
 }
 
 .stittle {
@@ -202,7 +203,101 @@
 
 /* image shine end */
 
+/* socialicons start */
+.social_Nav {
+  top: 40%;
+  left: -250px;
+  z-index: 10 !important;
+  transition: all 0.9s ease-in-out;
+}
 
+.social_Nav ul {
+  list-style-type: none;
+  width: 50px;
+  transform: translateX(-210px);
+}
+
+.social_Nav ul li {
+  background-color: rgba(34, 33, 33, 0.63);
+  width: 250px;
+  margin: 5px !important;
+  padding: 6px !important;
+  border-radius: 0 30px 30px 0;
+  transition: all 0.9s;
+}
+
+.social_Nav ul li.Facebook_sideNav:hover {
+  transform: translateX(135px);
+  background-image: linear-gradient(#1877f2, #1877f2) !important;
+}
+
+.social_Nav ul li.Instagram_sideNav:hover {
+  transform: translateX(165px);
+  background-image: linear-gradient(145deg,   #5c0000, #a10000, #d1a427, #a67c00) !important;
+}
+
+.social_Nav ul li.Twitter_sideNav:hover {
+  transform: translateX(155px);
+  background-image: linear-gradient(#1da1f2, #1da1f2) !important;
+}
+
+.social_Nav ul li.Facebook_sideNav .side_Nav_Icon {
+  color: #1877f2 !important;
+}
+
+.social_Nav ul li.Instagram_sideNav .side_Nav_Icon {
+  color: var(--red) !important;
+}
+
+.social_Nav ul li.Twitter_sideNav .side_Nav_Icon {
+  color: #1da1f2 !important;
+}
+
+.social_Nav ul li.Linkedin_sideNav .side_Nav_Icon {
+  color: #0077b5 !important;
+}
+
+.social_Nav ul li.Facebook_sideNav:hover {
+  background-image: linear-gradient(#1877f2, #1877f2) !important;
+}
+
+.social_Nav ul li.Instagram_sideNav:hover {
+  background-image: linear-gradient(-145deg,
+    #5c0000, #a10000, #d1a427, #a67c00) !important;
+}
+
+.social_Nav ul li.Twitter_sideNav:hover {
+  background-image: linear-gradient(#1da1f2, #1da1f2) !important;
+}
+
+.social_Nav ul li.Linkedin_sideNav:hover {
+  background-image: linear-gradient(#0077b5, #0077b5) !important;
+}
+
+.social_Nav ul li .sideNavIcon_tittle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social_Nav ul li .sideNavIcon_tittle span {
+  margin-right: 10px;
+}
+
+.social_Nav ul li .side_Nav_Icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 1s;
+}
+
+.social_Nav ul li:hover .side_Nav_Icon {
+  transform: rotate(360deg);
+}
+
+.social_Nav.show_side-icons {
+  left: 0;
+}
+
+/* socialicons end */
 /* Footer start */
 .activetab {
   color: #212529;
