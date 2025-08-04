@@ -34,15 +34,15 @@ function MissionVision() {
             <div className='mb-5 '>
                 <div className='container'>
                     <div className='row mainViMiSec'>
-                        <div className='col-12 col-lg-6 col-md-6' data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
-                            <div className='Main_ViMi_box shadow bg-white rounded-3 py-4 px-5  h-100'>
+                        <div className='col-12 col-lg-6 col-md-6 mb-md-0 mb-3' data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+                            <div className='Main_ViMi_box shadow bg-white rounded-3 py-4 px-4 px-lg-5  h-100'>
                                 <div className='Vi_Mi-shadow'><HiLightBulb className='vision_mission_icon p-1' /></div>
                                 <div className='Vi-Mi_Tittle fstyle mt-4 mb-2 fs-4 fw-bold'>Our Vision</div>
                                 <div className='text-secondary pera' style={{ wordBreak: "break-all" }}> Being a production hub at a distance of mere 250 kms from Mumbai, the Commercial Capital of the country, Vimal Agro has always had the ease of doing business throughout the world. Exporting over international quality products to the world, the brand always keeps looking for ways to expand their range and provide the flavour of Nostalgia and the Swad of Indian food to people across continents</div>
                             </div>
                         </div>
                         <div className='col-12 col-lg-6 col-md-6' data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
-                            <div className='Main_ViMi_box shadow bg-white rounded-3 py-4 px-5   h-100'>
+                            <div className='Main_ViMi_box shadow bg-white rounded-3 py-4 px-4 px-lg-5   h-100'>
                                 <div className='Vi_Mi-shadow'><MdDiamond className='vision_mission_icon p-1' /></div>
                                 <div className='Vi-Mi_Tittle fstyle mt-4 mb-2 fs-4 fw-bold'>Our Mission</div>
                                 <div className='text-secondary pera' style={{ wordBreak: "break-all" }}>At Vimal, health taste and quality have been paramount since forever. Be it canned vegetables, fruit pulps or juices, pickles or chutneys, papad or just ready to eat dishes, the brand has ensured strict quality measures, proper abiding of industry and standards guidelines without compromising on the taste at all. State of the art machinery combined with the richness of traditional Indian recipes dipped in organic preservatives, creates magic for all taste buds.

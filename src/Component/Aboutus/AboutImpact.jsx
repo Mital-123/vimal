@@ -56,9 +56,9 @@ function AboutImpact() {
                         <div className='col-12 col-lg-4 col-md-6 p-3' key={index} >
                        <div data-aos={service.animation} data-aos-duration="1500" data-aos-delay={service.delay} data-aos-once="true">
                              <div
-                                className='Service_card h-100 rounded-4 position-relative p-1 overflow-hidden'>
+                                className='Service_card h-100  position-relative p-1 overflow-hidden'>
                                 <div
-                                    className="bg-image position-absolute"
+                                    className="bg-image position-absolute rounded-4"
                                     style={{
                                         backgroundImage: `url(${service.bgImage})`,
                                         boxShadow: "inset 0px 0px 140px 1200px rgba(116, 0, 0, 0.42)",

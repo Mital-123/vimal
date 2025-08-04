@@ -162,31 +162,10 @@ function HomeCategory() {
             <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
           </div>
           <div className="col-md-8 col-10 m-auto pt-5 categoryarrow">
-            {/* <Slider {...settings} ref={sliderRef}>
-              {productlist.map((item, index) => (
-                <div key={index} className="px-2 m-1">
-                  <div
-                    className={`shadow-sm text-dark rounded-pill text-center btn_active ${activeBrand.brandId === item.brandId ? 'active-btn' : ''}`}
-                  >
-                    <button
-                      className={`nav-link text-center p-2 py-1 m-auto text-capitalize`}
-                      onClick={() => {
-                        setActiveIndex(index);
-                        setActiveBrand(item);
-                        if (sliderRef.current) {
-                          sliderRef.current.slickGoTo(index);
-                        }
-                      }}
-                    >
-                      {item.title}
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </Slider> */}
+           
             <Slider {...settings} ref={sliderRef}>
               {productlist.map((item, index) => (
-                <div key={index} className="px-2 m-1">
+                <div key={index} className="px-3 px-sm-2 m-1">
                   <div
                     className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeBrand.brandId === item.brandId ? 'active-btn' : ''}`}
                   >
