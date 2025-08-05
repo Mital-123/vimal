@@ -3,7 +3,7 @@ import Tittles from '../Tittles'
 
 function Principals() {
     return (
-        <div style={{ backgroundColor: 'var(--ofwhite)' }} className='py-5'>
+        <div className='py-5'>
             <div className='container-lg'>
                 <div className="col-11 mx-auto">
                     {/* <h1>OUR PRINCIPLES</h1>*/}
