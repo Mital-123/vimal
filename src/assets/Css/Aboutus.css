@@ -48,6 +48,7 @@
     font-size: 1rem;
   }
 }
+
 @keyframes upDown {
   0% {
     transform: translateY(0);
@@ -67,6 +68,7 @@
   margin: 0 auto;
   animation: upDown 3s ease-in-out infinite;
 }
+
 .whyno {
   color: #9b9b9b;
   font-size: 50px;
@@ -77,6 +79,7 @@
 .whyno:hover {
   color: var(--red) !important;
 }
+
 /* aboutus end */
 /* missinvision start */
 .main_vi_mi {
@@ -177,6 +180,7 @@
   box-shadow: inset 0px 0px 0px 1500px #1a0000d0;
   object-fit: fill;
 }
+
 /* brouvhers end */
 /* Faq start */
 .accordion-button:focus {
@@ -202,3 +206,48 @@
 }
 
 /* Faq end */
+
+
+/* principals start */
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Dancing+Script:wght@400..700&family=Permanent+Marker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.h1strike {
+  font-family: "Permanent Marker", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media screen and (max-width:992px) {
+
+  .littleimg1 {
+    right: 5px !important;
+  }
+
+  .littleimg2 {
+    bottom: 70px !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .littleimg1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .principalimg img {
+    min-height: 100% !important;
+  }
+
+  .principaltext div {
+    top: 23px !important;
+    /* right: 30px !important; */
+  }
+
+  .littleimg1 {
+    bottom: 50px !important;
+    right: 10px !important;
+  }
+}
+
+/* principals end */
