@@ -50,7 +50,7 @@ function Header() {
     }, [showDropdown]);
 
     return (
-        <div className='bg-white w-100 position-fixed top-0 z-3'>
+        <div className='bg-white w-100 position-fixed top-0' style={{zIndex:2000000}}>
             <nav className="bg-white fstyle navbar navbar-expand-md fixed-top shadow">
                 <div className='container-fluid ms-sm-5 ms-3'>
 
