@@ -22,7 +22,7 @@ function Principals() {
                             <img src={require('../../assets/Images/11436576.png')} style={{ height: '100px' }} alt="" />
                         </div>
                         <div className='col-md-6 p-lg-5 p-3 principalimg'>
-                            <img src={'https://www.vimalagro.com/wp-content/uploads/2020/10/home_product_collarge-1599x497.jpg'} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid' />
+                            <img src={require('../../assets/Images/recepi1.jpg')} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid object-fit-cover shadow ' />
                         </div>
                         <div className='col-md-6 p-lg-5 p-3 principaltext'>
                             <div className='h1strike text-warning text-opacity-25 pb-2 display-2 font-normal text-end mb-12 mt-8' style={{
@@ -62,7 +62,7 @@ function Principals() {
                             <p className='pera'>Today the consumer is more time poor than ever. Therefore, our focus lies in creating easy tasting but nutritious and authentic meals. Using Passage Foods sauces and our instant Heat and Eat bowls, a delicious and convenient meal can be prepared in under five minutes.</p>
                         </div>
                         <div className='col-md-6 p-lg-5 p-3 principalimg'>
-                            <img src={'https://www.vimalagro.com/wp-content/uploads/2020/10/home_product_collarge-1599x497.jpg'} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid' />
+                            <img src={require('../../assets/Images/recepi1.jpg')} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid img-fluid object-fit-cover shadow' />
                         </div>
                     </div>
                     <div className='text-start  littleimg1 littleimg2' style={{
@@ -72,11 +72,11 @@ function Principals() {
                         // zIndex: "-1",
                         height: '0px'
                     }}>
-                        <img src={require('../../assets/Images/sweet-mango-cubes-bowl-image-on-transparent-background-png-removebg-preview.png')} style={{ height: '100px' }} alt="" />
+                        <img src={require('../../assets/Images/sweet-mango-cubes-bowl-image-on-transparent-background-png-removebg-preview.png')} style={{ height: '100px' }} alt="" className='img-fluid ' />
                     </div>
                     <div className='row'>
                         <div className='col-md-6 p-lg-5 p-3 principalimg'>
-                            <img src={'https://www.vimalagro.com/wp-content/uploads/2020/10/home_product_collarge-1599x497.jpg'} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid' />
+                            <img src={require('../../assets/Images/recepi1.jpg')} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid object-fit-cover shadow ' />
                         </div>
                         <div className='col-md-6 p-lg-5 p-3 principaltext'>
                             <div className='h1strike text-warning text-opacity-25 pb-2 display-2 font-normal text-end mb-12 mt-8' style={{

@@ -253,6 +253,8 @@
 }
 
 .brand-main-img {
+  /* opacity: 1; */
+  transition: all 0.5s ease-in-out;
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
