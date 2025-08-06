@@ -26,32 +26,27 @@ function HOC(Component) {
         return (
             <>
                 <Header />
-                <div>
-                    <div className={`social_Nav position-fixed d-none d-md-block ${isVisible ? "show_side-icons" : ""}`}>
-                        <ul className='p-0'>
-                            <li className="Facebook_sideNav d-block text-end">
-                                <Link to="tel:+911234509876" className='sideNavIcon_tittle align-items-center text-white text-decoration-none'>
-                                    <span className='titletext border-0'> +91 12345 09876</span>
-                                    <div className='side_Nav_Icon text-center bg-white p-2 rounded-circle fs-5 d-flex justify-content-center align-items-center'><BiSolidPhoneCall /></div>
-                                </Link>
-                            </li>
-                            <li className="Instagram_sideNav d-block m-2 text-end p-2">
-                                <Link to="mailto:vimal123@gmail.com" target="_blank" className='sideNavIcon_tittle align-items-center text-white text-decoration-none'>
-                                    <span className='titletext border-0'>vimal123@gmail.com</span>
-                                    <div className='side_Nav_Icon text-center bg-white p-2 rounded-circle fs-5 d-flex justify-content-center align-items-center'><FaMailBulk /></div>
-                                </Link>
-                            </li>
-                            <li className="Twitter_sideNav d-block m-2 text-end p-2">
-                                <Link to={require("../assets/Images/groser.pdf")}
-                                    target="_blank"
-                                    className='sideNavIcon_tittle align-items-center text-white text-decoration-none'>
-                                    <span className='titletext border-0'>Download Brouchers</span>
-                                    <div className='side_Nav_Icon text-center bg-white p-2 rounded-circle fs-5 d-flex justify-content-center align-items-center'><FaFileDownload /></div>
-                                </Link>
-                            </li>
-
-                        </ul>
-                    </div>
+                <div className={`social_Nav ${isVisible ? "show" : "hide"}`}>
+                    <ul>
+                        <li>
+                            <a href="tel:+911234509876" className="sideNavIcon_tittle">
+                                <div className="side_Nav_Icon order-0"><BiSolidPhoneCall /></div>
+                                <span className='order-1'>+91 12345 09876</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:vimal123@gmail.com" className="sideNavIcon_tittle">
+                                <div className="side_Nav_Icon order-0"><FaMailBulk /></div>
+                                <span className='order-1'>vimal123@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={require("../assets/Images/groser.pdf")} target="_blank" className="sideNavIcon_tittle">
+                                <div className="side_Nav_Icon order-0"><FaFileDownload /></div>
+                                <span className='order-1'>Download Brochure</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <Component />
                 <Footer />
