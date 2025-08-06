@@ -97,7 +97,7 @@ function HomeAbout() {
 
 
                             <div className='brdstart'>
-                                <Tittles stitle={"About Us"} ltitle={"We Believe Ie Personal Touch"} />
+                                <Tittles stitle={"About Us"} ltitle={"We Believe In Personal Touch"} />
                             </div>
 
 

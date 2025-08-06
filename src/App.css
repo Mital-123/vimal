@@ -232,10 +232,23 @@
   padding: 0;
 }
 
+
+.social_Nav ul li:nth-child(1) {
+  border-radius: 0 5px 0px 0;
+}
+
+.social_Nav ul li:nth-child(2) {
+  border-radius: 0 0px 0px 0;
+}
+
+.social_Nav ul li:nth-child(3) {
+  border-radius: 0 0px 5px 0;
+}
+
 .social_Nav ul li {
   background-color: var(--red);
   display: flex;
-  border-radius: 0 5px 5px 0;
+  /* border-radius: 0 5px 5px 0; */
   align-items: center;
   overflow: hidden;
   width: 50px;
@@ -244,6 +257,7 @@
 
 .social_Nav ul li:hover {
   width: 220px;
+  border-radius: 0 5px 5px 0;
 }
 
 .sideNavIcon_tittle {
@@ -261,7 +275,7 @@
 
 .side_Nav_Icon {
   min-width: 50px;
-  height: 50px;
+  height: 40px;
   background: var(--red);
   color: white;
   font-size: 20px;
