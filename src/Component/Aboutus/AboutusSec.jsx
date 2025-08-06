@@ -12,9 +12,10 @@ import Testimonial from "../Home/Testimonial"
 import Certificates from '../../Certificates';
 import Faq from './Faq';
 import { Link } from 'react-router-dom';
-import Brouchers from './Brouchers';  
+import Brouchers from './Brouchers';
 import Whychooseus from '../Home/Whychooseus';
 import Companylogo from './Companylogo';
+import Principals from './Principals';
 
 
 function AboutusSec() {
@@ -30,7 +31,7 @@ function AboutusSec() {
       <div className="py-5  overflow-hidden contactinfo_bg">
         <div className="container">
 
-     {/* <div className="row p-0 m-0 my-3">
+          {/* <div className="row p-0 m-0 my-3">
 
             <div className="col-12 col-lg-4 pt-4 d-flex flex-column ps-0 pe-lg-4 pe-0 overflow-hidden" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
               <div className="h-100 test-shinee shadow">
@@ -160,25 +161,26 @@ function AboutusSec() {
 
             {/* Right Image */}
             <div className="col-lg-7 text-end ms-auto col-12">
-             <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
-               <img 
-                src="https://www.swad.shop/cdn/shop/files/1_51ff9f4c-90ab-438f-a1f0-76475116c5c3.png?v=1730196274&width=1500"
-                alt="About Us" 
-                className="img-fluid object-fit-cover w-100 h-100 rounded-5"
-              />
-             </div>
+              <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
+                <img
+                  src="https://www.swad.shop/cdn/shop/files/1_51ff9f4c-90ab-438f-a1f0-76475116c5c3.png?v=1730196274&width=1500"
+                  alt="About Us"
+                  className="img-fluid object-fit-cover w-100 h-100 rounded-5"
+                />
+              </div>
             </div>
           </div>
 
-       
 
-           
+
+
         </div>
       </div>
       <div className='overflow-hidden'>
-        <Companylogo/>
-          {/* <Whychooseus/> */}
+        <Companylogo />
+        {/* <Whychooseus/> */}
         {/* <MissionVision /> */}
+        <Principals />
         <AboutImpact />
         {/* <Brouchers /> */}
         <Faq />
