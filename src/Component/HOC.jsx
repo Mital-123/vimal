@@ -26,7 +26,7 @@ function HOC(Component) {
         return (
             <>
                 <Header />
-                <div className={`social_Nav ${isVisible ? "show" : "hide"}`}>
+                <div className={`social_Nav ${isVisible ? "show" : "hide"} d-sm-block d-none`}>
                     <ul>
                         <li>
                             <a href="tel:+911234509876" className="sideNavIcon_tittle">
