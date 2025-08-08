@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaFileDownload, FaLinkedinIn, FaMailBulk, FaTwitter } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
 import { BiSolidPhoneCall } from 'react-icons/bi';
-
+import brochurePDF from '../assets/Images/groser.pdf';
 function HOC(Component) {
     function NewComponent() {
 
@@ -41,9 +41,9 @@ function HOC(Component) {
                             </a>
                         </li>
                         <li>
-                            <a href={require("../assets/Images/groser.pdf")} target="_blank" className="sideNavIcon_tittle">
+                            <a href={brochurePDF} download target="_blank" rel="noopener noreferrer" className="sideNavIcon_tittle">
                                 <div className="side_Nav_Icon order-0"><FaFileDownload /></div>
-                                <span className='order-1'>Download Brochure</span>
+                                <span className="order-1">Download Brochure</span>
                             </a>
                         </li>
                     </ul>

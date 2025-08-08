@@ -251,12 +251,12 @@
   /* border-radius: 0 5px 5px 0; */
   align-items: center;
   overflow: hidden;
-  width: 50px;
+  width: 39px;
   transition: width 0.4s ease;
 }
 
 .social_Nav ul li:hover {
-  width: 220px;
+  width: 186px;
   border-radius: 0 5px 5px 0;
 }
 
@@ -274,7 +274,7 @@
 }
 
 .side_Nav_Icon {
-  min-width: 50px;
+  min-width: 35px;
   height: 40px;
   background: var(--red);
   color: white;
