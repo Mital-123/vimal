@@ -137,7 +137,11 @@ function AboutusSec() {
           <div className="row  ">
             {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
-              <h6 className="text-uppercase mb-2">
+              <h6 className="text-uppercase mb-2"
+                data-aos="fade-up "
+                data-aos-duration="1500"
+                data-aos-delay="50"
+                data-aos-once="true">
                 <Tittles stitle="About Us" />
               </h6>
               <h5 className="fw-bold ps-md-2 ps-0">

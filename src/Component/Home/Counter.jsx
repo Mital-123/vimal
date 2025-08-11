@@ -175,7 +175,11 @@ function Counter() {
         <>
             <div className="container pt-5">
                 <div className="row justify-content-center">
-                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                    <div className="col-12 col-md-6 col-lg-4 mt-3"
+                        data-aos="zoom-in"
+                        data-aos-duration="1500"
+                        data-aos-delay="50"
+                        data-aos-once="true">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
                                 <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><RiEmotionHappyLine /></div>
@@ -187,7 +191,11 @@ function Counter() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                    <div className="col-12 col-md-6 col-lg-4 mt-3"
+                        data-aos="zoom-in"
+                        data-aos-duration="1500"
+                        data-aos-delay="150"
+                        data-aos-once="true">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
                                 <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><TiShoppingCart /></div>
@@ -199,7 +207,11 @@ function Counter() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-4 mt-3">
+                    <div className="col-12 col-md-6 col-lg-4 mt-3"
+                        data-aos="zoom-in"
+                        data-aos-duration="1500"
+                        data-aos-delay="350"
+                        data-aos-once="true">
                         <div className="h-100 shadow p-0 p-lg-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-flex align-items-center '>
                                 <div className='fw-bold p-3 pt-1' style={{ fontSize: "70px" }}><TbWorld /></div>
