@@ -52,7 +52,7 @@ function Blog() {
 
                                     <Tittles stitle={recipe.titleSmall} ltitle={recipe.titleLarge} />
                                     <div className='lh-base ps-2 mt-3 fw-lighter pera'>{recipe.description}</div>
-                                    <div className='text-md-start text-center'>
+                                    <div className='text-start'>
                                         <img src={recipe.arrow} alt="" style={{ height: '100px' }} />
                                     </div>
                                     <div >
