@@ -36,7 +36,7 @@ function Faq() {
           </div>
         </div>
 
-        <div className='col-12 col-lg-6 mb-4 p-4 order-1 order-lg-2' style={{minHeight:"564px"}}>
+        <div className='col-12 col-lg-6 mb-0 mb-md-4 p-2 p-md-4 order-1 order-lg-2' style={{minHeight:"564px"}}>
           <div className="h-100">
             <div className='brdstart'>
               <Tittles stitle={"FAQs"} ltitle={"Your Laundry Queries, Answered!"} />
@@ -53,16 +53,16 @@ function Faq() {
 
                 return (
                   <div className="accordion-item border-0" key={index}>
-                    <h2 className="accordion-header my-2" id={headingId}>
+                    <h2 className="accordion-header my-1 my-md-2" id={headingId}>
                       <button
-                        className={`accordion-button ${!isFirst ? 'collapsed' : ''} addicon text-white p-3`}
+                        className={`accordion-button ${!isFirst ? 'collapsed' : ''} addicon text-white p-2 p-md-3 pera`}
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#${collapseId}`}
                         aria-expanded={isFirst ? 'true' : 'false'}
                         aria-controls={collapseId}
                       >
-                        <span className='fs-6 pe-3'>{faq.question}</span>
+                        <span className=' pe-3 pera'>{faq.question}</span>
                       </button>
                     </h2>
                     <div

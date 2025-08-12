@@ -48,7 +48,7 @@ function AboutImpact() {
 
     return (
         <>
-            <div className='container my-5 pt-5'>
+            <div className='container my-2 my-md-5 pt-1 pt-md-5'>
                 <div className='text-center'><Tittles stitle={"Rooted In Impact"} ltitle={"Every product we cultivate is rooted in impact"} /></div>
                 <div className="pera text-center text-secondary pt-2 mx-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui maxime placeat veniam expedita aperiam asperiores unde ipsa debitis inventore quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui maxime placeat veniam expedita aperiam asperiores unde ipsa debitis inventore quam.</div>
                 <div className='row mt-3'>
@@ -60,13 +60,13 @@ function AboutImpact() {
                                         className="bg-image position-absolute rounded-4 h-100 w-100"
                                         style={{
                                             backgroundImage: `url(${service.bgImage})`,
-                                            boxShadow: "inset 0px 0px 140px 1200px rgba(116, 0, 0, 0.42)",
+                                            boxShadow: "inset 0px 0px 140px 1200px rgba(94, 0, 0, 0.61)",
                                             top: "0", bottom: "0", right: "0", left: "0", backgroundSize: "cover",
                                             backgroundRepeat: "no-repeat", backgroundPosition: "center", transition: "all 0.5s ease-in-out",
                                             zIndex: "0"
                                         }}
                                     />
-                                    <div className='position-relative z-1 text-white p-4 p-lg-5'>
+                                    <div className='position-relative z-1 text-white p-2 p-lg-5'>
                                         <h4 className='fw-bold'>{service.title}</h4>
                                         <p className='pera fw-medium mt-3 mb-5' style={{ wordBreak: "break-all" }}>
                                             {service.description}

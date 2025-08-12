@@ -28,7 +28,7 @@ function AboutusSec() {
       </div>
       {/* lending section end*/}
 
-      <div className="py-5  overflow-hidden contactinfo_bg">
+      <div className="py-3 py-md-5  overflow-hidden contactinfo_bg">
         <div className="container">
 
           {/* <div className="row p-0 m-0 my-3">
@@ -137,22 +137,22 @@ function AboutusSec() {
           <div className="row  ">
             {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
-              <h6 className="text-uppercase mb-2"
+              <h6 className="text-uppercase mb-0 mb-md-2 stittle"
                 data-aos="fade-up "
                 data-aos-duration="1500"
                 data-aos-delay="50"
                 data-aos-once="true">
                 <Tittles stitle="About Us" />
               </h6>
-              <h5 className="fw-bold ps-md-2 ps-0">
+              <h5 className="fw-bold ps-md-2 ps-1 ftittle">
                 Combining culinary heritage, manufacturing excellence, and global reach
                 <span className="d-block">feeding the world with something for everyone.</span>
               </h5>
             </div>
 
             {/* Middle Paragraph Content */}
-            <div className="col-lg-6 col-12 mb-2 mb-lg-0 ms-auto ">
-              <p className="text-muted pera  text-justify">
+            <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto ">
+              <p className="text-muted pera  text-justify pera">
                 On a mission to bring authentic, convenient, and high-quality ethnic foods to consumers across the globe.
                 From rich curries and accompaniments to traditional sweets and savoury snacks, our offerings cater to
                 modern consumers seeking authentic Indian flavours with everyday convenience. Under the umbrella of <b className='text-dark'>Vimal Agro Products</b>,
