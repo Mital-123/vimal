@@ -69,6 +69,7 @@
 
   .sectesti_img {
     width: 82%;
+    height: 300px;
   }
 
   .aboutslider {
@@ -77,11 +78,11 @@
 
   .slider_imageaboutus {
     width: 100%;
-    height: 230px;
+    height: 150px;
   }
 
   .aboutslide_sec {
-    margin-top: -130px;
+    margin-top: -70px;
   }
 }
 
@@ -240,13 +241,11 @@
   width: 100%;
 }
 
-.brand-card:hover .brand-box {
-  box-shadow: inset 0 0 20px 100px var(--golden); /* Define --golden or use a hex value */
-}
+
 
 .brand-img-wrapper {
   width: 100%;
-  height: 150px; /* Default height for desktop */
+  height: 130px; /* Default height for desktop */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,32 +262,17 @@
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .brand-img-wrapper {
-    height: 150px; /* Tablets */
+    height: 130px; /* Tablets */
   }
 }
 
 @media (max-width: 576px) {
   .brand-img-wrapper {
-    height: 120px; /* Mobile */
+    height: 90px; /* Mobile */
   }
 }
 
-/* .icon-overlay {
-  opacity: 0;
-  transition: opacity 1s ease;
-  z-index: 2;
-} */
 
-/*   */
-
-/* .plus-icon {
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer !important;
-} */
 
 /* ProductBrand end */
 
@@ -644,163 +628,6 @@
 /* HomeContact end */
 
 /* counter start */
-/* .counter_bg {
-  background-image: url("https://www.tharayilpower.com/static/media/testi_bg.f45dc51be227a3befcbe.png");
-   background-repeat: no-repeat;
-  
-  background-size: cover;
-  background-position:30% center;
-  background-attachment: fixed;
-}
-
-.counter,
-.counter1,
-.counter2,
-.counter3 {
-  font-family: "Muli", sans-serif;
-  width: 210px;
-  height: 210px;
-  padding: 73px 32px 40px;
-  margin: 0 auto;
-}
-
-.counter:before,
-.counter:after,
-.counter1::before,
-.counter1::after,
-.counter2::before,
-.counter2::after,
-.counter3::before,
-.counter3::after {
-  content: "";
-  background: #fff;
-  width: 80%;
-  height: 80%;
-  border-radius: 100%;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
-  transform: translateX(-50%) translateY(-50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-}
-
-.counter:after {
-  background: linear-gradient(45deg, #360a0d 49%, #6a1a1f 50%);
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  transform: translate(0);
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-  transition: all 0.2s ease-in-out;
-}
-
-.counter-icon {
-  background: linear-gradient(45deg, #360a0d 49%, #6a1a1f 50%);
-  align-content: center;
-  width: 70px;
-  height: 70px;
-}
-
-.counter1:after {
-  background: linear-gradient(45deg, #bb222c 49%, #dd3b46 50%);
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  transform: translate(0);
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-}
-
-.counter-icon1 {
-  background: linear-gradient(45deg, #bb222c 49%, #dd3b46 50%);
-  align-content: center;
-  width: 70px;
-  height: 70px;
-}
-
-.counter2:after {
-  background: linear-gradient(45deg, #68191f 49%, #ac3139 50%);
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  transform: translate(0);
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-}
-
-.counter-icon2 {
-  background: linear-gradient(45deg, #68191f 49%, #ac3139 50%);
-  align-content: center;
-  width: 70px;
-  height: 70px;
-}
-
-.counter3:after {
-  background: linear-gradient(45deg, #dd3b46 49%, #dd3b468f 50%);
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  transform: translate(0);
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-}
-
-.counter-icon3 {
-  background: linear-gradient(45deg, #dd3b46 49%, #dd3b468f 50%);
-  align-content: center;
-  width: 70px;
-  height: 70px;
-}
-
-@media screen and (max-width: 990px) {
-  .counter {
-    margin-bottom: 40px;
-  }
-} */
-.counterbck_image {
-  background-image: url("https://it-company-kappa.vercel.app/static/media/counterimage002.6426e3bd58aa4207a833.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
-  box-shadow: inset 0px 0px 0px 2000px #300000cb;
-}
-
-.counter {
-  border: 2px solid goldenrod;
-  background-color: #6e00007c;
-  position: relative;
-  z-index: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.counter::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #ddbb41;
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  height: 0%;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
-}
-
-.counter:hover::after {
-  bottom: 0%;
-  height: 100%;
-}
 
 .countericon {
   font-size: 80px;
@@ -810,12 +637,20 @@
   font-family: none !important;
   font-size: 30px;
 }
-
-.nextprevbtn {
-  /* left: 20 !important; */
-  margin: 20px !important;
+.counter_name{
+  font-size: 25px;
 }
-
+@media (max-width: 576px){
+.countnumber {
+  font-size: 18px;
+}
+.countericon {
+  font-size: 40px;
+}
+.counter_name{
+  font-size: 10px;
+}
+}
 /* counter end */
 /* WhyChooseUs start */
 .feature-card {
@@ -995,7 +830,7 @@
 
 /* HomeRecipe start */
 .recipe_tittle {
-  height: 140px;
+  height: 138px;
   transition: all 0.4s ease-in-out;
   width: 85%;
   margin-top: -60px;
@@ -1028,7 +863,7 @@
 }
 
 .home-recipe-wrapper .slick-next {
-  right: -28px;
+  right: -25px !important;
 }
 
 @media (max-width: 768px) {
@@ -1046,11 +881,11 @@
   }
 
   .home-recipe-wrapper .slick-prev {
-    left: -12px !important;
+    left: -13px !important;
   }
 
   .home-recipe-wrapper .slick-next {
-    right: -15px;
+    right: -11px !important;
   }
 }
 

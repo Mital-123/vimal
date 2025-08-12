@@ -146,7 +146,7 @@ function HomeCategory() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
@@ -156,16 +156,16 @@ function HomeCategory() {
 
   return (
     <>
-      <div className='py-5 p-1 category_bgimg'>
+      <div className='py-2 py-md-5 p-1 category_bgimg'>
         <div className='container'>
           <div className='text-center'>
             <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
           </div>
-          <div className="col-md-8 col-10 m-auto pt-5 categoryarrow">
+          <div className="col-md-8 col-10 m-auto pt-2 pt-md-5 categoryarrow">
            
             <Slider {...settings} ref={sliderRef}>
               {productlist.map((item, index) => (
-                <div key={index} className="px-3 px-sm-2 m-1">
+                <div key={index} className="px-2 px-sm-2 m-1">
                   <div
                     className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeBrand.brandId === item.brandId ? 'active-btn' : ''}`}
                   >
@@ -189,7 +189,7 @@ function HomeCategory() {
 
           </div>
 
-          <div className="row align-items-center rounded-4 pt-4 overflow-hidden">
+          <div className="row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
             <div
               className="col-md-6 d-flex justify-content-center cat_image"
               data-aos="fade-right"

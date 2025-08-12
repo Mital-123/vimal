@@ -31,13 +31,13 @@ function HomeAbout() {
     };
 
     return (
-        <div className="my-4 pt-4 overflow-hidden">
+        <div className="my-0 my-md-3 pt-1 pt-md-3 overflow-hidden">
             <div className="testi_bg overflow-hidden">
                 <div className="container">
-                    <div className="row d-flex justify-content-center align-items-center align-content-center py-3">
+                    <div className="row d-flex justify-content-center align-items-center align-content-center py-1 py-lg-3">
                         <div className=" col-12 col-lg-6 p-3">
                             <div className="h-100 d-flex">
-                                <div className="sec1_imgtesti h-100 ">
+                                <div className="sec1_imgtesti h-100">
                                     <div className='test-shinee'>
                                         <img
                                             src={
@@ -93,7 +93,7 @@ function HomeAbout() {
                                 </div>
                             </div>
                         </div>
-                        <div className="h-100 col-12 col-lg-6 p-3 p-lg-5">
+                        <div className="h-100 col-12 col-lg-6 p-3 p-lg-5 pt-0 pt-md-3 pb-0 pb-md-2">
 
 
                             <div className='brdstart'>
@@ -103,7 +103,7 @@ function HomeAbout() {
 
                             {testimonials.map((testimonial, index) => (
                                 <div
-                                    className="px-0   py-3"
+                                    className="px-0   py-1 py-md-3"
                                     key={index}
                                     data-aos="fade-left"
                                     data-aos-duration="1500"
@@ -112,17 +112,17 @@ function HomeAbout() {
                                     <div>
                                         <FaQuoteLeft className="fs-1 text-secondary" />
                                     </div>
-                                    <div className="pt-4 pera" style={{ textAlign: "justify" }}>
+                                    <div className="pt-2 pt-md-4 pera" style={{ textAlign: "justify" }}>
                                         {testimonial.quote}
                                     </div>
-                                        <div className="row  m-0  mt-3">
+                                        <div className="row  m-0  mt-1 mt-md-3">
                                           <div className="col-3 p-0 m-0 bg-white" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
                                                         <div className="h-100 fs-1 text-white text-center shadow d-flex align-items-center justify-content-center " style={{ backgroundColor: "#6a1a1f",borderRadius:"20px 0px 0px 20px" }}>
                                                           <FaQuoteRight />
                                                         </div>
                                                       </div>
                                                       <div className="col-9 shadow  bg-white" style={{borderRadius:"0px 20px 20px 0px"}} data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
-                                                        <div className="h-100 d-flex align-items-center py-4   pera fw-bold text-center">
+                                                        <div className="h-100 d-flex align-items-center py-2 py-md-4   pera fw-bold text-center">
                                                           " At Vimal, health taste and quality have been paramount since forever.  "
                                                         </div>
                                                       </div>

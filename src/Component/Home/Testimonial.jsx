@@ -64,7 +64,7 @@ function Testimonial() {
   ]
  
   return (
-    <div className='testimonial_bg py-5'>
+    <div className='testimonial_bg py-0 py-md-5'>
       <div className='container overflow-hidden'>
         <div className='row d-flex align-items-center'>
           <div className='col-12 col-lg-4 p-4 ms-2 ms-lg-0 ms-md-0'>
@@ -94,7 +94,7 @@ function Testimonial() {
             </div>
           </div>
  
-          <div className='col-12 col-lg-8 p-4'>
+          <div className='col-12 col-lg-8 p-4 pt-1 pt-lg-4'>
             <div className='h-100'>
               <Slider {...settings} className='testimonial-slider'>
                 {testimonials.map((item) => (

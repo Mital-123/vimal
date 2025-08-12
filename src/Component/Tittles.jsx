@@ -9,7 +9,6 @@ function Tittles(props) {
                 data-aos="fade-up"
                 data-aos-duration="1500"
                 data-aos-once="true"
-                
               >
                {props.stitle}
               </h4>

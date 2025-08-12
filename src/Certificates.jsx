@@ -11,7 +11,7 @@ function Certificates() {
   return (
     <>
 
-      <section className={`red-certificates-section py-5 ${isVisible ? 'visible' : ''}`}>
+      <section className={`red-certificates-section py-3 py-md-5 ${isVisible ? 'visible' : ''}`}>
         {/* Animated Background Elements */}
         {/* <div className="floating-shapes">
           <div className="shape shape-1"></div>
@@ -21,7 +21,7 @@ function Certificates() {
           <div className="shape shape-5"></div>
         </div> */}
 
-        <div className="container-fluid px-4">
+        <div className="container px-4">
           {/* Header Section */}
           <div className="row justify-content-center mb-2">
             <div className="col-lg-8 text-center">
@@ -44,7 +44,7 @@ function Certificates() {
           </div>
 
           {/* Certificates Grid */}
-          <div className="certificates-grid">
+          {/* <div className="certificates-grid">
             <div data-aos="zoom-in"
               data-aos-duration="1000"
               data-aos-once="true">
@@ -54,7 +54,7 @@ function Certificates() {
                   alt="BRC Logo"
                   className="img-fluid"
                 />
-                <div className="certificate-glow"></div>
+              
               </div>
             </div>
 
@@ -68,7 +68,7 @@ function Certificates() {
                   alt="Halal Logo"
                   className="img-fluid"
                 />
-                <div className="certificate-glow"></div>
+                
               </div>
             </div>
 
@@ -82,8 +82,44 @@ function Certificates() {
                   alt="ISO Logo"
                   className="img-fluid"
                 />
-                <div className="certificate-glow"></div>
+             
               </div>
+            </div>
+          </div> */}
+          <div className="row g-2 g-lg-3 justify-content-center">
+            <div className="col-lg-2 col-4">
+              <div className="h-100">
+                <div className="certificate-item text-center"  >
+                  <img
+                    src="https://www.vimalagro.com/wp-content/themes/jan2018/images/brc_logo.jpg?v1"
+                    alt="BRC Logo"
+                    className="img-fluid"
+                  />
+
+                </div>            </div>
+            </div>
+            <div className="col-lg-2 col-4">
+              <div className="h-100">
+                <div className="certificate-item text-center"  >
+                  <img
+                    src="https://www.vimalagro.com/wp-content/themes/jan2018/images/halal_logo.jpg"
+
+                    alt="BRC Logo"
+                    className="img-fluid"
+                  />
+
+                </div>            </div>
+            </div>
+            <div className="col-lg-2 col-4">
+              <div className="h-100">
+                <div className="certificate-item text-center"  >
+                  <img src="https://www.vimalagro.com/wp-content/themes/jan2018/images/iso_logo.jpg"
+
+                    alt="BRC Logo"
+                    className="img-fluid"
+                  />
+
+                </div>            </div>
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ function HomeRecipe() {
         </div>
         <Slider {...settings}>
           {recipes.map((recipe, index) => (
-            <div key={index} className='p-3 ps-4 ps-lg-0 ms-0 ms-lg-2'>
+            <div key={index} className='p-3 ps-3 ps-lg-0 ms-0 ms-lg-2'>
               <div className='recipe_image h-100 m-2 '>
                 <div
                   className='test-shinee position-relative recipe-shadow-wrapper'

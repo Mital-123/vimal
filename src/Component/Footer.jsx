@@ -1,94 +1,79 @@
 import React from 'react'
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
 import Tittles from './Tittles'
+import { FaFacebook, FaInstalod, FaMapLocationDot } from 'react-icons/fa6'
+import { ImInstagram } from 'react-icons/im'
+import { CiInstagram } from 'react-icons/ci'
+import { BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
+import { MdArrowForwardIos } from 'react-icons/md'
+import { BiSolidPhoneCall } from 'react-icons/bi'
 
 function Footer() {
   return (
-    <div className="py-5 pb-2" style={{ backgroundColor: "#fffcf3" }}>
-      <div className="container-xl">
-        <div className="row">
-          <div className="col-lg-3 order-lg-0 order-4 mb-4 text-center">
-            <img src={require('../assets/Images/logo_vimal_agro.png')} alt="EnerGen Logo" width="120" />
-            <h6 className="fw-bold mt-3">STRATEGIC | ASTUTE | SAFE</h6>
-            <p className="text-muted small">
-              Your Strategic Partner To Enhanced Operation Efficiency & Improved Safety.
-            </p>
-            <div className="d-flex justify-content-center gap-3 mt-3">
-              <Link
-                to={"https://www.facebook.com/SWADBrand/"}
-                target="_blank"
-                className="footericon text-center p-2 mx-2  ms-0 d-flex text-decoration-none text-white facebookicon">
-                <FaFacebookF />
-              </Link>
-              <Link
-                to={"https://www.instagram.com/swadbrand/"}
-                target="_blank"
-                className="footericon text-center p-2  mx-2 d-flex text-decoration-none text-white instaicon">
-                <FaInstagram />
-              </Link>
-              <Link
-                to={"https://www.youtube.com/@SwadBrand"}
-                target="_blank"
-                className="footericon text-center p-2  mx-2 d-flex text-decoration-none text-white linkicon">
-                <FaYoutube />
-              </Link>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-8">
-            <div className="row justify-content-center">
-              <div className="col-lg-5 col-sm-6 mb-4">
-                <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Helpful Links" /></h5>
-                <div className='ms-2 pera'>
-                  <NavLink to="/" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`}>
-                    Home
-                  </NavLink>
-                  <NavLink to="/aboutus" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`} >
-                    About Us
-                  </NavLink>
-                  <NavLink to="/product" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`}>
-                    Product
-                  </NavLink>
-                  <NavLink to="/blog" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`}>
-                    Blog
-                  </NavLink>
-                  <NavLink to="/contact" className={({ isActive }) => `d-block text-decoration-none my-3 activetab ${isActive ? 'text-danger fw-bold' : 'text-dark'}`}>
-                    Contact
-                  </NavLink>
-                </div>
-              </div>
+    <div className="py-5 pb-2 text-white" style={{ backgroundColor: "var(--red)" }}>
+<div className="container">
+  <div className="row">
+    <div className="col-12 col-md-6 col-lg-3 text-white pera mt-0 mt-md-2">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit eius asperiores, hic aut eum ipsum illo amet ullam animi laboriosam similique quidem ducimus, quam, corrupti nulla provident natus ea deserunt!
+   
+    <h5 className='pt-2 fw-bold'>Follow Us</h5>
 
-              <div className="col-md-4 col-sm-6 mb-4">
-                <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Legal" /></h5>
-                <div className='ms-2 pera'>
-                  <Link to="/privacy-policy" className="d-block text-dark text-decoration-none my-3 activetab">Privacy Policy</Link>
-                  <Link to="/terms-condition" className="d-block text-dark text-decoration-none my-3 activetab">Terms And Conditions</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-sm-4 mb-4 pera">
-            <h5 className="fs-6 text-danger fw-semibold"><Tittles stitle="Get in Touch" /></h5>
-            <div className="mb-2 text-dark my-3 d-flex align-items-center justify-content-center">
-              <FaMapMarkerAlt className="me-2 fs-4 text-danger" />
-              Vimal Agro Products Pvt Ltd, Near GIDC, Ten Road, Bardoli, Gujarat: 394601, INDIA
-            </div>
-            <p className="mb-2 text-dark my-3">
-              <FaPhoneAlt className="me-2 text-danger" /> (+91) 2622 222759
-            </p>
-            <p className="mb-0 text-dark my-3">
-              <FaEnvelope className="me-2 text-danger" /> info@vimalagro.com
-            </p>
-            <div className="mb-2 text-dark my-3 d-flex align-items-center">
-              <FaEnvelope className="me-2 text-danger" />
-              <span className='ms-1'>Domestic Sales : sales@vimalagro.com</span>
-            </div>
-
-          </div>
-
-        </div>
+    <div className='d-flex align-items-center'>
+      <div className=' fs-5 hover_name'><BsInstagram/></div>
+      <div className='ps-3 fs-5 hover_name'><BsLinkedin/></div>
+      <div className='ps-3 fs-5 hover_name'><FaFacebook/></div>
+      <div className='ps-3 fs-5 hover_name'><BsYoutube/></div>
+     </div>
+     </div>
+     <div className=" col-6 col-lg-3 ps-1 ps-lg-5 mt-4 mt-md-2">
+      <h3 className='' style={{width:"fit-content"}}>
+Main Menu</h3>
+      <div className='pera pt-1 '>
+       <NavLink to={"/"} activeClassName="active_link" className='text-decoration-none hover_name'> <MdArrowForwardIos /> Home</NavLink>
       </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> About us</NavLink>
+      </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <NavLink to={"/product"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Product</NavLink>
+      </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <NavLink to={"/blog"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Blog</NavLink>
+      </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <NavLink to={"/contact"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Contact</NavLink>
+      </div>
+     </div>
+     <div className=" col-6 col-lg-3 mt-4 mt-md-2">
+      <h3 className='' style={{width:"fit-content"}}>Quick Links</h3>
+      <div className='pera pt-1 '>
+       <NavLink to={"/"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Privacy Policy
+</NavLink>
+      </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Terms of service</NavLink>
+      </div>
+
+     </div>
+     <div className=" col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
+      <h3 className='' style={{width:"fit-content"}}>Quick Links</h3>
+      <div className='pera pt-0 pt-md-1 '>
+       <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa?
+     </Link> </div>
+      <div className='pera pt-1 pt-md-2 '>
+       <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><BiSolidPhoneCall/></span> (+91) 2622 222759 </Link>
+      </div>
+      <div className='pera pt-1 pt-md-2  '>
+       <Link to={"mailto:vimal123@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk/></span> info@vimalagro.com </Link>
+      </div>
+
+     </div>
+  </div>
+     <div className='border-top text-center pera mt-1 mt-lg-4 pt-1'>
+      © copyright 2025 Vimal Agro Products Pvt Ltd
+     </div>
+</div>
     </div>
   )
 }
