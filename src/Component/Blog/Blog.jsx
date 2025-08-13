@@ -1,97 +1,120 @@
-import React, { useEffect, useState } from 'react'
+import { useRef, useState } from 'react';
+import Tittles from '../Tittles';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import HOC from '../HOC'
-import Tittles from '../Tittles'
-import ButtonCom from '../ButtonCom';
-
-function Blog() {
-    const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-    return (
-        <>
-            <div style={{ position: 'relative', width: '100%', overflow: 'hidden', marginTop: '78px' }} className="landingimg">
-                <img
-                    src="https://www.yellowsky.in/image/catalog/products/vimal_agro/02.jpg"
-                    // src="https://www.yellowsky.in/image/catalog/products/vimal_agro/03.jpg"
-                    alt=""
-                    className="img-fluid w-100"
-                    style={{
-                        height: '100%',
-                        objectFit: 'cover',
-                        display: 'block',
-                    }}
-                />
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: '#240000c0', // overlay color
-                        boxShadow: 'inset 0 0 100px 20px #000',
-                        pointerEvents: 'none',
-                    }}
-                    className="lendingshadow"
-                ></div>
-            </div>
-
-
-            <div className="container-lg">
-                {recipeSections.map((recipe, i) => (
-                    <div className='red-circle' key={recipe.id}>
-                        <div className='row align-items-center justify-content-center py-5 lh-lg'>
-                            <div className='col-md-6'>
-                                <div className='test-shine'>
-                                    <img src={recipe.image} alt="" className='img-fluid' />
-                                </div>
-                            </div>
-                            <div className='col-md-6'>
-                                <section className={`red-certificates-section p-4  ${isVisible ? 'visible' : ''}`}>
-
-                                    <Tittles stitle={recipe.titleSmall} ltitle={recipe.titleLarge} />
-                                    <div className='lh-base ps-2 mt-3 fw-lighter pera'>{recipe.description}</div>
-                                    <div className='text-start'>
-                                        <img src={recipe.arrow} alt="" style={{ height: '100px' }} />
-                                    </div>
-                                    <div >
-                                        <ButtonCom btn={"How to Make ?"} />
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-                <div>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default HOC(Blog)
-
-
 const recipeSections = [
     {
         id: 1,
         image: require('../../assets/Images/recepi1.jpg'),
         titleSmall: "5 Favorite",
         titleLarge: "Pickles In The Winter",
-        description: "There is no spring without sunshine, no autumn without brown, no summer without holidays, and no winter without...yes, you guess it right! Pickles!! We guarantee that even today when you rack your br...",
-        arrow: require('../../assets/Images/arrow_down.png'),
+        description: "There is no spring without sunshine, no autumn without brown, no summer without holidays, and no winter without...yes, you guess it right! Pickles!!",
+        type: "Appetizers"
     },
     {
         id: 2,
         image: require('../../assets/Images/recepi2.jpg'),
         titleSmall: "Swad's",
         titleLarge: "Mango Milkshake",
-        description: "SWAD Mango Milkshake is a cool and satiating drink made by simply blending ripe mango pulp, milk and sugar. Ingredients: 2 large Ripe Mangoes(approx. 2 cups chopped mango) 1½ cups Milk 1½ tabl...",
-        arrow: require('../../assets/Images/arrow_down.png'),
+        description: "SWAD Mango Milkshake is a cool and satiating drink made by blending ripe mango pulp, milk and sugar.",
+        type: "Main Courses"
     },
-    // Add more recipes like this...
+    {
+        id: 3,
+        image: require('../../assets/Images/recepi1.jpg'),
+        titleSmall: "Fresh Salad",
+        titleLarge: "Garden Salad",
+        description: "A healthy mix of fresh vegetables and dressing.",
+        type: "Salad & Slides"
+    },
+    {
+        id: 4,
+        image: require('../../assets/Images/recepi2.jpg'),
+        titleSmall: "Fresh Salad",
+        titleLarge: "Garden Salad",
+        description: "A healthy mix of fresh vegetables and dressing.",
+        type: "Vagetarian Delights"
+    },
+    // Add more recipes...
 ];
+
+function Blog() {
+    const [activeCategory, setActiveCategory] = useState("All");
+    const sliderRef = useRef(null);
+
+    const settings = {
+        infinite: true,
+        speed: 500,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+            { breakpoint: 992, settings: { slidesToShow: 3 } },
+            { breakpoint: 768, settings: { slidesToShow: 2 } },
+        ],
+    };
+
+    // Create a unique category list from recipeSections
+    const categories = ["All", ...new Set(recipeSections.map(item => item.type))];
+
+    // Filter recipes based on category
+    const filteredRecipes =
+        activeCategory === "All"
+            ? recipeSections
+            : recipeSections.filter(item => item.type === activeCategory);
+
+    return (
+        <div className='py-2 py-md-5 p-1 category_bgimg' style={{ backgroundAttachment: "fixed" }}>
+            <div className='container'>
+                <div className='text-center'>
+                    <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
+                </div>
+
+                {/* Dynamic Category Tabs */}
+                <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow">
+                    <Slider {...settings} ref={sliderRef}>
+                        {categories.map((category, index) => (
+                            <div key={index} className="px-2 m-1">
+                                <div
+                                    className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeCategory === category ? 'active-btn' : ''}`}
+                                >
+                                    <button
+                                        className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent"
+                                        onClick={() => {
+                                            setActiveCategory(category);
+                                            if (sliderRef.current) {
+                                                sliderRef.current.slickGoTo(index);
+                                            }
+                                        }}
+                                    >
+                                        {category}
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
+
+                {/* Filtered Recipes */}
+                <div className="row col-10 justify-content-sm-start justify-content-center mx-auto">
+                    {filteredRecipes.map((item) => (
+                        <div key={item.id} className="col-lg-4 col-md-5 col-sm-6 mt-4 d-flex">
+                            <div className="card h-100 w-100">
+                                <img src={item.image} alt="" className="card-img-top" />
+                                <div className="card-body d-flex flex-column">
+                                    <h5 className="card-title">{item.titleLarge}</h5>
+                                    <p className="card-text flex-grow-1">{item.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+export default HOC(Blog)
