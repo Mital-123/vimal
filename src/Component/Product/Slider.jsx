@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaLeaf } from 'react-icons/fa';
 import Slider from 'react-slick';
+import Tittles from '../Tittles';
 function ProductSlider() {
     const sliderRef = useRef();
     const settings = {
@@ -20,15 +21,15 @@ function ProductSlider() {
         <>
             <div className="container">
                 <div className='row justify-content-center text-center'>
-                    <div className='col-sm-5 col-7 rounded-bottom-5 m-auto' style={{ background: "var(--golden)" }}>
+                    {/* <div className='col-sm-2 col-7 rounded-4 m-auto' style={{ background: "var(--golden)" }}>
                         <div className='d-flex align-items-center justify-content-center'>
                             <div className="p-2 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
-                                <FaLeaf className='fs-3' />
+                                <FaLeaf className='fs-5' />
                             </div>
-                            <i className='h6 ms-2 mt-3'>Authentic <br />
+                            <i className='pera ms-2 py-3 fw-bold'>Authentic 
                                 Indian recipe</i>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div> */}
                 </div>
             </div>
@@ -42,10 +43,12 @@ function ProductSlider() {
                                 <Slider ref={sliderRef}  {...settings}>
                                     {recipes.map((item, index) => (
                                         <div key={index}>
-                                            <div className="row justify-content-end align-items-end animate-slide">
+                                            <div className="row justify-content-end align-items-center animate-slide">
                                                 <div className="col-lg-4 col-md-6 text-center position-relative">
-                                                    <div className="productbgred mx-auto">
-                                                        <div className='text-start ms-4 pt-5'>
+                                                    <div className="productbgred mx-auto" data-aos="zoom-in"
+                                                        data-aos-duration="1500"
+                                                        data-aos-once="true">
+                                                        <div className='text-start ms-4 pt-4 pt-md-5'>
                                                             <img src={item.dishImage} alt="" className='image1 rounded-circle' />
                                                         </div>
                                                         <div className='text-end'>
@@ -54,16 +57,39 @@ function ProductSlider() {
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-7 col-md-6 text-start px-4">
-                                                    <h3 className='display-6 fw-bold'>{item.title}</h3>
-                                                    <p className="fw-semibold">Instruction</p>
-                                                    <ol className="small lh-lg">
-                                                        {item.instructions.map((x, i) => {
-                                                            return (
-                                                                <li>{x}</li>
-                                                            )
-                                                        })}
-                                                    </ol>
-                                                    <p className="small">Enjoy with Swad pickles and chutney!</p>
+                                                    <div className=' rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} data-aos="zoom-in"
+                                                        data-aos-duration="1500"
+                                                        data-aos-once="true">
+                                                        <div className='d-flex align-items-center justify-content-center p-2'>
+                                                            <div className="p-1 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
+                                                                <FaLeaf className='fs-5' />
+                                                            </div>
+                                                            <i className='pera mx-2 fw-bold'>Authentic
+                                                                Indian recipe</i>
+                                                        </div>
+                                                    </div>
+                                                    <h3 className='display-6 fw-bold ftittle mt-1' data-aos="fade-up"
+                                                        data-aos-duration="1500"
+                                                        data-aos-once="true">{item.title}</h3>
+                                                    <h4
+                                                        className=" fw-bold stittle p-0 my-1"
+                                                        data-aos="fade-down"
+                                                        data-aos-duration="1500"
+                                                        data-aos-once="true"
+                                                    >
+                                                        Instruction
+                                                    </h4>
+                                                    {/* <p className="fw-semibold ps-2 "><Tittles stitle="Instruction"/></p> */}
+                                                    {/* <ol className="small lh-lg"> */}
+                                                    {item.instructions.map((x, i) => {
+                                                        return (
+                                                            // <li>{x}</li>
+                                                            <div className='pt-1 pt-0 pt-md-1 pera'>{i + 1}. {x}</div>
+                                                        )
+                                                    })}
+                                                    {/* </ol> */}
+                                                    <p className="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis temporibus, optio voluptatem consequatur similique natus cum veniam omnis voluptate vero.  </p>
+                                                    <p className="small p-0 m-0">Enjoy with Swad pickles and chutney!</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,25 +99,25 @@ function ProductSlider() {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1">
+                    <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1" >
                         <p className="mb-1 fw-semibold small text-muted">Authentic Indian recipe</p>
-                        <h1>
+                        <div className='fsizefont'>
                             With <span className="fw-bold" style={{ color: 'var(--golden)' }}>Vimal</span>, <br />
                             make your Food <br />
                             <span className="fw-bold" style={{ color: 'var(--golden)' }}>Quick, Easy & Flavourful</span>
-                        </h1>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className='row justify-content-center text-center'>
-                    <div className='col-sm-5 col-7 pt-3 px-3 rounded-top-5'
-                        style={{ height: '80px', background: "var(--golden)" }}>
-                        <button className="btn btn-link text-white fs-5 ms-auto bg-white mx-2" onClick={() => sliderRef.current?.slickPrev()}>
-                            <FaChevronLeft className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                    <div className='col-sm-5 col-7 pt-0 px-3 rounded-top-5'
+                        style={{ height: '60px', }}>
+                        <button className="btn btn-link text-white fs-5 ms-auto mx-2 " style={{ backgroundColor: "var(--golden)" }} onClick={() => sliderRef.current?.slickPrev()}>
+                            <FaChevronLeft className='' style={{ color: 'white', fontWeight: 900 }} />
                         </button>
-                        <button className="btn btn-link text-white fs-5 bg-white mx-2" onClick={() => sliderRef.current?.slickNext()}>
-                            <FaChevronRight className='' style={{ color: 'var(--golden)', fontWeight: 900 }} />
+                        <button className="btn btn-link text-white fs-5  mx-2" style={{ backgroundColor: "var(--golden)" }} onClick={() => sliderRef.current?.slickNext()}>
+                            <FaChevronRight className='' style={{ color: 'white', fontWeight: 900 }} />
                         </button>
                     </div>
                     {/* <div className='col-sm-5 col-6 ms-sm-5 ps-sm-5 rounded-top-5 rounded-end-0' style={{ height: '80px', background: "var(--golden)" }}></div> */}
