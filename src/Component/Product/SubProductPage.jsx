@@ -128,7 +128,6 @@ function SubProducts() {
                                     ))}
                                 </div>
                             )}
-
                             {/* Display Subtype Subproducts */}
                             <div className="container py-3">
                                 <div className="row justify-content-center">
