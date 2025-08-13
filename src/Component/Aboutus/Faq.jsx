@@ -23,8 +23,8 @@ const faqList = [
 function Faq() {
   return (
     <div className='container  pt-0'>
-      <div className='row d-flex justify-content-center align-content-center align-items-center' >
-        <div className='col-12 col-lg-6 order-2 order-lg-1' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+      <div className='row d-flex justify-content-center align-content-center align-items-center ' >
+        <div className='col-12 col-lg-6 ' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
           <div className="h-100">
             <div className='test-shine'>
               <img
@@ -36,8 +36,8 @@ function Faq() {
           </div>
         </div>
 
-        <div className='col-12 col-lg-6 mb-0 mb-md-4 p-2 p-md-4 order-1 order-lg-2' style={{minHeight:"564px"}}>
-          <div className="h-100">
+        <div className='col-12 col-lg-6 mb-0 mb-md-4 p-2 p-md-4 faq_height' >
+          <div className="h-100 ">
             <div className='brdstart'>
               <Tittles stitle={"FAQs"} ltitle={"Your Laundry Queries, Answered!"} />
             </div>
@@ -78,7 +78,6 @@ function Faq() {
                 );
               })}
             </div>
-
           </div>
         </div>
       </div>

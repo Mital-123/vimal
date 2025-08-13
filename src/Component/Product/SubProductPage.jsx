@@ -37,12 +37,12 @@ function SubProducts() {
             {/* Power Section */}
             <div style={{ backgroundColor: "#fffcf3" }}>
                 <div className='pt-2 pt-lg-4'><Gogreen /></div>
-                <div className='m-auto text-center col-sm-8 col-11 py-2 py-lg-4'>
-                    <h2 className='fw-bold my-2 my-lg-4'>Power of {product.h1}</h2>
+                <div className='m-auto text-center col-sm-8 col-11 py-2 '>
+                    <h2 className='fw-bold my-1 my-lg-4 ftittle'>Power of {product.h1}</h2>
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
                     <div className='w-75 mx-auto pb-3'>
                         {packagedetail.map((x, i) => (
-                            <span key={i} className='fw-bold'>{x}{i < packagedetail.length - 1 && ' | '}</span>
+                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < packagedetail.length - 1 && ' | '}</span>
                         ))}
                     </div>
                     {/* <div className='mt-1 mt-lg-4'>
@@ -54,32 +54,22 @@ function SubProducts() {
             </div>
 
             {/* Main Product Section */}
-            <div className="position-relative">
-                <div className="yellow-circle" style={{
-                    position: 'absolute',
-                    left: '-50px',
-                    marginTop: '-60px',
-                    width: '270px',
-                    height: '270px',
-                    backgroundColor: '#dbb842',
-                    borderRadius: '50%',
-                    zIndex: '-1',
-                }}></div>
-
-                <div className='pt-3'>
-                    <h3 className='mt-3 mt-lg-5 text-center text-dark text-uppercase fw-bold'>{product.h1}</h3>
+            <div className="">
+                
+                <div className='pt-1 pt-md-2'>
+                    <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.h1}</h3>
                 </div>
 
                 {/* Main Weight Filter */}
                 {uniqueMainWeights.length > 0 && (
-                    <div className='text-center pt-3 d-block d-lg-flex align-items-center justify-content-center'>
-                        <div className='border-0 bg-transparent mx-2 mt-3' onClick={() => setSelectedMainWeight(null)}>
+                    <div className='text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center'>
+                        <div className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(null)}>
                             <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? 'active-btn' : ''}`} >
                                 All
                             </div>
                         </div>
                         {uniqueMainWeights.map((weight, idx) => (
-                            <div key={idx} className='border-0 bg-transparent mx-2 mt-3' onClick={() => setSelectedMainWeight(weight)}>
+                            <div key={idx} className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(weight)}>
                                 <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? 'active-btn' : ''}`} >
                                     {weight}
                                 </div>
@@ -89,13 +79,13 @@ function SubProducts() {
                 )}
 
                 {/* Display Main Subproducts */}
-                <div className="container py-5">
+                <div className="container py-3 py-md-5">
                     <div className="row justify-content-center">
                         {filteredMainSubProducts.map((item, index) => (
                             <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
                                 <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
-                                    <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
-                                    <div className='fw-semibold subp pt-2 p-1 fs-6'>
+                                    <img src={item.proimg} alt="" className='img-fluid product_sizeimg' style={{  objectFit: 'contain' }} />
+                                    <div className='fw-semibold subp pt-2 p-1 ' style={{fontSize:"14px"}}>
                                         {item.ProductName}
                                     </div>
                                 </div>
@@ -114,16 +104,16 @@ function SubProducts() {
                         : subtype.subproducts;
 
                     return (
-                        <div key={idx} className="my-5">
-                            <h3 className='mt-3 text-center text-dark text-uppercase fw-bold'>{subtype.h1}</h3>
+                        <div key={idx} className="my-2 my-md-5">
+                            <h3 className='mt-1 mt-md-3 text-center text-dark text-uppercase fw-bold ftittle'>{subtype.h1}</h3>
 
                             {/* Weight Filter for Subtype */}
                             {subtypeWeights.length > 0 && (
-                                <div className='text-center py-4 d-block d-lg-flex align-items-center justify-content-center'>
+                                <div className='text-center py-2 py-md-4 d-block d-lg-flex align-items-center justify-content-center'>
                                     <div className='border-0 bg-transparent mx-2' onClick={() =>
                                         setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: null }))
                                     }>
-                                        <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-3 ${!selectedSubtypeWeight ? 'active-btn' : ''}`} >
+                                        <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-2 mt-md-3 ${!selectedSubtypeWeight ? 'active-btn' : ''}`} >
                                             All
                                         </div>
                                     </div>
@@ -131,7 +121,7 @@ function SubProducts() {
                                         <div key={i} className='border-0 bg-transparent mx-2' onClick={() =>
                                             setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: weight }))
                                         }>
-                                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-3 ${selectedSubtypeWeight === weight ? 'active-btn' : ''}`}>
+                                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-2 mt-md-3 ${selectedSubtypeWeight === weight ? 'active-btn' : ''}`}>
                                                 {weight}
                                             </div>
                                         </div>
@@ -145,8 +135,8 @@ function SubProducts() {
                                     {filteredSubtypeProducts.map((item, index) => (
                                         <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
                                             <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
-                                                <img src={item.proimg} alt="" className='img-fluid' style={{ height: '180px', objectFit: 'contain' }} />
-                                                <div className='fw-semibold subp pt-2 p-1 fs-6'>
+                                                <img src={item.proimg} alt="" className='img-fluid  product_sizeimg' style={{  objectFit: 'contain' }} />
+                                                <div className='fw-semibold subp pt-2 p-1 '  style={{fontSize:"14px"}}>
                                                     {item.ProductName}
                                                 </div>
                                             </div>

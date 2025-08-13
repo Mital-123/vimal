@@ -17,10 +17,15 @@
     }
 }
 
-
+.product_sizeimg{
+    height: 180px !important;
+}
 
 /* product recepie slider start */
-
+.fsizefont{
+    font-size: 40px;
+    line-height: 40px;
+}
 .image1 {
     height: 235px;
     width: 235px;
@@ -77,33 +82,89 @@
 .recepieslider .slick-track {
     transition-timing-function: ease-in-out !important;
 }
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+    .fsizefont{
+    font-size: 30px;
+    line-height: 30px;
+}
 
+    .image1 {
+        height: 200px;
+        width: 200px;
+        right: 20px;
+    }
+
+    .image2 {
+        height:95px;
+        width:95px;
+        right: 0;
+        left: 20px;
+    }
+
+    .productbgred {
+        background-size: 250px 250px;
+        width: 300px;
+        background-position: 45% 100%;
+    }
+}
 @media screen and (max-width:992px) {
     .product-line {
         margin-top: 0;
     }
+    .fsizefont{
+    font-size: 30px;
+    line-height: 30px;
+}
+ .image1 {
+        height: 210px;
+        width: 210px;
+        right: 20px;
+    }
+
+    .image2 {
+        height:100px;
+        width:100px;
+        right: 0;
+        left: 35px;
+    }
+
+    .productbgred {
+        background-size: 250px 250px;
+        width: 300px;
+        background-position: 45% 100%;
+    }
+    .product_sizeimg{
+    height: 150px !important;
+}
 }
 
 @media screen and (max-width:576px) {
 
     .image1 {
-        height: 211px;
-        width: 211px;
-        right: 16px;
+        height: 200px !important;
+        width: 200px !important;
+        right: 20px !important;
     }
 
     .image2 {
-        height: 111px;
-        width: 111px;
-        right: 0;
-        left: 46px;
+        height:95px !important;
+        width:95px !important;
+        right: 0 !important;
+        left: 20px !important;
     }
 
     .productbgred {
-        background-size: 267px 267px;
-        width: 300px;
-        background-position: 59% 100%;
+        background-size: 250px 250px !important;
+        width: 300px !important;
+        background-position: 45% 100% !important;
     }
+     .fsizefont{
+    font-size: 20px !important;
+    line-height: 20px !important;
+}
+.product_sizeimg{
+    height: 100px !important;
+}
 }
 
 

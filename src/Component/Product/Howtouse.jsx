@@ -15,9 +15,11 @@ function Howtouse() {
                 <img src={require('../../assets/Images/step6.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
             </div>
         </div> */}
-        <div className="container-fluid text-center py-2 py-lg-5" style={{ backgroundColor: "#fffcf3" }}>
+      <div style={{ backgroundColor: "#fffcf3" }}>
+          <div className="container text-center py-2 py-lg-5 " >
             <img src={require("../../assets/Images/shared image (1).jpeg")} alt="" className='img-fluid' />
         </div>
+      </div>
 </>
     )
 }
