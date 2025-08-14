@@ -13,6 +13,7 @@ import SpecificSubPro from './Component/Product/SpecificSubPro';
 import BrandProductDetail from './Component/Home/BrandProductDetail';
 import Blog from './Component/Blog/Blog';
 import ScrollToTop from './ScrollToTop';
+import Recepie from './Component/Blog/Recepie';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path='/product/:id' element={<SubProducts />} />
           <Route path='/product/:id/:proid' element={<SpecificSubPro />} />
           <Route path='/blog' element={<Blog />} />
+          <Route path='/Recepie' element={<Recepie />} />
+          <Route path='/Recepie/:id' element={<Recepie />} />
           <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
