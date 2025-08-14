@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import HOC from '../HOC'
 import { Link } from 'react-router-dom';
 import ButtonCom from '../ButtonCom';
+import YouTubeVideo from './YouTubeVideo';
+import "../../assets/Css/Blog.css";
+
 const recipeSections = [
     {
         id: 1,
@@ -122,6 +125,7 @@ function Blog() {
                     </div>
                 </div>
             </div>
+            <YouTubeVideo />
         </>
     );
 }
