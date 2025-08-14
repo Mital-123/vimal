@@ -4,6 +4,11 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HOC from '../HOC'
+import { Link } from 'react-router-dom';
+import ButtonCom from '../ButtonCom';
+import YouTubeVideo from './YouTubeVideo';
+import "../../assets/Css/Blog.css";
+
 const recipeSections = [
     {
         id: 1,
@@ -68,53 +73,60 @@ function Blog() {
             : recipeSections.filter(item => item.type === activeCategory);
 
     return (
-        <div className='py-2 py-md-5 p-1 category_bgimg' style={{ backgroundAttachment: "fixed" }}>
-            <div className='container'>
-                <div className='text-center'>
-                    <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
-                </div>
+        <>
+            <div className='mt-5'>
+                <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
+            </div>
+            <div className='py-2 py-md-5 p-1 category_bgimg' style={{ backgroundAttachment: "fixed" }}>
+                <div className='container'>
+                    <div className='text-center'>
+                        <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
+                    </div>
 
-                {/* Dynamic Category Tabs */}
-                <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow">
-                    <Slider {...settings} ref={sliderRef}>
-                        {categories.map((category, index) => (
-                            <div key={index} className="px-2 m-1">
-                                <div
-                                    className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeCategory === category ? 'active-btn' : ''}`}
-                                >
-                                    <button
-                                        className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent"
-                                        onClick={() => {
-                                            setActiveCategory(category);
-                                            if (sliderRef.current) {
-                                                sliderRef.current.slickGoTo(index);
-                                            }
-                                        }}
+                    {/* Dynamic Category Tabs */}
+                    <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow">
+                        <Slider {...settings} ref={sliderRef}>
+                            {categories.map((category, index) => (
+                                <div key={index} className="px-2 m-1">
+                                    <div
+                                        className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeCategory === category ? 'active-btn' : ''}`}
                                     >
-                                        {category}
-                                    </button>
-                                </div>  
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+                                        <button
+                                            className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent"
+                                            onClick={() => {
+                                                setActiveCategory(category);
+                                                if (sliderRef.current) {
+                                                    sliderRef.current.slickGoTo(index);
+                                                }
+                                            }}
+                                        >
+                                            {category}
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
 
-                {/* Filtered Recipes */}
-                <div className="row col-10 justify-content-sm-start justify-content-center mx-auto">
-                    {filteredRecipes.map((item) => (
-                        <div key={item.id} className="col-lg-4 col-md-5 col-sm-6 mt-4 d-flex">
-                            <div className="card h-100 w-100">
-                                <img src={item.image} alt="" className="card-img-top" />
-                                <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title">{item.titleLarge}</h5>
-                                    <p className="card-text flex-grow-1">{item.description}</p>
+                    {/* Filtered Recipes */}
+                    <div className="row col-10 justify-content-sm-start justify-content-center mx-auto">
+                        {filteredRecipes.map((item) => (
+                            <div key={item.id} className="col-lg-4 col-md-5 col-sm-6 mt-4 d-flex">
+                                <div className="card h-100 w-100">
+                                    <img src={item.image} alt="" className="card-img-top" />
+                                    <div className="card-body d-flex flex-column">
+                                        <h5 className="card-title">{item.titleLarge}</h5>
+                                        <p className="card-text flex-grow-1 pera">{item.description}</p>
+                                        <Link to={`/Recepie/${item.id}`} className='text-decoration-none'><ButtonCom btn={"How To Make ?"} /></Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+            <YouTubeVideo />
+        </>
     );
 }
 export default HOC(Blog)
