@@ -84,7 +84,9 @@
   color: white !important;
   transform: rotateY(360deg) !important;
 }
-
+.countericoncontact{
+  font-size: 50px !important;
+}
 @media (min-width: 355px) and (max-width: 992px) {
   .main-contact {
     margin-top: 30px !important;
