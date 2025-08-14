@@ -77,7 +77,7 @@ function Blog() {
             <div className='mt-5'>
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
             </div>
-            <div className='py-2 py-md-5 p-1 category_bgimg' style={{ backgroundAttachment: "fixed" }}>
+            <div className='py-2 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
                 <div className='container'>
                     <div className='text-center'>
                         <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
