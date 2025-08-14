@@ -30,7 +30,7 @@ function SubProducts() {
     return (
         <div className='mt-5'>
             {/* Banner */}
-            <div className='pt-3'>
+            <div>
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
             </div>
 
