@@ -1,8 +1,7 @@
-import HOC from '../HOC'
+import HOC from '../HOC';
 import "../../assets/Css/ContactUs.css";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-import ButtonCom from '../ButtonCom';
 import Tittles from '../Tittles';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
@@ -198,9 +197,10 @@ function ContactPage() {
                       />
                     </div>
 
-                    <button className='mt-2 border-0 bg-transparent' type='submit'>
-                      <ButtonCom btn="SUBMIT" />
-                    </button>
+                    <div >
+                        <button className="btncss fw-bold mt-2" type='submit'>SUBMIT</button>
+                 
+                    </div>
                   </form>
 
                   {/* {status && <p style={{ marginTop: '10px', color: status.startsWith('✅') ? 'green' : 'red' }}>{status}</p>} */}
