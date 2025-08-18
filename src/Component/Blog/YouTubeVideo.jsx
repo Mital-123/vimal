@@ -88,7 +88,7 @@ function YouTubeVideo() {
                             {videos.map((video) => (
                                 <div
                                     key={video.id}
-                                    className="mb-3 mb-lg-4 video-thumbnail p-1"
+                                    className="mb-3 mb-lg-4 video-thumbnail p-1 youtubevideo"
                                     onClick={() => setSelectedVideo(video)}
                                 >
                                     <img

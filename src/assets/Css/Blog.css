@@ -5,18 +5,22 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .video-thumbnail {
   cursor: pointer;
   outline: none !important;
 }
+
 .video-thumbnail img {
   outline: none !important;
   border: none;
 }
+
 .video-thumbnail:focus,
 .video-thumbnail img:focus {
   outline: none !important;
 }
+
 .slider-btn {
   background: var(--golden);
   color: var(--red);
@@ -25,13 +29,19 @@
   width: 40px;
   height: 40px;
 }
+
 @media (max-width: 768px) {
   .main_blog_video {
     height: 250px !important;
   }
 }
+
 @media (max-width: 576px) {
   .main_blog_video {
     height: 150px !important;
   }
+}
+
+.youtubevideo .slick-vertical .slick-slide {
+  margin-top: 6px !important;
 }
