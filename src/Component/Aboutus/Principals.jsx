@@ -7,10 +7,12 @@ function Principals() {
             <div className='container-lg'>
                 <div className="col-11 mx-auto">
                     {/* <h1>OUR PRINCIPLES</h1>*/}
-                    <div className='ms-md-4 ms-0 mt-0 mt-md-5'>
-                        <Tittles stitle="OUR PRINCIPLES" />
-                        <p className='mt-2 ms-2 pera'>The success of Passage Foods is the result of following these three principles:</p>
-                    </div>
+                       <div className='brdstart'>
+              <Tittles stitle={"OUR PRINCIPLES"} ltitle="Lorem ipsum dolor sit amet"/>
+            </div>
+                       
+                        <p className='mt-2  pera'>The success of Passage Foods is the result of following these three principles:</p>
+              
                     <div className='row'>
                         <div className='text-end littleimg1' style={{
                             position: "relative",

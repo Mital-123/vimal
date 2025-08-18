@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronDown, FaChevronLeft, FaChevronRight, FaChevronUp } from 'react-icons/fa';
 import Slider from 'react-slick';
 
 function YouTubeVideo() {
@@ -106,13 +106,13 @@ function YouTubeVideo() {
                                 onClick={() => sliderRef.slickPrev()}
                                 className="slider-btn"
                             >
-                                <FaChevronLeft size={16} />
+                                <FaChevronDown size={16} />
                             </button>
                             <button
                                 onClick={() => sliderRef.slickNext()}
                                 className="slider-btn"
                             >
-                                <FaChevronRight size={16} />
+                                <FaChevronUp size={16} />
                             </button>
                         </div>
                     </div>

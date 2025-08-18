@@ -53,7 +53,7 @@ Main Menu</h3>
 
      </div>
      <div className=" col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
-      <h3 className='' style={{width:"fit-content"}}>Quick Links</h3>
+      <h3 className='' style={{width:"fit-content"}}>Contact Us</h3>
       <div className='pera pt-0 pt-md-1 '>
        <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa?
      </Link> </div>
