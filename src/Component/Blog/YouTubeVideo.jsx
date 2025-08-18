@@ -65,7 +65,7 @@ function YouTubeVideo() {
     return (
         <div className="container my-3 my-lg-5 my-md-">
             <div className="row overflowX-hidden">
-                <div className="col-12 col-lg-8 col-md-8 p-3">
+                <div className="col-12 col-lg-8 col-md-8 p-3 pt-md-4">
                     <div className="h-100">
                         <iframe
                             className="main_blog_video object-fit-cover rounded-3"
@@ -77,23 +77,23 @@ function YouTubeVideo() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <h5 className="card-title fw-bold mt-2">{selectedVideo.title}</h5>
+                        <h5 className="card-title fw-bold mt-2 ftitle text-capitalize">{selectedVideo.title}</h5>
                         <p className="card-text text-secondary my-2 pera">{selectedVideo.description}</p>
                     </div>
                 </div>
 
-                <div className="col-12 col-lg-4 col-md-4 p-0 p-lg-3 p-md-3">
-                    <div className="h-100">
+                <div className="col-12 col-lg-4 col-md-4 p-0 p-lg-3 p-md-3 ">
+                    <div className="h-100 youtubevideo">
                         <Slider ref={(slider) => (sliderRef = slider)} {...sliderSettings}>
                             {videos.map((video) => (
                                 <div
                                     key={video.id}
-                                    className="mb-3 mb-lg-4 video-thumbnail p-1 youtubevideo"
+                                    className="mb-3 mb-lg-4 video-thumbnail p-1  youtubevideo"
                                     onClick={() => setSelectedVideo(video)}
                                 >
                                     <img
                                         src={video.thumbnail}
-                                        className="img-fluid w-100 object-fit-cover rounded-3"
+                                        className="img-fluid w-100 object-fit-cover rounded-3 "
                                         alt={video.title}
                                     />
                                     <h6 className="card-title fw-bold mt-2 video-title">{video.title}</h6>
