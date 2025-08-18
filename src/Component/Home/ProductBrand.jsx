@@ -28,7 +28,7 @@ function ProductBrand() {
                                             <img
                                                 src={item.image}
                                                 alt={item.alt}
-                                                className="brand-main-img img-fluid rounded-4"
+                                                className="brand-main-img img-fluid rounded-4 p-0 p-md-2"
                                             />
                                         </div>
                                     </div>
