@@ -9,7 +9,7 @@ function Recepie() {
     return (
         <div className='container mt-5 pt-5'>
             <div className='pt-5'>
-                <div>
+                <div> 
                     <div className='row mx-auto'>
                         <div className="col-lg-3 col-md-5 col-6 ">
                             <div className="h-100 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
