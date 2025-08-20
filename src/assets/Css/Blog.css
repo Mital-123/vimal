@@ -45,3 +45,11 @@
 .youtubevideo .slick-vertical .slick-slide {
   margin-top: 6px !important;
 }
+
+.blogarrow .slick-next {
+  right: -20px !important;
+}
+
+.blogarrow .slick-prev {
+  left: -26px !important;
+}

@@ -10,56 +10,56 @@ function Recepie() {
         <div className='container mt-5 pt-5'>
             <div className='pt-5'>
                 <div>
-                    <div className='row col-sm-10 mx-auto'>
+                    <div className='row mx-auto'>
                         <div className="col-lg-3 col-md-5 col-6 ">
-                            <div className="h-100 d-flex align-items-center justify-content-center text-white rounded-4 p-2 " style={{ backgroundColor: "var(--red)" }}>
-                                <GoPerson className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1",  }} />
-                                <div className='ms-3'>
-                                    <div className='fs-5 fw-semibold' style={{letterSpacing:"1.2px"}}>Servings</div>
-                                    <div className="">4 Persons</div>
+                            <div className="h-100 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <GoPerson className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
+                                <div className='ms-0 ms-md-3'>
+                                    <div className='fs-5 fw-semibold text-center text-md-start' style={{ letterSpacing: "1.2px" }}>Servings</div>
+                                    <div className="text-center text-md-start">4 Persons</div>
                                 </div>
 
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-5 col-6 ">
-                            <div className="h-100 d-flex align-items-center justify-content-center text-white rounded-4 p-2 " style={{ backgroundColor: "var(--red)" }}>
-                                <FaRegClock className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1",  }} />
-                                <div className='ms-3'>
-                                    <div className='fs-5 fw-semibold' style={{letterSpacing:"1.2px"}}>Prep Time</div>
-                                    <div className="">15 Minutes</div>
+                            <div className="h-100 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <FaRegClock className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
+                                <div className='ms-0 ms-md-3'>
+                                    <div className='fs-5 fw-semibold text-center text-md-start' style={{ letterSpacing: "1.2px" }}>Prep Time</div>
+                                    <div className="text-center text-md-start">15 Minutes</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-5 col-6">
+                            <div className="h-100 mt-3 mt-md-0 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <PiChefHat className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
+                                <div className='ms-0 ms-md-3'>
+                                    <div className='fs-5 fw-semibold text-center text-md-start' style={{ letterSpacing: "1.2px" }}>Cook Time</div>
+                                    <div className="text-center text-md-start">10 Minutes</div>
                                 </div>
 
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-5 col-6 ">
-                            <div className="h-100 d-flex align-items-center justify-content-center text-white rounded-4 p-2 " style={{ backgroundColor: "var(--red)" }}>
-                                <PiChefHat className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1",  }} />
-                                <div className='ms-3'>
-                                    <div className='fs-5 fw-semibold' style={{letterSpacing:"1.2px"}}>Cook Time</div>
-                                    <div className="">10 Minutes</div>
+                            <div className="h-100 mt-3 mt-md-0 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <MdStarBorder className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
+                                <div className='ms-0 ms-md-3'>
+                                    <div className='fs-5 fw-semibold text-center text-md-start' style={{ letterSpacing: "1.2px" }}>Difficulty</div>
+                                    <div className="text-center text-md-start">Intermediate Level</div>
                                 </div>
 
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-5 col-6 ">
-                            <div className="h-100 d-flex align-items-center justify-content-center text-white rounded-4 p-2 " style={{ backgroundColor: "var(--red)" }}>
-                                <MdStarBorder className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1",  }} />
-                                <div className='ms-3'>
-                                    <div className='fs-5 fw-semibold' style={{letterSpacing:"1.2px"}}>Difficulty</div>
-                                    <div className="">Intermediate Level</div>
-                                </div>
 
-                            </div>
-                        </div>
-                     
                     </div>
                 </div>
-                <div className='col-sm-10 p-1 mx-auto mt-5'>
+                <div className=' p-1 mx-auto mt-5'>
                     <p className='p-2' style={{ textAlign: "justify" }}>
                         Savor the bold and savory flavors of our Ground Beef Tacos! The impeccably seasoned ground beef, nestled in warm tortillas, creates a symphony of tastes complemented by vibrant toppings like crisp lettuce, juicy tomatoes, and a dollop of zesty salsa. This recipe promises a fiesta of textures and tastes, making it a perfect choice for a quick and delicious weeknight meal.
                     </p>
                 </div>
-                <div className='col-sm-10 p-1 mx-auto mt-3'>
+                <div className=' p-1 mx-auto mt-3'>
                     {/* <div className='mb-5 mt-3'>
                         Tags<br />
                         <span className='text-warning'>Mexican Food, Tacos, Spicy, Seafood, Featured Recipe</span>
@@ -82,30 +82,30 @@ function Recepie() {
                         </ul>
                     </div>
                 </div>
-                <div className="col-sm-10 p-1 mx-auto my-5">
+                <div className=" p-1 mx-auto my-5">
                     <Tittles stitle='Coockig Intructions' />
                     <div className='mt-4'>
-                        <div className='d-flex align-items-centermy-3 p-2 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
+                        <div className='d-flex align-items-center my-3 p-1 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
                             <h1 className='me-1 text-warning p-2 fw-bold'>01</h1>
-                            <p className='ms-3 col-9'>In a clean bowl, toss the ground beef with spices olive oil, smoked paprika, cumin, cayenne pepper, salt, and pepper.</p>
+                            <p className='ms-3 col-9 pera'>In a clean bowl, toss the ground beef with spices olive oil, smoked paprika, cumin, cayenne pepper, salt, and pepper.</p>
                         </div>
                     </div>
                     <div className=''>
-                        <div className='d-flex align-items-centermy-3 p-2 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
+                        <div className='d-flex align-items-center my-3 p-1 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
                             <h1 className='me-1 text-warning p-2 fw-bold'>02</h1>
-                            <p className='ms-3 col-9'>Heat a skillet over medium–high heat. Add the seasoned ground beef and cook for 2–3 minutes per side until opaque.</p>
+                            <p className='ms-3 col-9 pera'>Heat a skillet over medium–high heat. Add the seasoned ground beef and cook for 2–3 minutes per side until opaque.</p>
                         </div>
                     </div>
                     <div className=''>
-                        <div className='d-flex align-items-centermy-3 p-2 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
+                        <div className='d-flex align-items-center my-3 p-1 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
                             <h1 className='me-1 text-warning p-2 fw-bold'>03</h1>
-                            <p className='ms-3 col-9'>Warm the prepared flour tortillas in a dry pan or microwave. Make sure to heat the microwave in 180 degrees for 2 minutes.</p>
+                            <p className='ms-3 col-9 pera'>Warm the prepared flour tortillas in a dry pan or microwave. Make sure to heat the microwave in 180 degrees for 2 minutes.</p>
                         </div>
                     </div>
                     <div className=''>
-                        <div className='d-flex align-items-centermy-3 p-2 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
+                        <div className='d-flex align-items-center my-3 p-1 pt-3 rounded-4 my-3 shadow' style={{ backgroundColor: "var(--ofwhite)" }}>
                             <h1 className='me-1 text-warning p-2 fw-bold'>04</h1>
-                            <p className='ms-3 col-9'>Assemble tacos: Place ground beef on each tortilla, top with lettuce, tomatoes, red onion, paprika, cilantro, and avocado slices.</p>
+                            <p className='ms-3 col-9 pera'>Assemble tacos: Place ground beef on each tortilla, top with lettuce, tomatoes, red onion, paprika, cilantro, and avocado slices.</p>
                         </div>
                     </div>
                 </div>

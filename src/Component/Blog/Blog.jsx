@@ -78,21 +78,21 @@ function Blog() {
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
             </div>
             <div className='py-2 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
-                <div className='container'>
+                <div className='container-lg'>
                     <div className='text-center'>
                         <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
                     </div>
 
                     {/* Dynamic Category Tabs */}
-                    <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow ">
-                        <Slider {...settings} ref={sliderRef} >
+                    <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow blogarrow">
+                        <Slider {...settings} ref={sliderRef}>
                             {categories.map((category, index) => (
-                                <div key={index} className="px-2 m-1 ">
+                                <div key={index} className="px-2 m-1">
                                     <div
                                         className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeCategory === category ? 'active-btn' : ''}`}
                                     >
                                         <button
-                                            className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent "
+                                            className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent"
                                             onClick={() => {
                                                 setActiveCategory(category);
                                                 if (sliderRef.current) {
@@ -109,9 +109,9 @@ function Blog() {
                     </div>
 
                     {/* Filtered Recipes */}
-                    <div className="row col-10 justify-content-sm-start justify-content-center mx-auto">
+                    <div className="row col-lg-10 col-md-11 justify-content-sm-start justify-content-center mx-auto">
                         {filteredRecipes.map((item) => (
-                            <div key={item.id} className="col-lg-4 col-md-5 col-sm-6 mt-4 d-flex">
+                            <div key={item.id} className="col-md-4 col-sm-6 mt-sm-4 mt-2 d-flex">
                                 <div className="card h-100 w-100">
                                     <img src={item.image} alt="" className="card-img-top" />
                                     <div className="card-body d-flex flex-column">
