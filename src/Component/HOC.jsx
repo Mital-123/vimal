@@ -6,7 +6,9 @@ import { FaFacebookF, FaFileDownload, FaLinkedinIn, FaMailBulk, FaTwitter } from
 import { GrInstagram } from 'react-icons/gr';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import brochurePDF from '../assets/Images/groser.pdf';
+
 function HOC(Component) {
+
     function NewComponent() {
 
         const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +28,7 @@ function HOC(Component) {
         return (
             <>
                 <Header />
-                <div className={`social_Nav ${isVisible ? "show" : "hide"}`} style={{zIndex:30000}}>
+                <div className={`social_Nav ${isVisible ? "show" : "hide"}`} style={{ zIndex: 30000 }}>
                     <ul>
                         <li>
                             <a href="tel:+911234509876" className="sideNavIcon_tittle">

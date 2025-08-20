@@ -7,6 +7,7 @@ import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 
 function ContactPage() {
+
   const form = useRef();
   const [status, setStatus] = useState('');
   const [formData, setFormData] = useState({
@@ -97,36 +98,15 @@ function ContactPage() {
 
   return (
     <>
-      <div style={{ position: 'relative', width: '100%', overflow: 'hidden', marginTop: '78px' }} className="landingimg">
+      <div className="landingimg_contact">
         <img
           src="https://www.oregon.gov/employ/Agency/PublishingImages/ContactUs-2024.jpg"
           alt=""
-          className="img-fluid w-100"
-          style={{
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-          }}
+          className="landingimg-img_contact"
         />
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#240000c0',
-            boxShadow: 'inset 0 0 100px 20px #000',
-            pointerEvents: 'none',
-          }}
-          className="lendingshadow"
-        ></div>
+        <div className="lendingshadow_contact"></div>
       </div>
-
-      {/* <ContactInfo /> */}
-
-      {/* haldiram's contact page */}
-
+      
       <div className="contactinfo_bg" >
         <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
@@ -198,8 +178,8 @@ function ContactPage() {
                     </div>
 
                     <div >
-                        <button className="btncss fw-bold mt-2" type='submit'>SUBMIT</button>
-                 
+                      <button className="btncss fw-bold mt-2" type='submit'>SUBMIT</button>
+
                     </div>
                   </form>
 

@@ -77,14 +77,14 @@ function Blog() {
             <div className='mt-5'>
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
             </div>
-            <div className='py-2 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
+            <div className='py-4 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
                 <div className='container-lg'>
                     <div className='text-center'>
                         <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
                     </div>
 
                     {/* Dynamic Category Tabs */}
-                    <div className="col-11 m-auto pt-2 pt-md-5 categoryarrow blogarrow">
+                    <div className="col-11 m-auto pt-2 pt-md-4 categoryarrow blogarrow">
                         <Slider {...settings} ref={sliderRef}>
                             {categories.map((category, index) => (
                                 <div key={index} className="px-2 m-1">
@@ -109,15 +109,32 @@ function Blog() {
                     </div>
 
                     {/* Filtered Recipes */}
-                    <div className="row col-lg-10 col-md-11 justify-content-sm-start justify-content-center mx-auto">
+                    <div className="row justify-content-center mx-auto">
                         {filteredRecipes.map((item) => (
-                            <div key={item.id} className="col-md-4 col-sm-6 mt-sm-4 mt-2 d-flex">
+                            <div key={item.id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex">
                                 <div className="card h-100 w-100">
                                     <img src={item.image} alt="" className="card-img-top" />
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{item.titleLarge}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>
-                                        <Link to={`/Recepie/${item.id}`} className='text-decoration-none'><ButtonCom btn={"How To Make ?"} /></Link>
+                                        <Link to={`/Recepie/${item.id}`} className='text-decoration-none text-dark'><button className="c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">How To Make ?
+                                            <div className="c-button__blobs">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: "block", height: 0, width: "0" }} >
+                                                <defs>
+                                                    <filter id="goo">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                                                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </Link>
+                                        {/* <Link to={`/Recepie/${item.id}`} className='text-decoration-none'><ButtonCom btn={"How To Make ?"} /></Link> */}
                                     </div>
                                 </div>
                             </div>

@@ -103,11 +103,8 @@ function HomeAbout() {
 
                             {testimonials.map((testimonial, index) => (
                                 <div
-                                    className="px-0   py-1 py-md-3"
+                                    className="px-0 py-1 py-md-3"
                                     key={index}
-                                    data-aos="fade-left"
-                                    data-aos-duration="1500"
-                                    data-aos-once="true"
                                 >
                                     <div>
                                         <FaQuoteLeft className="fs-1 text-secondary" />
@@ -115,19 +112,19 @@ function HomeAbout() {
                                     <div className="pt-2 pt-md-4 pera" style={{ textAlign: "justify" }}>
                                         {testimonial.quote}
                                     </div>
-                                        <div className="row  m-0  mt-1 mt-md-3">
-                                          <div className="col-3 p-0 m-0 bg-white" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
-                                                        <div className="h-100 fs-1 text-white text-center shadow d-flex align-items-center justify-content-center " style={{ backgroundColor: "#6a1a1f",borderRadius:"20px 0px 0px 20px" }}>
-                                                          <FaQuoteRight />
-                                                        </div>
-                                                      </div>
-                                                      <div className="col-9 shadow  bg-white" style={{borderRadius:"0px 20px 20px 0px"}} data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
-                                                        <div className="h-100 d-flex align-items-center py-2 py-md-4   pera fw-bold text-center">
-                                                          " At Vimal, health taste and quality have been paramount since forever.  "
-                                                        </div>
-                                                      </div>
-                                                
-                                                    </div>
+                                    <div className="row  m-0  mt-1 mt-md-3">
+                                        <div className="col-3 p-0 m-0 bg-white">
+                                            <div className="h-100 fs-1 text-white text-center shadow d-flex align-items-center justify-content-center " style={{ backgroundColor: "#6a1a1f", borderRadius: "20px 0px 0px 20px" }}>
+                                                <FaQuoteRight />
+                                            </div>
+                                        </div>
+                                        <div className="col-9 shadow  bg-white" style={{ borderRadius: "0px 20px 20px 0px" }}>
+                                            <div className="h-100 d-flex align-items-center py-2 py-md-4   pera fw-bold text-center">
+                                                " At Vimal, health taste and quality have been paramount since forever.  "
+                                            </div>
+                                        </div>
+
+                                    </div>
                                     <div className="d-flex align-items-center align-content-center mt-2">
 
                                         <div className="mt-2">

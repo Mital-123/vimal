@@ -10,7 +10,7 @@
   --golden: #f2d05c;
   --ofwhite: #fffcf3;
 }
-.ftittle{
+.ftittle {
   font-size: 28px !important;
 }
 .stittle {
@@ -37,10 +37,7 @@
   width: 4px;
   /* width of the "border" */
   height: 100%;
-  background: linear-gradient(to top,
-      #610303,
-      #b90000,
-      #ff2525);
+  background: linear-gradient(to top, #610303, #b90000, #ff2525);
   /* customize gradient */
 }
 
@@ -85,16 +82,13 @@
   text-transform: uppercase;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   clip-path: polygon(
-      /* Top-left */
-      0% var(--curve-size),
-      var(--curve-size) 0,
-      /* top-right */
-      100% 0,
-      100% calc(100% - var(--curve-size)),
-      /* bottom-right 1 */
-      calc(100% - var(--curve-size)) 100%,
-      /* bottom-right 2 */
-      0 100%);
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
   transition: color 250ms;
 }
 
@@ -130,31 +124,35 @@
   background: var(--bg);
   z-index: -1;
   clip-path: polygon(
-      /* Top-left */
-      var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
-      calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
-      /* top-right */
-      calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      /* bottom-right 1 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
-      /* bottom-right 2 */
-      var(--border-width) calc(100% - var(--border-width)));
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
   transition: clip-path 500ms;
 }
 
 .btncss:where(:hover, :focus)::after {
   clip-path: polygon(
-      /* Top-left */
-      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      calc(100% - var(--border-width)) var(--border-width),
-      /* top-right */
-      calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      /* bottom-right 1 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
-      /* bottom-right 2 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
   transition: 200ms;
 }
 
@@ -185,11 +183,13 @@
   height: 200%;
   opacity: 0;
   transform: rotate(30deg);
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0.13) 0%,
-      rgba(255, 255, 255, 0.13) 77%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 /* Hover state - trigger effect */
@@ -213,6 +213,7 @@
   left: 0;
   z-index: 10;
   opacity: 0;
+  display: none;
   transform: translateX(-60px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -234,7 +235,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 .social_Nav ul li:nth-child(1) {
   border-radius: 0 5px 0px 0;
@@ -286,14 +286,17 @@
   justify-content: center;
   align-items: center;
 }
-
-
+@media (min-width: 768px) {
+  .social_Nav {
+    display: block;
+  }
+}
 /* socialicons end */
 
 /* Footer Start */
-.hover_name{
+.hover_name {
   transition: all 0.1s ease-in-out;
-color: white !important;
+  color: white !important;
 }
 .hover_name {
   transition: all 0.1s ease-in-out;
@@ -302,7 +305,7 @@ color: white !important;
 
 .hover_name:hover,
 .active_link {
-  color:#ffb4b4 !important;
+  color: #ffb4b4 !important;
 }
 
 /* Footer end */
@@ -325,9 +328,9 @@ color: white !important;
   .bg-video {
     height: 40vh !important;
   }
-  .ftittle{
-  font-size: 24px !important;
-}
+  .ftittle {
+    font-size: 24px !important;
+  }
 }
 
 /* lending section end */
@@ -347,21 +350,19 @@ color: white !important;
 
 .logo {
   height: 115px;
-  width: 115px
+  width: 115px;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .logo {
     height: 85px;
-    width: 75px
+    width: 75px;
   }
-  .ftittle{
+  .ftittle {
     font-size: 20px !important;
   }
-  .stittle{
-    
-  font-size: 18px !important;
-
+  .stittle {
+    font-size: 18px !important;
   }
 }
 
@@ -455,9 +456,6 @@ color: white !important;
 
 /* Floating Background Shapes */
 
-
-
-
 /* .certificates-grid {
   display: flex;
   flex-wrap: wrap;
@@ -488,20 +486,17 @@ color: white !important;
   transform: translateY(-10px);
   box-shadow: 0 30px 40px rgba(255, 37, 37, 0.205);
   border-color: rgba(255, 37, 37, 0.3);
-
 }
 
 .landingimg {
   height: 95vh;
-  
 }
 
 .lendingshadow {
   background-color: #24000061;
 }
 
-@media screen and (max-width:992px) {
-
+@media screen and (max-width: 992px) {
   .landingimg {
     height: auto;
   }
@@ -509,18 +504,15 @@ color: white !important;
   .lendingshadow {
     background-color: #24000061 !important;
   }
- 
-
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   /* .certificates-grid{
   flex-wrap: nowrap !important;
 gap: 10 !important;
   } */
-  .certificate-item{
-  /* width: 100px; */
-  padding: 5px !important;
-
-}
+  .certificate-item {
+    /* width: 100px; */
+    padding: 5px !important;
+  }
 }

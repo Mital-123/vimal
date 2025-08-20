@@ -9,7 +9,7 @@ function HomeProduct() {
 
     return (
         <>
-            <div className='container py-5 my-3'>
+            <div className='container mt-3 mb-5'>
                 <div className='row justify-content-center'>
                     {products.map((item, i) => {
                         return (
@@ -64,7 +64,7 @@ function HomeProduct() {
                     })}
                 </div>
             </div>
-            <Certificates />
+            {/* <Certificates /> */}
         </>
     );
 }

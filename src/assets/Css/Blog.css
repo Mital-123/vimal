@@ -53,3 +53,75 @@
 .blogarrow .slick-prev {
   left: -26px !important;
 }
+
+/* recipe page start */
+.ingredients-list {
+  list-style: none;
+  column-count: 1;
+}
+
+@media (min-width: 768px) {
+  .ingredients-list {
+    column-count: 2;
+  }
+}
+/* recipe page end */
+
+/* Blog section button start */
+.c-button {
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+.c-button--gooey {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: 3px solid lightgray;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+  transition: all 700ms ease;
+}
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+.c-button--gooey .c-button__blobs div {
+  background-color: var(--red);
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+.c-button--gooey:hover {
+  color: #fff;
+  border: 3px solid var(--red);
+}
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+/* Blog section button end */
