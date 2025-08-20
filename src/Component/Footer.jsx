@@ -1,10 +1,6 @@
-import React from 'react'
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaMailBulk } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
-import Tittles from './Tittles'
-import { FaFacebook, FaInstalod, FaMapLocationDot } from 'react-icons/fa6'
-import { ImInstagram } from 'react-icons/im'
-import { CiInstagram } from 'react-icons/ci'
+import { FaFacebook, FaMapLocationDot } from 'react-icons/fa6'
 import { BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
 import { MdArrowForwardIos } from 'react-icons/md'
 import { BiSolidPhoneCall } from 'react-icons/bi'
@@ -30,7 +26,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit eius asperiores,
       <h3 className='' style={{width:"fit-content"}}>
 Main Menu</h3>
       <div className='pera pt-1 '>
-       <NavLink to={"/"} activeClassName="active_link" className='text-decoration-none hover_name'> <MdArrowForwardIos /> Home</NavLink>
+       <NavLink to={"/"}  className='text-decoration-none hover_name'> <MdArrowForwardIos /> Home</NavLink>
       </div>
       <div className='pera pt-1 pt-md-2 '>
        <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> About us</NavLink>
@@ -57,7 +53,7 @@ Main Menu</h3>
 
      </div>
      <div className=" col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
-      <h3 className='' style={{width:"fit-content"}}>Quick Links</h3>
+      <h3 className='' style={{width:"fit-content"}}>Contact Us</h3>
       <div className='pera pt-0 pt-md-1 '>
        <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa?
      </Link> </div>

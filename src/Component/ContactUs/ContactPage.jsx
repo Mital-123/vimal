@@ -1,8 +1,7 @@
-import HOC from '../HOC'
+import HOC from '../HOC';
 import "../../assets/Css/ContactUs.css";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-import ButtonCom from '../ButtonCom';
 import Tittles from '../Tittles';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
@@ -19,20 +18,24 @@ function ContactPage() {
   const [errors, setErrors] = useState({});
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const mobileRegex = /^[0-9]{10,15}$/;
+  const mobileRegex = /^[0-9]{10}$/;
 
   const validateField = (name, value) => {
     let error = '';
 
-    if (name === 'user_name' && !value.trim()) {
-      error = 'Name is required!';
+    if (name === 'user_name') {
+      if (!value.trim()) {
+        error = 'Name is required!';
+      } else if (!/^[A-Za-z\s]+$/.test(value)) {
+        error = 'Name must contain only alphabet characters.';
+      }
     }
 
     if (name === 'user_email') {
       if (!value.trim()) {
         error = 'Email is required!';
       } else if (!emailRegex.test(value)) {
-        error = 'Invalid e-mail format.';
+        error = 'Invalid e-mail.';
       }
     }
 
@@ -125,7 +128,7 @@ function ContactPage() {
       {/* haldiram's contact page */}
 
       <div className="contactinfo_bg" >
-        <div className='  container overflow-hidden'>
+        <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
           </div>
           <div className='col-lg-10 mx-auto my-2 my-lg-5' >
@@ -137,7 +140,7 @@ function ContactPage() {
                     <div className='ftittle fw-bold' style={{ color: "var(--red)" }}>
                       Enquiry Form
                     </div>
-                    <div className=''>
+                    <div className='mt-2'>
                       <label className='my-1'>Name</label><br />
                       <input
                         className='col-12 py-1 inputplaceholder rounded-0 ps-2 border-1'
@@ -194,15 +197,17 @@ function ContactPage() {
                       />
                     </div>
 
-                    <button className='mt-2 border-0 bg-transparent' type='submit'>
-                      <ButtonCom btn="SUBMIT" />
-                    </button>
+                    <div >
+                        <button className="btncss fw-bold mt-2" type='submit'>SUBMIT</button>
+                 
+                    </div>
                   </form>
 
                   {/* {status && <p style={{ marginTop: '10px', color: status.startsWith('✅') ? 'green' : 'red' }}>{status}</p>} */}
                 </div>
               </div>
-              <div className='col-md-6 col-11 ' >
+
+              <div className='col-md-6 col-11'>
                 <div className="h-100 ps-0 ps-lg-2">
                   <div className='mb-1'>
                     <Tittles stitle={"Contact Us"} />
@@ -221,7 +226,7 @@ function ContactPage() {
                   <div className="row g-1">
                     <div className="col-6 ">
                       <div className="h-100">
-                        <div className='shadow rounded-4  text-white' style={{ backgroundColor: "var(--red)" }}>
+                        <div className='shadow rounded-4 text-white' style={{ backgroundColor: "var(--red)" }}>
                           <div className='d-block row d-md-flex align-items-center justify-content-center text-center text-md-start p-3'>
                             <div className='col-12 col-lg-4 fw-bold  countericoncontact text-center'><MdMarkEmailRead /></div>
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
@@ -237,7 +242,7 @@ function ContactPage() {
                     </div>
                     <div className="col-6">
                       <div className="h-100">
-                        <div className='shadow rounded-4  text-white ' style={{ backgroundColor: "var(--red)" }}>
+                        <div className='shadow rounded-4 text-white' style={{ backgroundColor: "var(--red)" }}>
                           <div className='d-block row d-md-flex align-items-center justify-content-center text-center text-md-start p-3'>
                             <div className='col-12 col-lg-4 fw-bold  countericoncontact text-center '><BiSolidPhoneCall /></div>
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
