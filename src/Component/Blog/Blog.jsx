@@ -111,7 +111,7 @@ function Blog() {
                     {/* Filtered Recipes */}
                     <div className="row justify-content-center mx-auto">
                         {filteredRecipes.map((item) => (
-                            <div key={item.id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex">
+                            <div key={item.id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex fade-in">
                                 <div className="card h-100 w-100">
                                     <img src={item.image} alt="" className="card-img-top" />
                                     <div className="card-body d-flex flex-column">
