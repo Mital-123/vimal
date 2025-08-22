@@ -106,7 +106,7 @@ function ContactPage() {
         />
         <div className="lendingshadow_contact"></div>
       </div>
-      
+
       <div className="contactinfo_bg" >
         <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
@@ -177,9 +177,23 @@ function ContactPage() {
                       />
                     </div>
 
-                    <div >
-                      <button className="btncss fw-bold mt-2" type='submit'>SUBMIT</button>
-
+                    <div>
+                      <button type='submit' className="mt-3 c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">SUBMIT
+                        <div className="c-button__blobs">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </button>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: "block", height: 0, width: "0" }} >
+                        <defs>
+                          <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                            <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                          </filter>
+                        </defs>
+                      </svg>
                     </div>
                   </form>
 
