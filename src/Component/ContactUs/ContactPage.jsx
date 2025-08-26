@@ -210,7 +210,7 @@ function ContactPage() {
 
                     <div className="ftittle" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">How We Can Help You ?</div>
                     <div className=" pera">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, perferendis recusandae eum aperiam numquam ipsum modi tempora voluptates quaerat ipsam?
+                      Need help or want to discuss Export/Bulk orders? Get in touch with us today.
                     </div>
                   </div>
 

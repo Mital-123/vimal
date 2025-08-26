@@ -17,10 +17,18 @@ function Footer() {
             <h5 className='pt-2 fw-bold'>Follow Us</h5>
 
             <div className='d-flex align-items-center'>
-              <div className=' fs-5 hover_name'><BsInstagram /></div>
-              <div className='ps-3 fs-5 hover_name'><BsLinkedin /></div>
-              <div className='ps-3 fs-5 hover_name'><FaFacebook /></div>
-              <div className='ps-3 fs-5 hover_name'><BsYoutube /></div>
+              <Link to={"https://www.instagram.com/swadbrand"} target='_blank'>
+                <div className='fs-5 hover_name'><BsInstagram /></div>
+              </Link>
+              <Link to={"https://www.linkedin.com/company/vimalagro/"} target='_blank'>
+                <div className='ps-3 fs-5 hover_name'><BsLinkedin /></div>
+              </Link>
+              <Link to={"https://www.facebook.com/share/1ExAbe4Mhu/"} target='_blank'>
+                <div className='ps-3 fs-5 hover_name'><FaFacebook /></div>
+              </Link>
+              <Link to={"https://youtube.com/@swadbrand?si=i2mCupjmof9xLnxG"} target='_blank'>
+                <div className='ps-3 fs-5 hover_name'><BsYoutube /></div>
+              </Link>
             </div>
           </div>
           <div className=" col-6 col-lg-3 ps-1 ps-lg-5 mt-4 mt-md-2">
