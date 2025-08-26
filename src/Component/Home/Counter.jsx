@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import { RiEmotionHappyLine } from 'react-icons/ri';
 import { TbWorld } from 'react-icons/tb';
 import { TiShoppingCart } from 'react-icons/ti';
 
 function Counter() {
+
+    const [counterData, setCounterData] = useState({
+        customers: 0,
+        products: 0,
+        countries: 0,
+    });
+
+    useEffect(() => {
+        fetch("https://backendvimalagro.onrender.com/counter")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0 && data[0].value && data[0].value.length > 0) {
+                    const { customers, products, countries } = data[0].value[0];
+                    setCounterData({ customers, products, countries });
+                }
+            })
+            .catch((err) => console.error("Error fetching counter data:", err));
+    }, []);
+
     return (
         <>
             <div className="container pt-3 pt-lg-5">
@@ -19,7 +38,7 @@ function Counter() {
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><RiEmotionHappyLine /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
                                     <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={1000} enableScrollSpy={true} separator="" /> +</h2></div>
+                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.customers} enableScrollSpy={true} separator="" /> +</h2></div>
                                     <div className='counter_name fw-bold'>Happy Customers</div>
                                 </div>
                             </div>
@@ -35,7 +54,7 @@ function Counter() {
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TiShoppingCart /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
                                     <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={160} enableScrollSpy={true} separator="" /> +</h2></div>
+                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.products} enableScrollSpy={true} separator="" /> +</h2></div>
                                     <div className='counter_name fw-bold'>popular product</div>
                                 </div>
                             </div>
@@ -51,7 +70,7 @@ function Counter() {
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TbWorld /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
                                     <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={45} enableScrollSpy={true} separator="" /> +</h2></div>
+                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.countries} enableScrollSpy={true} separator="" /> +</h2></div>
                                     <div className='counter_name fw-bold'>More Countries</div>
                                 </div>
                             </div>
@@ -63,4 +82,4 @@ function Counter() {
     );
 }
 
-export default Counter;
+export default Counter
