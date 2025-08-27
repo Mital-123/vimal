@@ -57,17 +57,6 @@ function ProductSlider() {
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-7 col-md-6 text-start px-4">
-                                                    <div className=' rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} data-aos="zoom-in"
-                                                        data-aos-duration="1500"
-                                                        data-aos-once="true">
-                                                        <div className='d-flex align-items-center justify-content-center p-2'>
-                                                            <div className="p-1 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
-                                                                <FaLeaf className='fs-5' />
-                                                            </div>
-                                                            <i className='pera mx-2 fw-bold'>Authentic
-                                                                Indian recipe</i>
-                                                        </div>
-                                                    </div>
                                                     <h3 className='display-6 fw-bold ftittle mt-1' data-aos="fade-up"
                                                         data-aos-duration="1500"
                                                         data-aos-once="true">{item.title}</h3>
@@ -100,7 +89,17 @@ function ProductSlider() {
                     </div>
 
                     <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1" >
-                        <p className="mb-1 fw-semibold small text-muted">Authentic Indian recipe</p>
+                        <div className='mb-2 rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} data-aos="zoom-in"
+                            data-aos-duration="1500"
+                            data-aos-once="true">
+                            <div className='d-flex align-items-center justify-content-center p-2'>
+                                <div className="p-1 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
+                                    <FaLeaf className='fs-5' />
+                                </div>
+                                <i className='pera mx-2 fw-bold'>Authentic
+                                    Indian recipe</i>
+                            </div>
+                        </div>
                         <div className='fsizefont'>
                             With <span className="fw-bold" style={{ color: 'var(--golden)' }}>Vimal</span>, <br />
                             make your Food <br />

@@ -12,13 +12,28 @@ function Counter() {
         countries: 0,
     });
 
+    const sanitizeNumber = (value) => {
+        if (!value) return 0;
+        const cleaned = String(value).replace(/[^\d]/g, ""); // remove non-digits
+        return parseInt(cleaned, 10) || 0;
+    };
+
+    // helper function for Indian number format
+    const formatIndian = (num) => {
+        return new Intl.NumberFormat("en-IN").format(num);
+    };
+
     useEffect(() => {
         fetch("https://backendvimalagro.onrender.com/counter")
             .then((res) => res.json())
             .then((data) => {
                 if (data && data.length > 0 && data[0].value && data[0].value.length > 0) {
                     const { customers, products, countries } = data[0].value[0];
-                    setCounterData({ customers, products, countries });
+                    setCounterData({
+                        customers: sanitizeNumber(customers),
+                        products: sanitizeNumber(products),
+                        countries: sanitizeNumber(countries),
+                    });
                 }
             })
             .catch((err) => console.error("Error fetching counter data:", err));
@@ -37,8 +52,11 @@ function Counter() {
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><RiEmotionHappyLine /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
-                                    <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.customers} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div>
+                                        <h2 className='countnumber fw-bold'>
+                                            <CountUp end={counterData.customers} enableScrollSpy
+                                                formattingFn={formatIndian} separator="" /> +</h2>
+                                    </div>
                                     <div className='counter_name fw-bold'>Happy Customers</div>
                                 </div>
                             </div>
@@ -53,8 +71,9 @@ function Counter() {
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TiShoppingCart /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
-                                    <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.products} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div>
+                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.products} enableScrollSpy
+                                            formattingFn={formatIndian} separator="" /> +</h2></div>
                                     <div className='counter_name fw-bold'>popular product</div>
                                 </div>
                             </div>
@@ -69,8 +88,9 @@ function Counter() {
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TbWorld /></div>
                                 <div className='p-2 pt-0 pt-md-2 p-md-3'>
-                                    <div >
-                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.countries} enableScrollSpy={true} separator="" /> +</h2></div>
+                                    <div>
+                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.countries} enableScrollSpy
+                                            formattingFn={formatIndian} separator="" /> +</h2></div>
                                     <div className='counter_name fw-bold'>More Countries</div>
                                 </div>
                             </div>
