@@ -50,10 +50,10 @@ function ProductSlider() {
                                                         data-aos-duration="1500"
                                                         data-aos-once="true">
                                                         <div className='text-start ms-4 pt-4 pt-md-5'>
-                                                            <img src={item.dishImage} alt="" className='image1 rounded-circle' />
+                                                            <img src={item.dishImage} alt="" className='image1 rounded-circle object-fit-cover' />
                                                         </div>
                                                         <div className='text-end'>
-                                                            <img src={item.productImage} alt="" className='image2 rounded-circle ms-auto me-5 bg-light ' />
+                                                            <img src={item.productImage} alt="" className='image2 rounded-circle ms-auto me-5 bg-light object-fit-cover' />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -152,8 +152,8 @@ const recipes = [
             "Pour into chilled glasses, garnish with chopped pistachios or almonds.",
             "Serve immediately for best taste."
         ],
-        productImage: require("../../assets/Images/WhatsApp Image 2025-08-27 at 17.47.03_f73e4955.jpg"),
-        dishImage: require("../../assets/Images/WhatsApp Image 2025-08-27 at 17.47.03_f73e4955.jpg")
+        productImage: require("../../assets/Images/mango lassi.jpg"),
+        dishImage: require("../../assets/Images/mango lassi.jpg")
     },
     {
         title: "Smoothie Bowl",
