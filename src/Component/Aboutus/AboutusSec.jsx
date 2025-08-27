@@ -145,8 +145,8 @@ function AboutusSec() {
                 <Tittles stitle="About Us" />
               </h6>
               <h5 className="fw-bold ps-md-2 ps-1 ftittle">
-                Combining culinary heritage, manufacturing excellence, and global reach
-                <span className="d-block">feeding the world with something for everyone.</span>
+                Combining culinary heritage, manufacturing excellence, and global reach—feeding
+                <span className="d-block">the world with something for everyone.</span>
               </h5>
             </div>
 

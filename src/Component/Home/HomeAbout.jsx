@@ -10,7 +10,7 @@ function HomeAbout() {
     const testimonials = [
         {
             quote:
-                "A pinch of spice, a dash of sweetness and, a bucketful of memories. Vimal Agro Products Pvt Ltd is your Indian flavour away from India. Packing the nostalgia of authentic Indian home-cooked dishes served with dollops of love and care, the whole range of products is a delicious bridge between India and the world. One of the biggest manufacturers and exporters of processed food items, Vimal Agro Products Pvt Ltd aims at spreading the true richness of Indian flavour in every corner of the world.",
+                "Vimal Agro Products was born with a simple dream—to bring the authentic taste of Indian home-cooked food to every corner of the world. From a humble vision, it has grown into a globally trusted name, loved by families across continents. With respect for age-old recipes and a passion for quality, we make it easy to enjoy the richness of Indian cuisine anytime, anywhere. From curries and pickles to snacks and sweets, every Vimal Agro product celebrates tradition, made convenient for modern life. Savor the tradition—made with love.",
             name: "parishi ",
             title: "LOREM",
             img: "https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/avatar_003.png",
@@ -97,7 +97,7 @@ function HomeAbout() {
 
 
                             <div className='brdstart'>
-                                <Tittles stitle={"About Us"} ltitle={"We Believe In Personal Touch"} />
+                                <Tittles stitle={"About Us"} ltitle={"Authentic Taste, Global Trust"} />
                             </div>
 
 
@@ -120,7 +120,7 @@ function HomeAbout() {
                                         </div>
                                         <div className="col-9 shadow  bg-white" style={{ borderRadius: "0px 20px 20px 0px" }}>
                                             <div className="h-100 d-flex align-items-center py-2 py-md-4   pera fw-bold text-center">
-                                                " At Vimal, health taste and quality have been paramount since forever.  "
+                                                " Vimal Agro proudly serves homes in India and beyond, making mealtimes easier, tastier, and filled with nostalgia. "
                                             </div>
                                         </div>
 

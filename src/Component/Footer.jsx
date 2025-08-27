@@ -12,7 +12,7 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 col-lg-3 text-white pera mt-0 mt-md-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit eius asperiores, hic aut eum ipsum illo amet ullam animi laboriosam similique quidem ducimus, quam, corrupti nulla provident natus ea deserunt!
+            Vimal Agro Products is a trusted name in exports and B2B solutions, delivering authentic Indian food worldwide. For retail purchases within India, explore our consumer brand at Swad.shop.
 
             <h5 className='pt-2 fw-bold'>Follow Us</h5>
 

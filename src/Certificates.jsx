@@ -37,7 +37,7 @@ function Certificates() {
                 <div className='text-center  mb-2' style={{ color: "#bb0000", textShadow: " 6px 7px 10px #31010131" }}><Tittles ltitle={"Our Certificates"} /></div>
 
                 <p className="pera pt-2">
-                  Our commitment to quality is backed by internationally recognized certifications
+                  Globally approved standards for quality, safety, and consistency.
                 </p>
               </div>
             </div>
