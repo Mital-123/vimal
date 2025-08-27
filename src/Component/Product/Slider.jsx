@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaLeaf } from 'react-icons/fa';
 import Slider from 'react-slick';
-import Tittles from '../Tittles';
+
 function ProductSlider() {
+
     const sliderRef = useRef();
     const settings = {
         dots: false,
@@ -77,8 +78,6 @@ function ProductSlider() {
                                                         )
                                                     })}
                                                     {/* </ol> */}
-                                                    <p className="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis temporibus, optio voluptatem consequatur similique natus cum veniam omnis voluptate vero.  </p>
-                                                    <p className="small p-0 m-0">Enjoy with Swad pickles and chutney!</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -144,51 +143,39 @@ export default ProductSlider;
 
 const recipes = [
     {
-        title: "Mango Smoothie Bowl",
+        title: "Mango Lassi",
         instructions: [
-            "Add fresh mango pulp to a blender with yogurt and honey.",
+            "In a blender, add SWAD Alphonso Mango Pulp, chilled yogurt, sugar/honey, and cardamom powder.",
             "Blend until smooth and creamy.",
-            "Pour into a bowl and top with granola, nuts, and fresh fruits.",
-            "Drizzle some extra honey on top for flavor.",
-            "Serve chilled and enjoy your refreshing smoothie bowl!"
+            "Add ice cubes and blend again for a few seconds for a frothy texture.",
+            "Taste and adjust sweetness if needed.",
+            "Pour into chilled glasses, garnish with chopped pistachios or almonds.",
+            "Serve immediately for best taste."
         ],
         productImage: require('../../assets/Images/Pickles/gunda_pickle_thumb.png'),
         dishImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.47.51_PM.png?v=1728991096&width=360"
     },
     {
-        title: "Spicy Mango Chutney",
+        title: "Smoothie Bowl",
         instructions: [
-            "Heat oil in a pan, add mustard seeds until they splutter.",
-            "Add chopped mangoes, red chili powder, salt, and jaggery.",
-            "Cook on medium flame until mixture thickens.",
-            "Let it cool and store in a glass jar.",
-            "Perfect accompaniment for parathas and rice."
+            "In a blender, combine SWAD Kesar Mango Pulp, frozen banana, Greek yogurt, honey, chia seeds, and ice cubes.",
+            "Blend until thick, creamy, and smooth.",
+            "Pour the smoothie mixture into a wide bowl.",
+            "Serve immediately with a spoon for a fresh, chilled treat."
         ],
         productImage: require('../../assets/Images/Pickles/methia_mango_thumb.png'),
         dishImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.46.33_PM.png?v=1728991057&width=360"
     },
     {
-        title: "Tangy Mango Salad",
+        title: "Cheese Cake",
         instructions: [
-            "In a bowl, add chopped cucumbers, tomatoes, onions, and mango cubes.",
-            "Season with black salt, lemon juice, and chili flakes.",
-            "Toss everything together well.",
-            "Garnish with coriander leaves and roasted peanuts.",
-            "Serve immediately for the best crunch."
+            "Crush biscuits, mix with butter, press into tin, chill 30 mins.",
+            "Beat cream cheese, sugar, vanilla. Add cream, mango pulp, gelatin; mix well.",
+            "Pour over crust, refrigerate 4–5 hrs.",
+            "Mix topping pulp with gelatin, spread over set cheesecake; chill 1–2 hrs.",
+            "Slice and serve chilled."
         ],
         productImage: require('../../assets/Images/Curry Paste/tikka_thumb.png'),
         dishImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.50.11_PM.png?v=1728991237&width=360"
-    },
-    {
-        title: "Classic Mango Lassi",
-        instructions: [
-            "Blend mango pulp with chilled yogurt and sugar.",
-            "Add a pinch of cardamom powder and crushed ice.",
-            "Blend until frothy.",
-            "Pour into tall glasses and garnish with saffron strands.",
-            "Serve cold for a refreshing summer drink."
-        ],
-        productImage: require('../../assets/Images/recepi2.jpg'),
-        dishImage: "https://www.swad.shop/cdn/shop/files/DSC_8662-min.jpg?v=1728981995&width=360"
     }
 ];
