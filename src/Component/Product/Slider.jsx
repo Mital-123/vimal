@@ -152,8 +152,8 @@ const recipes = [
             "Pour into chilled glasses, garnish with chopped pistachios or almonds.",
             "Serve immediately for best taste."
         ],
-        productImage: require('../../assets/Images/Pickles/gunda_pickle_thumb.png'),
-        dishImage: "https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.47.51_PM.png?v=1728991096&width=360"
+        productImage: require("../../assets/Images/WhatsApp Image 2025-08-27 at 17.47.03_f73e4955.jpg"),
+        dishImage: require("../../assets/Images/WhatsApp Image 2025-08-27 at 17.47.03_f73e4955.jpg")
     },
     {
         title: "Smoothie Bowl",
