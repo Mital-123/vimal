@@ -1,26 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Tittles from '../Tittles';
 
-const faqList = [
-  {
-    question: "Who is Vimal Agro Products Pvt. Ltd.?",
-    answer: "Vimal Agro is a renowned manufacturer of ready-to-eat foods and agro-based products in India and across the globe.",
-  },
-  {
-    question: "What types of products do they offer?",
-    answer: "They offer a variety of food products including pickles, canned foods, chutneys, sauces, ready meals, and more.",
-  },
-  {
-    question: "Do your products contain preservatives or additives?",
-    answer: "Most of our products are prepared using traditional recipes with minimal use of preservatives, ensuring both safety and taste.",
-  },
-  {
-    question: "What packaging formats are available?",
-    answer: "We provide packaging in jars, pouches, tins, and bulk containers depending on product type and customer needs.",
-  },
-];
-
 function Faq() {
+
+  const [faqList, setFaqList] = useState([]);
+
+  useEffect(() => {
+    fetch("https://backendvimalagro.onrender.com/faq")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("API Response:", data);
+        setFaqList(data.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching FAQs:", err);
+      });
+  }, []);
+
   return (
     <div className='container  pt-0'>
       <div className='row d-flex justify-content-center align-content-center align-items-center ' >
@@ -42,7 +38,7 @@ function Faq() {
               <Tittles stitle={"FAQs"} ltitle={" Lorem ipsum dolor sit amet "} />
             </div>
             <div className='pera text-secondary mt-3 mb-4'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolore sed, facere incidunt neque similique dolor veniam id in quae!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolore sed, facere incidunt neque similique dolor veniam id in quae!
             </div>
 
             <div className="accordion accordion-flush mt-1" id="accordionFlushExample">
@@ -62,7 +58,7 @@ function Faq() {
                         aria-expanded={isFirst ? 'true' : 'false'}
                         aria-controls={collapseId}
                       >
-                        <span className=' pe-3 pera'>{faq.question}</span>
+                        <span className=' pe-3 pera'>{faq.que}</span>
                       </button>
                     </h2>
                     <div
@@ -71,7 +67,7 @@ function Faq() {
                       data-bs-parent="#accordionFlushExample"
                     >
                       <div className="accordion-body pera text-secondary">
-                        {faq.answer}
+                        {faq.ans}
                       </div>
                     </div>
                   </div>
@@ -85,4 +81,4 @@ function Faq() {
   );
 }
 
-export default Faq;
+export default Faq

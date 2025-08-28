@@ -4,13 +4,23 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
 import HOC from '../HOC';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Gogreen from './Gogreen';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Howtouse from './Howtouse';
 import ProductSlider from './Slider';
+import axios from 'axios';
 
 function SubProducts() {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        axios.get("https://backendvimalagro.onrender.com/view/btn").then((res) => {
+            setIsVisible(res.data.isVisible);
+        });
+    }, []);
+
     const navigate = useNavigate();
     const { id } = useParams();
     const product = products.find(p => p.id == id);
@@ -55,7 +65,7 @@ function SubProducts() {
 
             {/* Main Product Section */}
             <div className="">
-                
+
                 <div className='pt-1 pt-md-2'>
                     <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.h1}</h3>
                 </div>
@@ -83,10 +93,17 @@ function SubProducts() {
                     <div className="row justify-content-center">
                         {filteredMainSubProducts.map((item, index) => (
                             <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
-                                    <img src={item.proimg} alt="" className='img-fluid product_sizeimg' style={{  objectFit: 'contain' }} />
-                                    <div className='fw-semibold subp pt-2 p-1 ' style={{fontSize:"14px"}}>
+                                <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
+                                    <img src={item.proimg} alt="" className='img-fluid product_sizeimg' style={{ objectFit: 'contain' }} />
+                                    <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
                                         {item.ProductName}
+                                    </div>
+                                    <div
+                                        onClick={() => navigate(`/product/${id}/${item.id}`)}
+                                        className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
+                                        style={{ padding: "5px 10px" }}
+                                    >
+                                        <ButtonCom btn={"View More"} />
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +111,7 @@ function SubProducts() {
                     </div>
                 </div>
 
-                {/* Subtypes Section */}
+                {/* Subtypes Section for pickels Only*/}
                 {product.subtypes && product.subtypes.length > 0 && product.subtypes.map((subtype, idx) => {
                     const subtypeId = subtype.id;
                     const subtypeWeights = Array.from(new Set(subtype.subproducts.map(item => item.weight)));
@@ -134,9 +151,16 @@ function SubProducts() {
                                     {filteredSubtypeProducts.map((item, index) => (
                                         <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
                                             <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
-                                                <img src={item.proimg} alt="" className='img-fluid  product_sizeimg' style={{  objectFit: 'contain' }} />
-                                                <div className='fw-semibold subp pt-2 p-1 '  style={{fontSize:"14px"}}>
+                                                <img src={item.proimg} alt="" className='img-fluid  product_sizeimg' style={{ objectFit: 'contain' }} />
+                                                <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
                                                     {item.ProductName}
+                                                </div>
+                                                <div
+                                                    onClick={() => navigate(`/product/${id}/${item.id}`)}
+                                                    className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
+                                                    style={{ padding: "5px 10px" }}
+                                                >
+                                                    <ButtonCom btn={"View More"} />
                                                 </div>
                                             </div>
                                         </div>
