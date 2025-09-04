@@ -20,7 +20,7 @@ function Faq() {
   return (
     <div className='container  pt-0'>
       <div className='row d-flex justify-content-center align-content-center align-items-center ' >
-        <div className='col-12 col-lg-6 ' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
+        {/* <div className='col-12 col-lg-6 ' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
           <div className="h-100">
             <div className='test-shine'>
               <img
@@ -30,11 +30,11 @@ function Faq() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='col-12 col-lg-6 mb-0 mb-md-4 p-2 p-md-4 faq_height' >
           <div className="h-100 ">
-            <div className='brdstart'>
+            <div className=' text-center'>
               <Tittles stitle={"FAQs"} ltitle={" Lorem ipsum dolor sit amet "} />
             </div>
             <div className='pera text-secondary mt-3 mb-4'>

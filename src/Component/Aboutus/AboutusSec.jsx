@@ -1,198 +1,226 @@
-import React from 'react';
-import CountUp from 'react-countup';
-import { TiArrowForward } from 'react-icons/ti';
-import Tittles from '../Tittles';
-import "../../assets/Css/Aboutus.css"
-import { FaQuoteRight } from 'react-icons/fa';
-import HOC from '../HOC';
-import MissionVision from './MissionVision';
-import videoBg from '../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4';
-import AboutImpact from './AboutImpact';
-import Testimonial from "../Home/Testimonial"
-import Certificates from '../../Certificates';
-import Faq from './Faq';
-import { Link } from 'react-router-dom';
-import Brouchers from './Brouchers';
-import Whychooseus from '../Home/Whychooseus';
-import Companylogo from './Companylogo';
-import Principals from './Principals';
+// import React from 'react';
+// import CountUp from 'react-countup';
+// import { TiArrowForward } from 'react-icons/ti';
+// import Tittles from '../Tittles';
+// import "../../assets/Css/Aboutus.css"
+// import { FaQuoteRight } from 'react-icons/fa';
+// import HOC from '../HOC';
+// import MissionVision from './MissionVision';
+// import videoBg from '../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4';
+// import AboutImpact from './AboutImpact';
+// import Testimonial from "../Home/Testimonial"
+// import Certificates from '../../Certificates';
+// import Faq from './Faq';
+// import { Link } from 'react-router-dom';
+// import Brouchers from './Brouchers';
+// import Whychooseus from '../Home/Whychooseus';
+// import Companylogo from './Companylogo';
+// import Principals from './Principals';
 
+
+// function AboutusSec() {
+//   return (
+//     <>
+//       <div className="video-container" >
+//         <video autoPlay muted loop playsInline className="bg-video">
+//           <source src={videoBg} type="video/mp4" /></video>
+//       </div>
+ 
+
+//       <div className="py-3 py-md-5  overflow-hidden contactinfo_bg">
+//         <div className="container">
+
+      
+
+
+//           <div className="row  ">
+//             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
+//               <h6 className="text-uppercase mb-0 mb-md-2 stittle"
+//                 data-aos="fade-up "
+//                 data-aos-duration="1500"
+//                 data-aos-delay="50"
+//                 data-aos-once="true">
+//                 <Tittles stitle="About Us" />
+//               </h6>
+//               <h5 className="fw-bold ps-md-2 ps-1 ftittle">
+//                 Combining culinary heritage, manufacturing excellence, and global reach—feeding
+//                 <span className="d-block">the world with something for everyone.</span>
+//               </h5>
+//             </div>
+
+//             <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto ">
+//               <p className="text-muted pera  text-justify pera">
+//                 On a mission to bring authentic, convenient, and high-quality ethnic foods to consumers across the globe.
+//                 From rich curries and accompaniments to traditional sweets and savoury snacks, our offerings cater to
+//                 modern consumers seeking authentic Indian flavours with everyday convenience. Under the umbrella of <b className='text-dark'>Vimal Agro Products</b>,
+//                 our brand architecture is thoughtfully designed to cater to every palate and purpose. <b className='text-dark'>Swad</b> and <b className='text-dark'>Britas</b> focus on delivering indulgent and innovative
+//                 offerings that fall under the “fun-for-you” and “better-for-you” categories. At the same time, <b className='text-dark'>Big Pantry</b> offers wholesome,
+//                 everyday products that align with the “good-for-you” philosophy. With a strong global distribution network, we serve retail,
+//                 horeca, gifting, and private label clients across diverse markets.
+//               </p>
+//             </div>
+
+//             <div className="col-lg-7 text-end ms-auto col-12">
+//               <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
+//                 <img
+//                   src="https://www.swad.shop/cdn/shop/files/1_51ff9f4c-90ab-438f-a1f0-76475116c5c3.png?v=1730196274&width=1500"
+//                   alt="About Us"
+//                   className="img-fluid object-fit-cover w-100 h-100 rounded-5"
+//                 />
+//               </div>
+//             </div>
+//           </div>
+
+
+
+
+//         </div>
+//       </div>
+//       <div className='overflow-hidden'>
+//         <Companylogo />
+//         <Principals />
+//         <AboutImpact />
+//         <Faq />
+   
+//       </div>
+//     </>
+//   );
+// }
+
+// export default HOC(AboutusSec)
+
+
+
+// after applying api
+import React, { useEffect, useState } from "react";
+import CountUp from "react-countup";
+import { TiArrowForward } from "react-icons/ti";
+import Tittles from "../Tittles";
+import "../../assets/Css/Aboutus.css";
+import { FaQuoteRight } from "react-icons/fa";
+import HOC from "../HOC";
+import videoBg from "../../assets/Video/4c8cfc38a8c14408b4c9adc3ea71e9be.HD-720p-4.5Mbps-37775345.mp4";
+import AboutImpact from "./AboutImpact";
+import Faq from "./Faq";
+import { Link } from "react-router-dom";
+import Brouchers from "./Brouchers";
+import Companylogo from "./Companylogo";
+import Principals from "./Principals";
+import axios from "axios";
+
+const API_URL = "https://backendvimalagro.onrender.com/vimalabout";
 
 function AboutusSec() {
+  const [aboutImages, setAboutImages] = useState([]);
+
+  // ✅ Fetch Aboutus images from API
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const res = await axios.get(API_URL);
+        // sort oldest first
+        const sorted = res.data.sort(
+          (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+        );
+        setAboutImages(sorted);
+      } catch (error) {
+        console.error("Error fetching About Us images:", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   return (
     <>
-      {/* lending section start*/}
-      <div className="video-container" >
+      {/* Video Background */}
+      <div className="video-container">
         <video autoPlay muted loop playsInline className="bg-video">
-          <source src={videoBg} type="video/mp4" /></video>
+          <source src={videoBg} type="video/mp4" />
+        </video>
       </div>
-      {/* lending section end*/}
 
-      <div className="py-3 py-md-5  overflow-hidden contactinfo_bg">
+      {/* About Us Section */}
+      <div className="py-3 py-md-5 overflow-hidden contactinfo_bg">
         <div className="container">
-
-          {/* <div className="row p-0 m-0 my-3">
-
-            <div className="col-12 col-lg-4 pt-4 d-flex flex-column ps-0 pe-lg-4 pe-0 overflow-hidden" data-aos="fade-right" data-aos-duration="1800" data-aos-once="true">
-              <div className="h-100 test-shinee shadow">
-                <img
-                  src={require("../../assets/Images/about us image.jpg")}
-                  alt=""
-                  className="img-fluid w-100 h-100 object-fit-cover"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-lg-2 p-0 m-0 pt-4 d-flex flex-column overflow-hidden" data-aos="fade-up" data-aos-duration="1800" data-aos-once="true">
-
-              <div className="flex-grow-1 test-shinee shadow">
-                <div className="h-100 ">
-                  <img
-                    src="https://www.swad.shop/cdn/shop/files/Screenshot_2024-10-15_at_4.51.10_PM.png?v=1728991291&width=360"
-
-                    alt=""
-                    className="img-fluid w-100 h-100 object-fit-cover"
-                  />
-                </div>
-              </div>
-              <div className="mt-auto shadow d-none d-md-block">
-                 <div className='h-100 test-shinee shadow'>
-                  <img
-                    src="https://importexport-nine.vercel.app/assets/images/faq-right.png"
-
-                    alt=""
-                    className="img-fluid w-100 h-100 object-fit-cover mt-3 shadow"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-lg-6 pt-4  d-flex flex-column justify-content-between ps-0 ps-lg-5">
-              <div className="h-100">
-                <div className='brdstart'><Tittles stitle={"About us"} ltitle={" We Are Best Products provider"} /></div>
-
-                <div className="pera text-secondary py-2 text-capitalize">
-                  A Pioneer In The World Of Food Products, Vimal Agro Products Lay Its Foundation Stone Way Back In 1975 With One Rice Mill And Has Been On The Path Of Success Ever Since. With Extensive Market Research, Inclination Towards Innovation And The Directors' Far-Sightedness, Vimal Agro Products Pvt Ltd Set Up Its Renowned Processed Food Vertical In 1988 And There Has Been No Looking Back Ever Since.
-                </div>
-                <div className="row align-items-center justify-content-center">
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} />
-                      Product Freshness
-                    </p>
-                  </div>
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} /> 24/7
-                      Support
-                    </p>
-                  </div>
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} />Top
-                      Quality Taste
-                    </p>
-                  </div>
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} /> Fair
-                      Prices
-                    </p>
-                  </div>
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} /> Quick Answer
-                    </p>
-                  </div>
-                  <div className="col-md-6 col-12 lh-lg span fw-bold">
-                    <p className="pb-0 mb-0 pb-lg-1 pera">
-                      <TiArrowForward className="iconbg me-2 text-light" style={{ backgroundColor: "#610303" }} /> Popular Service
-                    </p>
-                  </div>
-                </div>
-                <div className="pera text-secondary py-2 text-capitalize">
-                  Paying Utmost Importance To Customer Satisfaction And Keeping Prime Focus On Maintaining A Perfect Balance Between The Taste Of Tradition And Improving By Innovation, The Brand Has Established Itself As An Industry Leader In The World Of Processed Foods And Beverages.
-                </div>
-
-                <div className="row">
-                  <div className=' d-block d-md-flex mt-0 mt-md-1 '>
-                    <div style={{ width: 80 }} data-aos="zoom-in"
-                      data-aos-duration="1800"
-                      data-aos-once="true" className='mt-3 mx-auto mx-md-0' >
-                      <img src="https://architecture-beta-three.vercel.app/static/media/phone_874555.94ba0b90f65147e56ad1.png" alt="" className='img-fluid w-100 h-100 animated-image' />
-
-                    </div>
-
-                    <Link to={"tel:9824331155"} className="text-decoration-none ps-3 text-center text-md-start" data-aos="fade-right"
-                      data-aos-delay="400"
-                      data-aos-duration="1800"
-                      data-aos-once="true"> <div className='whyno mt-0 mt-md-2 ' > 12365 95847</div></Link>
-                  </div>
-                </div>
-              
-              </div>
-            </div>
-          </div> */}
-
-
-          <div className="row  ">
+          <div className="row">
             {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
-              <h6 className="text-uppercase mb-0 mb-md-2 stittle"
+              <h6
+                className="text-uppercase mb-0 mb-md-2 stittle"
                 data-aos="fade-up "
                 data-aos-duration="1500"
                 data-aos-delay="50"
-                data-aos-once="true">
+                data-aos-once="true"
+              >
                 <Tittles stitle="About Us" />
               </h6>
               <h5 className="fw-bold ps-md-2 ps-1 ftittle">
-                Combining culinary heritage, manufacturing excellence, and global reach—feeding
-                <span className="d-block">the world with something for everyone.</span>
+                Combining culinary heritage, manufacturing excellence, and
+                global reach—feeding
+                <span className="d-block">
+                  the world with something for everyone.
+                </span>
               </h5>
             </div>
 
             {/* Middle Paragraph Content */}
-            <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto ">
-              <p className="text-muted pera  text-justify pera">
-                On a mission to bring authentic, convenient, and high-quality ethnic foods to consumers across the globe.
-                From rich curries and accompaniments to traditional sweets and savoury snacks, our offerings cater to
-                modern consumers seeking authentic Indian flavours with everyday convenience. Under the umbrella of <b className='text-dark'>Vimal Agro Products</b>,
-                our brand architecture is thoughtfully designed to cater to every palate and purpose. <b className='text-dark'>Swad</b> and <b className='text-dark'>Britas</b> focus on delivering indulgent and innovative
-                offerings that fall under the “fun-for-you” and “better-for-you” categories. At the same time, <b className='text-dark'>Big Pantry</b> offers wholesome,
-                everyday products that align with the “good-for-you” philosophy. With a strong global distribution network, we serve retail,
-                horeca, gifting, and private label clients across diverse markets.
+            <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto">
+              <p className="text-muted pera text-justify pera">
+                On a mission to bring authentic, convenient, and high-quality
+                ethnic foods to consumers across the globe. From rich curries and
+                accompaniments to traditional sweets and savoury snacks, our
+                offerings cater to modern consumers seeking authentic Indian
+                flavours with everyday convenience. Under the umbrella of{" "}
+                <b className="text-dark">Vimal Agro Products</b>, our brand
+                architecture is thoughtfully designed to cater to every palate
+                and purpose. <b className="text-dark">Swad</b> and{" "}
+                <b className="text-dark">Britas</b> focus on delivering indulgent
+                and innovative offerings that fall under the “fun-for-you” and
+                “better-for-you” categories. At the same time,{" "}
+                <b className="text-dark">Big Pantry</b> offers wholesome,
+                everyday products that align with the “good-for-you” philosophy.
+                With a strong global distribution network, we serve retail,
+                horeca, gifting, and private label clients across diverse
+                markets.
               </p>
             </div>
 
-            {/* Right Image */}
-            <div className="col-lg-7 text-end ms-auto col-12">
+            {/* Right Images from API */}
+            <div >
+            
+                {aboutImages.length > 0 ? (
+                  aboutImages.map((img) => (
+                       <div key={img._id} className="col-lg-7 text-end ms-auto col-12">
               <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
                 <img
-                  src="https://www.swad.shop/cdn/shop/files/1_51ff9f4c-90ab-438f-a1f0-76475116c5c3.png?v=1730196274&width=1500"
+              src={img.vimalaboutimage}
                   alt="About Us"
                   className="img-fluid object-fit-cover w-100 h-100 rounded-5"
                 />
               </div>
             </div>
+                  ))
+                ) : (
+                  <p className="text-muted text-center">
+                    No About Us Images available.
+                  </p>
+                )}
+            </div>
           </div>
-
-
-
-
         </div>
       </div>
-      <div className='overflow-hidden'>
+
+      {/* Other Sections */}
+      <div className="overflow-hidden">
         <Companylogo />
-        {/* <Whychooseus/> */}
-        {/* <MissionVision /> */}
         <Principals />
         <AboutImpact />
         {/* <Brouchers /> */}
         <Faq />
-        {/* <Testimonial /> */}
-        {/* <Certificates /> */}
       </div>
     </>
   );
 }
 
-export default HOC(AboutusSec)
+export default HOC(AboutusSec);
