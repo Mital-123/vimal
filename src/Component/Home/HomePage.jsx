@@ -1,4 +1,5 @@
-import Certificates from '../../Certificates'
+
+import Certificates from '../Certificates'
 import HOC from '../HOC'
 import Counter from './Counter'
 import HomeAbout from './HomeAbout'

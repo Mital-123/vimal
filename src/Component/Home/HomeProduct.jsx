@@ -2,7 +2,6 @@ import { BsArrowRight } from 'react-icons/bs';
 import '../../assets/Css/Home.css';
 import products from '../../Product';
 import { useNavigate } from 'react-router-dom';
-import Certificates from '../../Certificates';
 function HomeProduct() {
     let product=products
     const navigate = useNavigate();
@@ -64,7 +63,6 @@ function HomeProduct() {
                     })}
                 </div>
             </div>
-            {/* <Certificates /> */}
         </>
     );
 }
