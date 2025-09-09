@@ -225,3 +225,73 @@
         width: 50%;
     }
 }
+
+
+/* product start */
+
+/* productpge start */
+
+.facility_image {
+    position: relative;
+    overflow: hidden;
+    border: 2px groove var(--red);
+    padding: 10px;
+    border-radius: 35px 0px 35px 0px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
+}
+
+.facility_image img {
+    transform: scale(1);
+    border-radius: 35px 0px 35px 0px;
+}
+
+.facility_image img:hover {
+    transform: scale(1.1);
+}
+
+.facility_image:hover {
+    border: 2px solid transparent;
+    /* border-bottom: 2px solid var(--red); */
+
+}
+
+.image-title {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: var(--red);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    /* border-radius: 20px 20px 0px 0px; */
+    transition: bottom 0.5s ease;
+    font-size: 13px !important;
+    letter-spacing: 0.8px;
+
+}
+
+/* productpge end */
+
+/* producthover start*/
+
+
+.main-image-container {
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.sticky-column {
+    position: sticky;
+    top: 12%;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.kjh::first-letter {
+    text-transform: uppercase;
+    /* Capitalize only the first letter */
+}

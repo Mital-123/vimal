@@ -10,6 +10,7 @@ import HomeRecipe from './HomeRecipe'
 import ProductBrand from './ProductBrand'
 import ProductHighlight from './ProductHighlight'
 import Testimonial from './Testimonial'
+import '../../assets/Css/Home.css';
 
 
 function HomePage() {
