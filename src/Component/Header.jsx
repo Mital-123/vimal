@@ -49,6 +49,7 @@ function Header() {
         };
     }, [showDropdown]);
 
+    if (location.pathname === '/product') { }
     return (
         <div className='bg-white w-100 position-fixed top-0' style={{ zIndex: 2000000 }}>
             <nav className="bg-white fstyle navbar navbar-expand-md fixed-top shadow">
@@ -156,9 +157,14 @@ function Header() {
                                 onMouseLeave={handleMouseLeave}
                                 ref={dropdownRef}
                             >
-                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" || "/product/:id" || "/product/:id/:proid" ? "active" : ""}`} to="/product">
-                                    Product <IoIosArrowDropdownCircle />
-                                </Link>
+  <Link
+    className={`nav-link px-3 mx-1 fs-6 producthover ${
+      location.pathname.startsWith("/product") ? "active" : ""
+    }`}
+    to="/product"
+  >
+    Product <IoIosArrowDropdownCircle />
+  </Link>
 
                                 {showDropdown && (
                                     <ul className="position-absolute bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
