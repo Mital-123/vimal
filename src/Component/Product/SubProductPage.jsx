@@ -1,12 +1,11 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import products from '../../Product';
+import { useNavigate, useParams } from 'react-router-dom';
+// import products from '../../Product';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
 import HOC from '../HOC';
 import { useEffect, useState } from 'react';
 import Gogreen from './Gogreen';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Howtouse from './Howtouse';
 import ProductSlider from './Slider';
 import axios from 'axios';
@@ -14,63 +13,95 @@ import axios from 'axios';
 function SubProducts() {
 
     const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        axios.get("https://backendvimalagro.onrender.com/view/btn").then((res) => {
-            setIsVisible(res.data.isVisible);
-        });
-    }, []);
+    const [products, setSubProduct] = useState([]);
 
     const navigate = useNavigate();
     const { id } = useParams();
-    const product = products.find(p => p.id == id);
+
+    // ✅ Fetch visibility toggle
+    useEffect(() => {
+        axios
+            .get("https://backendvimalagro.onrender.com/view/btn")
+            .then((res) => {
+                setIsVisible(res.data?.isVisible || false);
+            })
+            .catch((err) => console.error("Error fetching button visibility:", err));
+    }, []);
+
+    // ✅ Fetch products
+    const FetchProduct = async () => {
+        try {
+            const res = await axios.get(
+                "https://backendvimalagro.onrender.com/api/products"
+            );
+            setSubProduct(res.data || []);
+        } catch (err) {
+            console.error("Error fetching products:", err);
+        }
+    };
+
+    useEffect(() => {
+        FetchProduct();
+    }, []);
+
+    const product = products.find((p) => p._id == id);
+    console.log(product);
 
     const [selectedMainWeight, setSelectedMainWeight] = useState(null);
     const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
 
-    if (!product || !product.subproducts) return <p>No subproducts found.</p>;
-    const packagedetail = product.Pckdetail;
+    // ✅ If product not found
+    if (!product) return <p>No product found.</p>;
 
-    const uniqueMainWeights = Array.from(new Set(product.subproducts.map(item => item.weight)));
+    const packagedetail = product?.Pckdetail || [];
+    const uniqueMainWeights = Array.from(
+        new Set(product?.subproducts?.map((item) => item.weight) || [])
+    );
 
     const filteredMainSubProducts = selectedMainWeight
-        ? product.subproducts.filter(item => item.weight === selectedMainWeight)
-        : product.subproducts;
+        ? (product?.subproducts || []).filter(
+            (item) => item.weight === selectedMainWeight
+        )
+        : product?.subproducts || [];
 
     return (
         <div className='mt-5'>
-            {/* Banner */}
+            {/* Product Banner */}
             <div>
-                <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
+                <img src={product.productBanner} alt="" className='img-fluid w-100' />
             </div>
 
-            {/* Power Section */}
             <div style={{ backgroundColor: "#fffcf3" }}>
-                <div className='pt-2 pt-lg-4'><Gogreen /></div>
+                <div className='pt-2 pt-lg-4'>
+                    <div className='container'>
+                        <div className="col-10 mx-auto">
+                            <div className='row justify-content-center'>
+                                <div className='col-12 text-center'>
+                                    {/* Banner 2 */}
+                                    <img src={product.banner2} alt="" className='img-fluid w-100 border border-dark' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='m-auto text-center col-sm-8 col-11 py-2 '>
-                    <h2 className='fw-bold my-1 my-lg-4 ftittle'>Power of {product.h1}</h2>
+                    {/* Product Name */}
+                    <h2 className='fw-bold my-1 my-lg-4 ftittle'>Power of {product.productName}</h2>
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
                     <div className='w-75 mx-auto pb-3'>
-                        {packagedetail.map((x, i) => (
-                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < packagedetail.length - 1 && ' | '}</span>
+                        {product.productSizes.map((x, i) => (
+                            /* Product Sizes */
+                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && ' | '}</span>
                         ))}
                     </div>
-                    {/* <div className='mt-1 mt-lg-4'>
-                        <Link to="https://www.facebook.com/SWADBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaFacebook /></Link>
-                        <Link to="https://www.instagram.com/swadbrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaInstagram /></Link>
-                        <Link to="https://www.youtube.com/@SwadBrand/" target="_blank" className='fs-4 mx-2 text-dark'><FaYoutube /></Link>
-                    </div> */}
                 </div>
             </div>
 
-            {/* Main Product Section */}
-            <div className="">
-
+            <div>
                 <div className='pt-1 pt-md-2'>
                     <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.h1}</h3>
                 </div>
 
-                {/* Main Weight Filter */}
                 {uniqueMainWeights.length > 0 && (
                     <div className='text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center'>
                         <div className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(null)}>
@@ -81,7 +112,8 @@ function SubProducts() {
                         {uniqueMainWeights.map((weight, idx) => (
                             <div key={idx} className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(weight)}>
                                 <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? 'active-btn' : ''}`} >
-                                    {weight}
+                                    {/* Weight */}
+                                    {weight} GM
                                 </div>
                             </div>
                         ))}
@@ -94,14 +126,16 @@ function SubProducts() {
                         {filteredMainSubProducts.map((item, index) => (
                             <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
                                 <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
-                                    <img src={item.proimg} alt="" className='img-fluid product_sizeimg' style={{ objectFit: 'contain' }} />
+                                    {/* Subproduct Image */}
+                                    <img src={item.subproductImg} alt="" className='img-fluid product_sizeimg' style={{ objectFit: 'contain' }} />
                                     <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
-                                        {item.ProductName}
+                                        {/* Subproduct Name */}
+                                        {item.subproductName}
                                     </div>
                                     <div
-                                        onClick={() => navigate(`/product/${id}/${item.id}`)}
+                                        onClick={() => navigate(`/product/${id}/${item._id}`)}
                                         className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
-                                        style={{ padding: "5px 10px" }}
+                                        style={{ padding: "10px 10px" }}
                                     >
                                         <ButtonCom btn={"View More"} />
                                     </div>
@@ -111,7 +145,7 @@ function SubProducts() {
                     </div>
                 </div>
 
-                {/* Subtypes Section for pickels Only*/}
+                {/* Subtypes Section for PICKELS Only*/}
                 {product.subtypes && product.subtypes.length > 0 && product.subtypes.map((subtype, idx) => {
                     const subtypeId = subtype.id;
                     const subtypeWeights = Array.from(new Set(subtype.subproducts.map(item => item.weight)));
@@ -153,6 +187,7 @@ function SubProducts() {
                                             <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
                                                 <img src={item.proimg} alt="" className='img-fluid  product_sizeimg' style={{ objectFit: 'contain' }} />
                                                 <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
+                                                    {/* Product Name */}
                                                     {item.ProductName}
                                                 </div>
                                                 <div
@@ -173,75 +208,10 @@ function SubProducts() {
             </div>
 
             {/* Footer Components */}
-            <Howtouse />
+            <Howtouse banner={product.howToMakeBanner} />
             <ProductSlider />
         </div>
     );
 }
 
 export default HOC(SubProducts);
-
-
-{/* old product show with slider code */ }
-{/*   // ✅ Slider settings paste this up side on return 
-                        var settings = {
-                            dots: false,
-                            infinite: true,
-                            arrows: false,
-                            autoplay: false,
-                            speed: 3000,
-                            autoplaySpeed: 2000,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }; 
-                    */}
-{/* <div className="col-lg-4 col-sm-6 col-10 mt-4 mb-5" style={{ position: 'sticky', top: '100px' }}>
-                        <div className="px-4 pb-4" style={{ backgroundColor: "#eff4f8" }}>
-                            <Slider {...settings}>
-                                {product.subproducts.map((item, i) => (
-                                    <div className='text-center' key={i}>
-                                        <img src={item.proimg} alt="" className='img-fluid' />
-                                        <div className='py-3'>
-                                            <Tittles stitle={item.ProductName} />
-                                        </div>
-                                    </div>
-                                ))}
-                            </Slider>
-                        </div>
-                    </div> */}
-
-{/* Right Cards => Filtered by Weight */ }
-{/* <div className="col-lg-8 col-sm-6 fade-in bg-white" key={selectedWeight}>
-                        <div className="row justify-content-evenly align-items-center">
-                            {filteredSubProducts.map((item, i) => (
-                                <div
-                                    className='col-lg-3 col-md-6 col-sm-8 col-10 mx-1 p-3 mt-5 mb-4 text-center bg-white'
-                                    style={{
-                                        backgroundImage: "linear-gradient(135deg, #f7971e, #ffd200)",
-                                        borderRadius: "14% 86% 13% 87% / 88% 12% 88% 12%"
-                                    }}
-                                    key={i}
-                                >
-                                    <div style={{ backgroundColor: "#eff4f8", borderRadius: "50%" }}>
-                                        <div style={{ position: "relative", bottom: '83px', height: "170px" }}>
-                                            <img
-                                                src={item.proimg}
-                                                alt=""
-                                                className='img-fluid'
-                                                style={{ height: '200px' }}
-                                            />
-                                            <div className='fw-semibold subp' style={{ height: "30px" }}>
-                                                {item.ProductName}
-                                            </div>
-                                            <div className='subbtn' onClick={() => navigate(`/product/${id}/${item.id}`)}>
-                                                <ButtonCom btn={"View Product"} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                            {filteredSubProducts.length === 0 && (
-                                <p className='text-center text-danger'>No products found for selected weight</p>
-                            )}
-                        </div>
-                    </div> */}

@@ -50,7 +50,7 @@ function Header() {
     }, [showDropdown]);
 
     return (
-        <div className='bg-white w-100 position-fixed top-0' style={{zIndex:2000000}}>
+        <div className='bg-white w-100 position-fixed top-0' style={{ zIndex: 2000000 }}>
             <nav className="bg-white fstyle navbar navbar-expand-md fixed-top shadow">
                 <div className='container-fluid ms-sm-5 ms-3'>
 
@@ -156,7 +156,7 @@ function Header() {
                                 onMouseLeave={handleMouseLeave}
                                 ref={dropdownRef}
                             >
-                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" ? "active" : ""}`} to="/product">
+                                <Link className={`nav-link px-3 mx-1 fs-6 producthover ${location.pathname === "/product" || "/product/:id" || "/product/:id/:proid" ? "active" : ""}`} to="/product">
                                     Product <IoIosArrowDropdownCircle />
                                 </Link>
 
