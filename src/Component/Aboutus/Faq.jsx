@@ -9,7 +9,6 @@ function Faq() {
     fetch("https://backendvimalagro.onrender.com/faq")
       .then((res) => res.json())
       .then((data) => {
-        console.log("API Response:", data);
         setFaqList(data.data);
       })
       .catch((err) => {
