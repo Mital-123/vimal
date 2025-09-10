@@ -86,7 +86,6 @@ function HomeProduct() {
   const FetchProduct = async () => {
     try {
       const res = await axios.get("https://backendvimalagro.onrender.com/api/products");
-      console.log(res.data);
       setProducts(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -103,9 +102,9 @@ function HomeProduct() {
       <div className='contactinfo_bg'>
         <div className="container">
           <div className="row g-5  my-5 pb-5 overflow-hidden">
-            {products.map((Item) => {
+            {products.map((Item, i) => {
               return (
-                <div className="col-12  col-md-6 col-lg-3 overflow-hidden" data-aos="zoom-in" data-aos-duration="1800" data-aos-once="true">
+                <div key={i} className="col-12  col-md-6 col-lg-3 overflow-hidden" data-aos="zoom-in" data-aos-duration="1800" data-aos-once="true">
                   <div onClick={() => navigate(`/product/${Item._id}`)} className='text-decoration-none' >
                     <div className="">
                       <div className="p-1 " style={{ position: "relative", overflow: "hidden" }}>

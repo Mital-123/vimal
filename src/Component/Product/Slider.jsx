@@ -39,7 +39,6 @@ function ProductSlider() {
     }, []);
 
     const product = products.find((p) => p._id == id);
-    console.log(product);
 
     // ✅ If product not found
     if (!product) return <p>No product found.</p>;

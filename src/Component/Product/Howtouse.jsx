@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Howtouse(howToMakeBanner) {
-    console.log(howToMakeBanner);
 
     return (
         <>

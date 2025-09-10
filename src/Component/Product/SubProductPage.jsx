@@ -1,11 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom';
-// import products from '../../Product';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ButtonCom from '../ButtonCom';
 import HOC from '../HOC';
 import { useEffect, useState } from 'react';
-import Gogreen from './Gogreen';
 import Howtouse from './Howtouse';
 import ProductSlider from './Slider';
 import axios from 'axios';
@@ -17,6 +15,19 @@ function SubProducts() {
 
     const navigate = useNavigate();
     const { id } = useParams();
+    const [extraSubProducts, setExtraSubProducts] = useState([]);
+    const [selectedExtraWeight, setSelectedExtraWeight] = useState(null);
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:8000/api/extrasubproducts")
+            .then((res) => {
+                setExtraSubProducts(res.data || []);
+            })
+            .catch((err) => console.error("Error fetching extra subproducts:", err));
+    }, []);
+
+    // ✅ Find extraSubProduct that belongs to this product
 
     // ✅ Fetch visibility toggle
     useEffect(() => {
@@ -45,7 +56,6 @@ function SubProducts() {
     }, []);
 
     const product = products.find((p) => p._id == id);
-    console.log(product);
 
     const [selectedMainWeight, setSelectedMainWeight] = useState(null);
     const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
@@ -53,7 +63,6 @@ function SubProducts() {
     // ✅ If product not found
     if (!product) return <p>No product found.</p>;
 
-    const packagedetail = product?.Pckdetail || [];
     const uniqueMainWeights = Array.from(
         new Set(product?.subproducts?.map((item) => item.weight) || [])
     );
@@ -64,6 +73,10 @@ function SubProducts() {
         )
         : product?.subproducts || [];
 
+
+    const matchedExtras = extraSubProducts.filter(
+        (extra) => extra.productId?._id === product._id
+    );
     return (
         <div className='mt-5'>
             {/* Product Banner */}
@@ -145,68 +158,110 @@ function SubProducts() {
                     </div>
                 </div>
 
-                {/* Subtypes Section for PICKELS Only*/}
-                {product.subtypes && product.subtypes.length > 0 && product.subtypes.map((subtype, idx) => {
-                    const subtypeId = subtype.id;
-                    const subtypeWeights = Array.from(new Set(subtype.subproducts.map(item => item.weight)));
-                    const selectedSubtypeWeight = selectedSubtypeWeights[subtypeId] || null;
-                    const filteredSubtypeProducts = selectedSubtypeWeight
-                        ? subtype.subproducts.filter(item => item.weight === selectedSubtypeWeight)
-                        : subtype.subproducts;
+                {/* only for pickels */}
+                {matchedExtras.length > 0 && (
+                    <div className="my-2 my-md-5">
+                        <h3 className="mt-1 mt-md-3 text-center text-dark text-uppercase fw-bold ftittle">
+                            Extra Subproducts of {product.productName}
+                        </h3>
 
-                    return (
-                        <div key={idx} className="my-2 my-md-5">
-                            <h3 className='mt-1 mt-md-3 text-center text-dark text-uppercase fw-bold ftittle'>{subtype.h1}</h3>
+                        {/* 1. Collect ALL extraSubProducts for this product */}
+                        {(() => {
+                            const allExtraItems = matchedExtras.flatMap(extra => extra.extrasubproducts);
 
-                            {/* Weight Filter for Subtype */}
-                            {subtypeWeights.length > 0 && (
-                                <div className='text-center py-2 py-md-4 d-block d-lg-flex align-items-center justify-content-center'>
-                                    <div className='border-0 bg-transparent mx-2' onClick={() =>
-                                        setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: null }))
-                                    }>
-                                        <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-2 mt-md-3 ${!selectedSubtypeWeight ? 'active-btn' : ''}`} >
-                                            All
+                            // ✅ Unique weights
+                            const uniqueExtraWeights = Array.from(
+                                new Set(allExtraItems.map(item => item.weight))
+                            );
+
+                            // ✅ Filter based on selectedExtraWeight
+                            const filteredExtraItems = selectedExtraWeight
+                                ? allExtraItems.filter(item => item.weight === selectedExtraWeight)
+                                : allExtraItems;
+
+                            return (
+                                <>
+                                    {/* 2. Tabs */}
+                                    {uniqueExtraWeights.length > 0 && (
+                                        <div className="text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center">
+                                            {/* All Tab */}
+                                            <div
+                                                className="border-0 bg-transparent mx-2 mt-2 mt-md-3"
+                                                onClick={() => setSelectedExtraWeight(null)}
+                                            >
+                                                <div
+                                                    className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === null ? "active-btn" : ""
+                                                        }`}
+                                                >
+                                                    All
+                                                </div>
+                                            </div>
+
+                                            {/* Unique Weight Tabs */}
+                                            {uniqueExtraWeights.map((weight, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="border-0 bg-transparent mx-2 mt-2 mt-md-3"
+                                                    onClick={() => setSelectedExtraWeight(weight)}
+                                                >
+                                                    <div
+                                                        className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === weight ? "active-btn" : ""
+                                                            }`}
+                                                    >
+                                                        {weight} GM
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {/* 3. Products Grid */}
+                                    <div className="container py-3 py-md-5">
+                                        <div className="row justify-content-center">
+                                            {filteredExtraItems.map((item, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex"
+                                                >
+                                                    <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
+                                                        {/* Image */}
+                                                        <img
+                                                            src={item.subproductImg}
+                                                            alt={item.subproductName}
+                                                            className="img-fluid product_sizeimg"
+                                                            style={{ objectFit: "contain" }}
+                                                        />
+                                                        {/* Name */}
+                                                        <div
+                                                            className="fw-semibold subp pt-2 p-1"
+                                                            style={{ fontSize: "14px" }}
+                                                        >
+                                                            {item.subproductName}
+                                                        </div>
+                                                        {/* Weight */}
+                                                        <div className="text-muted" style={{ fontSize: "13px" }}>
+                                                            {item.weight} GM
+                                                        </div>
+                                                        {/* Button */}
+                                                        <div
+                                                            onClick={() => navigate(`/product/${id}/${item._id}`)}
+                                                            className={`subbtn mt-auto ${!isVisible ? "d-none" : ""
+                                                                }`}
+                                                            style={{ padding: "10px 10px" }}
+                                                        >
+                                                            <ButtonCom btn={"View More"} />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
-                                    {subtypeWeights.map((weight, i) => (
-                                        <div key={i} className='border-0 bg-transparent mx-2' onClick={() =>
-                                            setSelectedSubtypeWeights(prev => ({ ...prev, [subtypeId]: weight }))
-                                        }>
-                                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase mt-2 mt-md-3 ${selectedSubtypeWeight === weight ? 'active-btn' : ''}`}>
-                                                {weight}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                            {/* Display Subtype Subproducts */}
-                            <div className="container py-3">
-                                <div className="row justify-content-center">
-                                    {filteredSubtypeProducts.map((item, index) => (
-                                        <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                            <div className="card shadow-sm w-100 h-100 text-center p-1 p-md-3">
-                                                <img src={item.proimg} alt="" className='img-fluid  product_sizeimg' style={{ objectFit: 'contain' }} />
-                                                <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
-                                                    {/* Product Name */}
-                                                    {item.ProductName}
-                                                </div>
-                                                <div
-                                                    onClick={() => navigate(`/product/${id}/${item.id}`)}
-                                                    className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
-                                                    style={{ padding: "5px 10px" }}
-                                                >
-                                                    <ButtonCom btn={"View More"} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
+                                </>
+                            );
+                        })()}
+                    </div>
+                )}
             </div>
-
             {/* Footer Components */}
             <Howtouse banner={product.howToMakeBanner} />
             <ProductSlider />
