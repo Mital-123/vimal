@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Tittles from '../Tittles';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import ButtonCom from '../ButtonCom';
 import YouTubeVideo from './YouTubeVideo';
 import "../../assets/Css/Blog.css";
+import axios from 'axios';
 
 const recipeSections = [
     {
@@ -72,11 +73,51 @@ function Blog() {
             ? recipeSections
             : recipeSections.filter(item => item.type === activeCategory);
 
+            // banner created
+   const [banner, setBanner] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get("https://backendvimalagro.onrender.com/blogbanner");
+        if (res.data && res.data.length > 0) {
+          setBanner(res.data[0]); // ✅ take the first object
+        }
+      } catch (err) {
+        console.error("Error fetching banner:", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!banner) {
+    return null; // or loader/spinner
+  }
     return (
         <>
-            <div className='mt-5'>
+            {/* <div className='mt-5'>
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
-            </div>
+            </div> */}
+                 <div
+      style={{ position: "relative", width: "100%", overflow: "hidden" }}
+      className="landingimg mt-5 pt-md-4 pt-0"
+    >
+      {/* Desktop View */}
+      <img
+        src={banner.desktopblogbanner}
+        alt="desktop-banner"
+        className="img-fluid w-100 d-md-block d-none object-fit-cover"
+        style={{ height: "100%" }}
+      />
+
+      {/* Mobile View */}
+      <img
+        src={banner.mobileblogbanner}
+        alt="mobile-banner"
+        className="img-fluid w-100 d-lg-none d-block object-fit-cover"
+        style={{ height: "100%" }}
+      />
+    </div>
             <div className='py-4 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
                 <div className='container-lg'>
                     <div className='text-center'>

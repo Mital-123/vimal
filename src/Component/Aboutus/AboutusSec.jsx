@@ -131,15 +131,50 @@ function AboutusSec() {
     fetchImages();
   }, []);
 
+
+// banner created
+   const [banner, setBanner] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get("https://backendvimalagro.onrender.com/aboutbanner");
+        if (res.data && res.data.length > 0) {
+          setBanner(res.data[0]); // ✅ take the first object
+        }
+      } catch (err) {
+        console.error("Error fetching banner:", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!banner) {
+    return null; // or loader/spinner
+  }
   return (
     <>
       {/* Video Background */}
-      <div className="video-container">
-        <video autoPlay muted loop playsInline className="bg-video">
-          <source src={videoBg} type="video/mp4" />
-        </video>
-      </div>
+          <div
+      style={{ position: "relative", width: "100%", overflow: "hidden" }}
+      className="landingimg mt-5 pt-md-4 pt-0"
+    >
+      {/* Desktop View */}
+      <img
+        src={banner.desktopaboutbanner}
+        alt="desktop-banner"
+        className="img-fluid w-100 d-md-block d-none "
+        style={{ height: "100%" }}
+      />
 
+      {/* Mobile View */}
+      <img
+        src={banner.mobileaboutbanner}
+        alt="mobile-banner"
+        className="img-fluid w-100 d-lg-none d-block object-fit-cover"
+        style={{ height: "100%" }}
+      />
+    </div>
       {/* About Us Section */}
       <div className="py-3 py-md-5 overflow-hidden contactinfo_bg">
         <div className="container">
