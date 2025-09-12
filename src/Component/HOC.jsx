@@ -6,6 +6,7 @@ import { FaFacebookF, FaFileDownload, FaLinkedinIn, FaMailBulk, FaTwitter } from
 import { GrInstagram } from 'react-icons/gr';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import brochurePDF from '../assets/Images/groser.pdf';
+import Loader from './Loaderpage';
 
 function HOC(Component) {
 
@@ -28,6 +29,7 @@ function HOC(Component) {
         return (
             <>
                 <Header />
+          
                 <div className={`social_Nav ${isVisible ? "show" : "hide"}`} style={{ zIndex: 30000 }}>
                     <ul>
                         <li>

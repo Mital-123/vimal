@@ -10,44 +10,60 @@ import YouTubeVideo from './YouTubeVideo';
 import "../../assets/Css/Blog.css";
 import axios from 'axios';
 
-const recipeSections = [
-    {
-        id: 1,
-        image: require('../../assets/Images/recepi1.jpg'),
-        titleSmall: "5 Favorite",
-        titleLarge: "Pickles In The Winter",
-        description: "There is no spring without sunshine, no autumn without brown, no summer without holidays, and no winter without...yes, you guess it right! Pickles!!",
-        type: "Appetizers"
-    },
-    {
-        id: 2,
-        image: require('../../assets/Images/recepi2.jpg'),
-        titleSmall: "Swad's",
-        titleLarge: "Mango Milkshake",
-        description: "SWAD Mango Milkshake is a cool and satiating drink made by blending ripe mango pulp, milk and sugar.",
-        type: "Main Courses"
-    },
-    {
-        id: 3,
-        image: require('../../assets/Images/recepi1.jpg'),
-        titleSmall: "Fresh Salad",
-        titleLarge: "Garden Salad",
-        description: "A healthy mix of fresh vegetables and dressing.",
-        type: "Salad & Slides"
-    },
-    {
-        id: 4,
-        image: require('../../assets/Images/recepi2.jpg'),
-        titleSmall: "Fresh Salad",
-        titleLarge: "Garden Salad",
-        description: "A healthy mix of fresh vegetables and dressing.",
-        type: "Vagetarian Delights"
-    },
-    // Add more recipes...
-];
+// const recipeSections = [
+//     {
+//         id: 1,
+//         image: require('../../assets/Images/recepi1.jpg'),
+//         titleSmall: "5 Favorite",
+//         titleLarge: "Pickles In The Winter",
+//         description: "There is no spring without sunshine, no autumn without brown, no summer without holidays, and no winter without...yes, you guess it right! Pickles!!",
+//         type: "Appetizers"
+//     },
+//     {
+//         id: 2,
+//         image: require('../../assets/Images/recepi2.jpg'),
+//         titleSmall: "Swad's",
+//         titleLarge: "Mango Milkshake",
+//         description: "SWAD Mango Milkshake is a cool and satiating drink made by blending ripe mango pulp, milk and sugar.",
+//         type: "Main Courses"
+//     },
+//     {
+//         id: 3,
+//         image: require('../../assets/Images/recepi1.jpg'),
+//         titleSmall: "Fresh Salad",
+//         titleLarge: "Garden Salad",
+//         description: "A healthy mix of fresh vegetables and dressing.",
+//         type: "Salad & Slides"
+//     },
+//     {
+//         id: 4,
+//         image: require('../../assets/Images/recepi2.jpg'),
+//         titleSmall: "Fresh Salad",
+//         titleLarge: "Garden Salad",
+//         description: "A healthy mix of fresh vegetables and dressing.",
+//         type: "Vagetarian Delights"
+//     },
+//     // Add more recipes...
+// ];
 
 function Blog() {
     const [activeCategory, setActiveCategory] = useState("All");
+    const [recipeSections, setRecipeSections] = useState([])
+
+
+    const FetchProduct = async () => {
+        try {
+            const res = await axios.get("https://backendvimalagro.onrender.com/api/blogs");
+            setRecipeSections(res.data);
+        } catch (err) {
+            console.error("Error fetching products:", err);
+        }
+    }
+
+
+    useEffect(() => {
+        FetchProduct()
+    }, [])
     const sliderRef = useRef(null);
 
     const settings = {
@@ -65,7 +81,7 @@ function Blog() {
     };
 
     // Create a unique category list from recipeSections
-    const categories = ["All", ...new Set(recipeSections.map(item => item.type))];
+    const categories = ["All", ...new Set(recipeSections.map(item => item.category))];
 
     // Filter recipes based on category
     const filteredRecipes =
@@ -73,51 +89,51 @@ function Blog() {
             ? recipeSections
             : recipeSections.filter(item => item.type === activeCategory);
 
-            // banner created
-   const [banner, setBanner] = useState(null);
+    // banner created
+    const [banner, setBanner] = useState(null);
 
-  useEffect(() => {
-    const fetchBanner = async () => {
-      try {
-        const res = await axios.get("https://backendvimalagro.onrender.com/blogbanner");
-        if (res.data && res.data.length > 0) {
-          setBanner(res.data[0]); // ✅ take the first object
-        }
-      } catch (err) {
-        console.error("Error fetching banner:", err);
-      }
-    };
-    fetchBanner();
-  }, []);
+    useEffect(() => {
+        const fetchBanner = async () => {
+            try {
+                const res = await axios.get("https://backendvimalagro.onrender.com/blogbanner");
+                if (res.data && res.data.length > 0) {
+                    setBanner(res.data[0]); // ✅ take the first object
+                }
+            } catch (err) {
+                console.error("Error fetching banner:", err);
+            }
+        };
+        fetchBanner();
+    }, []);
 
-  if (!banner) {
-    return null; // or loader/spinner
-  }
+    if (!banner) {
+        return null; // or loader/spinner
+    }
     return (
         <>
             {/* <div className='mt-5'>
                 <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
             </div> */}
-                 <div
-      style={{ position: "relative", width: "100%", overflow: "hidden" }}
-      className="landingimg mt-5 pt-md-4 pt-0"
-    >
-      {/* Desktop View */}
-      <img
-        src={banner.desktopblogbanner}
-        alt="desktop-banner"
-        className="img-fluid w-100 d-md-block d-none object-fit-cover"
-        style={{ height: "100%" }}
-      />
+            <div
+                style={{ position: "relative", width: "100%", overflow: "hidden" }}
+                className="landingimg mt-5 pt-md-4 pt-0"
+            >
+                {/* Desktop View */}
+                <img
+                    src={banner.desktopblogbanner}
+                    alt="desktop-banner"
+                    className="img-fluid w-100 d-md-block d-none object-fit-cover"
+                    style={{ height: "100%" }}
+                />
 
-      {/* Mobile View */}
-      <img
-        src={banner.mobileblogbanner}
-        alt="mobile-banner"
-        className="img-fluid w-100 d-lg-none d-block object-fit-cover"
-        style={{ height: "100%" }}
-      />
-    </div>
+                {/* Mobile View */}
+                <img
+                    src={banner.mobileblogbanner}
+                    alt="mobile-banner"
+                    className="img-fluid w-100 d-lg-none d-block object-fit-cover"
+                    style={{ height: "100%" }}
+                />
+            </div>
             <div className='py-4 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
                 <div className='container-lg'>
                     <div className='text-center'>
@@ -154,11 +170,11 @@ function Blog() {
                         {filteredRecipes.map((item) => (
                             <div key={item.id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex fade-in">
                                 <div className="card h-100 w-100">
-                                    <img src={item.image} alt="" className="card-img-top" />
+                                    <img src={item.blogImage} alt="" className="card-img-top" />
                                     <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title">{item.titleLarge}</h5>
+                                        <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>
-                                        <Link to={`/Recepie/${item.id}`} className='text-decoration-none text-dark'><button className="c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">How To Make ?
+                                        <Link to={`/Recepie/${item._id}`} className='text-decoration-none text-dark'><button className="c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">How To Make ?
                                             <div className="c-button__blobs">
                                                 <div></div>
                                                 <div></div>
