@@ -45,12 +45,12 @@ import axios from 'axios';
 //     },
 //     // Add more recipes...
 // ];
-
 function Blog() {
-    const [activeCategory, setActiveCategory] = useState("All");
-    const [recipeSections, setRecipeSections] = useState([])
+    const [activeBlog, setActiveBlog] = useState("All");
+    const [recipeSections, setRecipeSections] = useState([]);
+    const sliderRef = useRef(null);
 
-
+    // Fetch Blogs
     const FetchProduct = async () => {
         try {
             const res = await axios.get("https://backendvimalagro.onrender.com/api/blogs");
@@ -58,13 +58,11 @@ function Blog() {
         } catch (err) {
             console.error("Error fetching products:", err);
         }
-    }
-
+    };
 
     useEffect(() => {
-        FetchProduct()
-    }, [])
-    const sliderRef = useRef(null);
+        FetchProduct();
+    }, []);
 
     const settings = {
         infinite: true,
@@ -80,24 +78,23 @@ function Blog() {
         ],
     };
 
-    // Create a unique category list from recipeSections
-    const categories = ["All", ...new Set(recipeSections.map(item => item.category))];
+    // Create a list of titles
+    const titles = ["All", ...recipeSections.map(item => item.category)];
 
-    // Filter recipes based on category
-    const filteredRecipes =
-        activeCategory === "All"
+    // Filter blogs by activeBlog
+    const filteredBlogs =
+        activeBlog === "All"
             ? recipeSections
-            : recipeSections.filter(item => item.type === activeCategory);
+            : recipeSections.filter(item => item.category === activeBlog);
 
-    // banner created
+    // banner state
     const [banner, setBanner] = useState(null);
-
     useEffect(() => {
         const fetchBanner = async () => {
             try {
                 const res = await axios.get("https://backendvimalagro.onrender.com/blogbanner");
                 if (res.data && res.data.length > 0) {
-                    setBanner(res.data[0]); // ✅ take the first object
+                    setBanner(res.data[0]);
                 }
             } catch (err) {
                 console.error("Error fetching banner:", err);
@@ -107,51 +104,46 @@ function Blog() {
     }, []);
 
     if (!banner) {
-        return null; // or loader/spinner
+        return null; // loader/spinner optional
     }
+
     return (
         <>
-            {/* <div className='mt-5'>
-                <img src="https://i0.wp.com/sub.vimalagro2.vimalagro.com/sub.vimalagro2.vimalagro/wp-content/uploads/2024/10/3-1.png?w=1920&ssl=1" alt="" className='img-fluid w-100' />
-            </div> */}
+            {/* Banner */}
             <div
                 style={{ position: "relative", width: "100%", overflow: "hidden" }}
                 className="landingimg mt-5 pt-md-4 pt-0"
             >
-                {/* Desktop View */}
                 <img
                     src={banner.desktopblogbanner}
                     alt="desktop-banner"
                     className="img-fluid w-100 d-md-block d-none object-fit-cover"
-                    style={{ height: "100%" }}
                 />
-
-                {/* Mobile View */}
                 <img
                     src={banner.mobileblogbanner}
                     alt="mobile-banner"
                     className="img-fluid w-100 d-lg-none d-block object-fit-cover"
-                    style={{ height: "100%" }}
                 />
             </div>
-            <div className='py-4 py-md-5 p-1 category_bgimg overflow-hidden' style={{ backgroundAttachment: "fixed" }}>
-                <div className='container-lg'>
-                    <div className='text-center'>
-                        <Tittles stitle={"Our Categories"} ltitle={"Leading the market with quality and trust"} />
+
+            {/* Title Slider */}
+            <div className="py-4 py-md-5 p-1 category_bgimg overflow-hidden" style={{ backgroundAttachment: "fixed" }}>
+                <div className="container-lg">
+                    <div className="text-center">
+                        <Tittles stitle={"Our Blogs"} ltitle={"Leading the market with quality and trust"} />
                     </div>
 
-                    {/* Dynamic Category Tabs */}
                     <div className="col-11 m-auto pt-2 pt-md-4 categoryarrow blogarrow">
                         <Slider {...settings} ref={sliderRef}>
-                            {categories.map((category, index) => (
+                            {titles.map((category, index) => (
                                 <div key={index} className="px-2 m-1">
                                     <div
-                                        className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeCategory === category ? 'active-btn' : ''}`}
+                                        className={`shadow-sm text-dark rounded-pill text-center btn_active d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeBlog === category ? 'active-btn' : ''}`}
                                     >
                                         <button
                                             className="nav-link text-center w-100 h-100 py-2 px-3 text-capitalize category-btn bg-transparent"
                                             onClick={() => {
-                                                setActiveCategory(category);
+                                                setActiveBlog(category);
                                                 if (sliderRef.current) {
                                                     sliderRef.current.slickGoTo(index);
                                                 }
@@ -165,33 +157,25 @@ function Blog() {
                         </Slider>
                     </div>
 
-                    {/* Filtered Recipes */}
+                    {/* Filtered Blogs */}
                     <div className="row justify-content-center mx-auto">
-                        {filteredRecipes.map((item) => (
-                            <div key={item.id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex fade-in">
+                        {filteredBlogs.map((item) => (
+                            <div key={item._id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex fade-in">
                                 <div className="card h-100 w-100">
-                                    <img src={item.blogImage} alt="" className="card-img-top" />
+                                    <img src={item.blogImage} alt={item.title} className="card-img-top img-fluid" height={300} />
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>
-                                        <Link to={`/Recepie/${item._id}`} className='text-decoration-none text-dark'><button className="c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">How To Make ?
-                                            <div className="c-button__blobs">
-                                                <div></div>
-                                                <div></div>
-                                                <div></div>
-                                            </div>
-                                        </button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: "block", height: 0, width: "0" }} >
-                                                <defs>
-                                                    <filter id="goo">
-                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
-                                                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
-                                                    </filter>
-                                                </defs>
-                                            </svg>
+                                        <Link to={`/Recepie/${item._id}`} className="text-decoration-none text-dark">
+                                            <button className="c-button c-button--gooey py-1 px-3 fw-bold fstyle overflow-hidden">
+                                                How To Make ?
+                                                <div className="c-button__blobs">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </button>
                                         </Link>
-                                        {/* <Link to={`/Recepie/${item.id}`} className='text-decoration-none'><ButtonCom btn={"How To Make ?"} /></Link> */}
                                     </div>
                                 </div>
                             </div>
@@ -199,8 +183,10 @@ function Blog() {
                     </div>
                 </div>
             </div>
+
             <YouTubeVideo />
         </>
     );
 }
-export default HOC(Blog)
+
+export default HOC(Blog);
