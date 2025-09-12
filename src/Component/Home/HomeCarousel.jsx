@@ -31,7 +31,7 @@ function HomeCarousel() {
       <img
         src={banner.desktophomebanner}
         alt="desktop-banner"
-        className="img-fluid w-100 d-md-block d-none"
+        className="img-fluid w-100 d-lg-block d-none"
         style={{ height: "100%" }}
       />
 

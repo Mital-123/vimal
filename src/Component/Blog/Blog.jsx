@@ -117,7 +117,7 @@ function Blog() {
                 <img
                     src={banner.desktopblogbanner}
                     alt="desktop-banner"
-                    className="img-fluid w-100 d-md-block d-none object-fit-cover"
+                    className="img-fluid w-100 d-lg-block d-none object-fit-cover"
                 />
                 <img
                     src={banner.mobileblogbanner}
