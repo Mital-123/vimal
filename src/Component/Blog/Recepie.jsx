@@ -32,9 +32,28 @@ function Recepie() {
 
     return (
         <>
-            <div className='mt-5'>
+            {/* <div className='mt-5'>
                 {data && data.blogBanner && (
                     <img src={data.blogBanner} alt="Recipe Banner" className='img-fluid w-100' />
+                )}
+            </div> */}
+            <div
+                style={{ position: "relative", width: "100%", overflow: "hidden" }}
+                className="landingimg mt-5 pt-md-4 pt-0"
+            >
+                {data && data.blogBanner && (
+                    <>
+                        <img
+                            src={data.blogBanner}
+                            alt="desktop-banner"
+                            className="img-fluid w-100 d-lg-block d-none object-fit-cover"
+                        />
+                        <img
+                            src={data.blogBannerMobile}
+                            alt="mobile-banner"
+                            className="img-fluid w-100 d-lg-none d-block object-fit-cover"
+                        />
+                    </>
                 )}
             </div>
             <div className='container'>
