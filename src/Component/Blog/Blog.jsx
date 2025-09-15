@@ -162,7 +162,10 @@ function Blog() {
                         {filteredBlogs.map((item) => (
                             <div key={item._id} className="col-12 col-lg-3 col-md-6 mt-sm-4 mt-3 d-flex fade-in">
                                 <div className="card h-100 w-100">
-                                    <img src={item.blogImage} alt={item.title} className="card-img-top img-fluid" height={300} />
+                                       <div style={{height:180}} className='shadow'>
+                                     <img src={item.blogImage} alt={item.title} className="card-img-top img-fluid w-100 h-100 object-fit-cover"  />
+                                   </div>
+ 
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>

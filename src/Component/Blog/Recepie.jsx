@@ -111,7 +111,7 @@ function Recepie() {
                                     {item.description}
                                 </p>
                             </div>
-                            <div className='row mt-0 mt-md-3'>
+                            {/* <div className='row mt-0 mt-md-3'>
                                 <div className='col-12 col-lg-7 mb-4'>
                                     <div className='h-100'>
                                         <div className='shadow-lg p-4 rounded-3'>
@@ -129,7 +129,29 @@ function Recepie() {
                                         <img src={item.image} className='img-fluid rounded-3 w-100 h-100 object-fit-cover' alt="" />
                                     </div>
                                 </div>
+                            </div> */}
+                             <div className='row mt-0 mt-md-3 align-items-stretch'>
+                                <div className='col-12 col-lg-7 mb-4'>
+                                    <div className='h-100'>
+                                        <div className='shadow-lg p-4 rounded-3 h-100'>
+                                            <Tittles stitle='ingredients' />
+                                            <ul className="ingredients-list mt-4 ps-2">
+                                                {item.ingredients.map((ing, idx) => (
+                                                    <li key={idx}><MdKeyboardDoubleArrowRight /> {ing}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-12 col-lg-5 mb-4'>
+                                    <div className='h-100'>
+                                        <div style={{ height: "300px" }}>
+                                            <img src={item.image} className='img-fluid rounded-3 w-100 object-fit-cover h-100' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+ 
                             <div className="p-1 mx-auto mb-3 mb-md-5 mt-2 mt-md-4">
                                 <Tittles stitle='Coockig Intructions' />
                                 <div className='mt-4'>
