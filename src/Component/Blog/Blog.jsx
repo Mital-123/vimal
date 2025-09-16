@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import YouTubeVideo from './YouTubeVideo';
 import "../../assets/Css/Blog.css";
 import axios from 'axios';
+import { GrNext, GrPrevious } from 'react-icons/gr';
 
 function Blog() {
     const [activeBlog, setActiveBlog] = useState("All");
@@ -121,31 +122,32 @@ function Blog() {
                     </div>
 
                     {/* Pagination Controls */}
-                    <div className="d-flex justify-content-center align-items-center mt-4 flex-wrap">
+                    <div className="d-flex justify-content-center align-items-center mt-4 flex-wrap" >
                         <button
-                            className="btn btn-outline-dark mx-1"
+                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{width:"20px",height:"20px"}}
                             disabled={currentPage === 1}
                             onClick={() => handlePageChange(currentPage - 1)}
                         >
-                            Prev
+                          <GrPrevious />
                         </button>
 
                         {[...Array(totalPages)].map((_, index) => (
                             <button
                                 key={index}
-                                className={`btn mx-1 ${currentPage === index + 1 ? "btn-dark" : "btn-outline-dark"}`}
+                                className={`btn mx-1 d-flex justify-content-center align-items-center pt-2 ${currentPage === index + 1 ? "btn-dark" : "btn-outline-dark"}`}
                                 onClick={() => handlePageChange(index + 1)}
+                                style={{width:"25px",height:"25px"}}
                             >
                                 {index + 1}
                             </button>
                         ))}
 
                         <button
-                            className="btn btn-outline-dark mx-1"
+                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{width:"20px",height:"20px"}}
                             disabled={currentPage === totalPages}
                             onClick={() => handlePageChange(currentPage + 1)}
                         >
-                            Next
+                           <GrNext/>
                         </button>
                     </div>
                 </div>

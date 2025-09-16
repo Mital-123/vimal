@@ -103,8 +103,11 @@ function SubProducts() {
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
                     <div className='w-75 mx-auto pb-3'>
                         {product.productSizes.map((x, i) => (
-                            /* Product Sizes */
-                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && ' | '}</span>
+                            <>
+                            {console.log(x)}
+                            {/* /* Product Sizes */ }
+                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && '|'}</span>
+                            </>
                         ))}
                     </div>
                 </div>
