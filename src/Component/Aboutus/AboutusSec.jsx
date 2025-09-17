@@ -154,12 +154,11 @@ function AboutusSec() {
   }
   return (
     <>
-      {/* Video Background */}
-          <div
+          {/* <div
       style={{ position: "relative", width: "100%", overflow: "hidden" }}
       className="landingimg mt-5 pt-md-4 pt-0"
     >
-      {/* Desktop View */}
+    
       <img
         src={banner.desktopaboutbanner}
         alt="desktop-banner"
@@ -167,14 +166,22 @@ function AboutusSec() {
         style={{ height: "100%" }}
       />
 
-      {/* Mobile View */}
       <img
         src={banner.mobileaboutbanner}
         alt="mobile-banner"
         className="img-fluid w-100 d-lg-none d-block object-fit-cover"
         style={{ height: "100%" }}
       />
-    </div>
+    </div> */}
+
+    <div>
+  <div className="d-none d-lg-block bannervimaldesktop mt-5">
+    <img src={banner.desktopaboutbanner} alt="" className="img-fluid w-100 h-100 "/>
+  </div>
+  <div className="d-block d-lg-none bannervimalmobile mt-5">
+    <img src={banner.mobileaboutbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
+  </div>
+</div>
       {/* About Us Section */}
       <div className="py-3 py-md-5 overflow-hidden contactinfo_bg">
         <div className="container">

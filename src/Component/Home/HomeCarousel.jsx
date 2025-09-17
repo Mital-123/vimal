@@ -23,26 +23,40 @@ function HomeCarousel() {
   }
 
   return (
-    <div
-      style={{ position: "relative", width: "100%", overflow: "hidden" }}
-      className="landingimg mt-5 pt-md-4 pt-0"
-    >
-      {/* Desktop View */}
-      <img
-        src={banner.desktophomebanner}
-        alt="desktop-banner"
-        className="img-fluid w-100 d-lg-block d-none"
-        style={{ height: "100%" }}
-      />
+//     <div
+//       style={{ position: "relative", width: "100%", overflow: "hidden" }}
+//       className="landingimg mt-5 pt-md-4 pt-0"
+//     >
+//       {/* Desktop View */}
+// <div className="h-100 landingimg">
+//         <img
+//         src={banner.desktophomebanner}
+//         alt="desktop-banner"
+//         className="img-fluid w-100 h-100 d-lg-block d-none"
+//         // style={{ height: "100%" }}
+//       />
+// </div>
 
-      {/* Mobile View */}
-      <img
-        src={banner.mobilehomebanner}
-        alt="mobile-banner"
-        className="img-fluid w-100 d-lg-none d-block object-fit-cover"
-        style={{ height: "100%" }}
-      />
-    </div>
+//       {/* Mobile View */}
+//  <div className="landingimg" >
+//        <img
+//         src={banner.mobilehomebanner}
+//         alt="mobile-banner"
+//         className="img-fluid w-100  "
+//         // style={{ height: "100%" }}
+//       />
+//  </div>
+//     </div>
+<>
+<div>
+  <div className="d-none d-lg-block bannervimaldesktop mt-5">
+    <img src={banner.desktophomebanner} alt="" className="img-fluid w-100 h-100 "/>
+  </div>
+  <div className="d-block d-lg-none bannervimalmobile mt-5">
+    <img src={banner.mobilehomebanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
+  </div>
+</div>
+</>
   );
 }
 

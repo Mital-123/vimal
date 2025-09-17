@@ -69,8 +69,7 @@ function Blog() {
 
     return (
         <>
-            {/* Banner (always stays at top, never reloaded on page change) */}
-            <div
+            {/* <div
                 style={{ position: "relative", width: "100%", overflow: "hidden" }}
                 className="landingimg mt-5 pt-md-4 pt-0"
             >
@@ -84,8 +83,15 @@ function Blog() {
                     alt="mobile-banner"
                     className="img-fluid w-100 d-lg-none d-block object-fit-cover"
                 />
-            </div>
-
+            </div> */}
+   <div>
+  <div className="d-none d-lg-block bannervimaldesktop mt-5">
+    <img src={banner.desktopblogbanner} alt="" className="img-fluid w-100 h-100 "/>
+  </div>
+  <div className="d-block d-lg-none bannervimalmobile mt-5">
+    <img src={banner.mobileblogbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
+  </div>
+</div>
             {/* Blogs Section */}
             <div className="py-4 py-md-5 p-1 category_bgimg overflow-hidden" style={{ backgroundAttachment: "fixed" }}>
                 <div className="container-lg">

@@ -26,26 +26,31 @@ function Product() {
   return (
     <>
 
-      <div
+      {/* <div
         style={{ position: "relative", width: "100%", overflow: "hidden" }}
         className="landingimg mt-5 pt-md-4 pt-0"
       >
-        {/* Desktop View */}
         <img
           src={banner.desktopproductbanner}
           alt="desktop-banner"
           className="img-fluid w-100 d-lg-block d-none "
           style={{ height: "100%" }}
         />
-
-        {/* Mobile View */}
         <img
           src={banner.mobileproductbanner}
           alt="mobile-banner"
           className="img-fluid w-100 d-lg-none d-block object-fit-cover"
           style={{ height: "100%" }}
         />
-      </div>
+      </div> */}
+         <div>
+  <div className="d-none d-lg-block bannervimaldesktop mt-5">
+    <img src={banner.desktopproductbanner} alt="" className="img-fluid w-100 h-100 "/>
+  </div>
+  <div className="d-block d-lg-none bannervimalmobile mt-5">
+    <img src={banner.mobileproductbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
+  </div>
+</div>
       <HomeProduct />
 
     </>

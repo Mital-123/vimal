@@ -486,18 +486,21 @@
   border-color: rgba(255, 37, 37, 0.3);
 }
 
-.landingimg {
-  height: 95vh;
+.bannervimaldesktop{
+  height: 95vh !important;
 }
+.bannervimalmobile{
+  height: auto;
+  /* height: 50vh !important; */
+}
+
 
 .lendingshadow {
   background-color: #24000061;
 }
 
 @media screen and (max-width: 992px) {
-  .landingimg {
-    height: auto;
-  }
+
 
   .lendingshadow {
     background-color: #24000061 !important;
@@ -519,4 +522,5 @@ gap: 10 !important;
   .certificate_height{
   height: 80px !important;
 }
+
 }

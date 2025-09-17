@@ -1,10 +1,11 @@
 import HOC from '../HOC';
 import "../../assets/Css/ContactUs.css";
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Tittles from '../Tittles';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
+import axios from 'axios';
 
 function ContactPage() {
 
@@ -96,17 +97,45 @@ function ContactPage() {
       );
   };
 
+  // banner start
+   const [banner, setBanner] = useState(null);
+  
+    useEffect(() => {
+      const fetchBanner = async () => {
+        try {
+          const res = await axios.get("https://backendvimalagro.onrender.com/contactbanner");
+          if (res.data && res.data.length > 0) {
+            setBanner(res.data[0]); // ✅ take the first object
+          }
+        } catch (err) {
+          console.error("Error fetching banner:", err);
+        }
+      };
+      fetchBanner();
+    }, []);
+  
+    if (!banner) {
+      return null; // or loader/spinner
+    }
+
   return (
     <>
-      <div className="landingimg_contact">
+      {/* <div className="landingimg_contact">
         <img
           src="https://www.oregon.gov/employ/Agency/PublishingImages/ContactUs-2024.jpg"
           alt=""
           className="landingimg-img_contact"
         />
         <div className="lendingshadow_contact"></div>
-      </div>
-
+      </div> */}
+<div>
+  <div className="d-none d-lg-block bannervimaldesktop mt-5">
+    <img src={banner.desktopcontactbanner} alt="" className="img-fluid w-100 h-100 "/>
+  </div>
+  <div className="d-block d-lg-none bannervimalmobile mt-5">
+    <img src={banner.mobilecontactbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
+  </div>
+</div>
       <div className="contactinfo_bg" >
         <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
