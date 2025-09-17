@@ -29,6 +29,14 @@ function SubProducts() {
 
     // ✅ Find extraSubProduct that belongs to this product
 
+    useEffect(() => {
+        axios
+            .get("http://localhost:8000/api/heading")
+            .then((res) => {
+                setExtraSubheading(res.data || []);
+            })
+            .catch((err) => console.error("Error fetching extra subproducts:", err));
+    }, []);
     // ✅ Fetch visibility toggle
     useEffect(() => {
         axios
@@ -58,6 +66,8 @@ function SubProducts() {
     const product = products.find((p) => p._id == id);
 
     const [selectedMainWeight, setSelectedMainWeight] = useState(null);
+    const [extraSubheading, setExtraSubheading] = useState([]);
+
     const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
 
     // ✅ If product not found
@@ -77,6 +87,13 @@ function SubProducts() {
     const matchedExtras = extraSubProducts.filter(
         (extra) => extra.productId?._id === product._id
     );
+    console.log(extraSubheading);
+
+    const filtered = extraSubheading.filter(
+        (item) => item.productId?._id === id
+    ).map((item) => item.subproductTitle);
+    console.log(filtered);
+
     return (
         <div className='mt-5'>
             {/* Product Banner */}
@@ -103,11 +120,8 @@ function SubProducts() {
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
                     <div className='w-75 mx-auto pb-3'>
                         {product.productSizes.map((x, i) => (
-                            <>
-                            {console.log(x)}
-                            {/* /* Product Sizes */ }
-                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && '|'}</span>
-                            </>
+                            /* Product Sizes */
+                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && ' | '}</span>
                         ))}
                     </div>
                 </div>
@@ -165,7 +179,10 @@ function SubProducts() {
                 {matchedExtras.length > 0 && (
                     <div className="my-2 my-md-5">
                         <h3 className="mt-1 mt-md-3 text-center text-dark text-uppercase fw-bold ftittle">
-                            Extra Subproducts of {product.productName}
+                            {/* Extra Subproducts of {product.productName} */}
+                            {filtered.map((title, i) => (
+                                <li key={i}>{title}</li>
+                            ))}
                         </h3>
 
                         {/* 1. Collect ALL extraSubProducts for this product */}
