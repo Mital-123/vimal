@@ -833,7 +833,7 @@
   height: 138px;
   transition: all 0.4s ease-in-out;
   width: 85%;
-  margin-top: -60px;
+  margin-top: -50px;
   z-index: 1;
   border: 4px double var(--red);
   border-radius: 20px;
