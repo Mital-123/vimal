@@ -103,8 +103,8 @@ function SubProducts() {
 
             <div style={{ backgroundColor: "#fffcf3" }}>
                 <div className='pt-2 pt-lg-4'>
-                    <div className='container'>
-                        <div className="col-10 mx-auto">
+                    <div className='container-fluid'>
+                        <div>
                             <div className='row justify-content-center'>
                                 <div className='col-12 text-center'>
                                     {/* Banner 2 */}
