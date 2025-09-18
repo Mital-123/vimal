@@ -20,7 +20,7 @@ function SubProducts() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/extrasubproducts")
+            .get("https://backendvimalagro.onrender.com/api/extrasubproducts")
             .then((res) => {
                 setExtraSubProducts(res.data || []);
             })
@@ -31,7 +31,7 @@ function SubProducts() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/heading")
+            .get("https://backendvimalagro.onrender.com/api/heading")
             .then((res) => {
                 setExtraSubheading(res.data || []);
             })

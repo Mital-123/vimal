@@ -5,13 +5,31 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { LuAlignRight } from 'react-icons/lu';
 import { Link, useLocation } from 'react-router-dom';
 import products from '../Product';
+import axios from 'axios';
 
 function Header() {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
-    let product = products
+    const [products, setProducts] = useState([])
+    const FetchProduct = async () => {
+        try {
+            const res = await axios.get(
+                "https://backendvimalagro.onrender.com/api/products"
+            );
+            setProducts(res.data || []);
+
+        } catch (err) {
+            console.error("Error fetching products:", err);
+        }
+    };
+
+    useEffect(() => {
+        FetchProduct();
+    }, []);
+
+
     const toggleDropdown = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -119,10 +137,10 @@ function Header() {
                                         {showDropdown && (
 
                                             <ul className="list-unstyled mt-2 bg-white shadow rounded py-2 px-1 w-100">
-                                                {products.map((p) => (
-                                                    <li key={p.id} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
-                                                        <Link to={`/product/${p.id}`} className="dropdown-item  text-break text-wrap" style={{ fontSize: "12px" }} onClick={closeAll}>
-                                                            {p.h1}
+                                                {products.map((p, i) => (
+                                                    <li key={i} className=' dropdown_color list-unstyled py-1 ps-2 text-break'>
+                                                        <Link to={`/product/${p._id}`} className="dropdown-item  text-break text-wrap" style={{ fontSize: "12px" }} onClick={closeAll}>
+                                                            {p.productName}
                                                         </Link>
                                                     </li>
                                                 ))}
@@ -166,11 +184,11 @@ function Header() {
                                 </Link>
 
                                 {showDropdown && (
-                                    <ul className="position-absolute bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
-                                        {products.map((p) => (
-                                            <li key={p.id} className='dropdown_color list-unstyled py-1 ps-2 pe-1'>
-                                                <Link to={`/product/${p.id}`} className="dropdown-item pera" onClick={closeAll}>
-                                                    {p.h1}
+                                    <ul className="position-absolute translate-middle-x start-50 bg-white shadow rounded p-2" style={{ top: "100%", left: "-50%", zIndex: 5 }}>
+                                        {products.map((p, i) => (
+                                            <li key={i} className='dropdown_color list-unstyled py-1 ps-2 pe-1'>
+                                                <Link to={`/product/${p._id}`} className="dropdown-item pera" onClick={closeAll}>
+                                                    {p.productName}
                                                 </Link>
                                             </li>
                                         ))}
