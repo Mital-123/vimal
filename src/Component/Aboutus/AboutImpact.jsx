@@ -5,42 +5,42 @@ function AboutImpact() {
 
     const services = [
         {
-            title: "Organic Non-GMO",
-            description: "Everything we make is Organic and Non-GMO so it’s better for you and better for the planet.",
+            title: "Empowering Farmers",
+            description: "Through fair trade practices, we empower farmers with better income and sustainable livelihoods.",
             icon_image: require("../../assets/Images/images_1-removebg-preview.png"),
-            bgImage: require("../../assets/Images/close-up-basket-vegetables.jpg"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg1.jpg"),
             animation: "fade-right"
         },
         {
-            title: "Regenerative Agriculture",
-            description: "Today our sustainable supply chain is made up of 32,000 acres of land that practice regenerative farming.",
-            icon_image: require("../../assets/Images/images_2-removebg-preview.png"),
-            bgImage: require("../../assets/Images/smart-agriculture-iot-with-hand-planting-tree-background.jpg"),
+            title: "Trusted Quality",
+            description: "Delivering pure, authentic, and trusted products that reach millions of households worldwide",
+            icon_image: require("../../assets/Images/About-Impact/impect-img2.png"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg1.jpg"),
             animation: "flip-up",
             delay: "400"
         },
         {
-            title: "Fair Trade",
-            description: "Our collective of over 10,000 farmer partners are paid fair trade wages and have improved wage stability and transparency.",
-            icon_image: require("../../assets/Images/images_3-removebg-preview.png"),
-            bgImage: require("../../assets/Images/close-up-person-with-green-apple.jpg"),
+            title: "Sustainability",
+            description: "Committed to eco-friendly practices, reducing water and resource consumption with every product",
+            icon_image: require("../../assets/Images/About-Impact/impect-img3.jpg"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg3.jpg"),
             animation: "fade-left",
             delay: "400"
         },
         {
-            title: "Preserves Trees",
-            description: "We’ve helped conserve over 6 Million trees. Bio-diversity is essential to sustainability and trees are a key part of that.",
-            icon_image: require("../../assets/Images/images_4-removebg-preview.png"),
-            bgImage: require("../../assets/Images/pexels-akilmazumder-1072824.jpg"),
+            title: "Global Reach",
+            description: "Taking the taste of India to kitchens across the globe, while staying true to our roots",
+            icon_image: require("../../assets/Images/About-Impact/impect-img4.png"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg4.webp"),
             animation: "fade-right",
             delay: "600"
 
         },
         {
-            title: "Saves Water",
-            description: "Annually our production saves 5 billion liters of freshwater compared to the same production size of cane sugar.",
-            icon_image: require("../../assets/Images/images_5-removebg-preview.png"),
-            bgImage: require("../../assets/Images/images.jpg"),
+            title: "Community Impact",
+            description: "From education to nourishment, our growth fuels initiatives that bring smiles to communities",
+            icon_image: require("../../assets/Images/images_3-removebg-preview.png"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg5.jpg"),
             animation: "flip-up",
             delay: "800"
         }
@@ -66,9 +66,9 @@ function AboutImpact() {
                                             zIndex: "0"
                                         }}
                                     />
-                                    <div className='position-relative z-1 text-white p-2 p-lg-5'>
+                                    <div className='position-relative z-1 text-white p-4 px-5 mt-3'>
                                         <h4 className='fw-bold'>{service.title}</h4>
-                                        <p className='pera fw-medium mt-3 mb-5' style={{ wordBreak: "break-all" }}>
+                                        <p className='pera fw-medium mt-2 mb-4' style={{ wordBreak: "break-all" }}>
                                             {service.description}
                                         </p>
                                     </div>

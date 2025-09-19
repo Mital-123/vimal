@@ -129,7 +129,7 @@ function SubProducts() {
 
             <div>
                 <div className='pt-1 pt-md-2'>
-                    <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.h1}</h3>
+                    <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.productName}</h3>
                 </div>
 
                 {uniqueMainWeights.length > 0 && (
