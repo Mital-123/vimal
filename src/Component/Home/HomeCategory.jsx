@@ -182,9 +182,11 @@ function HomeCategory() {
       <div className='py-2 py-md-5 p-1 category_bgimg'>
         <div className='container'>
           <div className='text-center'>
-            <Tittles stitle={"Our Categories"}
-            // ltitle={"Leading the market with quality and trust"}
-            />
+            <h4
+              className="fw-bold stittle p-0 m-0"
+            >
+              Our Categories
+            </h4>
           </div>
           <div className="col-md-8 col-10 m-auto pt-2 pt-md-4 categoryarrow">
 
@@ -214,7 +216,7 @@ function HomeCategory() {
 
           </div>
 
-          <div className="categreySec row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
+          <div key={activeBrand.brandId} className="categreySec row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
             <div
               className="col-md-6 d-flex justify-content-center cat_image"
               data-aos="fade-right"
@@ -237,9 +239,15 @@ function HomeCategory() {
               data-aos-duration="1500"
               data-aos-once="true"
             >
-              <div className="fw-bold ps-0"><Tittles stitle={activeBrand.title} /></div>
+              <div className="fw-bold ps-2">
+                <h4
+                  className="fw-bold stittle p-0 m-0"
+                >
+                  {activeBrand.title}
+                </h4>
+              </div>
               <p className='pera mt-2 ps-2'>{activeBrand.description}</p>
-              <div className='ms-2 '>
+              <div className='ms-2'>
                 <Link to={activeBrand.path} className='text-decoration-none'> <ButtonCom btn={"Explore Now"} /></Link>
               </div>
             </div>
