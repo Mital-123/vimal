@@ -68,7 +68,7 @@ function AboutImpact() {
                                     />
                                     <div className='position-relative z-1 text-white p-4 px-5 mt-3'>
                                         <h4 className='fw-bold'>{service.title}</h4>
-                                        <p className='pera fw-medium mt-2 mb-4' style={{ wordBreak: "break-all" }}>
+                                        <p className='pera fw-medium mt-2 mb-xxl-5 mb-4' style={{ wordBreak: "break-all" }}>
                                             {service.description}
                                         </p>
                                     </div>
