@@ -6,6 +6,7 @@ import Tittles from '../Tittles';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 function ContactPage() {
 
@@ -78,10 +79,16 @@ function ContactPage() {
     }
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .sendForm('service_tdzoj3o', 'template_bd9sb99', form.current, 'iKoORhzehQH5332ix')
       .then(
         () => {
-          setStatus('✅ Message sent successfully!');
+          Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: '✅ Your message has been sent successfully.',
+            timer: 2000,
+            showConfirmButton: false
+          });
           form.current.reset();
           setFormData({
             user_name: '',
@@ -92,31 +99,35 @@ function ContactPage() {
           setErrors({});
         },
         () => {
-          setStatus('❌ Failed to send message. Try again.');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: '❌ Failed to send message. Please try again.'
+          });
         }
       );
   };
 
   // banner start
-   const [banner, setBanner] = useState(null);
-  
-    useEffect(() => {
-      const fetchBanner = async () => {
-        try {
-          const res = await axios.get("https://backendvimalagro.onrender.com/contactbanner");
-          if (res.data && res.data.length > 0) {
-            setBanner(res.data[0]); // ✅ take the first object
-          }
-        } catch (err) {
-          console.error("Error fetching banner:", err);
+  const [banner, setBanner] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get("https://backendvimalagro.onrender.com/contactbanner");
+        if (res.data && res.data.length > 0) {
+          setBanner(res.data[0]); // ✅ take the first object
         }
-      };
-      fetchBanner();
-    }, []);
-  
-    if (!banner) {
-      return null; // or loader/spinner
-    }
+      } catch (err) {
+        console.error("Error fetching banner:", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!banner) {
+    return null; // or loader/spinner
+  }
 
   return (
     <>
@@ -128,15 +139,15 @@ function ContactPage() {
         />
         <div className="lendingshadow_contact"></div>
       </div> */}
-<div>
-  <div className="d-none d-lg-block bannervimaldesktop mt-5">
-    <img src={banner.desktopcontactbanner} alt="" className="img-fluid w-100 h-100 "/>
-  </div>
-  <div className="d-block d-lg-none bannervimalmobile mt-5">
-    <img src={banner.mobilecontactbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
-  </div>
-</div>
-      <div className="contactinfo_bg" >
+      <div>
+        <div className="d-none d-lg-block bannervimaldesktop mt-5">
+          <img src={banner.desktopcontactbanner} alt="" className="img-fluid w-100 h-100 " />
+        </div>
+        <div className="d-block d-lg-none bannervimalmobile mt-5">
+          <img src={banner.mobilecontactbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
+        </div>
+      </div>
+      <div className="contactinfo_bg">
         <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
           </div>
