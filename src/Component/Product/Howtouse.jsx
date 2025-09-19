@@ -17,8 +17,8 @@ function Howtouse(howToMakeBanner) {
             </div>
         </div> */}
             <div style={{ backgroundColor: "#fffcf3" }}>
-                <div className="container text-center py-2 py-lg-5 " >
-                    <img src={howToMakeBanner.banner} alt="not found" className='img-fluid' />
+                <div className="container text-center py-2 py-lg-5" >
+                    <img src={howToMakeBanner.banner} alt="not found" className=' w-100 h-100 img-fluid' />
                 </div>
             </div>
         </>
