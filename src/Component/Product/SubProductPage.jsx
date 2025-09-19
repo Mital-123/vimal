@@ -129,7 +129,7 @@ function SubProducts() {
 
             <div>
                 <div className='pt-1 pt-md-2'>
-                    <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.h1}</h3>
+                    <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.productName}</h3>
                 </div>
 
                 {uniqueMainWeights.length > 0 && (
@@ -257,10 +257,6 @@ function SubProducts() {
                                                             style={{ fontSize: "14px" }}
                                                         >
                                                             {item.subproductName}
-                                                        </div>
-                                                        {/* Weight */}
-                                                        <div className="text-muted" style={{ fontSize: "13px" }}>
-                                                            {item.weight} GM
                                                         </div>
                                                         {/* Button */}
                                                         <div
