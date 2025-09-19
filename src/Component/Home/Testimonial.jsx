@@ -54,14 +54,7 @@ function Testimonial() {
                 What Our Customers Say
               </h2>
               <div className='pera pt-3' style={{ color: '#b7b3b3' }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                tempore doloribus odio totam fugit repellat eius excepturi
-                placeat accusantium officiis.
-              </div>
-              <div className='pera pt-3' style={{ color: '#b7b3b3' }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                tempore doloribus odio totam fugit repellat eius excepturi
-                placeat accusantium officiis.
+                From households to businesses, our products bring smiles across continents. Hear directly from our valued partners and customers.
               </div>
             </div>
           </div>
