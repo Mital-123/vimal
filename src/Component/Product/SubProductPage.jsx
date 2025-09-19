@@ -258,10 +258,6 @@ function SubProducts() {
                                                         >
                                                             {item.subproductName}
                                                         </div>
-                                                        {/* Weight */}
-                                                        <div className="text-muted" style={{ fontSize: "13px" }}>
-                                                            {item.weight} GM
-                                                        </div>
                                                         {/* Button */}
                                                         <div
                                                             onClick={() => navigate(`/product/${id}/${item._id}`)}
