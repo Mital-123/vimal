@@ -453,7 +453,7 @@
   box-shadow: inset 0px 0px 1500px 1000px rgba(255, 255, 255, 0.466);
   background-size: cover;
 }
-.certificate_height{
+.certificate_height {
   height: 200px !important;
 }
 /* Floating Background Shapes */
@@ -486,28 +486,25 @@
   border-color: rgba(255, 37, 37, 0.3);
 }
 
-.bannervimaldesktop{
+.bannervimaldesktop {
   height: 95vh !important;
 }
-.bannervimalmobile{
+.bannervimalmobile {
   height: auto;
   /* height: 50vh !important; */
 }
-
 
 .lendingshadow {
   background-color: #24000061;
 }
 
 @media screen and (max-width: 992px) {
-
-
   .lendingshadow {
     background-color: #24000061 !important;
   }
-  .certificate_height{
-  height: 120px !important;
-}
+  .certificate_height {
+    height: 120px !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -519,8 +516,10 @@ gap: 10 !important;
     /* width: 100px; */
     padding: 5px !important;
   }
-  .certificate_height{
-  height: 80px !important;
-}
-
+  .certificate-item:hover {
+    box-shadow: 0 10px 10px rgba(255, 37, 37, 0.205) !important;
+  }
+  .certificate_height {
+    height: 80px !important;
+  }
 }

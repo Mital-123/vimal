@@ -75,7 +75,7 @@ function Testimonial() {
                             background: `url(${item.testimonialimage}) no-repeat center/cover`,
                           }}
                         ></div>
-                        <h4 className='testi_person text-white fw-bold text-medium d-flex w-100 text-center justify-content-center'>
+                        <h4 className='testi_person text-capitalize text-white fw-bold text-medium d-flex w-100 text-center justify-content-center'>
                           {item.testimonialname}
                         </h4>
                       </div>

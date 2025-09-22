@@ -51,13 +51,13 @@ function Counter() {
                         <div className="h-100 shadow p-0 p-lg-3 pb-2 pb-md-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><RiEmotionHappyLine /></div>
-                                <div className='p-2 pt-0 pt-md-2 p-md-3'>
+                                <div className='p-2 text-md-start text-center d-block d-lg-flex flex-column justify-content-center'>
                                     <div>
-                                        <h2 className='countnumber fw-bold'>
+                                        <h2 className='countnumber text-md-start text-center fw-bold'>
                                             <CountUp end={counterData.customers} enableScrollSpy
                                                 formattingFn={formatIndian} separator="" /> +</h2>
                                     </div>
-                                    <div className='counter_name fw-bold'>Happy Customers</div>
+                                    <div className='counter_name fw-bold text-md-start text-center'>Happy Customers</div>
                                 </div>
                             </div>
                         </div>
@@ -70,11 +70,11 @@ function Counter() {
                         <div className="h-100 shadow p-0 p-lg-3 pb-2 pb-md-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TiShoppingCart /></div>
-                                <div className='p-2 pt-0 pt-md-2 p-md-3'>
+                                <div className='p-2 text-md-start text-center d-block d-lg-flex flex-column justify-content-center'>
                                     <div>
-                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.products} enableScrollSpy
+                                        <h2 className='countnumber text-md-start text-center fw-bold'> <CountUp end={counterData.products} enableScrollSpy
                                             formattingFn={formatIndian} separator="" /> +</h2></div>
-                                    <div className='counter_name fw-bold'>popular product</div>
+                                    <div className='counter_name fw-bold text-md-start text-center'>Popular Product</div>
                                 </div>
                             </div>
                         </div>
@@ -87,11 +87,11 @@ function Counter() {
                         <div className="h-100 shadow p-0 p-lg-3 pb-2 pb-md-3 rounded-5 text-white" style={{ backgroundColor: "var(--red)" }}>
                             <div className='d-block d-md-flex align-items-center justify-content-center text-center text-md-start'>
                                 <div className='fw-bold p-0 p-md-3 pt-0 pt-md-1 countericon'><TbWorld /></div>
-                                <div className='p-2 pt-0 pt-md-2 p-md-3'>
+                                <div className='p-2 text-md-start text-center d-block d-lg-flex flex-column justify-content-center'>
                                     <div>
-                                        <h2 className='countnumber fw-bold'> <CountUp end={counterData.countries} enableScrollSpy
+                                        <h2 className='countnumber text-md-start text-center fw-bold'> <CountUp end={counterData.countries} enableScrollSpy
                                             formattingFn={formatIndian} separator="" /> +</h2></div>
-                                    <div className='counter_name fw-bold'>More Countries</div>
+                                    <div className='counter_name fw-bold text-md-start text-center'>More Countries</div>
                                 </div>
                             </div>
                         </div>

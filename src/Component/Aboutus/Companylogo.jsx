@@ -4,6 +4,7 @@ import axios from "axios";
 import Tittles from "../Tittles";
 
 function Companylogo() {
+
   const [logos, setLogos] = useState([]);
   const [storyData, setStoryData] = useState([]);
 
@@ -42,7 +43,7 @@ function Companylogo() {
   return (
     <>
       {/* Logos Section */}
-      <div style={{ backgroundColor: "var(--ofwhite)" }}>
+      <div className="py-4" style={{ backgroundColor: "var(--ofwhite)" }}>
         <div className="container logo-section">
           <div className="row align-items-center">
             <div className="col-md-4 mb-1 mb-md-0">
