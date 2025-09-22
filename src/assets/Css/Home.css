@@ -183,11 +183,10 @@
   width: auto;
   transition: all 0.3s ease-in-out;
 }
- .category-btn-container {
-    height: 45px;
-    padding: 0;
-  }
-
+.category-btn-container {
+  height: 45px;
+  padding: 0;
+}
 
 .category-btn {
   background: transparent;
@@ -202,7 +201,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 /* Handle content height to avoid jumping */
 .category_bgimg {
@@ -229,10 +227,11 @@
   transition: all 0.3s ease;
 }
 
-
 .product-brand_bg {
   width: 100%;
-  background-color: var(--red); /* Define --red in root or replace with actual color */
+  background-color: var(
+    --red
+  ); /* Define --red in root or replace with actual color */
   border-radius: 1rem;
 }
 
@@ -240,8 +239,6 @@
   transition: all 0.5s ease;
   width: 100%;
 }
-
-
 
 .brand-img-wrapper {
   width: 100%;
@@ -272,7 +269,20 @@
   }
 }
 
+.categreySec {
+  height: 320px;
+}
 
+@media (max-width: 768px) {
+  .categreySec {
+    height: 510px;
+  }
+}
+@media (max-width: 576px) {
+  .categreySec {
+    height: 540px;
+  }
+}
 
 /* ProductBrand end */
 
@@ -515,7 +525,6 @@
 
 /* HomeContact start */
 .whychooseus_bg {
-
   position: relative;
   width: 100%;
   height: auto;
@@ -637,19 +646,19 @@
   font-family: none !important;
   font-size: 30px;
 }
-.counter_name{
+.counter_name {
   font-size: 25px;
 }
-@media (max-width: 576px){
-.countnumber {
-  font-size: 18px;
-}
-.countericon {
-  font-size: 40px;
-}
-.counter_name{
-  font-size: 10px;
-}
+@media (max-width: 576px) {
+  .countnumber {
+    font-size: 18px;
+  }
+  .countericon {
+    font-size: 40px;
+  }
+  .counter_name {
+    font-size: 10px;
+  }
 }
 /* counter end */
 /* WhyChooseUs start */
@@ -833,7 +842,7 @@
   height: 138px;
   transition: all 0.4s ease-in-out;
   width: 85%;
-  margin-top: -60px;
+  margin-top: -50px;
   z-index: 1;
   border: 4px double var(--red);
   border-radius: 20px;

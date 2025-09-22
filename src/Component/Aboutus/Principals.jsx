@@ -7,12 +7,12 @@ function Principals() {
             <div className='container-lg'>
                 <div className="col-11 mx-auto">
                     {/* <h1>OUR PRINCIPLES</h1>*/}
-                       <div className='brdstart'>
-              <Tittles stitle={"OUR PRINCIPLES"} ltitle="Lorem ipsum dolor sit amet"/>
-            </div>
-                       
-                        <p className='mt-2  pera'>The success of Passage Foods is the result of following these three principles:</p>
-              
+                    <div className='brdstart'>
+                        <Tittles stitle={"OUR PRINCIPLES"} ltitle="Lorem ipsum dolor sit amet" />
+                    </div>
+
+                    <p className='mt-2  pera'>The success of Passage Foods is the result of following these three principles:</p>
+
                     <div className='row'>
                         <div className='text-end littleimg1' style={{
                             position: "relative",
@@ -33,15 +33,15 @@ function Principals() {
                                 WebkitFontSmoothing: "antialiased",
                                 MozOsxFontSmoothing: "grayscale",
                                 textRendering: "optimizeLegibility",
-                                
+
                                 position: "relative",
                                 top: "38px",
                                 right: '30px',
                                 zIndex: "-1"
 
                             }}>ONE</div>
-                            <h3 className='fw-bold stittle' style={{ letterSpacing: '1px' }}>TRUE AUTHENTICITY</h3>
-                            <p className='pera mb-0'>Each of our recipes is carefully researched and developed by specialty chefs from the region of origin. We also ensure all of our ingredients are sourced from around the world to ensure absolute authenticity.</p>
+                            <h3 className='fw-bold stittle  text-uppercase' style={{ letterSpacing: '1px' }}>QUALITY FIRST</h3>
+                            <p className='pera mb-0'>Deliver only products that meet the highest standards of purity and taste.</p>
                         </div>
                     </div>
 
@@ -53,15 +53,15 @@ function Principals() {
                                 WebkitFontSmoothing: "antialiased",
                                 MozOsxFontSmoothing: "grayscale",
                                 textRendering: "optimizeLegibility",
-                                
+
                                 position: "relative",
                                 top: "38px",
                                 right: '30px',
                                 zIndex: "-1"
 
                             }}>TWO</div>
-                            <h3 className='fw-bold stittle' style={{ letterSpacing: '1px' }}>CONSUMER CONVENIENCE</h3>
-                            <p className='pera mb-0'>Today the consumer is more time poor than ever. Therefore, our focus lies in creating easy tasting but nutritious and authentic meals. Using Passage Foods sauces and our instant Heat and Eat bowls, a delicious and convenient meal can be prepared in under five minutes.</p>
+                            <h3 className='fw-bold stittle text-uppercase' style={{ letterSpacing: '1px' }}>Customer-Centric</h3>
+                            <p className='pera mb-0'>Every decision revolves around the trust and satisfaction of our customers.</p>
                         </div>
                         <div className='col-md-6 p-lg-5 p-2 principalimg'>
                             <img src={require('../../assets/Images/recepi1.jpg')} style={{ minHeight: "300px", height: '100%', width: "auto" }} alt="" className='img-fluid img-fluid object-fit-cover shadow' />
@@ -87,15 +87,15 @@ function Principals() {
                                 WebkitFontSmoothing: "antialiased",
                                 MozOsxFontSmoothing: "grayscale",
                                 textRendering: "optimizeLegibility",
-                                
+
                                 position: "relative",
                                 top: "38px",
                                 right: '30px',
                                 zIndex: "-1"
 
                             }}>THREE</div>
-                            <h3 className='fw-bold stittle' style={{ letterSpacing: '1px' }}>NO ARTIFICIAL COLOURS OR FLAVOURS</h3>
-                            <p className='pera mb-0'>We know that many people are concerned about the use of artificial colours, flavours, flavour enhancers and preservatives. That’s why we develop our products using no artificial ingredients.</p>
+                            <h3 className='fw-bold stittle text-uppercase' style={{ letterSpacing: '1px' }}>Integrity</h3>
+                            <p className='pera mb-0'>Doing the right thing, always.</p>
                         </div>
                     </div>
                 </div>

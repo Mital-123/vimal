@@ -19,7 +19,7 @@ export const productlist = [
     title: "Pickles",
     description:
       "We offer a vibrant range of traditional Indian pickles, crafted with age-old recipes and the finest ingredients. From tangy mango and spicy mixed to regional favourites like lime and sweet pickles, each variant is packed with bold, authentic flavours. Hygienically processed and globally loved, they add the perfect punch to every meal.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/pickles.png"),
     path: "/product/Pickles"
   },
   {
@@ -34,7 +34,7 @@ export const productlist = [
     brandId: "ExoticSweetChutney",
     title: "Exotic Sweet Chutney",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Rich, luscious, and irresistibly tangy — our Exotic Sweet Chutney is the perfect balance of sweetness and spice. Made with the finest fruits and spices, it’s a gourmet twist on tradition. Pair it with appetizers, cheese boards, or global fusion recipes to add a delightful touch of indulgence.",
     image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
     path: "/product/ExoticSweetChutney"
   },
@@ -43,15 +43,15 @@ export const productlist = [
     title: "Ready to eat (Can)",
     description:
       "Our Ready-to-Eat range brings the taste of India’s diverse culinary heritage to your plate in minutes. From Punjabi Chole and Surti Undhiyu to South Indian Sambhar and more, each dish is crafted with authentic spices and traditional recipes. Flavourful and loved worldwide — An authentic homestyle meal, anytime, anywhere.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Ready to eat (Can).png"),
     path: "/product/ReadyToEat(can)"
   },
   {
     brandId: "Readytoeat(Pouch)",
     title: "Ready to eat (Pouch)",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+      "Convenience meets authenticity with our Ready-to-Eat pouches. From hearty curries to classic Indian favorites, every pack is crafted with real ingredients and homestyle flavors. Just heat and serve for a wholesome meal — anytime, anywhere.",
+    image: require("../../assets/Images/Ready to eat (Pouch).png"),
     path: "/product/Readytoeat(Pouch)"
   },
   {
@@ -59,7 +59,7 @@ export const productlist = [
     title: "Cooking Sauce",
     description:
       "Make authentic Indian cooking effortless and quick. From rich Butter Chicken sauce and classic Tikka Masala to fiery Vindaloo, each sauce is crafted with traditional spices and slow-cooked flavours. Just add your choice of protein or vegetables, and enjoy restaurant-style dishes in minutes. A time-saving delight, trusted under the SWAD brand globally.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Cooking Sauce.png"),
     path: "/product/CookingSauce"
   },
   {
@@ -67,15 +67,15 @@ export const productlist = [
     title: "Curry Paste",
     description:
       "Dive into a world of regional Indian flavours with our curated Curry Pastes collection. Featuring expertly blended pastes like Balti, Madras, Biryani and Rogan Josh, each variant captures the essence of its origin with aromatic spices and tradition. Designed for culinary precision—just add fresh ingredients and simmer to perfection. A trusted pantry staple for unmistakable authenticity in every dish.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Curry paste.png"),
     path: "/product/CurryPaste"
   },
   {
     brandId: "Cookingpaste",
     title: "Cooking paste",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+      "Make cooking effortless with our range of Cooking Pastes. Packed with fresh spices and rich flavors, they bring the authentic taste of Indian kitchens straight to yours. From curry bases to marinade magic, our pastes cut prep time without compromising on taste.",
+    image: require("../../assets/Images/Cooking paste.png"),
     path: "/product/Cookingpaste"
   },
   {
@@ -83,7 +83,7 @@ export const productlist = [
     title: "Pappadums",
     description:
       "Our Papadums are the perfect accompaniment to every Indian meal. Made from legacy recipes using lentils, spices, and care, they offer a satisfying crunch whether roasted, fried, or microwaved. From classic Urad dal to Black Pepper, each bite delivers a nostalgic taste of home with global appeal.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Papadums.png"),
     path: "/product/Pappadums"
   },
   {
@@ -91,7 +91,7 @@ export const productlist = [
     title: "Basmati Rice",
     description:
       "Our Basmati Rice stands out for its long, slender grains, and fluffy texture. Aged to perfection, it cooks evenly and elevates everything from biryanis to simple everyday meals. With each serving, it brings elegance, purity, and the hallmark of authentic Indian quality to your plate.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Basmati Rice.png"),
     path: "/product/BasmatiRice"
   },
   {
@@ -99,7 +99,7 @@ export const productlist = [
     title: "Canned Vegetables",
     description:
       "Our Canned Vegetables offer a ready-to-use mix of Indian staples like okra, drumsticks, tuver lilva, lotus root, and more—carefully preserved in brine for freshness and ease. Pre-washed and prepped, they save time without compromising on taste or nutrition. Ideal for quick curries, stews, or fusion dishes with authentic flavour in every bite.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Canned Vegetables.png"),
     path: "/product/CannedVegetables"
   },
   {
@@ -107,7 +107,7 @@ export const productlist = [
     title: "Juices",
     description:
       "Our Juices bring you the rich taste of ripe Mango, smooth Guava, and fragrant Litchi—each bottle filled with juicy indulgence and real fruit character. Carefully processed to retain natural flavour and freshness, these juices are perfect for cooling down or perking up, any time of day. Taste the difference in every refreshing sip.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Juices.png"),
     path: "/product/juices"
   },
   {
@@ -115,7 +115,7 @@ export const productlist = [
     title: "Ketchup & Jam",
     description:
       "Our Ketchups and Jams are crafted to add vibrant flavour and everyday joy to your table. Tomato Ketchup delivers bold, tangy richness, while the fruit-packed Jams burst with natural sweetness in every spoonful. Whether paired with snacks or spread on warm toast, they offer a tasty treat loved by all ages.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Ketchup & Jam.png"),
     path: "/product/KetchupJam"
   },
   {
@@ -123,7 +123,7 @@ export const productlist = [
     title: "Sweets",
     description:
       "Indulge in the rich traditions of Indian sweets with our Shahi Gulab Jamun, Shahi Rasgulla, and classic Chikki. From the soft, syrup-soaked luxury of our royal desserts to the nostalgic crunch of jaggery and roasted nut Chikki, each treat is a celebration of timeless flavour. Whether it’s a festive occasion or a moment of personal indulgence, these handcrafted delights bring warmth, sweetness, and tradition to every bite.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Sweets.png"),
     path: "/product/sweets"
   },
   {
@@ -131,7 +131,7 @@ export const productlist = [
     title: "Seeds & Nuts",
     description:
       "Power up your day with our wholesome range of Seeds and Nuts — nature’s original source of protein, fiber, and essential nutrients. From crunchy almonds to nutrient-rich chia, flax, and Basil seeds, every bite supports a healthier lifestyle. Ideal for snacking, baking, or boosting your meals with clean, plant-based energy.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Seeds & Nuts.png"),
     path: "/product/SeedsNuts"
   },
   {
@@ -139,7 +139,7 @@ export const productlist = [
     title: "Makhana (Dry Snack)",
     description:
       "Our Raw Makhana, also known as fox nuts or lotus seeds, are the popped kernels of the plant, traditionally grown in the water-filled ponds of South Asia. Harvested by hand and naturally dried, these light, puffed seeds are prized for their subtle taste and versatility. Perfect for roasting, seasoning, or cooking — a truly unique ingredient rooted in centuries of culinary tradition.",
-    image: "https://www.vimalagro.com/wp-content/uploads/2018/03/vimal_agro_ready_food_group_images.png",
+    image: require("../../assets/Images/Makhana (Dry snack).png"),
     path: "/product/makhana"
   },
 ];
@@ -182,9 +182,11 @@ function HomeCategory() {
       <div className='py-2 py-md-5 p-1 category_bgimg'>
         <div className='container'>
           <div className='text-center'>
-            <Tittles stitle={"Our Categories"}
-            // ltitle={"Leading the market with quality and trust"}
-            />
+            <h4
+              className="fw-bold stittle p-0 m-0"
+            >
+              Our Categories
+            </h4>
           </div>
           <div className="col-md-8 col-10 m-auto pt-2 pt-md-4 categoryarrow">
 
@@ -214,7 +216,7 @@ function HomeCategory() {
 
           </div>
 
-          <div className="row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
+          <div key={activeBrand.brandId} className="categreySec row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
             <div
               className="col-md-6 d-flex justify-content-center cat_image"
               data-aos="fade-right"
@@ -237,9 +239,15 @@ function HomeCategory() {
               data-aos-duration="1500"
               data-aos-once="true"
             >
-              <div className="fw-bold ps-0"><Tittles stitle={activeBrand.title} /></div>
+              <div className="fw-bold ps-2">
+                <h4
+                  className="fw-bold stittle p-0 m-0"
+                >
+                  {activeBrand.title}
+                </h4>
+              </div>
               <p className='pera mt-2 ps-2'>{activeBrand.description}</p>
-              <div className='ms-2 '>
+              <div className='ms-2'>
                 <Link to={activeBrand.path} className='text-decoration-none'> <ButtonCom btn={"Explore Now"} /></Link>
               </div>
             </div>
