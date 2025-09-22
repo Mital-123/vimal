@@ -240,11 +240,11 @@ function Recepie() {
                     <div className="text-center mt-4">
       <h4 className="fw-bold text-uppercase">{data?.category}</h4>
     </div>
-  <div className="d-flex flex-wrap justify-content-center gap-2 pt-2 pt-md-4">
+  <div className="row  d-flex justify-content-center">
     {recipes.map((r, idx) => (
       <button
         key={idx}
-        className={`rounded-pill px-4 px-md-5 py-2 shadow-sm btn_active bg-transparent text-uppercase ${activeRecipeIndex === idx ? "active" : ""}`}
+        className={`col-12 col-md-2  rounded-pill mx-2 p-1 shadow-sm btn_active bg-transparent text-uppercase text-capitalize ${activeRecipeIndex === idx ? "active-btn" : ""}`}
         onClick={() => setActiveRecipeIndex(idx)}
       >
         {r.recipeName}
