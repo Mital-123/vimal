@@ -32,8 +32,8 @@ function AboutusSec() {
   }, []);
 
 
-// banner created
-   const [banner, setBanner] = useState(null);
+  // banner created
+  const [banner, setBanner] = useState(null);
 
   useEffect(() => {
     const fetchBanner = async () => {
@@ -54,7 +54,7 @@ function AboutusSec() {
   }
   return (
     <>
-          {/* <div
+      {/* <div
       style={{ position: "relative", width: "100%", overflow: "hidden" }}
       className="landingimg mt-5 pt-md-4 pt-0"
     >
@@ -74,17 +74,17 @@ function AboutusSec() {
       />
     </div> */}
 
-    <div>
-  <div className="d-none d-lg-block bannervimaldesktop mt-5">
-    <img src={banner.desktopaboutbanner} alt="" className="img-fluid w-100 h-100 "/>
-  </div>
-  <div className="d-block d-lg-none bannervimalmobile mt-5">
-    <img src={banner.mobileaboutbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
-  </div>
-</div>
+      {/* <div>
+        <div className="d-none d-lg-block bannervimaldesktop mt-5">
+          <img src={banner.desktopaboutbanner} alt="" className="img-fluid w-100 h-100 " />
+        </div>
+        <div className="d-block d-lg-none bannervimalmobile mt-5">
+          <img src={banner.mobileaboutbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
+        </div>
+      </div> */}
       {/* About Us Section */}
-      <div className="py-3 py-md-5 overflow-hidden contactinfo_bg">
-        <div className="container">
+      <div className="py-3 py-md-5 overflow-hidden contactinfo_bg mt-5">
+        <div className="container mt-4">
           <div className="row">
             {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
@@ -130,24 +130,24 @@ function AboutusSec() {
 
             {/* Right Images from API */}
             <div >
-            
-                {aboutImages.length > 0 ? (
-                  aboutImages.map((img) => (
-                       <div key={img._id} className="col-lg-7 text-end ms-auto col-12">
-              <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
-                <img
-              src={img.vimalaboutimage}
-                  alt="About Us"
-                  className="img-fluid object-fit-cover w-100 h-100 rounded-5"
-                />
-              </div>
-            </div>
-                  ))
-                ) : (
-                  <p className="text-muted text-center">
-                    No About Us Images available.
-                  </p>
-                )}
+
+              {aboutImages.length > 0 ? (
+                aboutImages.map((img) => (
+                  <div key={img._id} className="col-lg-7 text-end ms-auto col-12">
+                    <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
+                      <img
+                        src={img.vimalaboutimage}
+                        alt="About Us"
+                        className="img-fluid object-fit-cover w-100 h-100 rounded-5"
+                      />
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p className="text-muted text-center">
+                  No About Us Images available.
+                </p>
+              )}
             </div>
           </div>
         </div>
