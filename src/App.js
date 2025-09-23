@@ -13,7 +13,8 @@ import Blog from './Component/Blog/Blog';
 import ScrollToTop from './ScrollToTop';
 import Recepie from './Component/Blog/Recepie';
 import Page404 from './Component/Page404';
-
+import Csrprivacypolicy from './Component/Csrprivacypolicy';
+ 
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           <Route path='/Recepie' element={<Recepie />} />
           <Route path='/Recepie/:id' element={<Recepie />} />
           <Route path='/contact' element={<ContactPage />} />
+    <Route path='/csrpolicy' element={<Csrprivacypolicy/>} />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>

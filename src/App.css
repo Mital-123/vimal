@@ -506,7 +506,9 @@
     height: 120px !important;
   }
 }
-
+.mediamargin{
+  margin-top: 120px;
+}
 @media screen and (max-width: 576px) {
   /* .certificates-grid{
   flex-wrap: nowrap !important;
@@ -522,6 +524,9 @@ gap: 10 !important;
   .certificate_height {
     height: 80px !important;
   }
+  .mediamargin{
+  margin-top: 90px !important;
+}
 }
 
 /* Error404 start */
@@ -556,6 +561,7 @@ gap: 10 !important;
     transform: translateY(-12px);
   }
 }
+
 @media (max-width: 600px) {
   .error-code {
     font-size: 5rem;

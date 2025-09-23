@@ -5,17 +5,17 @@ import { BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
 import { MdArrowForwardIos } from 'react-icons/md'
 import { BiSolidPhoneCall } from 'react-icons/bi'
 import brochurePDF from '../assets/Images/groser.pdf';
-
+ 
 function Footer() {
   return (
-    <div className="py-5 pb-2 text-white" style={{ backgroundColor: "var(--red)" }}>
+    <div className="py-5 pt-4 pt-lg-5 pb-2 text-white" style={{ backgroundColor: "var(--red)" }}>
       <div className="container">
-        <div className="row">
+        <div className="row ms-0">
           <div className="col-12 col-md-6 col-lg-3 text-white pera mt-0 mt-md-2">
             Vimal Agro Products is a trusted name in exports and B2B solutions, delivering authentic Indian food worldwide. For retail purchases within India, explore our consumer brand at Swad.shop.
-
+ 
             <h5 className='pt-2 fw-bold'>Follow Us</h5>
-
+ 
             <div className='d-flex align-items-center'>
               <Link to={"https://www.instagram.com/swadbrand"} target='_blank'>
                 <div className='fs-5 hover_name'><BsInstagram /></div>
@@ -31,33 +31,33 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className=" col-6 col-lg-3 ps-1 ps-lg-5 mt-4 mt-md-2">
-            <h3 className='' style={{ width: "fit-content" }}>
+          <div className="col-6 col-lg-3 ps-1 ps-lg-5 mt-4 mt-md-2">
+            <h3 style={{ width: "fit-content" }}>
               Main Menu</h3>
-            <div className='pera pt-1 '>
+            <div className='pera pt-1'>
               <NavLink to={"/"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Home</NavLink>
             </div>
-            <div className='pera pt-1 pt-md-2 '>
-              <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> About us</NavLink>
+            <div className='pera pt-1 pt-md-2'>
+              <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> About Us</NavLink>
             </div>
-            <div className='pera pt-1 pt-md-2 '>
+            <div className='pera pt-1 pt-md-2'>
               <NavLink to={"/product"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Product</NavLink>
             </div>
-            <div className='pera pt-1 pt-md-2 '>
+            <div className='pera pt-1 pt-md-2'>
               <NavLink to={"/blog"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Blog</NavLink>
             </div>
-            <div className='pera pt-1 pt-md-2 '>
+            <div className='pera pt-1 pt-md-2'>
               <NavLink to={"/contact"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Contact</NavLink>
             </div>
           </div>
-          <div className=" col-6 col-lg-3 mt-4 mt-md-2">
+          <div className="col-6 col-lg-3 mt-4 mt-md-2">
             <h3 className='' style={{ width: "fit-content" }}>Quick Links</h3>
             <div className='pera pt-1'>
               <NavLink to={"/csrpolicy"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> CSR policy & projects
               </NavLink>
             </div>
-      
-
+       
+ 
           </div>
           <div className="col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
             <h3 style={{ width: "fit-content" }}>Contact Us</h3>
@@ -73,7 +73,7 @@ function Footer() {
                 Download Brochure
               </a>
             </div>
-            <div className='pera pt-0 pt-md-1'>
+            <div className='pera pt-0 pt-md-0'>
               <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa?</Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
@@ -82,15 +82,16 @@ function Footer() {
             <div className='pera pt-1 pt-md-2'>
               <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> info@vimalagro.com </Link>
             </div>
-
+ 
           </div>
         </div>
-        <div className='border-top text-center pera mt-1 mt-lg-4 pt-1'>
+        <div className='border-top text-center pera mt-3 mt-lg-4 pt-2'>
           © copyright 2025 Vimal Agro Products Pvt Ltd
         </div>
       </div>
     </div>
   )
 }
-
-export default Footer;
+ 
+export default Footer
+ 
