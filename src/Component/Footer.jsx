@@ -53,12 +53,10 @@ function Footer() {
           <div className=" col-6 col-lg-3 mt-4 mt-md-2">
             <h3 className='' style={{ width: "fit-content" }}>Quick Links</h3>
             <div className='pera pt-1'>
-              <NavLink to={"/"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Privacy Policy
+              <NavLink to={"/csrpolicy"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> CSR policy & projects
               </NavLink>
             </div>
-            <div className='pera pt-1 pt-md-2'>
-              <NavLink to={"/aboutus"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> Terms of service</NavLink>
-            </div>
+      
 
           </div>
           <div className="col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
@@ -82,7 +80,7 @@ function Footer() {
               <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><BiSolidPhoneCall /></span> (+91) 2622 222759 </Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
-              <Link to={"mailto:vimal123@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> info@vimalagro.com </Link>
+              <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> info@vimalagro.com </Link>
             </div>
 
           </div>

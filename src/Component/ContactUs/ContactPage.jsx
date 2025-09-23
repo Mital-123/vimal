@@ -266,7 +266,7 @@ function ContactPage() {
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
                               <div >
                                 <h2 className='countnumber fw-bold fs-5 text-lg-start text-center'> Email</h2></div>
-                              <div className=' pera text-lg-start text-center'>info@vimalagro.com</div>
+                              <div className=' pera text-lg-start text-center'>swad.vimal.gj@gmail.com</div>
                               <div className=' pera text-lg-start text-center'>sales@vimalagro.com</div>
                             </div>
                           </div>
