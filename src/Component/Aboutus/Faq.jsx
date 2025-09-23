@@ -34,13 +34,11 @@ function Faq() {
         <div className='col-12 col-lg-6 mb-0 mb-md-4 p-2 p-md-4 faq_height' >
           <div className="h-100 ">
             <div className=' text-center'>
-              <Tittles stitle={"FAQs"} ltitle={" Lorem ipsum dolor sit amet "} />
+              <Tittles stitle={"FAQs"} />
             </div>
-            <div className='pera text-secondary mt-3 mb-4'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolore sed, facere incidunt neque similique dolor veniam id in quae!
-            </div>
+         
 
-            <div className="accordion accordion-flush mt-1" id="accordionFlushExample">
+            <div className="accordion accordion-flush mt-4" id="accordionFlushExample">
               {faqList.map((faq, index) => {
                 const collapseId = `flush-collapse-${index}`;
                 const headingId = `flush-heading-${index}`;

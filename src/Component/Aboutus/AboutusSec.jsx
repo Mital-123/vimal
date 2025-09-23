@@ -117,7 +117,7 @@ function AboutusSec() {
                 <b className="text-dark">Vimal Agro Products</b>, our brand
                 architecture is thoughtfully designed to cater to every palate
                 and purpose. <b className="text-dark">Swad</b> and{" "}
-                <b className="text-dark">Britas</b> focus on delivering indulgent
+                <b className="text-dark">Bvitas</b> focus on delivering indulgent
                 and innovative offerings that fall under the “fun-for-you” and
                 “better-for-you” categories. At the same time,{" "}
                 <b className="text-dark">Big Pantry</b> offers wholesome,
