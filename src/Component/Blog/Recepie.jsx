@@ -159,7 +159,7 @@
 //                                     </div>
 //                                 </div>
 //                             </div>
- 
+
 //                             <div className="p-1 mx-auto mb-3 mb-md-5 mt-2 mt-md-4">
 //                                 <Tittles stitle='Coockig Intructions' />
 //                                 <div className='mt-4'>
@@ -181,7 +181,6 @@
 // }
 
 // export default HOC(Recepie)
-
 
 import { FaRegClock } from 'react-icons/fa'
 import HOC from '../HOC'
@@ -235,36 +234,35 @@ function Recepie() {
 
             <div className='container'>
                 {/* Tabs for recipe names */}
-               {recipes.length > 0 && (
-                   <>
-                    <div className="text-center mt-4">
-      <h4 className="fw-bold text-uppercase">{data?.category}</h4>
-    </div>
-  <div className="row  d-flex justify-content-center">
-    {recipes.map((r, idx) => (
-      <button
-        key={idx}
-        className={`col-12 col-md-2  rounded-pill mx-2 p-1 shadow-sm btn_active bg-transparent text-uppercase text-capitalize ${activeRecipeIndex === idx ? "active-btn" : ""}`}
-        onClick={() => setActiveRecipeIndex(idx)}
-      >
-        {r.recipeName}
-      </button>
-    ))}
-  </div>
-                   </>
-)}
-
+                {recipes.length > 0 && (
+                    <>
+                        <div className="text-center mt-4">
+                            <h4 className="fw-bold text-uppercase">{data?.category}</h4>
+                        </div>
+                        <div className="row d-flex gy-2 justify-content-center mt-2">
+                            {recipes.map((r, idx) => (
+                                <button
+                                    key={idx}
+                                    className={`col-5 col-md-3 col-lg-2 rounded-pill mx-1 mx-md-2 p-1 shadow-sm btn_active bg-transparent text-capitalize ${activeRecipeIndex === idx ? "active-btn" : ""}`}
+                                    onClick={() => setActiveRecipeIndex(idx)}
+                                >
+                                    {r.recipeName}
+                                </button>
+                            ))}
+                        </div>
+                    </>
+                )}
 
                 {activeRecipe && (
-                    <div className='pt-3 pt-md-5'>
+                    <div className='pt-2 pt-md-3'>
                         <div className='text-center py-3'>
                             <Tittles stitle={activeRecipe.recipeName} />
                         </div>
-                        <div className='row mx-auto'>
+                        <div className='row mx-auto g-3'>
                             <div className="col-lg-3 col-6">
                                 <div className="h-100 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
                                     <GoPerson className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
-                                    <div className='ms-0 ms-md-3'>
+                                    <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Servings</div>
                                         <div>{activeRecipe.serving} Persons</div>
                                     </div>
@@ -274,7 +272,7 @@ function Recepie() {
                             <div className="col-lg-3 col-6">
                                 <div className="h-100 d-block d-md-flex align-items-center mt-2 mt-md-0 justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
                                     <FaRegClock className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
-                                    <div className='ms-0 ms-md-3'>
+                                    <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Prep Time</div>
                                         <div>{activeRecipe.prep_time} Minutes</div>
                                     </div>
@@ -282,9 +280,9 @@ function Recepie() {
                             </div>
 
                             <div className="col-lg-3 col-6">
-                                <div className="h-100 mt-3 mt-md-0 d-block d-md-flex align-items-center justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <div className="h-100 mt-2 mt-md-0 d-block d-md-flex align-items-center justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
                                     <PiChefHat className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
-                                    <div className='ms-0 ms-md-3'>
+                                    <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Cook Time</div>
                                         <div>{activeRecipe.cook_time} Minutes</div>
                                     </div>
@@ -292,18 +290,18 @@ function Recepie() {
                             </div>
 
                             <div className="col-lg-3 col-6">
-                                <div className="h-100 mt-3 mt-md-0 d-block d-md-flex align-items-center justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
+                                <div className="h-100 mt-2 mt-md-0 d-block d-md-flex align-items-center justify-content-center text-white rounded-4 p-3 p-md-2 text-center text-md-start" style={{ backgroundColor: "var(--red)" }}>
                                     <MdStarBorder className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
-                                    <div className='ms-0 ms-md-3'>
+                                    <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Difficulty</div>
-                                        <div>{activeRecipe.difficulty}</div>
+                                        <div className='text-capitalize'>{activeRecipe.difficulty}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className='p-1 mx-auto mt-4'>
-                            <p className='p-2' style={{ textAlign: "justify" }}>
+                            <p className='p-2 pera' style={{ textAlign: "justify" }}>
                                 {activeRecipe.description}
                             </p>
                         </div>
@@ -313,7 +311,7 @@ function Recepie() {
                                 <div className='h-100'>
                                     <div className='shadow-lg p-4 rounded-3 h-100'>
                                         <Tittles stitle='Ingredients' />
-                                        <ul className="ingredients-list mt-4 ps-2">
+                                        <ul className="ingredients-list mt-4 ps-2 pera">
                                             {activeRecipe.ingredients.map((ing, idx) => (
                                                 <li key={idx}><MdKeyboardDoubleArrowRight /> {ing}</li>
                                             ))}

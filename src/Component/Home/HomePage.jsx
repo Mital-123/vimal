@@ -1,4 +1,3 @@
-
 import Certificates from '../Certificates'
 import HOC from '../HOC'
 import Counter from './Counter'
@@ -7,7 +6,6 @@ import HomeCarousel from './HomeCarousel'
 import HomeCategory from './HomeCategory'
 import HomeContact from './HomeContact'
 import HomeRecipe from './HomeRecipe'
-import ProductBrand from './ProductBrand'
 import Testimonial from './Testimonial'
 import '../../assets/Css/Home.css';
 
@@ -16,7 +14,6 @@ function HomePage() {
     return (
         <div>
             <HomeCarousel />
-            <ProductBrand />
             <HomeAbout />
             <HomeCategory />
             <Counter />
