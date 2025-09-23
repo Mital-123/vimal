@@ -236,7 +236,7 @@
     overflow: hidden;
     border: 2px groove var(--red);
     padding: 10px;
-    border-radius: 35px 0px 35px 0px;
+    border-radius: 35px 35px 35px 35px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
 }

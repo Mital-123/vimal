@@ -8,6 +8,7 @@ import YouTubeVideo from './YouTubeVideo';
 import "../../assets/Css/Blog.css";
 import axios from 'axios';
 import { GrNext, GrPrevious } from 'react-icons/gr';
+import ButtonCom from '../ButtonCom';
 
 function Blog() {
     const [activeBlog, setActiveBlog] = useState("All");
@@ -111,15 +112,8 @@ function Blog() {
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title text-capitalize">{item.title}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>
-                                        <Link to={`/Recepie/${item._id}`} className="text-decoration-none text-dark">
-                                            <button className="c-button c-button--gooey py-1 px-3 fw-bold fstyle overflow-hidden">
-                                                How To Make ?
-                                                <div className="c-button__blobs">
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
-                                                </div>
-                                            </button>
+                                        <Link to={`/Recepie/${item._id}`}>
+                                            <ButtonCom btn={"How To Make ?"} />
                                         </Link>
                                     </div>
                                 </div>

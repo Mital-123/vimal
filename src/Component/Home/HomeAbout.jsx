@@ -115,7 +115,7 @@ function HomeAbout() {
                                     <div className="d-flex align-items-center align-content-center mt-2">
                                         <div className="mt-2">
                                             <Link to={"/aboutus"} className='text-decoration-none'>
-                                                <ButtonCom btn={"view More"} />
+                                                <ButtonCom btn={"View More"} />
                                             </Link>
                                         </div>
                                         {/* Logo Removed */}

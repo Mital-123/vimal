@@ -99,9 +99,9 @@ function HomeProduct() {
 
   return (
     <>
-      <div className='contactinfo_bg'>
+      <div className='contactinfo_bg pt-0 pt-md-4 mt-4'>
         <div className="container overflow-hidden">
-          <div className="row g-5  my-5 pb-5 overflow-hidden">
+          <div className="row g-3 g-md-4 my-5 mb-4 overflow-hidden">
             {products.map((Item, i) => {
               return (
                 <div key={i} className="col-12  col-md-6 col-lg-3 overflow-hidden" data-aos="zoom-in" data-aos-duration="1800" data-aos-once="true">

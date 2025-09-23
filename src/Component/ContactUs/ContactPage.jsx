@@ -139,15 +139,15 @@ function ContactPage() {
         />
         <div className="lendingshadow_contact"></div>
       </div> */}
-      <div>
+      {/* <div>
         <div className="d-none d-lg-block bannervimaldesktop mt-5">
           <img src={banner.desktopcontactbanner} alt="" className="img-fluid w-100 h-100 " />
         </div>
         <div className="d-block d-lg-none bannervimalmobile mt-5">
           <img src={banner.mobilecontactbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
         </div>
-      </div>
-      <div className="contactinfo_bg">
+      </div> */}
+      <div className="contactinfo_bg mt-5 pt-3 pt-md-5">
         <div className='container overflow-hidden'>
           <div className='text-center col-md-10 col-11 mx-auto'>
           </div>
@@ -218,22 +218,8 @@ function ContactPage() {
                     </div>
 
                     <div>
-                      <button type='submit' className="mt-3 c-button c-button--gooey py-1 px-3 ext-decoration-none fw-bold fstyle overflow-hidden">SUBMIT
-                        <div className="c-button__blobs">
-                          <div></div>
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </button>
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: "block", height: 0, width: "0" }} >
-                        <defs>
-                          <filter id="goo">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
-                            <feBlend in="SourceGraphic" in2="goo"></feBlend>
-                          </filter>
-                        </defs>
-                      </svg>
+                      <button className="rounded-pill px-4 py-2 fw-bold mt-2 text-white"
+                        style={{ background: "var(--red)", border: "2px solid var(--ofwhite)" }}>Submit</button>
                     </div>
                   </form>
 
@@ -254,11 +240,11 @@ function ContactPage() {
                     </div>
                   </div>
 
-                  <div style={{ height: "80px", width: "250px" }}>
+                  {/* <div style={{ height: "80px", width: "250px" }}>
                     <img src={require("../../assets/Images/devide_image_jpg.jpg")} alt="" className='img-fluid w-100 h-100 object-fit-cover' />
-                  </div>
+                  </div> */}
                   <div className="row g-1">
-                    <div className="col-6 ">
+                    <div className="col-6 mt-4">
                       <div className="h-100">
                         <div className='shadow rounded-4 text-white' style={{ backgroundColor: "var(--red)" }}>
                           <div className='d-block row d-md-flex align-items-center justify-content-center text-center text-md-start p-3'>
@@ -266,15 +252,15 @@ function ContactPage() {
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
                               <div >
                                 <h2 className='countnumber fw-bold fs-5 text-lg-start text-center'> Email</h2></div>
-                              <div className=' pera text-lg-start text-center'>swad.vimal.gj@gmail.com</div>
-                              <div className=' pera text-lg-start text-center'>sales@vimalagro.com</div>
+                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>swad.vimal.gj@gmail.com</div>
+                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>sales@vimalagro.com</div>
                             </div>
                           </div>
                         </div>
 
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 mt-4">
                       <div className="h-100">
                         <div className='shadow rounded-4 text-white' style={{ backgroundColor: "var(--red)" }}>
                           <div className='d-block row d-md-flex align-items-center justify-content-center text-center text-md-start p-3'>
@@ -282,8 +268,8 @@ function ContactPage() {
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
                               <div >
                                 <h2 className='countnumber fw-bold fs-5 text-lg-start text-center'> Contact</h2></div>
-                              <div className=' pera text-lg-start text-center'>(+91) 2622 222759</div>
-                              <div className=' pera text-lg-start text-center'>(+91) 2622 222759</div>
+                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
+                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
                             </div>
                           </div>
                         </div>
