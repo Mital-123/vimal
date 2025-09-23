@@ -108,17 +108,17 @@ function SubProducts() {
                 </div>
             </div>
             <div style={{ backgroundColor: "#fffcf3" }}>
-                <div className='pt-2 pt-lg-4'>
+                <div className=''>
                     <div className='container-fluid'>
                         <div>
                             <div className='row justify-content-center'>
 
                                 {/* Banner 2 */}
                                 <div>
-                                    <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                                    <div className="d-none d-lg-block">
                                         <img src={product.banner2} alt="" className="img-fluid w-100 h-100 " />
                                     </div>
-                                    <div className="d-block d-lg-none bannervimalmobile mt-5">
+                                    <div className="d-block d-lg-none">
                                         <img src={product.banner2Mobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                                     </div>
                                 </div>
