@@ -64,6 +64,7 @@ function SubProducts() {
     }, []);
 
     const product = products.find((p) => p._id == id);
+    console.log(product);
 
     const [selectedMainWeight, setSelectedMainWeight] = useState(null);
     const [extraSubheading, setExtraSubheading] = useState([]);
@@ -97,18 +98,29 @@ function SubProducts() {
     return (
         <div className='mt-5'>
             {/* Product Banner */}
-            <div>
-                <img src={product.productBanner} alt="" className='img-fluid w-100' />
-            </div>
 
+            <div>
+                <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                    <img src={product.productBanner} alt="" className="img-fluid w-100 h-100 " />
+                </div>
+                <div className="d-block d-lg-none bannervimalmobile mt-5">
+                    <img src={product.productBannerMobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
+                </div>
+            </div>
             <div style={{ backgroundColor: "#fffcf3" }}>
                 <div className='pt-2 pt-lg-4'>
                     <div className='container-fluid'>
                         <div>
                             <div className='row justify-content-center'>
-                                <div className='col-12 text-center'>
-                                    {/* Banner 2 */}
-                                    <img src={product.banner2} alt="" className='img-fluid w-100 border border-dark' />
+
+                                {/* Banner 2 */}
+                                <div>
+                                    <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                                        <img src={product.banner2} alt="" className="img-fluid w-100 h-100 " />
+                                    </div>
+                                    <div className="d-block d-lg-none bannervimalmobile mt-5">
+                                        <img src={product.banner2Mobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +155,7 @@ function SubProducts() {
                             <div key={idx} className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(weight)}>
                                 <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? 'active-btn' : ''}`} >
                                     {/* Weight */}
-                                    {weight} GM
+                                    {weight}
                                 </div>
                             </div>
                         ))}
@@ -279,7 +291,7 @@ function SubProducts() {
                 )}
             </div>
             {/* Footer Components */}
-            <Howtouse banner={product.howToMakeBanner} />
+            <Howtouse banner={product.howToMakeBanner} bannerMobile={product.howToMakeBannerMobile} />
             <ProductSlider />
         </div>
     );

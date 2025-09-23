@@ -8,7 +8,6 @@ import HomeCategory from './HomeCategory'
 import HomeContact from './HomeContact'
 import HomeRecipe from './HomeRecipe'
 import ProductBrand from './ProductBrand'
-import ProductHighlight from './ProductHighlight'
 import Testimonial from './Testimonial'
 import '../../assets/Css/Home.css';
 
@@ -17,13 +16,12 @@ function HomePage() {
     return (
         <div>
             <HomeCarousel />
-            {/* <ProductHighlight /> */}
             <ProductBrand />
             <HomeAbout />
-            <HomeCategory/>
+            <HomeCategory />
             <Counter />
             {/* <HomeContact /> */}
-    
+
             {/* <HomeProduct /> */}
             <HomeRecipe />
             <Testimonial />
