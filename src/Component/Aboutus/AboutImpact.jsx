@@ -15,7 +15,7 @@ function AboutImpact() {
             title: "Trusted Quality",
             description: "Delivering pure, authentic, and trusted products that reach millions of households worldwide",
             icon_image: require("../../assets/Images/About-Impact/impect-img2.png"),
-            bgImage: require("../../assets/Images/About-Impact/impect-bg1.jpg"),
+            bgImage: require("../../assets/Images/About-Impact/impect-bg2.jpg"),
             animation: "flip-up",
             delay: "400"
         },

@@ -100,7 +100,7 @@ function HomeProduct() {
   return (
     <>
       <div className='contactinfo_bg'>
-        <div className="container">
+        <div className="container overflow-hidden">
           <div className="row g-5  my-5 pb-5 overflow-hidden">
             {products.map((Item, i) => {
               return (

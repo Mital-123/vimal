@@ -1,26 +1,20 @@
 import React from 'react'
 
 function Howtouse(howToMakeBanner) {
+    console.log(howToMakeBanner);
 
     return (
         <>
-            {/* <div className='container-fluid text-center py-5' style={{ backgroundColor: "#fffcf3" }}>
-            <div className="h5 py-2">USER GUIDE</div>
-            <div className='h2 fw-bold py-2'>How To Use</div>
-            <div className='row justify-content-center py-2'>
-                <img src={require('../../assets/Images/step1.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-                <img src={require('../../assets/Images/step2.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-                <img src={require('../../assets/Images/step3.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-                <img src={require('../../assets/Images/step4.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-                <img src={require('../../assets/Images/step5.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-                <img src={require('../../assets/Images/step6.webp')} alt="" className='' style={{ height: "175px", width: "195px" }} />
-            </div>
-        </div> */}
-            <div style={{ backgroundColor: "#fffcf3" }}>
-                <div className="container text-center py-2 py-lg-5" >
-                    <img src={howToMakeBanner.banner} alt="not found" className=' w-100 h-100 img-fluid' />
+           
+            <div>
+                <div className="d-none d-lg-block bannervimaldesktop mt-5" style={{ backgroundColor: "#fffcf3" }}>
+                    <img src={howToMakeBanner.banner} alt="" className="img-fluid w-100 h-100 " />
+                </div>
+                <div className="d-block d-lg-none bannervimalmobile mt-5">
+                    <img src={howToMakeBanner.bannerMobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                 </div>
             </div>
+
         </>
     )
 }

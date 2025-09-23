@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaChevronUp } from 'react-icons/fa';
 import Slider from 'react-slick';
 
@@ -31,15 +31,24 @@ function YouTubeVideo() {
     ];
 
     const [selectedVideo, setSelectedVideo] = useState(videos[0]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     let sliderRef = null;
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const sliderSettings = {
         dots: false,
         infinite: true,
-        vertical: true,
-        slidesToShow: 2,
+        vertical: !isMobile,
+        slidesToShow: isMobile ? 2 : 2,
         slidesToScroll: 1,
-        verticalSwiping: true,
+        verticalSwiping: !isMobile,
         adaptiveHeight: false,
         arrows: false,
         responsive: [
@@ -102,18 +111,25 @@ function YouTubeVideo() {
                         </Slider>
 
                         <div className="d-flex justify-content-center align-items-center gap-2 p-2">
-                            <button
-                                onClick={() => sliderRef.slickPrev()}
-                                className="slider-btn"
-                            >
-                                <FaChevronDown size={16} />
-                            </button>
-                            <button
-                                onClick={() => sliderRef.slickNext()}
-                                className="slider-btn"
-                            >
-                                <FaChevronUp size={16} />
-                            </button>
+                            {!isMobile ? (
+                                <>
+                                    <button onClick={() => sliderRef.slickPrev()} className="slider-btn">
+                                        <FaChevronDown size={16} />
+                                    </button>
+                                    <button onClick={() => sliderRef.slickNext()} className="slider-btn">
+                                        <FaChevronUp size={16} />
+                                    </button>
+                                </>
+                            ) : (
+                                <>
+                                    <button onClick={() => sliderRef.slickPrev()} className="slider-btn">
+                                        <FaChevronLeft size={16} />
+                                    </button>
+                                    <button onClick={() => sliderRef.slickNext()} className="slider-btn">
+                                        <FaChevronRight size={16} />
+                                    </button>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

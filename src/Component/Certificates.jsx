@@ -13,7 +13,7 @@ function Certificates() {
       try {
         const res = await axios.get("https://backendvimalagro.onrender.com/certificate");
         if (res.data && res.data.length > 0) {
-        setCertificates(res.data);
+          setCertificates(res.data);
         }
       } catch (err) {
         console.error("Error fetching certificates:", err);
@@ -25,7 +25,7 @@ function Certificates() {
 
   return (
     <>
-      <section className={`red-certificates-section py-3 py-md-5 ${isVisible ? 'visible' : ''}`}>
+      <section className={`red-certificates-section py-4 py-md-5 ${isVisible ? 'visible' : ''}`}>
         <div className="container px-4">
           {/* Header Section */}
           <div className="row justify-content-center mb-2">
@@ -53,7 +53,7 @@ function Certificates() {
           {/* Certificates Section */}
           <div className="row g-2 g-lg-3 justify-content-center">
             {certificates.map((item, index) => (
-              <div className="col-lg-2 col-4 mt-4" key={index}>
+              <div className="col-lg-2 col-4 mt-3" key={index}>
                 <div className="h-100 bg-white certificate-item">
                   <div className="text-center d-flex align-items-center justify-content-center p-2 p-lg-3 certificate_height" >
                     <img
@@ -72,4 +72,4 @@ function Certificates() {
   );
 }
 
-export default Certificates;
+export default Certificates

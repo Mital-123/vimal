@@ -84,14 +84,14 @@ function Blog() {
                     className="img-fluid w-100 d-lg-none d-block object-fit-cover"
                 />
             </div> */}
-   <div>
-  <div className="d-none d-lg-block bannervimaldesktop mt-5">
-    <img src={banner.desktopblogbanner} alt="" className="img-fluid w-100 h-100 "/>
-  </div>
-  <div className="d-block d-lg-none bannervimalmobile mt-5">
-    <img src={banner.mobileblogbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover"/>
-  </div>
-</div>
+            <div>
+                <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                    <img src={banner.desktopblogbanner} alt="" className="img-fluid w-100 h-100 " />
+                </div>
+                <div className="d-block d-lg-none bannervimalmobile mt-5">
+                    <img src={banner.mobileblogbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
+                </div>
+            </div>
             {/* Blogs Section */}
             <div className="py-4 py-md-5 p-1 category_bgimg overflow-hidden" style={{ backgroundAttachment: "fixed" }}>
                 <div className="container-lg">
@@ -109,7 +109,7 @@ function Blog() {
                                     </div>
 
                                     <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title">{item.title}</h5>
+                                        <h5 className="card-title text-capitalize">{item.title}</h5>
                                         <p className="card-text flex-grow-1 pera">{item.description}</p>
                                         <Link to={`/Recepie/${item._id}`} className="text-decoration-none text-dark">
                                             <button className="c-button c-button--gooey py-1 px-3 fw-bold fstyle overflow-hidden">
@@ -130,11 +130,11 @@ function Blog() {
                     {/* Pagination Controls */}
                     <div className="d-flex justify-content-center align-items-center mt-4 flex-wrap" >
                         <button
-                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{width:"20px",height:"20px"}}
+                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{ width: "20px", height: "20px" }}
                             disabled={currentPage === 1}
                             onClick={() => handlePageChange(currentPage - 1)}
                         >
-                          <GrPrevious />
+                            <GrPrevious />
                         </button>
 
                         {[...Array(totalPages)].map((_, index) => (
@@ -142,18 +142,18 @@ function Blog() {
                                 key={index}
                                 className={`btn mx-1 d-flex justify-content-center align-items-center pt-2 ${currentPage === index + 1 ? "btn-dark" : "btn-outline-dark"}`}
                                 onClick={() => handlePageChange(index + 1)}
-                                style={{width:"25px",height:"25px"}}
+                                style={{ width: "25px", height: "25px" }}
                             >
                                 {index + 1}
                             </button>
                         ))}
 
                         <button
-                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{width:"20px",height:"20px"}}
+                            className="btn btn-outline-dark mx-1 rounded-circle p-1 d-flex justify-content-center align-items-center" style={{ width: "20px", height: "20px" }}
                             disabled={currentPage === totalPages}
                             onClick={() => handlePageChange(currentPage + 1)}
                         >
-                           <GrNext/>
+                            <GrNext />
                         </button>
                     </div>
                 </div>
@@ -164,4 +164,4 @@ function Blog() {
     );
 }
 
-export default HOC(Blog);
+export default HOC(Blog)

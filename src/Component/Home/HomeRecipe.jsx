@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ButtonCom from '../ButtonCom';
 import Slider from 'react-slick';
 import Tittles from '../Tittles';
 import 'slick-carousel/slick/slick.css';
@@ -8,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 
 function HomeRecipe() {
+
   const settings = {
     dots: false,
     arrows: true,
@@ -34,25 +34,6 @@ function HomeRecipe() {
     ],
   };
 
-  // const recipes = [
-  //   {
-  //     title: '5 Favorite Pickles In The Winter',
-  //     image: 'https://www.vimalagro.com/wp-content/uploads/2020/12/5-favorite-pickles-in-the-winter-794x528.jpg',
-  //   },
-  //   {
-  //     title: 'SWAD Mango Milk shake',
-  //     image: 'https://www.vimalagro.com/wp-content/uploads/2018/03/mango_milkshake-794x528.jpg',
-  //   },
-  //   {
-  //     title: '5 Favorite Pickles In The Winter',
-  //     image: 'https://www.vimalagro.com/wp-content/uploads/2020/12/5-favorite-pickles-in-the-winter-794x528.jpg',
-  //   },
-  //   {
-  //     title: 'SWAD Mango Milk shake',
-  //     image: 'https://www.vimalagro.com/wp-content/uploads/2018/03/mango_milkshake-794x528.jpg',
-  //   },
-  // ];
-
   const [recipes, setRecepie] = useState([])
   const FetchProduct = async () => {
     try {
@@ -68,9 +49,9 @@ function HomeRecipe() {
   }, []);
 
   return (
-    <div className='home-recipe-wrapper overflow-hidden my-5'>
+    <div className='home-recipe-wrapper overflow-hidden my-5 mb-3 mb-md-5'>
       <div className='container position-relative'>
-        <div className='text-center mb-4'>
+        <div className='text-center mb-2 mb-md-4'>
           <Tittles ltitle={'Mouth-Watering Recipes'} />
         </div>
         <Slider {...settings}>
@@ -86,7 +67,7 @@ function HomeRecipe() {
                   >
                     <img
                       src={recipe.blogImage}
-                      className='img-fluid object-fit-cover  w-100'
+                      className='img-fluid object-fit-cover w-100'
                       style={{ borderRadius: '17px', height: '220px' }}
                       alt={recipe.title}
                     />
@@ -103,9 +84,9 @@ function HomeRecipe() {
             </div>
           ))}
         </Slider>
-      </div >
-    </div >
+      </div>
+    </div>
   );
 }
 
-export default HomeRecipe;
+export default HomeRecipe
