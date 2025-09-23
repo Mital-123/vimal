@@ -50,7 +50,7 @@ function AboutImpact() {
         <>
             <div className='container my-2 my-md-5 pt-1 pt-md-5'>
                 <div className='text-center'><Tittles stitle={"Rooted In Impact"} ltitle={"Every product we cultivate is rooted in impact"} /></div>
-                <div className="pera text-center text-secondary pt-2 mx-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui maxime placeat veniam expedita aperiam asperiores unde ipsa debitis inventore quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui maxime placeat veniam expedita aperiam asperiores unde ipsa debitis inventore quam.</div>
+               
                 <div className='row mt-3'>
                     {services.map((service, index) => (
                         <div className='col-12 col-lg-4 col-md-6 p-3' key={index} >
