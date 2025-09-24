@@ -222,10 +222,10 @@ function Recepie() {
             >
                 {data && data.blogBanner && (
                     <div>
-                        <div className="d-none d-lg-block bannervimaldesktop " style={{ boxShadow: "inset 0 0 100px 20px #000" }}>
+                        <div className="d-none d-lg-block  " style={{ boxShadow: "inset 0 0 100px 20px #000" }}>
                             <img src={data.blogBanner} alt="" className="img-fluid w-100 h-100 " />
                         </div>
-                        <div className="d-block d-lg-none bannervimalmobile">
+                        <div className="d-block d-lg-none ">
                             <img src={data.blogBannerMobile || data.blogBanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                         </div>
                     </div>
