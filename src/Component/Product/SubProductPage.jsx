@@ -270,25 +270,23 @@ const filteredMainSubProducts = selectedMainWeight
                         </h3>
 
                         {/* 1. Collect ALL extraSubProducts for this product */}
-                        {(() => {
+                        {/* {(() => {
                             const allExtraItems = matchedExtras.flatMap(extra => extra.extrasubproducts);
 
-                            // ✅ Unique weights
                             const uniqueExtraWeights = Array.from(
                                 new Set(allExtraItems.map(item => item.weight))
                             );
 
-                            // ✅ Filter based on selectedExtraWeight
                             const filteredExtraItems = selectedExtraWeight
                                 ? allExtraItems.filter(item => item.weight === selectedExtraWeight)
                                 : allExtraItems;
 
                             return (
                                 <>
-                                    {/* 2. Tabs */}
+                                  
                                     {uniqueExtraWeights.length > 0 && (
                                         <div className="text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center">
-                                            {/* All Tab */}
+                                          
                                             <div
                                                 className="border-0 bg-transparent mx-2 mt-2 mt-md-3"
                                                 onClick={() => setSelectedExtraWeight(null)}
@@ -301,7 +299,6 @@ const filteredMainSubProducts = selectedMainWeight
                                                 </div>
                                             </div>
 
-                                            {/* Unique Weight Tabs */}
                                             {uniqueExtraWeights.map((weight, idx) => (
                                                 <div
                                                     key={idx}
@@ -319,30 +316,31 @@ const filteredMainSubProducts = selectedMainWeight
                                         </div>
                                     )}
 
-                                    {/* 3. Products Grid */}
                                     <div className="container py-3 py-md-5">
                                         <div className="row justify-content-center">
+                                            {console.log(filteredExtraItems)
+                                            }
                                             {filteredExtraItems.map((item, index) => (
                                                 <div
                                                     key={index}
                                                     className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex"
                                                 >
                                                     <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
-                                                        {/* Image */}
+                                            
                                                         <img
                                                             src={item.subproductImg}
                                                             alt={item.subproductName}
                                                             className="img-fluid product_sizeimg"
                                                             style={{ objectFit: "contain" }}
                                                         />
-                                                        {/* Name */}
+                                                   
                                                         <div
                                                             className="fw-semibold subp pt-2 p-1"
                                                             style={{ fontSize: "14px" }}
                                                         >
                                                             {item.subproductName}
                                                         </div>
-                                                        {/* Button */}
+                                                 
                                                         <div
                                                             onClick={() => navigate(`/product/${id}/${item._id}`)}
                                                             className={`subbtn mt-auto ${!isVisible ? "d-none" : ""
@@ -357,7 +355,118 @@ const filteredMainSubProducts = selectedMainWeight
                                     </div>
                                 </>
                             );
-                        })()}
+                        })()} */}
+                        {(() => {
+  // ✅ Collect all extra subproducts for this product
+  const allExtraItems = matchedExtras.flatMap(extra => extra.extrasubproducts);
+
+  // ✅ Extract all weights (split by comma) & normalize
+  const allWeights = allExtraItems.flatMap(item =>
+    item.weight
+      ? item.weight.split(",").map(w => w.trim().toLowerCase())
+      : []
+  );
+
+  // ✅ Unique sorted weights
+  const uniqueExtraWeights = Array.from(new Set(allWeights)).sort((a, b) => {
+    const parseWeight = (w) => {
+      const num = parseFloat(w.replace(/[^\d.]/g, ""));
+      if (w.includes("kg")) return num * 1000;
+      return num;
+    };
+    return parseWeight(a) - parseWeight(b);
+  });
+
+  // ✅ Filter extra items by selected weight
+  const filteredExtraItems = selectedExtraWeight
+    ? allExtraItems.filter(item =>
+        item.weight
+          ?.split(",")
+          .map(w => w.trim().toLowerCase())
+          .includes(selectedExtraWeight)
+      )
+    : allExtraItems;
+
+  return (
+    <>
+      {/* Tabs */}
+      {uniqueExtraWeights.length > 0 && (
+        <div className="text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center">
+          {/* All Tab */}
+          <div
+            className="border-0 bg-transparent mx-2 mt-2 mt-md-3"
+            onClick={() => setSelectedExtraWeight(null)}
+          >
+            <div
+              className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${
+                selectedExtraWeight === null ? "active-btn" : ""
+              }`}
+            >
+              All
+            </div>
+          </div>
+
+          {/* Weight Tabs */}
+          {uniqueExtraWeights.map((weight, idx) => (
+            <div
+              key={idx}
+              className="border-0 bg-transparent mx-2 mt-2 mt-md-3"
+              onClick={() => setSelectedExtraWeight(weight)}
+            >
+              <div
+                className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${
+                  selectedExtraWeight === weight ? "active-btn" : ""
+                }`}
+              >
+                {weight}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Products Grid */}
+      <div className="container py-3 py-md-5">
+        <div className="row justify-content-center">
+          {filteredExtraItems.map((item, index) => (
+            <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
+              <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
+                {/* Image */}
+                <img
+                  src={item.subproductImg}
+                  alt={item.subproductName}
+                  className="img-fluid product_sizeimg"
+                  style={{ objectFit: "contain" }}
+                />
+                {/* Name */}
+                <div className="fw-semibold subp pt-2 p-1" style={{ fontSize: "14px" }}>
+                  {item.subproductName}
+                </div>
+                {/* Button */}
+                <div
+                  onClick={() => navigate(`/product/${id}/${item._id}`)}
+                  className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
+                >
+                  <button
+                    className="rounded-pill px-4 py-2 fw-bold mt-2 text-white"
+                    style={{
+                      background: "var(--red)",
+                      border: "2px solid var(--ofwhite)",
+                      fontSize: "15px",
+                    }}
+                  >
+                    View More
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+})()}
+
                     </div>
                 )}
             </div>
