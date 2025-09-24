@@ -54,6 +54,7 @@ function SubProducts() {
                 "https://backendvimalagro.onrender.com/api/products"
             );
             setSubProduct(res.data || []);
+
         } catch (err) {
             console.error("Error fetching products:", err);
         }
@@ -74,15 +75,43 @@ function SubProducts() {
     // ✅ If product not found
     if (!product) return <p>No product found.</p>;
 
-    const uniqueMainWeights = Array.from(
-        new Set(product?.subproducts?.map((item) => item.weight) || [])
-    );
+    // const uniqueMainWeights = Array.from(
+    //     new Set(product?.subproducts?.map((item) => item.weight) || [])
+    // );
 
-    const filteredMainSubProducts = selectedMainWeight
-        ? (product?.subproducts || []).filter(
-            (item) => item.weight === selectedMainWeight
-        )
-        : product?.subproducts || [];
+    // const filteredMainSubProducts = selectedMainWeight
+    //     ? (product?.subproducts || []).filter(
+    //         (item) => item.weight === selectedMainWeight
+    //     )
+    //     : product?.subproducts || [];
+// ✅ Helper: Convert weight string to grams (for sorting)
+const parseWeight = (w) => {
+  const num = parseFloat(w.replace(/[^\d.]/g, "")); // get number
+  if (w.toLowerCase().includes("kg")) return num * 1000;
+  return num; // gm
+};
+
+// ✅ Collect, normalize, and sort weights
+const uniqueMainWeights = Array.from(
+  new Set(
+    (product?.subproducts || [])
+      .flatMap((item) =>
+        item.weight
+          ? item.weight.split(",").map((w) => w.trim().toLowerCase())
+          : []
+      )
+  )
+).sort((a, b) => parseWeight(a) - parseWeight(b));
+
+// ✅ Filter subproducts by selected weight
+const filteredMainSubProducts = selectedMainWeight
+  ? (product?.subproducts || []).filter((item) =>
+      item.weight
+        ?.split(",")
+        .map((w) => w.trim().toLowerCase())
+        .includes(selectedMainWeight)
+    )
+  : product?.subproducts || [];
 
 
     const matchedExtras = extraSubProducts.filter(
@@ -98,7 +127,7 @@ function SubProducts() {
     return (
         <div className='mt-5'>
             {/* Product Banner */}
-
+            {console.log(product)}
             <div >
                 <div className="d-none d-lg-block  mt-5">
                     <img src={product.productBanner} alt="" className="img-fluid w-100 h-100 " />
@@ -144,6 +173,36 @@ function SubProducts() {
                     <h3 className='mt-1 mt-lg-5 text-center text-dark text-uppercase fw-bold ftittle'>{product.productName}</h3>
                 </div>
 
+                {/* {uniqueMainWeights.length > 0 && (
+                    <div className="row justify-content-center pt-1 pt-md-3 flex-wrap gx-0 gap-2">
+                        <div
+                            className="col-auto mt-1"
+                            onClick={() => setSelectedMainWeight(null)}
+                        >
+                            <div
+                                className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? "active-btn" : ""
+                                    }`}
+                            >
+                                All
+                            </div>
+                        </div>
+
+                        {uniqueMainWeights.map((weight, idx) => (
+                            <div
+                                key={idx}
+                                className="col-auto mt-1"
+                                onClick={() => setSelectedMainWeight(weight)}
+                            >
+                                <div
+                                    className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? "active-btn" : ""
+                                        }`}
+                                >
+                                    {weight}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )} */}
                 {uniqueMainWeights.length > 0 && (
                     <div className="row justify-content-center pt-1 pt-md-3 flex-wrap gx-0 gap-2">
                         <div
