@@ -312,7 +312,7 @@ const filteredMainSubProducts = selectedMainWeight
                                                         className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === weight ? "active-btn" : ""
                                                             }`}
                                                     >
-                                                        {weight} GM
+                                                        {weight} 
                                                     </div>
                                                 </div>
                                             ))}
