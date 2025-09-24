@@ -99,7 +99,7 @@ function SubProducts() {
         <div className='mt-5'>
             {/* Product Banner */}
 
-            <div>
+            <div >
                 <div className="d-none d-lg-block  mt-5">
                     <img src={product.productBanner} alt="" className="img-fluid w-100 h-100 " />
                 </div>
@@ -107,9 +107,9 @@ function SubProducts() {
                     <img src={product.productBannerMobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                 </div>
             </div>
-            <div style={{ backgroundColor: "#fffcf3" }}>
-                <div className='pt-2 pt-lg-4'>
-                    <div className='container-fluid'>
+            <div className='py-2 py-md-4' style={{ backgroundColor: "#fffcf3" }}>
+                <div className=''>
+                    <div className='container-xxl'>
                         <div>
                             <div className='row justify-content-center'>
 
