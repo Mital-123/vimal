@@ -217,9 +217,6 @@ function HomeCategory() {
           <div key={activeBrand.brandId} className="categreySec row align-items-center rounded-4 pt-1 pt-md-4 overflow-hidden">
             <div
               className="col-md-6 d-flex justify-content-center cat_image"
-              data-aos="fade-right"
-              data-aos-duration="1500"
-              data-aos-once="true"
             >
               <div className="test-shine">
                 <img
@@ -233,9 +230,7 @@ function HomeCategory() {
 
             <div
               className="col-md-6 text-start d-flex flex-column justify-content-center"
-              data-aos="fade-left"
-              data-aos-duration="1500"
-              data-aos-once="true"
+           
             >
               <div className="fw-bold ps-2">
                 <h4
