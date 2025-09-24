@@ -100,10 +100,10 @@ function SubProducts() {
             {/* Product Banner */}
 
             <div>
-                <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                <div className="d-none d-lg-block  mt-5">
                     <img src={product.productBanner} alt="" className="img-fluid w-100 h-100 " />
                 </div>
-                <div className="d-block d-lg-none bannervimalmobile mt-5">
+                <div className="d-block d-lg-none  mt-5">
                     <img src={product.productBannerMobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                 </div>
             </div>
@@ -115,10 +115,10 @@ function SubProducts() {
 
                                 {/* Banner 2 */}
                                 <div>
-                                    <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                                    <div className="d-none d-lg-block">
                                         <img src={product.banner2} alt="" className="img-fluid w-100 h-100 " />
                                     </div>
-                                    <div className="d-block d-lg-none bannervimalmobile mt-5">
+                                    <div className="d-block d-lg-none">
                                         <img src={product.banner2Mobile} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                                     </div>
                                 </div>
@@ -145,16 +145,29 @@ function SubProducts() {
                 </div>
 
                 {uniqueMainWeights.length > 0 && (
-                    <div className='text-center pt-1 pt-md-3 d-block d-lg-flex align-items-center justify-content-center'>
-                        <div className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(null)}>
-                            <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? 'active-btn' : ''}`} >
+                    <div className="row justify-content-center pt-1 pt-md-3 flex-wrap gx-0 gap-2">
+                        <div
+                            className="col-auto mt-1"
+                            onClick={() => setSelectedMainWeight(null)}
+                        >
+                            <div
+                                className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? "active-btn" : ""
+                                    }`}
+                            >
                                 All
                             </div>
                         </div>
+
                         {uniqueMainWeights.map((weight, idx) => (
-                            <div key={idx} className='border-0 bg-transparent mx-2 mt-2 mt-md-3' onClick={() => setSelectedMainWeight(weight)}>
-                                <div className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? 'active-btn' : ''}`} >
-                                    {/* Weight */}
+                            <div
+                                key={idx}
+                                className="col-auto mt-1"
+                                onClick={() => setSelectedMainWeight(weight)}
+                            >
+                                <div
+                                    className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? "active-btn" : ""
+                                        }`}
+                                >
                                     {weight}
                                 </div>
                             </div>
@@ -179,7 +192,7 @@ function SubProducts() {
                                         className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
                                         style={{ padding: "10px 10px" }}
                                     >
-                                        <ButtonCom btn={"View More"} />
+                                        <button className="rounded-pill px-4 py-2 fw-bold mt-2 text-white" style={{ background: "var(--red)", border: "2px solid var(--ofwhite)", fontSize: "15px" }}>View More</button>
                                     </div>
                                 </div>
                             </div>
@@ -275,9 +288,8 @@ function SubProducts() {
                                                             onClick={() => navigate(`/product/${id}/${item._id}`)}
                                                             className={`subbtn mt-auto ${!isVisible ? "d-none" : ""
                                                                 }`}
-                                                            style={{ padding: "10px 10px" }}
                                                         >
-                                                            <ButtonCom btn={"View More"} />
+                                                            <button className="rounded-pill px-4 py-2 fw-bold mt-2 text-white" style={{ background: "var(--red)", border: "2px solid var(--ofwhite)", fontSize: "15px" }}>View More</button>
                                                         </div>
                                                     </div>
                                                 </div>

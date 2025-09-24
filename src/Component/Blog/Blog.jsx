@@ -86,10 +86,10 @@ function Blog() {
                 />
             </div> */}
             <div>
-                <div className="d-none d-lg-block bannervimaldesktop mt-5">
+                <div className="d-none d-lg-block  mt-5">
                     <img src={banner.desktopblogbanner} alt="" className="img-fluid w-100 h-100 " />
                 </div>
-                <div className="d-block d-lg-none bannervimalmobile mt-5">
+                <div className="d-block d-lg-none  mt-5">
                     <img src={banner.mobileblogbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
                 </div>
             </div>
