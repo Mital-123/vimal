@@ -84,34 +84,34 @@ function SubProducts() {
     //         (item) => item.weight === selectedMainWeight
     //     )
     //     : product?.subproducts || [];
-// ✅ Helper: Convert weight string to grams (for sorting)
-const parseWeight = (w) => {
-  const num = parseFloat(w.replace(/[^\d.]/g, "")); // get number
-  if (w.toLowerCase().includes("kg")) return num * 1000;
-  return num; // gm
-};
+    // ✅ Helper: Convert weight string to grams (for sorting)
+    const parseWeight = (w) => {
+        const num = parseFloat(w.replace(/[^\d.]/g, "")); // get number
+        if (w.toLowerCase().includes("kg")) return num * 1000;
+        return num; // gm
+    };
 
-// ✅ Collect, normalize, and sort weights
-const uniqueMainWeights = Array.from(
-  new Set(
-    (product?.subproducts || [])
-      .flatMap((item) =>
-        item.weight
-          ? item.weight.split(",").map((w) => w.trim().toLowerCase())
-          : []
-      )
-  )
-).sort((a, b) => parseWeight(a) - parseWeight(b));
+    // ✅ Collect, normalize, and sort weights
+    const uniqueMainWeights = Array.from(
+        new Set(
+            (product?.subproducts || [])
+                .flatMap((item) =>
+                    item.weight
+                        ? item.weight.split(",").map((w) => w.trim().toLowerCase())
+                        : []
+                )
+        )
+    ).sort((a, b) => parseWeight(a) - parseWeight(b));
 
-// ✅ Filter subproducts by selected weight
-const filteredMainSubProducts = selectedMainWeight
-  ? (product?.subproducts || []).filter((item) =>
-      item.weight
-        ?.split(",")
-        .map((w) => w.trim().toLowerCase())
-        .includes(selectedMainWeight)
-    )
-  : product?.subproducts || [];
+    // ✅ Filter subproducts by selected weight
+    const filteredMainSubProducts = selectedMainWeight
+        ? (product?.subproducts || []).filter((item) =>
+            item.weight
+                ?.split(",")
+                .map((w) => w.trim().toLowerCase())
+                .includes(selectedMainWeight)
+        )
+        : product?.subproducts || [];
 
 
     const matchedExtras = extraSubProducts.filter(
@@ -159,10 +159,15 @@ const filteredMainSubProducts = selectedMainWeight
                     {/* Product Name */}
                     <h2 className='fw-bold my-1 my-lg-4 ftittle'>Power of {product.productName}</h2>
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
-                    <div className='w-75 mx-auto pb-3'>
+                    <div className="w-75 mx-auto pb-3">
                         {product.productSizes.map((x, i) => (
-                            /* Product Sizes */
-                            <span key={i} className='fw-bold pe-1 pera'>{x}{i < product.productSizes.length - 1 && ' | '}</span>
+                            <span
+                                key={i}
+                                className={`fw-bold size-item ${i === product.productSizes.length - 1 ? "last" : ""}`}
+                                style={{ fontSize: "17px" }}
+                            >
+                                {x}
+                            </span>
                         ))}
                     </div>
                 </div>
@@ -312,7 +317,7 @@ const filteredMainSubProducts = selectedMainWeight
                                                         className={`p-2 rounded-pill px-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === weight ? "active-btn" : ""
                                                             }`}
                                                     >
-                                                        {weight} 
+                                                        {weight}
                                                     </div>
                                                 </div>
                                             ))}
