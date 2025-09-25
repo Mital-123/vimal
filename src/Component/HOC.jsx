@@ -39,7 +39,7 @@ function HOC(Component) {
                 </div>
                 <span className="order-1">(+91) 2622 222759</span>
               </a>
-            </li>
+            </li> 
             <li>
               <a href="mailto:swad.vimal.gj@gmail.com" className="sideNavIcon_tittle">
                 <div className="side_Nav_Icon order-0">
