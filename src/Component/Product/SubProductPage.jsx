@@ -7,11 +7,14 @@ import { useEffect, useState } from 'react';
 import Howtouse from './Howtouse';
 import ProductSlider from './Slider';
 import axios from 'axios';
+import { BiSolidRightArrowCircle } from 'react-icons/bi';
 
 function SubProducts() {
 
     const [isVisible, setIsVisible] = useState(false);
     const [products, setSubProduct] = useState([]);
+
+    const [visibleCount, setVisibleCount] = useState(6);
 
     const navigate = useNavigate();
     const { id } = useParams();
@@ -124,6 +127,10 @@ function SubProducts() {
     ).map((item) => item.subproductTitle);
     console.log(filtered);
 
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => prev + 6); // show 6 more each time
+    };
+
     return (
         <div className='mt-5'>
             {/* Product Banner */}
@@ -208,12 +215,13 @@ function SubProducts() {
                     </div>
                 )} */}
                 {uniqueMainWeights.length > 0 && (
-                    <div className="row justify-content-center pt-1 pt-md-3 flex-wrap gx-0 gap-2">
+                    <div className="row justify-content-center pt-1 pt-md-3 pb-3 pb-md-0 flex-wrap gx-0 gap-2">
                         <div
                             className="col-auto mt-1"
                             onClick={() => setSelectedMainWeight(null)}
                         >
                             <div
+                                style={{ cursor: "pointer" }}
                                 className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? "active-btn" : ""
                                     }`}
                             >
@@ -228,6 +236,7 @@ function SubProducts() {
                                 onClick={() => setSelectedMainWeight(weight)}
                             >
                                 <div
+                                    style={{ cursor: "pointer" }}
                                     className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === weight ? "active-btn" : ""
                                         }`}
                                 >
@@ -239,29 +248,44 @@ function SubProducts() {
                 )}
 
                 {/* Display Main Subproducts */}
-                <div className="container py-3 py-md-5">
+                <div className="container py-2 py-md-5">
                     <div className="row justify-content-center">
-                        {filteredMainSubProducts.map((item, index) => (
-                            <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
-                                    {/* Subproduct Image */}
-                                    <img src={item.subproductImg} alt="" className='img-fluid product_sizeimg' style={{ objectFit: 'contain' }} />
-                                    <div className='fw-semibold subp pt-2 p-1 ' style={{ fontSize: "14px" }}>
-                                        {/* Subproduct Name */}
-                                        {item.subproductName}
-                                    </div>
-                                    <div
-                                        onClick={() => navigate(`/product/${id}/${item._id}`)}
-                                        className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
-                                        style={{ padding: "10px 10px" }}
-                                    >
-                                        <button className="rounded-pill px-4 py-2 fw-bold mt-2 text-white" style={{ background: "var(--red)", border: "2px solid var(--ofwhite)", fontSize: "15px" }}>View More</button>
+                        {(window.innerWidth < 768
+                            ? filteredMainSubProducts.slice(0, visibleCount) // sm screen => show limited
+                            : filteredMainSubProducts) // md/lg => show all
+                            .map((item, index) => (
+                                <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
+                                    <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
+                                        {/* Subproduct Image */}
+                                        <img src={item.subproductImg} alt="" className='img-fluid product_sizeimg' style={{ objectFit: 'contain' }} />
+                                        <div className='fw-semibold subp pt-2 p-1 text-capitalize' style={{ fontSize: "14px" }}>
+                                            {/* Subproduct Name */}
+                                            {item.subproductName}
+                                        </div>
+                                        <div
+                                            onClick={() => navigate(`/product/${id}/${item._id}`)}
+                                            className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
+                                            style={{ padding: "10px 10px" }}
+                                        >
+                                            <button className="rounded-pill px-4 py-2 fw-bold mt-2 text-white" style={{ background: "var(--red)", border: "2px solid var(--ofwhite)", fontSize: "15px" }}>View More</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
                 </div>
+                {/* Load More Button */}
+                {window.innerWidth < 768 && visibleCount < filteredMainSubProducts.length && (
+                    <div className="text-center mb-4 mb-md-0">
+                        <button
+                            onClick={handleLoadMore}
+                            className="btn fw-bold px-4 py-2 rounded-pill text-white"
+                            style={{ background: "var(--red)", fontSize: "15px" }}
+                        >
+                            Load More <BiSolidRightArrowCircle className='ms-2' />
+                        </button>
+                    </div>
+                )}
 
                 {/* only for pickels */}
                 {matchedExtras.length > 0 && (
@@ -403,6 +427,7 @@ function SubProducts() {
                                                 onClick={() => setSelectedExtraWeight(null)}
                                             >
                                                 <div
+                                                    style={{ cursor: "pointer" }}
                                                     className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === null ? "active-btn" : ""
                                                         }`}
                                                 >
@@ -414,6 +439,7 @@ function SubProducts() {
                                             {uniqueExtraWeights.map((weight, idx) => (
                                                 <div
                                                     key={idx}
+                                                    style={{ cursor: "pointer" }}
                                                     className="col-auto mt-1"
                                                     onClick={() => setSelectedExtraWeight(weight)}
                                                 >
@@ -431,40 +457,56 @@ function SubProducts() {
                                     {/* Products Grid */}
                                     <div className="container py-3 py-md-5">
                                         <div className="row justify-content-center">
-                                            {filteredExtraItems.map((item, index) => (
-                                                <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
-                                                    <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
-                                                        {/* Image */}
-                                                        <img
-                                                            src={item.subproductImg}
-                                                            alt={item.subproductName}
-                                                            className="img-fluid product_sizeimg"
-                                                            style={{ objectFit: "contain" }}
-                                                        />
-                                                        {/* Name */}
-                                                        <div className="fw-semibold subp pt-2 p-1" style={{ fontSize: "14px" }}>
-                                                            {item.subproductName}
-                                                        </div>
-                                                        {/* Button */}
-                                                        <div
-                                                            onClick={() => navigate(`/product/${id}/${item._id}`)}
-                                                            className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
-                                                        >
-                                                            <button
-                                                                className="rounded-pill px-4 py-2 fw-bold mt-2 text-white"
-                                                                style={{
-                                                                    background: "var(--red)",
-                                                                    border: "2px solid var(--ofwhite)",
-                                                                    fontSize: "15px",
-                                                                }}
+                                            {(window.innerWidth < 768
+                                                ? filteredExtraItems.slice(0, visibleCount) // sm screen => limited
+                                                : filteredExtraItems) // md/lg => show all
+                                                .map((item, index) => (
+                                                    <div key={index} className="col-6 col-md-4 custom-col-lg-5 mb-4 d-flex">
+                                                        <div className="card shadow-sm w-100 h-100 text-center p-1 pb-md-3">
+                                                            {/* Image */}
+                                                            <img
+                                                                src={item.subproductImg}
+                                                                alt={item.subproductName}
+                                                                className="img-fluid product_sizeimg"
+                                                                style={{ objectFit: "contain" }}
+                                                            />
+                                                            {/* Name */}
+                                                            <div className="fw-semibold subp pt-2 p-1 text-capitalize" style={{ fontSize: "14px" }}>
+                                                                {item.subproductName}
+                                                            </div>
+                                                            {/* Button */}
+                                                            <div
+                                                                onClick={() => navigate(`/product/${id}/${item._id}`)}
+                                                                className={`subbtn mt-auto ${!isVisible ? "d-none" : ""}`}
                                                             >
-                                                                View More
-                                                            </button>
+                                                                <button
+                                                                    className="rounded-pill px-4 py-2 fw-bold mt-2 text-white"
+                                                                    style={{
+                                                                        background: "var(--red)",
+                                                                        border: "2px solid var(--ofwhite)",
+                                                                        fontSize: "15px",
+                                                                    }}
+                                                                >
+                                                                    View More
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            ))}
+                                                ))}
                                         </div>
+
+                                        {/* Load More Button for small screens */}
+                                        {window.innerWidth < 768 && visibleCount < filteredExtraItems.length && (
+                                            <div className="text-center mb-4 mb-md-0">
+                                                <button
+                                                    onClick={handleLoadMore}
+                                                    className="btn fw-bold px-4 py-2 rounded-pill text-white"
+                                                    style={{ background: "var(--red)", fontSize: "15px" }}
+                                                >
+                                                    Load More <BiSolidRightArrowCircle className='ms-2' />
+                                                </button>
+                                            </div>
+                                        )}
                                     </div>
                                 </>
                             );
