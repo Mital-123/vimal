@@ -1,63 +1,82 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaFileDownload, FaLinkedinIn, FaMailBulk, FaTwitter } from 'react-icons/fa';
-import { GrInstagram } from 'react-icons/gr';
+import { FaFileDownload, FaMailBulk } from 'react-icons/fa';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import brochurePDF from '../assets/Images/groser.pdf';
-import Loader from './Loaderpage';
 
 function HOC(Component) {
+  function NewComponent() {
+    const [isVisible, setIsVisible] = useState(false);
 
-    function NewComponent() {
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 100) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
 
-        const [isVisible, setIsVisible] = useState(false);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-        useEffect(() => {
-            const handleScroll = () => {
-                if (window.scrollY > 100) {
-                    setIsVisible(true);
-                } else {
-                    setIsVisible(false);
-                }
-            };
+    return (
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
 
-            window.addEventListener("scroll", handleScroll);
-            return () => window.removeEventListener("scroll", handleScroll);
-        }, []);
-        return (
-            <>
-                <Header />
-          
-                <div className={`social_Nav ${isVisible ? "show" : "hide"}`} style={{ zIndex: 30000 }}>
-                    <ul>
-                        <li>
-                            <a href="tel:+911234509876" className="sideNavIcon_tittle">
-                                <div className="side_Nav_Icon order-0"><BiSolidPhoneCall /></div>
-                                <span className='order-1'>+91 12345 09876</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:vimal123@gmail.com" className="sideNavIcon_tittle">
-                                <div className="side_Nav_Icon order-0"><FaMailBulk /></div>
-                                <span className='order-1'>vimal123@gmail.com</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href={brochurePDF} download target="_blank" rel="noopener noreferrer" className="sideNavIcon_tittle">
-                                <div className="side_Nav_Icon order-0"><FaFileDownload /></div>
-                                <span className="order-1">Download Brochure</span>
-                            </a>
-                        </li>
-                    </ul>
+        {/* Floating Social Nav */}
+        <div
+          className={`social_Nav ${isVisible ? "show" : "hide"}`}
+          style={{ zIndex: 30000 }}
+        >
+          <ul>
+            <li>
+              <a href="tel:+911234509876" className="sideNavIcon_tittle">
+                <div className="side_Nav_Icon order-0">
+                  <BiSolidPhoneCall />
                 </div>
-                <Component />
-                <Footer />
-            </>
-        )
-    }
-    return NewComponent
+                <span className="order-1">+91 12345 09876</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:vimal123@gmail.com" className="sideNavIcon_tittle">
+                <div className="side_Nav_Icon order-0">
+                  <FaMailBulk />
+                </div>
+                <span className="order-1">vimal123@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={brochurePDF}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sideNavIcon_tittle"
+              >
+                <div className="side_Nav_Icon order-0">
+                  <FaFileDownload />
+                </div>
+                <span className="order-1">Download Brochure</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Main Content */}
+        <main className="flex-fill">
+          <Component />
+        </main>
+
+        {/* Footer at bottom always */}
+        <Footer />
+      </div>
+    );
+  }
+
+  return NewComponent;
 }
 
-export default HOC
+export default HOC;

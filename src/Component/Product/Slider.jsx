@@ -98,7 +98,7 @@ function ProductSlider() {
 
                     <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1" >
                         <div className='mb-2 rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} >
-                            <div className='d-flex align-items-center justify-content-center p-2'>
+                            <div className='d-flex align-items-center justify-content-center p-1 '>
                                 <div className="p-1 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
                                     <FaLeaf className='fs-5' />
                                 </div>
