@@ -33,11 +33,11 @@ function HOC(Component) {
         >
           <ul>
             <li>
-              <a href="tel:+911234509876" className="sideNavIcon_tittle">
+              <a href="tel:(+91) 2622 222759" className="sideNavIcon_tittle">
                 <div className="side_Nav_Icon order-0">
                   <BiSolidPhoneCall />
                 </div>
-                <span className="order-1">+91 12345 09876</span>
+                <span className="order-1">(+91) 2622 222759</span>
               </a>
             </li>
             <li>
