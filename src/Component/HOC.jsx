@@ -41,11 +41,11 @@ function HOC(Component) {
               </a>
             </li>
             <li>
-              <a href="mailto:vimal123@gmail.com" className="sideNavIcon_tittle">
+              <a href="mailto:swad.vimal.gj@gmail.com" className="sideNavIcon_tittle">
                 <div className="side_Nav_Icon order-0">
                   <FaMailBulk />
                 </div>
-                <span className="order-1">vimal123@gmail.com</span>
+                <span className="order-1">swad.vimal.gj@gmail.com</span>
               </a>
             </li>
             <li>

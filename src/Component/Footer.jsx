@@ -5,7 +5,7 @@ import { BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
 import { MdArrowForwardIos } from 'react-icons/md'
 import { BiSolidPhoneCall } from 'react-icons/bi'
 import brochurePDF from '../assets/Images/groser.pdf';
- 
+
 function Footer() {
   return (
     <div className="py-5 pt-4 pt-lg-5 pb-2 text-white" style={{ backgroundColor: "var(--red)" }}>
@@ -13,9 +13,9 @@ function Footer() {
         <div className="row ms-0">
           <div className="col-12 col-md-6 col-lg-3 text-white pera mt-0 mt-md-2">
             Vimal Agro Products is a trusted name in exports and B2B solutions, delivering authentic Indian food worldwide. For retail purchases within India, explore our consumer brand at Swad.shop.
- 
+
             <h5 className='pt-2 fw-bold'>Follow Us</h5>
- 
+
             <div className='d-flex align-items-center'>
               <Link to={"https://www.instagram.com/swadbrand"} target='_blank'>
                 <div className='fs-5 hover_name'><BsInstagram /></div>
@@ -56,8 +56,8 @@ function Footer() {
               <NavLink to={"/csrpolicy"} className='text-decoration-none hover_name'> <MdArrowForwardIos /> CSR policy & projects
               </NavLink>
             </div>
-       
- 
+
+
           </div>
           <div className="col-12 col-md-6 col-lg-3 mt-4 mt-md-2">
             <h3 style={{ width: "fit-content" }}>Contact Us</h3>
@@ -80,9 +80,9 @@ function Footer() {
               <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><BiSolidPhoneCall /></span> (+91) 2622 222759 </Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
-              <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> info@vimalagro.com </Link>
+              <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> swad.vimal.gj@gmail.com </Link>
             </div>
- 
+
           </div>
         </div>
         <div className='border-top text-center pera mt-3 mt-lg-4 pt-2'>
@@ -92,6 +92,5 @@ function Footer() {
     </div>
   )
 }
- 
+
 export default Footer
- 

@@ -7,6 +7,7 @@ import { MdMarkEmailRead } from 'react-icons/md';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 function ContactPage() {
 
@@ -252,8 +253,12 @@ function ContactPage() {
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
                               <div >
                                 <h2 className='countnumber fw-bold fs-5 text-lg-start text-center'> Email</h2></div>
-                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>swad.vimal.gj@gmail.com</div>
-                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>sales@vimalagro.com</div>
+                              <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none text-white'>
+                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>swad.vimal.gj@gmail.com</div>
+                              </Link>
+                              <Link to={"mailto:sales@vimalagro.com"} className='text-decoration-none text-white'>
+                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>sales@vimalagro.com</div>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -268,8 +273,12 @@ function ContactPage() {
                             <div className='col-12 col-lg-8 ps-0 pe-0'>
                               <div >
                                 <h2 className='countnumber fw-bold fs-5 text-lg-start text-center'> Contact</h2></div>
-                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
-                              <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
+                              <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none text-white'>
+                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
+                              </Link>
+                              <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none text-white'>
+                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
+                              </Link>
                             </div>
                           </div>
                         </div>
