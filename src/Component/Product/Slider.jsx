@@ -68,9 +68,7 @@ function ProductSlider() {
                                         <div key={index}>
                                             <div className="row justify-content-end align-items-center animate-slide">
                                                 <div className="col-lg-4 col-md-6 text-center position-relative">
-                                                    <div className="productbgred mx-auto" data-aos="zoom-in"
-                                                        data-aos-duration="1500"
-                                                        data-aos-once="true">
+                                                    <div className="productbgred mx-auto" >
                                                         <div className='text-start ms-4 pt-4 pt-md-5'>
                                                             <img src={item.recipeMainImg} alt="" className='image1 rounded-circle object-fit-cover' />
                                                         </div>
@@ -99,9 +97,7 @@ function ProductSlider() {
                     </div>
 
                     <div className="col-lg-4 text-start bg-transparent product-line order-0 order-lg-1" >
-                        <div className='mb-2 rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} data-aos="zoom-in"
-                            data-aos-duration="1500"
-                            data-aos-once="true">
+                        <div className='mb-2 rounded-pill me-auto' style={{ background: "var(--golden)", width: "fit-content" }} >
                             <div className='d-flex align-items-center justify-content-center p-2'>
                                 <div className="p-1 rounded-circle" style={{ background: "white", color: 'var(--golden)' }}>
                                     <FaLeaf className='fs-5' />
