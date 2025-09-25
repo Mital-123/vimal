@@ -278,9 +278,9 @@
     height: 510px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .categreySec {
-    height: 540px;
+    height: 350px;
   }
 }
 

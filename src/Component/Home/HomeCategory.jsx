@@ -230,17 +230,17 @@ function HomeCategory() {
 
             <div
               className="col-md-6 text-start d-flex flex-column justify-content-center"
-           
+
             >
               <div className="fw-bold ps-2">
                 <h4
-                  className="fw-bold stittle p-0 m-0"
+                  className="fw-bold stittle p-0 m-0 text-center text-sm-start"
                 >
                   {activeBrand.title}
                 </h4>
               </div>
-              <p className='pera mt-2 ps-2'>{activeBrand.description}</p>
-              <div className='ms-2'>
+              <p className='pera mt-2 ps-2 d-none d-sm-block'>{activeBrand.description}</p>
+              <div className='ms-2 mt-2 mt-sm-0 text-center text-sm-start'>
                 <Link to={activeBrand.path} className='text-decoration-none'> <ButtonCom btn={"Explore Now"} /></Link>
               </div>
             </div>
