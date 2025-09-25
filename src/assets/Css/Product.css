@@ -293,3 +293,17 @@
 .size-item.last::after {
   content: "";
 }
+
+.subproduct-size {
+  font-size: 17px !important;
+}
+@media (max-width: 768px) {
+  .subproduct-size {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 576px) {
+  .subproduct-size {
+    font-size: 12.5px !important;
+  }
+}

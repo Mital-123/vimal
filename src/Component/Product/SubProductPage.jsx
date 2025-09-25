@@ -163,8 +163,7 @@ function SubProducts() {
                         {product.productSizes.map((x, i) => (
                             <span
                                 key={i}
-                                className={`fw-bold size-item ${i === product.productSizes.length - 1 ? "last" : ""}`}
-                                style={{ fontSize: "17px" }}
+                                className={`subproduct-size fw-bold size-item ${i === product.productSizes.length - 1 ? "last" : ""}`}
                             >
                                 {x}
                             </span>
