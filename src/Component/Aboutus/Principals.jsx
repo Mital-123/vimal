@@ -133,26 +133,29 @@ function Principals() {
         <div className="py-1 py-md-5">
             <div className="container-lg">
                 <div className="col-11 mx-auto">
-                    <div className="brdstart">
-                        <Tittles stitle={"OUR PRINCIPLES"} ltitle="Lorem ipsum dolor sit amet" />
+                    <div className="text-center ">
+                        <Tittles stitle={"OUR PRINCIPLES"}  />
                     </div>
-
+{/* 
                     <p className="mt-2 pera">
                         The success of Passage Foods is the result of following these principles:
-                    </p>
+                    </p> */}
 
                     {principles.map((item, index) => (
                         <div className="row" key={item._id}>
+                            
                             {/* Alternate image/text positioning */}
                             {index % 2 === 0 ? (
                                 <>
                                     <div className="col-md-6 p-lg-5 p-2 principalimg">
-                                        <img
+                                      <div className="test-shine">
+                                          <img
                                             src={item.principleimage}
                                             alt={item.principletitle}
                                             style={{ minHeight: "300px", height: "100%", width: "auto" }}
                                             className="img-fluid object-fit-cover shadow"
                                         />
+                                      </div>
                                     </div>
                                     <div className="col-md-6 p-lg-5 p-2 principaltext">
                                         <div className="d-flex flex-column justify-content-between h-100">
@@ -182,7 +185,9 @@ function Principals() {
                                             </div>
                                             <div style={{ width: 120 ,marginLeft:"auto"}}>
 
-                                                <img src={item.smallpngimage} alt="" className="img-fluid w-100 h-100" />
+                                               <div className="test-shine">
+                                                 <img src={item.smallpngimage} alt="" className="img-fluid w-100 h-100" />
+                                               </div>
                                             </div>
                                         </div>
 
@@ -216,19 +221,21 @@ function Principals() {
                                         </h3>
                                         <p className="pera mb-0">{item.principledescription}</p>
                             </div>
-                               <div style={{ width: 120 ,marginRight:"auto"}}>
+                               <div className="test-shine" style={{ width: 120 ,marginRight:"auto"}}>
 
                                                 <img src={item.smallpngimage} alt="" className="img-fluid w-100 h-100" />
                                             </div>
                            </div>
                                     </div>
                                     <div className="col-md-6 p-lg-5 p-2 principalimg">
-                                        <img
+                                      <div className="test-shine">
+                                          <img
                                             src={item.principleimage}
                                             alt={item.principletitle}
                                             style={{ minHeight: "300px", height: "100%", width: "auto" }}
                                             className="img-fluid object-fit-cover shadow"
                                         />
+                                      </div>
                                     </div>
                                 </>
                             )}
