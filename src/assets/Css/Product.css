@@ -170,8 +170,18 @@
   transition: all 0.3s ease;
   color: #54595f !important;
 }
+.homecategory-btn_active {
+  font-weight: 500 !important;
+  border: 2px solid #d0c7c7 !important;
+  transition: all 0.3s ease;
+  color: #54595f !important;
+}
 
 .btn_active:hover {
+  border: 2px solid var(--red) !important;
+  color: #000000 !important;
+}
+.homecategory-btn_active:hover {
   border: 2px solid var(--red) !important;
   color: #000000 !important;
 }
