@@ -8,12 +8,14 @@ import HomeContact from './HomeContact'
 import HomeRecipe from './HomeRecipe'
 import Testimonial from './Testimonial'
 import '../../assets/Css/Home.css';
+import ProductBrand from './ProductBrand'
 
 
 function HomePage() {
     return (
         <div>
             <HomeCarousel />
+            <ProductBrand />
             <HomeAbout />
             <HomeCategory />
             <Counter />
