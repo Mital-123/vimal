@@ -74,7 +74,8 @@ function Footer() {
               </a>
             </div>
             <div className='pera pt-0 pt-md-0'>
-              <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa?</Link>
+              <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span>Vimal Agro Products Pvt Ltd
+Near GIDC, Ten Road, Bardoli, Gujarat: 394601, INDIA</Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
               <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><BiSolidPhoneCall /></span> (+91) 2622 222759 </Link>

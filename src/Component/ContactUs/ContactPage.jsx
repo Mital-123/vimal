@@ -256,9 +256,7 @@ function ContactPage() {
                               <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none text-white'>
                                 <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>swad.vimal.gj@gmail.com</div>
                               </Link>
-                              <Link to={"mailto:sales@vimalagro.com"} className='text-decoration-none text-white'>
-                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>sales@vimalagro.com</div>
-                              </Link>
+                          
                             </div>
                           </div>
                         </div>
@@ -276,9 +274,7 @@ function ContactPage() {
                               <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none text-white'>
                                 <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
                               </Link>
-                              <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none text-white'>
-                                <div className='text-lg-start text-center' style={{ fontSize: "12px" }}>(+91) 2622 222759</div>
-                              </Link>
+                             
                             </div>
                           </div>
                         </div>
