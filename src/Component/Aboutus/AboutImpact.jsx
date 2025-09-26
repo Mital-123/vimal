@@ -9,14 +9,14 @@ function AboutImpact() {
             description: "Through fair trade practices, we empower farmers with better income and sustainable livelihoods.",
             icon_image: require("../../assets/Images/images_1-removebg-preview.png"),
             bgImage: require("../../assets/Images/About-Impact/impect-bg1.jpg"),
-            animation: "fade-right"
+            animation: "zoom-in"
         },
         {
             title: "Trusted Quality",
             description: "Delivering pure, authentic, and trusted products that reach millions of households worldwide",
             icon_image: require("../../assets/Images/About-Impact/impect-img2.png"),
             bgImage: require("../../assets/Images/About-Impact/impect-bg2.jpg"),
-            animation: "flip-up",
+            animation: "zoom-in",
             delay: "400"
         },
         {
@@ -24,7 +24,7 @@ function AboutImpact() {
             description: "Committed to eco-friendly practices, reducing water and resource consumption with every product",
             icon_image: require("../../assets/Images/About-Impact/impect-img3.jpg"),
             bgImage: require("../../assets/Images/About-Impact/impect-bg3.jpg"),
-            animation: "fade-left",
+            animation: "zoom-in",
             delay: "400"
         },
         {
@@ -32,16 +32,15 @@ function AboutImpact() {
             description: "Taking the taste of India to kitchens across the globe, while staying true to our roots",
             icon_image: require("../../assets/Images/About-Impact/impect-img4.png"),
             bgImage: require("../../assets/Images/About-Impact/impect-bg4.webp"),
-            animation: "fade-right",
+            animation: "zoom-in",
             delay: "600"
-
         },
         {
             title: "Community Impact",
             description: "From education to nourishment, our growth fuels initiatives that bring smiles to communities",
             icon_image: require("../../assets/Images/images_3-removebg-preview.png"),
             bgImage: require("../../assets/Images/About-Impact/impect-bg5.jpg"),
-            animation: "flip-up",
+            animation: "zoom-in",
             delay: "800"
         }
     ];
@@ -50,7 +49,7 @@ function AboutImpact() {
         <>
             <div className='container my-2 my-md-5 pt-1 pt-md-5'>
                 <div className='text-center'><Tittles stitle={"Rooted In Impact"} ltitle={"Every product we cultivate is rooted in impact"} /></div>
-               
+
                 <div className='row mt-3'>
                     {services.map((service, index) => (
                         <div className='col-12 col-lg-4 col-md-6 p-3' key={index} >

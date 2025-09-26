@@ -4,7 +4,6 @@ import { IoIosArrowDropdownCircle, IoMdArrowDropdown } from 'react-icons/io';
 import { IoCloseSharp } from 'react-icons/io5';
 import { LuAlignRight } from 'react-icons/lu';
 import { Link, useLocation } from 'react-router-dom';
-import products from '../Product';
 import axios from 'axios';
 
 function Header() {
@@ -91,7 +90,7 @@ function Header() {
                         aria-label="Toggle navigation"
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        <span className="navbar-toggler-icon text-warning">
+                        <span className="navbar-toggler-icon text-warning mt-1">
                             {isOpen ? <IoCloseSharp className='text-light fs-3' /> : <LuAlignRight className='fs-3' />}
                         </span>
                     </button>
@@ -210,4 +209,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Header
