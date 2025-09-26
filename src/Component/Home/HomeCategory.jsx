@@ -77,7 +77,7 @@ function HomeCategory() {
               {categories.map((item, index) => (
                 <div key={index} className="px-2 px-sm-2 m-1">
                   <div
-                    className={`shadow-sm text-dark rounded-pill text-center d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeIndex === index ? "active-btn" : "btn_active"
+                    className={`shadow-sm text-dark rounded-pill text-center d-flex align-items-center justify-content-center category-btn-container bg-transparent ${activeIndex === index ? "active-btn" : "homecategory-btn_active"
                       }`}
                   >
                     <button
