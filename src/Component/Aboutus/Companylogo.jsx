@@ -1,5 +1,4 @@
-// export default Companylogo;
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import Tittles from "../Tittles";
 
@@ -56,12 +55,16 @@ function Companylogo() {
               <div className="row py-1 py-md-4">
                 {logos.length > 0 ? (
                   logos.map((logo, index) => (
-                    <div className="col-6 col-md-4 col-lg-3" key={index}>
-                      <div className="h-100 p-2">
+                    <div className="col-6 col-md-4 col-lg-3  my-2 " key={index}>
+                      <div
+                        key={index}
+                        className="d-flex justify-content-center p-1 bg-light"
+                      >
                         <img
                           src={logo.Leaderlogoimage}
+                          height={70}
                           alt={`Logo ${index}`}
-                          className="img-fluid w-100 h-100"
+                          className="object-fit-contain rounded"
                         />
                       </div>
                     </div>
