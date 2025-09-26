@@ -133,7 +133,7 @@ function AboutusSec() {
 
               {aboutImages.length > 0 ? (
                 aboutImages.map((img) => (
-                  <div key={img._id} className="col-lg-6 text-end ms-auto col-12">
+                  <div key={img._id} className="col-lg-7 text-end ms-auto col-12">
                     <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
                       <img
                         src={img.vimalaboutimage}
