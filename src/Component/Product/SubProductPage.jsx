@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ButtonCom from '../ButtonCom';
 import HOC from '../HOC';
 import { useEffect, useState } from 'react';
 import Howtouse from './Howtouse';
@@ -166,11 +165,11 @@ function SubProducts() {
                     {/* Product Name */}
                     <h2 className='fw-bold my-1 my-lg-4 ftittle'>Power of {product.productName}</h2>
                     <p className='px-2 px-lg-5'>{product.powerdesc}</p>
-                    <div className="w-75 mx-auto pb-3">
+                    <div className="w-75 mx-auto pb-3 text-capitalize">
                         {product.productSizes.map((x, i) => (
                             <span
                                 key={i}
-                                className={`subproduct-size fw-bold size-item ${i === product.productSizes.length - 1 ? "last" : ""}`}
+                                className={`subproduct-size fw-bold mt-1 size-item ${i === product.productSizes.length - 1 ? "last" : ""}`}
                             >
                                 {x}
                             </span>
@@ -522,4 +521,4 @@ function SubProducts() {
     );
 }
 
-export default HOC(SubProducts);
+export default HOC(SubProducts)
