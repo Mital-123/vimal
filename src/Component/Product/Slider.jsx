@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
+import { BiSolidRightArrowCircle } from 'react-icons/bi';
 import { FaChevronLeft, FaChevronRight, FaLeaf } from 'react-icons/fa';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 
 function ProductSlider() {
@@ -9,7 +10,6 @@ function ProductSlider() {
     const [products, setSubProduct] = useState([]);
     const sliderRef = useRef();
 
-    const navigate = useNavigate();
     const { id } = useParams();
 
     // ✅ Fetch visibility toggle
@@ -87,6 +87,17 @@ function ProductSlider() {
                                                             <div className='pt-1 pt-0 pt-md-1 pera' key={i}>{i + 1}. {x}</div>
                                                         )
                                                     })}
+                                                    <div className="my-4 mb-md-0 d-sm-none d-block">
+                                                        <Link to='/blog'>
+                                                            <button
+                                                                // onClick={handleLoadMore}
+                                                                className="btn fw-bold px-4 py-2 rounded-pill text-white"
+                                                                style={{ background: "var(--red)", fontSize: "15px" }}
+                                                            >
+                                                                Load More <BiSolidRightArrowCircle className='ms-2' />
+                                                            </button>
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -111,6 +122,7 @@ function ProductSlider() {
                             make your Food <br />
                             <span className="fw-bold" style={{ color: 'var(--golden)' }}>Quick, Easy & Flavourful</span>
                         </div>
+
                     </div>
                 </div>
             </div>
