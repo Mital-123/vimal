@@ -12,14 +12,25 @@ function SubProducts() {
 
     const [isVisible, setIsVisible] = useState(false);
     const [products, setSubProduct] = useState([]);
-
     const [visibleCount, setVisibleCount] = useState(6);
+    const [extraSubProducts, setExtraSubProducts] = useState([]);
+    const [extraSubheading, setExtraSubheading] = useState([]);
+    const [selectedExtraWeight, setSelectedExtraWeight] = useState(null);
+    const [selectedMainWeight, setSelectedMainWeight] = useState(null);
+    const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     const navigate = useNavigate();
     const { id } = useParams();
-    const [extraSubProducts, setExtraSubProducts] = useState([]);
-    const [selectedExtraWeight, setSelectedExtraWeight] = useState(null);
 
+    // ✅ Update screen size on resize
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    // ✅ Fetch extra subproducts
     useEffect(() => {
         axios
             .get("https://backendvimalagro.onrender.com/api/extrasubproducts")
@@ -29,17 +40,17 @@ function SubProducts() {
             .catch((err) => console.error("Error fetching extra subproducts:", err));
     }, []);
 
-    // ✅ Find extraSubProduct that belongs to this product
-
+    // ✅ Fetch extra subheadings
     useEffect(() => {
         axios
             .get("https://backendvimalagro.onrender.com/api/heading")
             .then((res) => {
                 setExtraSubheading(res.data || []);
             })
-            .catch((err) => console.error("Error fetching extra subproducts:", err));
+            .catch((err) => console.error("Error fetching extra heading:", err));
     }, []);
-    // ✅ Fetch visibility toggle
+
+    // ✅ Fetch button visibility
     useEffect(() => {
         axios
             .get("https://backendvimalagro.onrender.com/view/btn")
@@ -50,62 +61,48 @@ function SubProducts() {
     }, []);
 
     // ✅ Fetch products
-    const FetchProduct = async () => {
-        try {
-            const res = await axios.get(
-                "https://backendvimalagro.onrender.com/api/products"
-            );
-            setSubProduct(res.data || []);
-
-        } catch (err) {
-            console.error("Error fetching products:", err);
-        }
-    };
-
     useEffect(() => {
+        const FetchProduct = async () => {
+            try {
+                const res = await axios.get(
+                    "https://backendvimalagro.onrender.com/api/products"
+                );
+                setSubProduct(res.data || []);
+            } catch (err) {
+                console.error("Error fetching products:", err);
+            }
+        };
         FetchProduct();
     }, []);
 
     const product = products.find((p) => p._id == id);
-    console.log(product);
 
-    const [selectedMainWeight, setSelectedMainWeight] = useState(null);
-    const [extraSubheading, setExtraSubheading] = useState([]);
-
-    const [selectedSubtypeWeights, setSelectedSubtypeWeights] = useState({});
-
-    // ✅ If product not found
-    if (!product) return <p>No product found.</p>;
-
-    // const uniqueMainWeights = Array.from(
-    //     new Set(product?.subproducts?.map((item) => item.weight) || [])
-    // );
-
-    // const filteredMainSubProducts = selectedMainWeight
-    //     ? (product?.subproducts || []).filter(
-    //         (item) => item.weight === selectedMainWeight
-    //     )
-    //     : product?.subproducts || [];
-    // ✅ Helper: Convert weight string to grams (for sorting)
+    // ✅ Parse weight to grams for sorting
     const parseWeight = (w) => {
-        const num = parseFloat(w.replace(/[^\d.]/g, "")); // get number
+        const num = parseFloat(w.replace(/[^\d.]/g, ""));
         if (w.toLowerCase().includes("kg")) return num * 1000;
-        return num; // gm
+        return num;
     };
 
-    // ✅ Collect, normalize, and sort weights
+    // ✅ Unique main weights
     const uniqueMainWeights = Array.from(
         new Set(
-            (product?.subproducts || [])
-                .flatMap((item) =>
-                    item.weight
-                        ? item.weight.split(",").map((w) => w.trim().toLowerCase())
-                        : []
-                )
+            (product?.subproducts || []).flatMap((item) =>
+                item.weight
+                    ? item.weight.split(",").map((w) => w.trim().toLowerCase())
+                    : []
+            )
         )
     ).sort((a, b) => parseWeight(a) - parseWeight(b));
 
-    // ✅ Filter subproducts by selected weight
+    // ✅ Select first main weight automatically
+    useEffect(() => {
+        if (product && uniqueMainWeights.length > 0 && !selectedMainWeight) {
+            setSelectedMainWeight(uniqueMainWeights[0]);
+        }
+    }, [product, uniqueMainWeights, selectedMainWeight]);
+
+    // ✅ Filtered main subproducts
     const filteredMainSubProducts = selectedMainWeight
         ? (product?.subproducts || []).filter((item) =>
             item.weight
@@ -115,20 +112,52 @@ function SubProducts() {
         )
         : product?.subproducts || [];
 
-
+    // ✅ Matched extra products
     const matchedExtras = extraSubProducts.filter(
-        (extra) => extra.productId?._id === product._id
+        (extra) => extra.productId?._id === product?._id
     );
-    console.log(extraSubheading);
 
-    const filtered = extraSubheading.filter(
-        (item) => item.productId?._id === id
-    ).map((item) => item.subproductTitle);
-    console.log(filtered);
+    // ✅ Filter extra subheadings for this product
+    const filtered = extraSubheading
+        .filter((item) => item.productId?._id === id)
+        .map((item) => item.subproductTitle);
 
+    // ✅ Handle Load More
     const handleLoadMore = () => {
-        setVisibleCount((prev) => prev + 6); // show 6 more each time
+        setVisibleCount((prev) => prev + 6);
     };
+
+    // ✅ Select default extra weight
+    useEffect(() => {
+        if (matchedExtras.length > 0) {
+            const allExtraItems = matchedExtras.flatMap(
+                (extra) => extra.extrasubproducts
+            );
+
+            const allWeights = allExtraItems.flatMap((item) =>
+                item.weight
+                    ? item.weight.split(",").map((w) => w.trim().toLowerCase())
+                    : []
+            );
+
+            const uniqueExtraWeights = Array.from(new Set(allWeights)).sort(
+                (a, b) => parseWeight(a) - parseWeight(b)
+            );
+
+            if (uniqueExtraWeights.length > 0 && !selectedExtraWeight) {
+                setSelectedExtraWeight(uniqueExtraWeights[0]);
+            }
+        }
+    }, [matchedExtras, selectedExtraWeight]);
+
+    // ✅ If no product found
+    if (!product) {
+        return (
+            <div className="text-center py-5">
+                <h4>No product found.</h4>
+            </div>
+        );
+    }
 
     return (
         <div className='mt-5'>
@@ -214,20 +243,7 @@ function SubProducts() {
                     </div>
                 )} */}
                 {uniqueMainWeights.length > 0 && (
-                    <div className="row justify-content-center pt-1 pt-md-3 pb-3 pb-md-0 flex-wrap gx-0 gap-2">
-                        <div
-                            className="col-auto mt-1"
-                            onClick={() => setSelectedMainWeight(null)}
-                        >
-                            <div
-                                style={{ cursor: "pointer" }}
-                                className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedMainWeight === null ? "active-btn" : ""
-                                    }`}
-                            >
-                                All
-                            </div>
-                        </div>
-
+                    <div className="row justify-content-center pt-3 pb-3 flex-wrap gx-0 gap-2">
                         {uniqueMainWeights.map((weight, idx) => (
                             <div
                                 key={idx}
@@ -419,30 +435,15 @@ function SubProducts() {
 
                                     {/* Tabs */}
                                     {uniqueExtraWeights.length > 0 && (
-                                        <div className="row justify-content-center pt-1 pt-md-3 flex-wrap gx-0 gap-2">
-                                            {/* All Tab */}
-                                            <div
-                                                className="col-auto mt-1"
-                                                onClick={() => setSelectedExtraWeight(null)}
-                                            >
-                                                <div
-                                                    style={{ cursor: "pointer" }}
-                                                    className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === null ? "active-btn" : ""
-                                                        }`}
-                                                >
-                                                    All
-                                                </div>
-                                            </div>
-
-                                            {/* Weight Tabs */}
+                                        <div className="row justify-content-center pt-3 flex-wrap gx-0 gap-2">
                                             {uniqueExtraWeights.map((weight, idx) => (
                                                 <div
                                                     key={idx}
-                                                    style={{ cursor: "pointer" }}
                                                     className="col-auto mt-1"
                                                     onClick={() => setSelectedExtraWeight(weight)}
                                                 >
                                                     <div
+                                                        style={{ cursor: "pointer" }}
                                                         className={`p-2 rounded-pill px-3 px-md-5 shadow-sm btn_active bg-transparent text-uppercase ${selectedExtraWeight === weight ? "active-btn" : ""
                                                             }`}
                                                     >
