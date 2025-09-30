@@ -89,7 +89,7 @@ function AboutusSec() {
             {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
               <h6
-                className="text-uppercase mb-0 mb-md-2 stittle"
+                className="text-uppercase mb-0 mb-md-2 stittle ps-2"
                 data-aos="fade-up "
                 data-aos-duration="1500"
                 data-aos-delay="50"
@@ -134,7 +134,7 @@ function AboutusSec() {
               {aboutImages.length > 0 ? (
                 aboutImages.map((img) => (
                   <div key={img._id} className="col-lg-7 text-end ms-auto col-12">
-                    <div className='rounded-5 shadow-lg mt-0 mt-lg-3 test-shine' >
+                    <div className='rounded-5 shadow mt-0 mt-lg-3 test-shine' >
                       <img
                         src={img.vimalaboutimage}
                         alt="About Us"

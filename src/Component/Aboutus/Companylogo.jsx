@@ -58,7 +58,7 @@ function Companylogo() {
                     <div className="col-6 col-md-4 col-lg-3  my-2 " key={index}>
                       <div
                         key={index}
-                        className="d-flex justify-content-center p-1 bg-light"
+                        className="d-flex justify-content-center p-1"
                       >
                         <img
                           src={logo.Leaderlogoimage}

@@ -9,7 +9,7 @@ function YouTubeVideo() {
             title: "Mango Smoothie made with Alphonso Mango Pulp | SWAD Mango Pulp",
             description:
                 "Make your quarantine worthwhile by treating yourself with luscious mango smoothie. An amazing blend of taste and flavors enriched with goodness of rich mango pulp from Swad. An easy recipe to make and relish with your loved ones. Try it today.",
-            thumbnail: "https://www.swad.shop/cdn/shop/files/UeUw2duQBV8-MQ.jpg?v=1729196500&width=1946",
+            thumbnail: require("../../assets/Images/you tube video image -1.jpg"),
             videoUrl: "https://www.youtube.com/embed/UeUw2duQBV8",
         },
         {
@@ -17,7 +17,7 @@ function YouTubeVideo() {
             title: "Vegetarian Mango Jelly Recipe | How to Make Mango Jelly at Home",
             description:
                 "This homemade vegetarian mango jelly is a delightful, fruity treat made with fresh mango puree and set with agar-agar, making it gelatin-free. Bursting with tropical flavor, it's easy to make and perfect as a light dessert or snack, capturing the sweetness and vibrant color of ripe mangoes.",
-            thumbnail: "https://www.swad.shop/cdn/shop/files/0H_QHBNMnjA-MQ.jpg?v=1729934569&width=1946",
+            thumbnail: require("../../assets/Images/you tube video image -2.jpg"),
             videoUrl: "https://www.youtube.com/embed/0H_QHBNMnjA",
         },
         {
@@ -25,7 +25,7 @@ function YouTubeVideo() {
             title: "How to make Mango Cheese Cake | Swad Recipe",
             description:
                 "Swad brings authentic Indian flavors to your home with the convenience of online shopping. Explore our wide range, including mango pulp, pickles, curry pastes, chutneys, sauces, and ready-to-eat meals. Simply add your favorites to the cart, and we’ll deliver them to your doorstep anywhere in India. Start shopping today!",
-            thumbnail: "https://www.swad.shop/cdn/shop/files/RbGnCEg9cfQ-MQ.jpg?v=1729191445&width=1946",
+            thumbnail: require("../../assets/Images/you tube video image -3.jpg"),
             videoUrl: "https://www.youtube.com/embed/RbGnCEg9cfQ",
         },
     ];

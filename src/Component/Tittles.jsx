@@ -3,7 +3,7 @@ import React from 'react';
 function Tittles(props) {
   return (
 
-    <div className='ps-2'>
+    <div className='ps-0 ps-md-2'>
       <h4
         className=" fw-bold stittle p-0 m-0 text-uppercase"
         data-aos="fade-up"
