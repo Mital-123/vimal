@@ -152,7 +152,12 @@ function Principals() {
                                             <img
                                                 src={item.principleimage}
                                                 alt={item.principletitle}
-                                                style={{ minHeight: "300px", height: "100%", width: "auto" }}
+                                              style={{
+    width: "100%",
+    height: "300px",       // fixed display height for consistency
+    objectFit: "cover",    // keeps aspect ratio while covering
+    borderRadius: "8px",   // optional: makes it look smoother
+  }}
                                                 className="img-fluid object-fit-cover shadow"
                                             />
                                         </div>
@@ -232,7 +237,12 @@ function Principals() {
                                             <img
                                                 src={item.principleimage}
                                                 alt={item.principletitle}
-                                                style={{ minHeight: "300px", height: "100%", width: "auto" }}
+                                                style={{
+    width: "100%",
+    height: "300px",       // fixed display height for consistency
+    objectFit: "cover",    // keeps aspect ratio while covering
+    borderRadius: "8px",   // optional: makes it look smoother
+  }}
                                                 className="img-fluid object-fit-cover shadow"
                                             />
                                         </div>
