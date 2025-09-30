@@ -66,7 +66,7 @@ function HomeCategory() {
 
   return (
     <>
-      <div className='py-2 py-md-5 p-1 category_bgimg'>
+      <div className='py-2 py-md-5 p-1 category_bgimg'>    
         <div className='container'>
           <div className='text-center p-0 m-0'>
             <Tittles stitle={"Our Categories"} />
