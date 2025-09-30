@@ -45,20 +45,28 @@
 
     AOS.init();
   </script>
-  <script>
-  // Force disable dark mode in any browser
-  (function () {
-    // Prevent browsers from applying system dark mode
-    const meta = document.createElement("meta");
-    meta.name = "color-scheme";
-    meta.content = "light";
-    document.head.appendChild(meta);
 
-    // Force Bootstrap (if used) into light mode
-    document.documentElement.setAttribute("data-bs-theme", "light");
+  <script>
+  (function () {
+    // Always tell browsers to use only light theme
+    var meta = document.querySelector('meta[name="color-scheme"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'color-scheme';
+      document.head.appendChild(meta);
+    }
+    meta.content = 'light';
+
+    // Force Bootstrap (if used) to light mode
+    document.documentElement.setAttribute('data-bs-theme', 'light');
+
+    // Extra protection for older mobile/in-app browsers
+    document.documentElement.style.backgroundColor = '#ffffff';
+    document.documentElement.style.color = '#000000';
   })();
 </script>
 
+  
 </body>
 
 </html>
