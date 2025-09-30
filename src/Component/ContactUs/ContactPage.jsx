@@ -228,15 +228,15 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className='col-md-6 col-11'>
+              <div className='col-md-6 col-11 pt-3 pt-md-0'>
                 <div className="h-100 ps-0 ps-lg-2">
-                  <div className='mb-1'>
+                  <div className='mb-1 text-center text-md-start'>
                     <Tittles stitle={"Contact Us"} />
                   </div>
                   <div className="ps-2">
 
-                    <div className="ftittle" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">How We Can Help You ?</div>
-                    <div className=" pera">
+                    <div className="ftittle text-center text-md-start" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">How We Can Help You ?</div>
+                    <div className=" pera text-center text-md-start">
                       Need help or want to discuss Export/Bulk orders? Get in touch with us today.
                     </div>
                   </div>
