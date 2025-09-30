@@ -89,7 +89,7 @@ function HomeAbout() {
                                 <div className='d-none d-sm-block'>
                                     <FaQuoteLeft className="fs-1 text-secondary" />
                                 </div>
-                                <div className="pt-2 pt-md-4 pera" style={{ textAlign: "justify" }}>
+                                <div className="pt-2 pt-md-4 pera">
                                     Vimal Agro Products was born with a simple dream—to bring the authentic taste of Indian home-cooked food to every corner of the world. From a humble vision, it has grown into a globally trusted name, loved by families across continents. With respect for age-old recipes and a passion for quality, we make it easy to enjoy the richness of Indian cuisine anytime, anywhere. From curries and pickles to snacks and sweets, every Vimal Agro product celebrates tradition, made convenient for modern life. Savor the tradition—made with love.
                                 </div>
 
