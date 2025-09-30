@@ -17,7 +17,7 @@ function Faq() {
   }, []);
 
   return (
-    <div className='container  pt-0'>
+    <div className='container  pt-0 px-3 px-md-0'>
       <div className='row d-flex justify-content-center align-content-center align-items-center ' >
         {/* <div className='col-12 col-lg-6 ' data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
           <div className="h-100">

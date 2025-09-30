@@ -104,7 +104,7 @@ function HomeProduct() {
           <div className="row g-3 g-md-4 my-5 mb-4 overflow-hidden">
             {products.map((Item, i) => {
               return (
-                <div key={i} className="col-12  col-md-6 col-lg-3 overflow-hidden" data-aos="zoom-in" data-aos-duration="1800" data-aos-once="true">
+                <div key={i} className="col-6  col-md-6 col-lg-3 overflow-hidden" data-aos="zoom-in" data-aos-duration="1800" data-aos-once="true">
                   <div onClick={() => navigate(`/product/${Item._id}`)} className='text-decoration-none' >
                     <div className="">
                       <div className="p-1 " style={{ position: "relative", overflow: "hidden" }}>
@@ -112,7 +112,7 @@ function HomeProduct() {
                           <img
                             src={Item.productImages[0]}
                             alt=""
-                            className="img-fluid w-100 object-fit-contain py-4 py-lg-5 pb-5 pt-0 pt-lg-0"
+                            className="mainproduct-home img-fluid w-100 object-fit-contain py-4 py-lg-5 pb-5 pt-0 pt-lg-0"
                             style={{ transition: "transform 0.5s", width: "100%", height: "220px", backgroundColor: "#fffcf3" }}
                           />
                           <div className="image-title fw-bold jr_tittle">

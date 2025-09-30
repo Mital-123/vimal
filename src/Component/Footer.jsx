@@ -31,7 +31,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className="col-6 col-lg-3 ps-1 ps-lg-5 mt-4 mt-md-2">
+          <div className="col-6 col-lg-3 ps-2 ps-lg-5 mt-4 mt-md-2">
             <h3 style={{ width: "fit-content" }}>
               Main Menu</h3>
             <div className='pera pt-1'>
@@ -75,13 +75,13 @@ function Footer() {
             </div>
             <div className='pera pt-0 pt-md-0'>
               <Link to={"/"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMapLocationDot /></span>Vimal Agro Products Pvt Ltd
-Near GIDC, Ten Road, Bardoli, Gujarat: 394601, INDIA</Link>
+                Near GIDC, Ten Road, Bardoli, Gujarat: 394601, INDIA</Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
               <Link to={"tel:(+91) 2622 222759"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><BiSolidPhoneCall /></span> (+91) 2622 222759 </Link>
             </div>
             <div className='pera pt-1 pt-md-2'>
-              <Link to={"mailto:swad.vimal.gj@gmail.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> swad.vimal.gj@gmail.com </Link>
+              <Link to={"mailto:info@vimalagro.com"} className='text-decoration-none hover_name'> <span className='fs-5 pe-1'><FaMailBulk /></span> info@vimalagro.com </Link>
             </div>
 
           </div>

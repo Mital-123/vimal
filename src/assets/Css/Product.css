@@ -274,7 +274,11 @@
   font-size: 13px !important;
   letter-spacing: 0.8px;
 }
-
+@media (max-width: 576px) {
+  .mainproduct-home {
+    height: 160px !important;
+  }
+}
 /* productpge end */
 
 /* producthover start*/

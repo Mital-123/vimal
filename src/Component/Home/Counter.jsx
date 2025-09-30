@@ -41,8 +41,8 @@ function Counter() {
 
     return (
         <>
-            <div className="container pt-3 pt-lg-5">
-                <div className="row justify-content-center mx-1">
+            <div className="container bg-white pt-3 pt-lg-5">
+                <div className="row justify-content-center bg-white mx-1">
                     <div className="col-4 col-md-6 col-lg-4  mt-3 m-0  p-1 p-md-3 ps-0 ps-md-2"
                         data-aos="zoom-in"
                         data-aos-duration="1500"

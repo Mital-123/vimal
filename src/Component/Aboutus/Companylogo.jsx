@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Tittles from "../Tittles";
 
@@ -79,7 +79,7 @@ function Companylogo() {
       </div>
 
       {/* Story Section */}
-      <div className="container my-3 my-md-5">
+      <div className="container my-3 my-md-5 bg-white px-3 px-md-0">
         <h4 className="text-center">
           <Tittles stitle="Our Story" />
         </h4>

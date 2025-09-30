@@ -107,7 +107,7 @@ function AboutusSec() {
             </div>
 
             {/* Middle Paragraph Content */}
-            <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto">
+            <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto px-3 px-lg-0">
               <p className="text-muted pera text-justify pera">
                 On a mission to bring authentic, convenient, and high-quality
                 ethnic foods to consumers across the globe. From rich curries and

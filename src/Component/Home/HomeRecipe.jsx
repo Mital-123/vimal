@@ -49,7 +49,7 @@ function HomeRecipe() {
   }, []);
 
   return (
-    <div className='home-recipe-wrapper overflow-hidden my-5 mb-3 mb-md-5'>
+    <div className='home-recipe-wrapper bg-white overflow-hidden my-5 mb-3 mb-md-5'>
       <div className='container position-relative'>
         <div className='text-center mb-2 mb-md-4'>
           <Tittles ltitle={'Mouth-Watering Recipes'} />
