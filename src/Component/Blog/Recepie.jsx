@@ -264,7 +264,7 @@ function Recepie() {
                                     <GoPerson className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
                                     <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Servings</div>
-                                        <div>{activeRecipe.serving} Persons</div>
+                                        <div>{activeRecipe.serving}</div>
                                     </div>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@ function Recepie() {
                                     <FaRegClock className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
                                     <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Prep Time</div>
-                                        <div>{activeRecipe.prep_time} Minutes</div>
+                                        <div>{activeRecipe.prep_time}</div>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +284,7 @@ function Recepie() {
                                     <PiChefHat className='text-warning me-1 fs-1 p-1 rounded-5 fw-bold' style={{ backgroundColor: 'var(--ofwhite)', boxShadow: " 0 0 2px 5px #ffc400a1", }} />
                                     <div className='ms-0 ms-md-3 mt-2 mt-md-0'>
                                         <div className='fs-5 fw-semibold'>Cook Time</div>
-                                        <div>{activeRecipe.cook_time} Minutes</div>
+                                        <div>{activeRecipe.cook_time}</div>
                                     </div>
                                 </div>
                             </div>
