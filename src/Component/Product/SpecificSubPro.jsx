@@ -92,7 +92,7 @@ function SpecificSubPro() {
             </div>
 
             {/* ✅ Related products */}
-            <div className="container pb-4">
+            {/* <div className="container pb-4">
                 <div className="text-center pb-3">
                     <Tittles stitle="Related Products" />
                 </div>
@@ -124,7 +124,7 @@ function SpecificSubPro() {
                             </div>
                         ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
