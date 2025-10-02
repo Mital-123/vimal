@@ -132,7 +132,7 @@ function ContactPage() {
 
   return (
     <>
-      {/* <div className="landingimg_contact">
+      {/* <div className="">
         <img
           src="https://www.oregon.gov/employ/Agency/PublishingImages/ContactUs-2024.jpg"
           alt=""

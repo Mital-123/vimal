@@ -32,37 +32,3 @@
   }
 }
 /* Map end */
-
-/* ContactPage start */
-/* .landingimg_contact {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 40px;
-}
-.landingimg-img_contact {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.lendingshadow_contact {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #240000c0 !important;
-  box-shadow: inset 0 0 100px 20px #000;
-  pointer-events: none;
-}
-@media (min-width: 768px) {
-  .landingimg_contact {
-    height: 55vh;
-    margin-top: 75px;
-  }
-  .landingimg-img_contact {
-    height: 100%;
-  }
-} */
-/* ContactPage end */

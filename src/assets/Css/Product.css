@@ -1,22 +1,18 @@
 .subbtn .btncss {
   font-size: 12px;
 }
-
 .subp {
   font-size: 13px;
 }
-
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
-
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
-
 .product_sizeimg {
   height: 180px !important;
 }
@@ -35,7 +31,6 @@
   box-shadow: -2px -2px 20px #696969bd;
   border: 9px solid white;
 }
-
 .image2 {
   height: 135px;
   width: 135px;
@@ -46,7 +41,6 @@
   box-shadow: -8px 0 6px rgba(0, 0, 0, 0.2), 8px 0 6px rgba(0, 0, 0, 0.2),
     0 8px 6px rgba(0, 0, 0, 0.2), 0 -8px 6px rgba(0, 0, 0, 0.2);
 }
-
 .productbgred {
   background-image: url(../Images/yellow-circle.png);
   background-size: 300px 300px;
@@ -55,27 +49,22 @@
   width: 375px;
   background-position: 23% 100%;
 }
-
 .product-line {
   margin-top: -170px;
 }
-
 .product-line {
   margin-top: -200px;
 }
-
 .recepieslider .slick-slide {
   opacity: 0 !important;
   transform: translateY(20px) !important;
   transition: none !important;
 }
-
 .recepieslider .slick-active {
   opacity: 1 !important;
   transform: translateY(0) !important;
   transition: all 1s ease-in-out !important;
 }
-
 .recepieslider .slick-track {
   transition-timing-function: ease-in-out !important;
 }
@@ -84,20 +73,17 @@
     font-size: 30px;
     line-height: 30px;
   }
-
   .image1 {
     height: 200px;
     width: 200px;
     right: 20px;
   }
-
   .image2 {
     height: 95px;
     width: 95px;
     right: 0;
     left: 20px;
   }
-
   .productbgred {
     background-size: 250px 250px;
     width: 300px;
@@ -117,14 +103,12 @@
     width: 210px;
     right: 20px;
   }
-
   .image2 {
     height: 100px;
     width: 100px;
     right: 0;
     left: 35px;
   }
-
   .productbgred {
     background-size: 250px 250px;
     width: 300px;
@@ -134,21 +118,18 @@
     height: 150px !important;
   }
 }
-
 @media screen and (max-width: 576px) {
   .image1 {
     height: 200px !important;
     width: 200px !important;
     right: 20px !important;
   }
-
   .image2 {
     height: 95px !important;
     width: 95px !important;
     right: 0 !important;
     left: 20px !important;
   }
-
   .productbgred {
     background-size: 250px 250px !important;
     width: 300px !important;
@@ -176,7 +157,6 @@
   transition: all 0.3s ease;
   color: #54595f !important;
 }
-
 .btn_active:hover {
   border: 2px solid var(--red) !important;
   color: #000000 !important;
@@ -185,55 +165,44 @@
   border: 2px solid var(--red) !important;
   color: #000000 !important;
 }
-
 .active-btn {
   border: 2px solid var(--red) !important;
   color: #000000 !important;
 }
-
 @media screen and (max-width: 576px) {
   .recepie {
     line-height: 20px !important;
     margin-bottom: 5px;
   }
 }
-
 .yellow-circle {
-  /* Responsive adjustment for yellow background circle */
   width: 270px;
   height: 270px;
 }
-
 @media (max-width: 768px) {
   .yellow-circle {
     width: 220px !important;
     height: 220px !important;
   }
 }
-
-/* Custom responsive 5-column layout */
 @media (min-width: 1200px) {
   .custom-col-lg-5 {
     width: 20%;
   }
 }
-
 @media (max-width: 1199.98px) {
   .custom-col-lg-5 {
     width: 33.33%;
   }
 }
-
 @media (max-width: 767.98px) {
   .custom-col-lg-5 {
     width: 50%;
   }
 }
-
 /* product start */
 
 /* productpge start */
-
 .facility_image {
   position: relative;
   overflow: hidden;
@@ -243,21 +212,16 @@
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
 }
-
 .facility_image img {
   transform: scale(1);
   border-radius: 35px 0px 35px 0px;
 }
-
 .facility_image img:hover {
   transform: scale(1.1);
 }
-
 .facility_image:hover {
   border: 2px solid transparent;
-  /* border-bottom: 2px solid var(--red); */
 }
-
 .image-title {
   position: absolute;
   bottom: -100%;
@@ -269,7 +233,6 @@
   padding: 10px;
   text-align: center;
   bottom: 0;
-  /* border-radius: 20px 20px 0px 0px; */
   transition: bottom 0.5s ease;
   font-size: 13px !important;
   letter-spacing: 0.8px;
@@ -282,32 +245,26 @@
 /* productpge end */
 
 /* producthover start*/
-
 .main-image-container {
   object-fit: contain;
   overflow: hidden;
 }
-
 .sticky-column {
   position: sticky;
   top: 12%;
   max-height: 100vh;
   overflow-y: auto;
 }
-
 .kjh::first-letter {
   text-transform: uppercase;
-  /* Capitalize only the first letter */
 }
 .size-item::after {
   content: " | ";
   margin: 0 8px;
 }
-
 .size-item.last::after {
   content: "";
 }
-
 .subproduct-size {
   font-size: 17px !important;
   display: inline-block;

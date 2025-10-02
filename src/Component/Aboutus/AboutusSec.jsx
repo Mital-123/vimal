@@ -11,14 +11,13 @@ import axios from "axios";
 const API_URL = "https://backendvimalagro.onrender.com/vimalabout";
 
 function AboutusSec() {
+
   const [aboutImages, setAboutImages] = useState([]);
 
-  // ✅ Fetch Aboutus images from API
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const res = await axios.get(API_URL);
-        // sort oldest first
         const sorted = res.data.sort(
           (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
         );
@@ -27,12 +26,9 @@ function AboutusSec() {
         console.error("Error fetching About Us images:", error);
       }
     };
-
     fetchImages();
   }, []);
 
-
-  // banner created
   const [banner, setBanner] = useState(null);
 
   useEffect(() => {
@@ -40,7 +36,7 @@ function AboutusSec() {
       try {
         const res = await axios.get("https://backendvimalagro.onrender.com/aboutbanner");
         if (res.data && res.data.length > 0) {
-          setBanner(res.data[0]); // ✅ take the first object
+          setBanner(res.data[0]);
         }
       } catch (err) {
         console.error("Error fetching banner:", err);
@@ -50,8 +46,9 @@ function AboutusSec() {
   }, []);
 
   if (!banner) {
-    return null; // or loader/spinner
+    return null;
   }
+
   return (
     <>
       {/* <div
@@ -82,11 +79,10 @@ function AboutusSec() {
           <img src={banner.mobileaboutbanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
         </div>
       </div> */}
-      {/* About Us Section */}
+
       <div className="py-3 py-md-5 overflow-hidden contactinfo_bg mt-5">
         <div className="container mt-4">
           <div className="row">
-            {/* Left Text Content */}
             <div className="col-lg-4 col-12 mb-2 mb-lg-0 mx-auto">
               <h6
                 className="text-uppercase mb-0 mb-md-2 stittle ps-2"
@@ -106,7 +102,6 @@ function AboutusSec() {
               </h5>
             </div>
 
-            {/* Middle Paragraph Content */}
             <div className="col-lg-6 col-12 mb-1 mb-md-2 mb-lg-0 ms-auto px-3 px-lg-0">
               <p className="text-muted pera text-justify pera">
                 On a mission to bring authentic, convenient, and high-quality
@@ -127,9 +122,7 @@ function AboutusSec() {
                 markets.
               </p>
             </div>
-
-            {/* Right Images from API */}
-            <div >
+            <div>
 
               {aboutImages.length > 0 ? (
                 aboutImages.map((img) => (
@@ -153,16 +146,14 @@ function AboutusSec() {
         </div>
       </div>
 
-      {/* Other Sections */}
       <div className="overflow-hidden">
         <Companylogo />
         <Principals />
         <AboutImpact />
-        {/* <Brouchers /> */}
         <Faq />
       </div>
     </>
   );
 }
 
-export default HOC(AboutusSec);
+export default HOC(AboutusSec)

@@ -15,7 +15,7 @@ function Brouchers() {
                 <div className="jr_tittle "><Tittles stitle="Our Brochures" ltitle="Innovation Meets Everyday Needs" /></div>
               </div>
               <div
-                className="pera pt-4 p-0 py-lg-3  "
+                className="pera pt-4 p-0 py-lg-3"
                 style={{ color: "gray" }}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -25,7 +25,7 @@ function Brouchers() {
                 facere voluptate nulla, commodi delectus ducimus!
               </div>
               <div
-                className="pera pt-2 p-0  ps-0 "
+                className="pera pt-2 p-0  ps-0"
                 style={{ color: "gray" }}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -35,30 +35,6 @@ function Brouchers() {
             </div>
           </div>
           <div className="col-12 col-lg-6 p-0 p-lg-5 pt-3">
-            {/* <div className='p-5 pt-3 mx-auto' >
-        <div class="test-shine mx-auto m-3" style={{width:"250px",height:"250px"}} >
-          <Link
-            target="_blank"
-            to={require("../Assets/pdf and broushers/j-r-equipment.pdf")}
-          >
-            <img
-              src={require("../Assets/pdf and broushers/images.jpeg")}
-              className="img-fluid w-100 h-100"
-            />
-          </Link>
-        </div>
-
-        <div className='mx-auto' style={{width:"250px"}} >
-          <ButtonHover
-            btnttitle="Download Now"
-            target="_blank"
-            to={require("../Assets/pdf and broushers/j-r-equipment.pdf")}
-            data-title="images/brochure/j-r-equipment.pdf"
-            className="w-100"
-          ></ButtonHover>
-        </div>
-      </div> */}
-
             <div
               className="mx-auto"
               style={{ height: "250px", width: "250px" }}
@@ -83,7 +59,7 @@ function Brouchers() {
                     to={require("../../assets/Images/groser.pdf")}
                     className={`elementor-button-text text-white text-decoration-none fw-medium `}
                   >
-                   <ButtonCom btn={" Download Now"}/>
+                    <ButtonCom btn={" Download Now"} />
                   </div>
                 </div></div>
 
@@ -96,4 +72,4 @@ function Brouchers() {
   );
 }
 
-export default Brouchers;
+export default Brouchers
